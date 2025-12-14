@@ -1948,8 +1948,8 @@ async function loadSplashVideo() {
     
     // Пробуем разные варианты имени файла
     const videoVariants = [
-        'alisa/alisa04',
         'alisa/alisa04_dzo5os',
+        'alisa/alisa04',
         'alisa/alisa03' // Fallback
     ];
     
