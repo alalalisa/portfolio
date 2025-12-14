@@ -428,7 +428,7 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translateX(-875px) translateY(50px);
+    transform: translateX(-925px) translateY(50px);
     z-index: 20;
     pointer-events: auto;
     display: flex;
@@ -458,12 +458,12 @@ body {
     border-radius: 25px;
     font-size: 1em;
     transition: all 0.3s ease;
-    transform: translateX(1100px) translateY(-250px);
+    transform: translateX(600px) translateY(-50px);
 }
 
 .splash-description .splash-telegram-btn:hover {
     background-color: rgba(255, 255, 255, 0.2);
-    transform: translateX(1100px) translateY(-250px) scale(1.05);
+    transform: translateX(600px) translateY(-50px) scale(1.05);
 }
 
 .splash-hint {
@@ -504,7 +504,7 @@ body {
     height: 2000%;
     object-fit: contain;
     opacity: 0.7;
-    transform: translate(-50%, -50%) scale(0.054) translateX(-500px);
+    transform: translate(-50%, -50%) scale(0.054) translateX(-400px);
     transform-origin: center center;
     display: block;
     z-index: 2;
