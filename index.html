@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alisa Voronina</title>
+    <link rel="preconnect" href="https://res.cloudinary.com">
+    <link rel="dns-prefetch" href="https://res.cloudinary.com">
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.min.js"></script>
 </head>
@@ -11,13 +13,22 @@
     <!-- Начальный экран (splash screen) -->
     <div id="splash-screen" class="splash-screen">
         <div class="splash-content">
-            <!-- Левая часть: текст из квадратиков -->
-            <div id="splash-text" class="splash-text">
-                <!-- Текст будет создан из иконок -->
+            <!-- Левая часть: видео -->
+            <div class="splash-video-container">
+                <video id="splash-video" class="splash-video" autoplay muted loop playsinline></video>
             </div>
             <!-- Правая часть: фотография -->
             <div class="splash-photo">
                 <img id="splash-photo-img" src="" alt="Alisa Voronina">
+            </div>
+            <!-- Описание и кнопка -->
+            <div class="splash-description">
+                <p>Я медиадизайнер, работающий с широким кругом технологий. Занимаюсь программированием интерактивных инсталляций, создаю генеративную графику, делаю контент и программирую вольюметрические экраны, кинетические лебедки, лазеры. Так же работаю с AI графикой, делаю арт для музыкальных обложек и виджею на мероприятиях</p>
+                <a href="https://t.me/alalisasilala" class="splash-telegram-btn" target="_blank">Telegram</a>
+            </div>
+            <!-- Подсказка -->
+            <div class="splash-hint">
+                <p>Кликните по экрану, чтобы увидеть проекты</p>
             </div>
         </div>
     </div>

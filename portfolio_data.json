@@ -1188,10 +1188,11 @@
       "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/73"
     },
     "title": "Vjing",
-    "description": "Intervals Festival 2024 Night program\n\nГенеративный виджеинг",
+    "description": "Intervals Festival 2024 Night program\n\nГенеративный виджеинг\n\nVolumetric",
     "additional": {
       "col_0": "Intervals Festival 2024 Night program",
       "col_1": "Генеративный виджеинг",
+      "col_2": "Volumetric",
       "col_3": "Vjing"
     }
   },
@@ -3720,6 +3721,21 @@
       "col_0": "New Star Camp 2024",
       "col_1": "Генеративный виджеинг",
       "col_2": "Vjing"
+    }
+  },
+  {
+    "id": 229,
+    "media": {
+      "filename": "229.mp4",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/229",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/229"
+    },
+    "title": "Volumetric",
+    "description": "Тест вольюметрического экрана Tseh",
+    "additional": {
+      "col_0": "Тест вольюметрического экрана Tseh",
+      "col_2": "Volumetric"
     }
   },
   {
