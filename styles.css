@@ -246,7 +246,7 @@ body {
     cursor: pointer;
     z-index: 100;
     pointer-events: auto;
-    transition: all 0.3s ease;
+    transition: all 0.8s ease-out;
     backdrop-filter: blur(10px);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     user-select: none;
@@ -438,7 +438,7 @@ body {
 }
 
 .splash-description p {
-    font-size: 0.969408em;
+    font-size: 1.21176em;
     color: #7CBFD6;
     margin-bottom: 20px;
     font-weight: 300;

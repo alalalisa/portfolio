@@ -240,10 +240,10 @@ function createTags() {
         tagPositions.push({ x, y });
         
         // Случайные параметры для плавания
-        const speedX = (Math.random() - 0.5) * 0.3; // Очень медленная скорость
-        const speedY = (Math.random() - 0.5) * 0.3;
-        const amplitudeX = 30 + Math.random() * 50; // Амплитуда движения
-        const amplitudeY = 30 + Math.random() * 50;
+        const speedX = (Math.random() - 0.5) * 0.1; // Очень медленная и плавная скорость
+        const speedY = (Math.random() - 0.5) * 0.1;
+        const amplitudeX = 20 + Math.random() * 40; // Уменьшенная амплитуда для более плавного движения
+        const amplitudeY = 20 + Math.random() * 40;
         const phaseX = Math.random() * Math.PI * 2; // Начальная фаза
         const phaseY = Math.random() * Math.PI * 2;
         
