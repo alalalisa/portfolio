@@ -1904,7 +1904,7 @@ async function setupSplashScreen() {
         splashPhoto.src = splashConfig.photoPath;
         
         // Увеличиваем картинку в 1.3 раза и сдвигаем влево на 100px
-        splashPhoto.style.transform = 'scale(1.3) translateX(-100px)';
+        splashPhoto.style.transform = 'scale(1.3) translateX(0px)';
         splashPhoto.style.transformOrigin = 'center center';
         
         splashPhoto.onload = () => {
@@ -1995,6 +1995,14 @@ async function loadSplashVideo() {
         });
         
         if (loaded) {
+            // Устанавливаем обработчик для бесшовного цикла без пауз
+            splashVideo.addEventListener('ended', () => {
+                splashVideo.currentTime = 0;
+                splashVideo.play().catch(e => {
+                    console.warn('Ошибка перезапуска видео:', e);
+                });
+            }, { once: false });
+            
             splashVideo.play().catch(e => {
                 console.warn('Автовоспроизведение заблокировано:', e);
             });
