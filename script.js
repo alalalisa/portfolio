@@ -1995,7 +1995,19 @@ async function loadSplashVideo() {
         });
         
         if (loaded) {
+            // Предзагружаем видео для бесшовного воспроизведения
+            splashVideo.preload = 'auto';
+            
             // Устанавливаем обработчик для бесшовного цикла без пауз
+            // Используем timeupdate вместо ended для более плавного перехода
+            splashVideo.addEventListener('timeupdate', () => {
+                // Если видео близко к концу (осталось менее 0.1 секунды), перезапускаем
+                if (splashVideo.duration && splashVideo.currentTime >= splashVideo.duration - 0.1) {
+                    splashVideo.currentTime = 0;
+                }
+            }, { once: false });
+            
+            // Дополнительный обработчик на случай, если timeupdate не сработает
             splashVideo.addEventListener('ended', () => {
                 splashVideo.currentTime = 0;
                 splashVideo.play().catch(e => {
@@ -2003,6 +2015,14 @@ async function loadSplashVideo() {
                 });
             }, { once: false });
             
+            // Ждем, пока видео будет готово к воспроизведению
+            splashVideo.addEventListener('canplaythrough', () => {
+                splashVideo.play().catch(e => {
+                    console.warn('Автовоспроизведение заблокировано:', e);
+                });
+            }, { once: true });
+            
+            // Также пробуем запустить сразу
             splashVideo.play().catch(e => {
                 console.warn('Автовоспроизведение заблокировано:', e);
             });
