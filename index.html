@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Портфолио медиахудожника</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.min.js"></script>
+    <script src="config.js"></script>
+</head>
+<body>
+    <!-- Начальный экран (splash screen) -->
+    <div id="splash-screen" class="splash-screen">
+        <div class="splash-content">
+            <!-- Левая часть: видео -->
+            <div class="splash-video-container">
+                <video id="splash-video" class="splash-video" autoplay muted loop playsinline></video>
+            </div>
+            <!-- Правая часть: фотография -->
+            <div class="splash-photo">
+                <img id="splash-photo-img" src="" alt="Alisa Voronina">
+            </div>
+            <!-- Описание и кнопка -->
+            <div class="splash-description">
+                <p>Я медиадизайнер, работающий с широким кругом технологий. Занимаюсь программированием интерактивных инсталляций, создаю генеративную графику, делаю контент и программирую вольюметрические экраны, кинетические лебедки, лазеры. Так же работаю с AI графикой, делаю арт для музыкальных обложек и виджею на мероприятиях</p>
+                <a href="https://t.me/alalisasilala" class="splash-telegram-btn" target="_blank">Telegram</a>
+            </div>
+            <!-- Подсказка -->
+            <div class="splash-hint">
+                <p>Кликните по экрану, чтобы увидеть проекты</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Основной контейнер с бесконечной доской -->
+    <div id="canvas-container" class="canvas-container" style="display: none;">
+        <canvas id="background-canvas"></canvas>
+        <div id="portfolio-board" class="portfolio-board">
+            <!-- Иконки будут добавлены динамически -->
+        </div>
+    </div>
+
+    <!-- Модальное окно для просмотра работы -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <div class="modal-media-container">
+                <img id="modal-image" class="modal-media" style="display: none;" alt="Работа">
+                <video id="modal-video" class="modal-media" style="display: none;" controls></video>
+            </div>
+            <div class="modal-info">
+                <h2 id="modal-title" class="modal-title"></h2>
+                <p id="modal-description" class="modal-description"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="p5_3d_shapes.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

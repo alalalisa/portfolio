@@ -1,0 +1,49 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+.venv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Временные файлы
+*.tmp
+*.log
+
+# Environment variables (НЕ коммитить секреты!)
+.env
+.env.local
+.env.*.local
+
+# Медиафайлы - слишком большие для Git (12 ГБ)
+# Они будут храниться на внешнем сервисе (Cloudinary, S3 и т.д.)
+images/
+icons/
+alisa/
+*.mp4
+*.mov
+*.MOV
+*.MP4
+*.HEIC
+*.heic
+
+# Excel файл с исходными данными (можно добавить в Git если нужно)
+# сайт_портфолио.xlsx
+
+# Но portfolio_data.json нужен для работы сайта
+!portfolio_data.json
+

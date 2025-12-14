@@ -1,0 +1,617 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-color: #0a0a0a;
+    --accent-color: #ffffff;
+    --text-color: #e0e0e0;
+    --panel-bg: rgba(20, 20, 20, 0.95);
+    --panel-border: rgba(255, 255, 255, 0.1);
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background-color: transparent; /* Прозрачный, чтобы видеть canvas */
+    color: var(--text-color);
+    overflow: hidden;
+    height: 100vh;
+}
+
+/* Панель управления */
+.control-panel {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background: var(--panel-bg);
+    border: 1px solid var(--panel-border);
+    border-radius: 12px;
+    padding: 20px;
+    z-index: 1000;
+    min-width: 280px;
+    max-width: 320px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.control-panel.hidden {
+    transform: translateX(-100%);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.control-section {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--panel-border);
+}
+
+.control-section:last-child {
+    border-bottom: none;
+}
+
+.control-section h3 {
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--accent-color);
+}
+
+.button-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.control-btn {
+    background: transparent;
+    border: 1px solid var(--panel-border);
+    color: var(--text-color);
+    padding: 10px 16px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 0.85rem;
+    border-radius: 6px;
+    text-align: left;
+}
+
+.control-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: var(--accent-color);
+}
+
+.control-btn.active {
+    background: var(--accent-color);
+    color: var(--bg-color);
+    border-color: var(--accent-color);
+}
+
+.color-picker-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.color-picker-group label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    cursor: pointer;
+}
+
+.color-picker-group input[type="color"] {
+    width: 50px;
+    height: 30px;
+    border: 1px solid var(--panel-border);
+    border-radius: 4px;
+    cursor: pointer;
+    background: transparent;
+}
+
+.control-section label {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 0.85rem;
+}
+
+.control-section input[type="range"] {
+    width: 100%;
+    cursor: pointer;
+}
+
+.toggle-btn {
+    width: 100%;
+    padding: 10px;
+    background: var(--accent-color);
+    color: var(--bg-color);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: opacity 0.2s ease;
+}
+
+.toggle-btn:hover {
+    opacity: 0.9;
+}
+
+/* Контейнер с бесконечной доской */
+.canvas-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    cursor: grab;
+    background-color: #000000;
+}
+
+.canvas-container.dragging {
+    cursor: grabbing;
+}
+
+#background-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+    background-color: #000000;
+}
+
+.portfolio-board {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-origin: 0 0;
+    will-change: transform;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+    z-index: 2;
+}
+
+/* Иконки портфолио */
+.portfolio-icon {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    border: 2px solid transparent;
+    will-change: transform;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    contain: layout style paint;
+    isolation: isolate;
+}
+
+.portfolio-icon:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 24px rgba(255, 255, 255, 0.2);
+    border-color: var(--accent-color);
+    z-index: 100;
+}
+
+.portfolio-icon img,
+.portfolio-icon video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.portfolio-icon video {
+    pointer-events: none;
+}
+
+.portfolio-icon .icon-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    padding: 8px;
+    font-size: 0.7rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.portfolio-icon:hover .icon-overlay {
+    opacity: 1;
+}
+
+/* Теги портфолио */
+.portfolio-tag {
+    position: fixed;
+    padding: 20px 40px;
+    background: rgba(124, 191, 214, 0.2);
+    border: none;
+    border-radius: 25px;
+    color: #7CBFD6;
+    font-size: 1.8rem;
+    font-weight: 500;
+    cursor: pointer;
+    z-index: 100;
+    pointer-events: auto;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    user-select: none;
+    white-space: nowrap;
+    transform: translate(-50%, -50%);
+}
+
+.portfolio-tag:hover {
+    background: rgba(124, 191, 214, 0.3);
+    transform: translate(-50%, -50%) scale(1.1);
+    box-shadow: 0 6px 20px rgba(124, 191, 214, 0.4);
+}
+
+.portfolio-tag.active {
+    background: rgba(124, 191, 214, 0.5);
+    color: #7CBFD6;
+    box-shadow: 0 0 30px rgba(124, 191, 214, 0.8);
+    transform: translate(-50%, -50%) scale(1.15);
+}
+
+@media (max-width: 768px) {
+    .portfolio-tag {
+        font-size: 1.4rem;
+        padding: 16px 32px;
+    }
+}
+
+/* Модальное окно */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.95);
+    overflow: auto;
+    animation: fadeIn 0.3s;
+}
+
+.modal.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.modal-content {
+    position: relative;
+    background-color: var(--panel-bg);
+    margin: 2% auto;
+    padding: 0;
+    width: 90%;
+    max-width: 1200px;
+    border-radius: 8px;
+    overflow: hidden;
+    animation: slideIn 0.3s;
+    border: 1px solid var(--panel-border);
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.modal-close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    color: var(--accent-color);
+    font-size: 2.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1001;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.modal-close:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: rotate(90deg);
+}
+
+.modal-media-container {
+    width: 100%;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh;
+    max-height: 80vh;
+}
+
+.modal-media {
+    max-width: 100%;
+    max-height: 80vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+
+.modal-info {
+    padding: 2rem;
+}
+
+.modal-title {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: var(--accent-color);
+    font-weight: 400;
+}
+
+.modal-description {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--text-color);
+    white-space: pre-wrap;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .control-panel {
+        min-width: 240px;
+        max-width: 280px;
+        padding: 15px;
+    }
+
+    .portfolio-icon {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+/* Начальный экран (splash screen) */
+.splash-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: visible;
+}
+
+.splash-content {
+    display: flex;
+    width: 100%;
+    max-width: none;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    position: relative;
+    overflow: visible;
+}
+
+.splash-description {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-1225px) translateY(150px);
+    z-index: 20;
+    pointer-events: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 1300px; /* Увеличено на 100px */
+}
+
+.splash-description p {
+    font-size: 1.683em;
+    color: #7CBFD6;
+    margin-bottom: 20px;
+    font-weight: 300;
+    letter-spacing: 0px;
+    max-width: 100%;
+    line-height: 1.6;
+    white-space: normal;
+}
+
+.splash-description .splash-telegram-btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #7CBFD6;
+    text-decoration: none;
+    border: none;
+    border-radius: 25px;
+    font-size: 1em;
+    transition: all 0.3s ease;
+    transform: translateX(1100px) translateY(150px);
+}
+
+.splash-description .splash-telegram-btn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateX(1100px) translateY(150px) scale(1.05);
+}
+
+.splash-hint {
+    position: absolute;
+    bottom: 160px;
+    left: 50%;
+    transform: translateX(-750px);
+    z-index: 20;
+    pointer-events: auto;
+}
+
+.splash-hint p {
+    font-size: 1.2em;
+    color: #7CBFD6;
+    text-align: center;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+.splash-video-container {
+    flex: 1;
+    position: relative;
+    z-index: 2;
+    overflow: visible;
+    width: 100%;
+    height: 100%;
+    min-width: 0;
+    min-height: 0;
+    max-width: none;
+    max-height: none;
+}
+
+.splash-video {
+    position: absolute;
+    top: calc(50% - 240px);
+    left: 50%;
+    width: 2000%;
+    height: 2000%;
+    object-fit: contain;
+    opacity: 0.7;
+    transform: translate(-50%, -50%) scale(0.05) translateX(-500px);
+    transform-origin: center center;
+    display: block;
+    z-index: 2;
+    visibility: visible;
+}
+
+.splash-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 30px;
+    position: relative;
+    z-index: 10; /* Надпись поверх картинки */
+    overflow: visible; /* Показываем все квадратики */
+}
+
+.splash-text-word {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.splash-text-coords {
+    position: relative;
+    width: 100%;
+    min-height: 450px;
+    height: auto;
+    overflow: visible; /* Показываем все квадратики, даже если они выходят за границы */
+}
+
+.splash-text-row {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.splash-text-square {
+    flex-shrink: 0;
+    transition: transform 0.2s, opacity 0.2s, background-color 0.5s ease;
+    position: absolute;
+    display: block; /* Убеждаемся, что квадратик виден */
+    opacity: 1; /* Полная непрозрачность */
+    visibility: visible; /* Видимость */
+    box-sizing: border-box; /* Размер включает border и padding */
+    border: none; /* Нет границы, чтобы не влиять на размер */
+    padding: 0; /* Нет отступов */
+    margin: 0; /* Нет внешних отступов */
+    /* Принудительное сглаживание для одинакового рендеринга */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+    /* Убеждаемся, что размер точно задан */
+    min-width: 0;
+    min-height: 0;
+    max-width: none;
+    max-height: none;
+}
+
+.splash-text-square:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
+.splash-photo {
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 900px;
+    min-width: 400px;
+    position: relative;
+    z-index: 1; /* Картинка под надписью */
+}
+
+.splash-photo img {
+    width: 100%;
+    height: auto;
+    max-height: 80vh;
+    max-width: 100%;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    transition: transform 0.3s ease;
+}
+
+@media (max-width: 1024px) {
+    .splash-content {
+        flex-direction: column;
+        gap: 40px;
+    }
+    
+    .splash-text {
+        align-items: center;
+    }
+    
+    .splash-photo {
+        max-width: 100%;
+    }
+    
+    .splash-text-square {
+        width: 15px !important;
+        height: 15px !important;
+    }
+}

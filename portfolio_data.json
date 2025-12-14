@@ -1,0 +1,4050 @@
+[
+  {
+    "id": 1,
+    "media": {
+      "filename": "1.png",
+      "type": "image",
+      "path": "https://res.cloudinary.com/dwwyducge/image/upload/images/1",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/1"
+    },
+    "title": "LED",
+    "description": "Интерактивная инсталляция из более чем 200\nLED-палок. Цвет LED-палок изменялся над местами, где проходили люди. Система трекинга Black Traxx.",
+    "additional": {
+      "col_0": "Mediatotium / Source by Dreamlaser in Tseh",
+      "col_1": "Интерактивная инсталляция из более чем 200\nLED-палок. Цвет LED-палок изменялся над местами, где проходили люди. Система трекинга Black Traxx.",
+      "col_2": "Interactive installation",
+      "col_3": "LED"
+    }
+  },
+  {
+    "id": 2,
+    "media": {
+      "filename": "2.mp4",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/2",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/2"
+    },
+    "title": "Generative graphics",
+    "description": "Генеративная графика",
+    "additional": {
+      "col_1": "Генеративная графика",
+      "col_2": "Generative graphics"
+    }
+  },
+  {
+    "id": 3,
+    "media": {
+      "filename": "3.png",
+      "type": "image",
+      "path": "https://res.cloudinary.com/dwwyducge/image/upload/images/3",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/3"
+    },
+    "title": "Interactive installation",
+    "description": "На основе работы Якова Хорева со спиралями из текста, я создала интерактивную инсталляцию. Текст жил своей жизнью ,но когда человек останавливался на нем, буквы собирались в вопросы. Яков собрал коллекцию из 200 мотивирующих вопросов, которые волнуют посетителей студии «Тихая» и мультимедиа-арт-пространства ЦЕХ*. Я превратила вопросы в трехмерные объекты, которые двигаются в виртуальном пространстве в соответствии с законами физики. Созданное «пространство вопросов» живет по собственным законам, но вместе с тем открыто к воздействию со стороны зрителей.",
+    "additional": {
+      "col_0": "Смешаная техника/The Pulse of Life студия Тихая и Dreamlaser Tseh",
+      "col_1": "На основе работы Якова Хорева со спиралями из текста, я создала интерактивную инсталляцию. Текст жил своей жизнью ,но когда человек останавливался на нем, буквы собирались в вопросы. Яков собрал коллекцию из 200 мотивирующих вопросов, которые волнуют посетителей студии «Тихая» и мультимедиа-арт-пространства ЦЕХ*. Я превратила вопросы в трехмерные объекты, которые двигаются в виртуальном пространстве в соответствии с законами физики. Созданное «пространство вопросов» живет по собственным законам, но вместе с тем открыто к воздействию со стороны зрителей.",
+      "col_2": "Interactive installation"
+    }
+  },
+  {
+    "id": 4,
+    "media": {
+      "filename": "4.mp4",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/4",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/4"
+    },
+    "title": "Generative graphics",
+    "description": "mix cover Radiant - Dissident",
+    "additional": {
+      "col_0": "mix cover Radiant - Dissident",
+      "col_2": "Generative graphics"
+    }
+  },
+  {
+    "id": 5,
+    "media": {
+      "filename": "5.MP4",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/5",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/5"
+    },
+    "title": "Vjing",
+    "description": "Генеративный виджеинг на диодных и вольюметрическом экранах",
+    "additional": {
+      "col_0": "Intervals Festival 2025 Night program",
+      "col_1": "Генеративный виджеинг на диодных и вольюметрическом экранах",
+      "col_2": "Volumetric",
+      "col_3": "Vjing"
+    }
+  },
+  {
+    "id": 6,
+    "media": {
+      "filename": "6.jpg",
+      "type": "image",
+      "path": "https://res.cloudinary.com/dwwyducge/image/upload/images/6",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/6"
+    },
+    "title": "Vjing",
+    "description": "Работаем",
+    "additional": {
+      "col_0": "Работаем",
+      "col_2": "Vjing"
+    }
+  },
+  {
+    "id": 7,
+    "media": {
+      "filename": "7.png",
+      "type": "image",
+      "path": "https://res.cloudinary.com/dwwyducge/image/upload/images/7",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/7"
+    },
+    "title": "Laser programming",
+    "description": "NUR 2022/A.R.R.C 1.0 Dreamlaser\n\nКонтент для лазерных модулей и лазер-баров",
+    "additional": {
+      "col_0": "NUR 2022/A.R.R.C 1.0 Dreamlaser",
+      "col_1": "Контент для лазерных модулей и лазер-баров",
+      "col_2": "Laser programming"
+    }
+  },
+  {
+    "id": 8,
+    "media": {
+      "filename": "8.png",
+      "type": "image",
+      "path": "https://res.cloudinary.com/dwwyducge/image/upload/images/8",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/8"
+    },
+    "title": "Tracking",
+    "description": "Инсталляция на действующем производстве. Сетап состоял из лазеров, зеркал установленных на кран-балке и дальномеров, с помощью которых мы получали информацию о местоположении кран-балки. Кран-балкой управлял работник производства. Я программировала инсталляцию и прописывала лазерный контент.",
+    "additional": {
+      "col_0": "Ночь Музеев/Dialog Dreamlaser г.Чехов",
+      "col_1": "Инсталляция на действующем производстве. Сетап состоял из лазеров, зеркал установленных на кран-балке и дальномеров, с помощью которых мы получали информацию о местоположении кран-балки. Кран-балкой управлял работник производства. Я программировала инсталляцию и прописывала лазерный контент.",
+      "col_2": "Laser programming",
+      "col_3": "Tracking"
+    }
+  },
+  {
+    "id": 9,
+    "media": {
+      "filename": "9.jpg",
+      "type": "image",
+      "path": "https://res.cloudinary.com/dwwyducge/image/upload/images/9",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/9"
+    },
+    "title": "Vjing",
+    "description": "Горьковская/Dreamlaser Tseh\n\nГенеративный виджеинг",
+    "additional": {
+      "col_0": "Горьковская/Dreamlaser Tseh",
+      "col_1": "Генеративный виджеинг",
+      "col_2": "Vjing"
+    }
+  },
+  {
+    "id": 10,
+    "media": {
+      "filename": "10.jpg",
+      "type": "image",
+      "path": "https://res.cloudinary.com/dwwyducge/image/upload/images/10",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/10"
+    },
+    "title": "Vjing",
+    "description": "Горьковская/Dreamlaser Tseh\n\nГенеративный виджеинг",
+    "additional": {
+      "col_0": "Горьковская/Dreamlaser Tseh",
+      "col_1": "Генеративный виджеинг",
+      "col_2": "Vjing"
+    }
+  },
+  {
+    "id": 11,
+    "media": {
+      "filename": "11.jpg",
+      "type": "image",
+      "path": "https://res.cloudinary.com/dwwyducge/image/upload/images/11",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/11"
+    },
+    "title": "Vjing",
+    "description": "Генеративный виджеинг на диодных и вольюметрическом экранах",
+    "additional": {
+      "col_0": "Intervals Festival 2025 Night program",
+      "col_1": "Генеративный виджеинг на диодных и вольюметрическом экранах",
+      "col_2": "Volumetric",
+      "col_3": "Vjing"
+    }
+  },
+  {
+    "id": 12,
+    "media": {
+      "filename": "12.MP4",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/12",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/12"
+    },
+    "title": "Vjing",
+    "description": "Генеративный виджеинг на диодных и вольюметрическом экранах",
+    "additional": {
+      "col_0": "Intervals Festival 2025 Night program",
+      "col_1": "Генеративный виджеинг на диодных и вольюметрическом экранах",
+      "col_2": "Volumetric",
+      "col_3": "Vjing"
+    }
+  },
+  {
+    "id": 13,
+    "media": {
+      "filename": "13.png",
+      "type": "image",
+      "path": "https://res.cloudinary.com/dwwyducge/image/upload/images/13",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/13"
+    },
+    "title": "Vjing",
+    "description": "Ambient in Tseh\n\nГенеративный виджеинг",
+    "additional": {
+      "col_0": "Ambient in Tseh",
+      "col_1": "Генеративный виджеинг",
+      "col_2": "Vjing"
+    }
+  },
+  {
+    "id": 14,
+    "media": {
+      "filename": "14.png",
+      "type": "image",
+      "path": "https://res.cloudinary.com/dwwyducge/image/upload/images/14",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/14"
+    },
+    "title": "Vjing",
+    "description": "Концерт Николы Мельникова и Ансамбля Окто\n\nГенеративный виджеинг",
+    "additional": {
+      "col_0": "Концерт Николы Мельникова и Ансамбля Окто",
+      "col_1": "Генеративный виджеинг",
+      "col_2": "Vjing"
+    }
+  },
+  {
+    "id": 15,
+    "media": {
+      "filename": "15.jpg",
+      "type": "image",
+      "path": "https://res.cloudinary.com/dwwyducge/image/upload/images/15",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/15"
+    },
+    "title": "Laser programming",
+    "description": "Мастер класс по программированию аудиореактивной инсталляции с лазерами Dreamlaser",
+    "additional": {
+      "col_0": "Мастер класс по программированию аудиореактивной инсталляции с лазерами Dreamlaser",
+      "col_2": "Interactive installation",
+      "col_3": "Laser programming"
+    }
+  },
+  {
+    "id": 16,
+    "media": {
+      "filename": "16.png",
+      "type": "image",
+      "path": "https://res.cloudinary.com/dwwyducge/image/upload/images/16",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/16"
+    },
+    "title": "Vjing",
+    "description": "Концерт Николы Мельникова и Ансамбля Окто\n\nГенеративный виджеинг",
+    "additional": {
+      "col_0": "Концерт Николы Мельникова и Ансамбля Окто",
+      "col_1": "Генеративный виджеинг",
+      "col_2": "Vjing"
+    }
+  },
+  {
+    "id": 17,
+    "media": {
+      "filename": "17.jpg",
+      "type": "image",
+      "path": "https://res.cloudinary.com/dwwyducge/image/upload/images/17",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/17"
+    },
+    "title": "Vjing",
+    "description": "Горьковская/Dreamlaser Tseh\n\nГенеративный виджеинг",
+    "additional": {
+      "col_0": "Горьковская/Dreamlaser Tseh",
+      "col_1": "Генеративный виджеинг",
+      "col_2": "Vjing"
+    }
+  },
+  {
+    "id": 18,
+    "media": {
+      "filename": "18.png",
+      "type": "image",
+      "path": "https://res.cloudinary.com/dwwyducge/image/upload/images/18",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/18"
+    },
+    "title": "Vjing",
+    "description": "Intervals Festival 2023 Night program\n\nГенеративный виджеинг",
+    "additional": {
+      "col_0": "Intervals Festival 2023 Night program",
+      "col_1": "Генеративный виджеинг",
+      "col_2": "Vjing"
+    }
+  },
+  {
+    "id": 19,
+    "media": {
+      "filename": "19.MP4",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/19",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/19"
+    },
+    "title": "Vjing",
+    "description": "Генеративный виджеинг на диодных и вольюметрическом экранах",
+    "additional": {
+      "col_0": "Intervals Festival 2025 Night program",
+      "col_1": "Генеративный виджеинг на диодных и вольюметрическом экранах",
+      "col_2": "Volumetric",
+      "col_3": "Vjing"
+    }
+  },
+  {
+    "id": 20,
+    "media": {
+      "filename": "20.mov",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/20",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/20"
+    },
+    "title": "Generative graphics",
+    "description": "Обложка для микса с использованием генеративной графики и неросети.",
+    "additional": {
+      "col_0": "mix cover Radiant - Kokokei",
+      "col_1": "Обложка для микса с использованием генеративной графики и неросети.",
+      "col_2": "Generative graphics"
+    }
+  },
+  {
+    "id": 21,
+    "media": {
+      "filename": "21.MP4",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/21",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/21"
+    },
+    "title": "Vjing",
+    "description": "Генеративный виджеинг на диодных и вольюметрическом экранах",
+    "additional": {
+      "col_0": "Intervals Festival 2025 Night program",
+      "col_1": "Генеративный виджеинг на диодных и вольюметрическом экранах",
+      "col_2": "Volumetric",
+      "col_3": "Vjing"
+    }
+  },
+  {
+    "id": 22,
+    "media": {
+      "filename": "22.png",
+      "type": "image",
+      "path": "https://res.cloudinary.com/dwwyducge/image/upload/images/22",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/22"
+    },
+    "title": "Vjing",
+    "description": "Intervals Festival 2023 Night program\n\nГенеративный виджеинг",
+    "additional": {
+      "col_0": "Intervals Festival 2023 Night program",
+      "col_1": "Генеративный виджеинг",
+      "col_2": "Vjing"
+    }
+  },
+  {
+    "id": 23,
+    "media": {
+      "filename": "23.MP4",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/23",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/23"
+    },
+    "title": "Vjing",
+    "description": "Генеративный виджеинг на диодных и вольюметрическом экранах",
+    "additional": {
+      "col_0": "Intervals Festival 2025 Night program",
+      "col_1": "Генеративный виджеинг на диодных и вольюметрическом экранах",
+      "col_2": "Volumetric",
+      "col_3": "Vjing"
+    }
+  },
+  {
+    "id": 24,
+    "media": {
+      "filename": "24.MP4",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/24",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/24"
+    },
+    "title": "Vjing",
+    "description": "Intervals Festival 2025 Night program\n\nIntervals Festival 2025 Night program\n\nVolumetric",
+    "additional": {
+      "col_0": "Intervals Festival 2025 Night program",
+      "col_1": "Intervals Festival 2025 Night program",
+      "col_2": "Volumetric",
+      "col_3": "Vjing"
+    }
+  },
+  {
+    "id": 25,
+    "media": {
+      "filename": "25.png",
+      "type": "image",
+      "path": "https://res.cloudinary.com/dwwyducge/image/upload/images/25",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/25"
+    },
+    "title": "Vjing",
+    "description": "Long Arm/Tseh\n\nГенеративный виджеинг",
+    "additional": {
+      "col_0": "Long Arm/Tseh",
+      "col_1": "Генеративный виджеинг",
+      "col_2": "Vjing"
+    }
+  },
+  {
+    "id": 26,
+    "media": {
+      "filename": "26.MP4",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/26",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/26"
+    },
+    "title": "Vjing",
+    "description": "Генеративный виджеинг на диодных и вольюметрическом экранах",
+    "additional": {
+      "col_0": "Intervals Festival 2025 Night program",
+      "col_1": "Генеративный виджеинг на диодных и вольюметрическом экранах",
+      "col_2": "Volumetric",
+      "col_3": "Vjing"
+    }
+  },
+  {
+    "id": 27,
+    "media": {
+      "filename": "27.jpg",
+      "type": "image",
+      "path": "https://res.cloudinary.com/dwwyducge/image/upload/images/27",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/27"
+    },
+    "title": "Vjing",
+    "description": "Генеративный виджеинг на диодных и вольюметрическом экранах",
+    "additional": {
+      "col_0": "Intervals Festival 2025 Night program",
+      "col_1": "Генеративный виджеинг на диодных и вольюметрическом экранах",
+      "col_2": "Volumetric",
+      "col_3": "Vjing"
+    }
+  },
+  {
+    "id": 28,
+    "media": {
+      "filename": "28.MP4",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/28",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/28"
+    },
+    "title": "Vjing",
+    "description": "Генеративный виджеинг на диодных и вольюметрическом экранах",
+    "additional": {
+      "col_0": "Intervals Festival 2025 Night program",
+      "col_1": "Генеративный виджеинг на диодных и вольюметрическом экранах",
+      "col_2": "Volumetric",
+      "col_3": "Vjing"
+    }
+  },
+  {
+    "id": 29,
+    "media": {
+      "filename": "29.mp4",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/29",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/29"
+    },
+    "title": "Vjing",
+    "description": "Intervals Festival 2025 Night program\n\nIntervals Festival 2025 Night program\n\nVolumetric",
+    "additional": {
+      "col_0": "Intervals Festival 2025 Night program",
+      "col_1": "Intervals Festival 2025 Night program",
+      "col_2": "Volumetric",
+      "col_3": "Vjing"
+    }
+  },
+  {
+    "id": 30,
+    "media": {
+      "filename": "30.png",
+      "type": "image",
+      "path": "https://res.cloudinary.com/dwwyducge/image/upload/images/30",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/30"
+    },
+    "title": "Vjing",
+    "description": "New Star Camp 2022\n\nПрограммирование лазерных излучателей\n\nLaser programming",
+    "additional": {
+      "col_0": "New Star Camp 2022",
+      "col_1": "Программирование лазерных излучателей",
+      "col_2": "Laser programming",
+      "col_3": "Vjing"
+    }
+  },
+  {
+    "id": 31,
+    "media": {
+      "filename": "31.mp4",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/31",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/31"
+    },
+    "title": "Volumetric",
+    "description": "Тест вольюметрического экрана Tseh",
+    "additional": {
+      "col_0": "Тест вольюметрического экрана Tseh",
+      "col_2": "Volumetric"
+    }
+  },
+  {
+    "id": 32,
+    "media": {
+      "filename": "32.mp4",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/32",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/32"
+    },
+    "title": "Interactive installation",
+    "description": "Новогодняя инсталляция \"Снежки\" Tseh\n\nПрограммирование интерактивной инсталляции",
+    "additional": {
+      "col_0": "Новогодняя инсталляция \"Снежки\" Tseh",
+      "col_1": "Программирование интерактивной инсталляции",
+      "col_2": "Interactive installation"
+    }
+  },
+  {
+    "id": 33,
+    "media": {
+      "filename": "33.png",
+      "type": "image",
+      "path": "https://res.cloudinary.com/dwwyducge/image/upload/images/33",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/33"
+    },
+    "title": "LED",
+    "description": "Программирование и управление лазерными излучателями, лазер барами и диодной лентой",
+    "additional": {
+      "col_0": "Горьковская/Dreamlaser Tseh",
+      "col_1": "Программирование и управление лазерными излучателями, лазер барами и диодной лентой",
+      "col_2": "Laser programming",
+      "col_3": "Vjing",
+      "col_4": "LED"
+    }
+  },
+  {
+    "id": 34,
+    "media": {
+      "filename": "34.mp4",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/34",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/34"
+    },
+    "title": "Volumetric",
+    "description": "АТОМ/Dreamlaser\n\nСоздание контента для вольюметричксого экрана",
+    "additional": {
+      "col_0": "АТОМ/Dreamlaser",
+      "col_1": "Создание контента для вольюметричксого экрана",
+      "col_2": "Volumetric"
+    }
+  },
+  {
+    "id": 35,
+    "media": {
+      "filename": "35.png",
+      "type": "image",
+      "path": "https://res.cloudinary.com/dwwyducge/image/upload/images/35",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/35"
+    },
+    "title": "Vjing",
+    "description": "Intervals Festival 2023 Night program\n\nГенеративный виджеинг",
+    "additional": {
+      "col_0": "Intervals Festival 2023 Night program",
+      "col_1": "Генеративный виджеинг",
+      "col_2": "Vjing"
+    }
+  },
+  {
+    "id": 36,
+    "media": {
+      "filename": "36.mp4",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/36",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/36"
+    },
+    "title": "Generative graphics",
+    "description": "Отправной точкой для работ был 50-летний юбилей отправки в космос радиосигнала о человечестве группой учёных в Аресибо, Пуэрто-Рико.\nМы решили предположить, что радиосигнал действительно дошёл до некой формы жизни из далёкого космоса, и теперь она пытается его расшифровать. Мы взяли исходный бинарный код сообщения и поняли, что зашифрованная в нём информация очень \"человеческая\", и другая форма разума вряд ли сможет декодировать его.\nПроконсультировавшись с ChatGPT 40, - единственной доступной на данный момент не-человеческой формой разума, - мы попробовали интерпретировать этот код как информацию о 2D или 3D координатах, расстоянии, 3D-объектах и даже данных о цвете. Ничего из этого в итоге не имело смысла, поэтому форма разума перестаёт пытаться расшифровать сообщение и просто наслаждается красотой космоса :)\nВ звуковой дорожке мы сначала буквально воспроизвели исходный радиосигнал, задав сдвижку на полтона вверх либо вниз для 0 и 1, с той же частотой, с которой было отправлено сообщение в 1974 году. Затем, при попытках\n\"расшифровки\", эта звуковая дорожка изменялась с разной логикой.\nУ нас естественным образом получился очень мощный вайб компьтерного арта 1970-х, что в рамках этого опен-колла было очень органично.",
+    "additional": {
+      "col_0": "INBOX: 1 Работа, сделанная совместно с Арсением Тюриным для Опен-колла, в котором мы заняли первое место. Опен-колл проводился немецким фондом art meets science -\nStiftung Herbert W. Franke и назывался CONTACT\nАТТЕМРТ.",
+      "col_1": "Отправной точкой для работ был 50-летний юбилей отправки в космос радиосигнала о человечестве группой учёных в Аресибо, Пуэрто-Рико.\nМы решили предположить, что радиосигнал действительно дошёл до некой формы жизни из далёкого космоса, и теперь она пытается его расшифровать. Мы взяли исходный бинарный код сообщения и поняли, что зашифрованная в нём информация очень \"человеческая\", и другая форма разума вряд ли сможет декодировать его.\nПроконсультировавшись с ChatGPT 40, - единственной доступной на данный момент не-человеческой формой разума, - мы попробовали интерпретировать этот код как информацию о 2D или 3D координатах, расстоянии, 3D-объектах и даже данных о цвете. Ничего из этого в итоге не имело смысла, поэтому форма разума перестаёт пытаться расшифровать сообщение и просто наслаждается красотой космоса :)\nВ звуковой дорожке мы сначала буквально воспроизвели исходный радиосигнал, задав сдвижку на полтона вверх либо вниз для 0 и 1, с той же частотой, с которой было отправлено сообщение в 1974 году. Затем, при попытках\n\"расшифровки\", эта звуковая дорожка изменялась с разной логикой.\nУ нас естественным образом получился очень мощный вайб компьтерного арта 1970-х, что в рамках этого опен-колла было очень органично.",
+      "col_2": "Generative graphics"
+    }
+  },
+  {
+    "id": 37,
+    "media": {
+      "filename": "37.mp4",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/37",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/37"
+    },
+    "title": "Vjing",
+    "description": "New Star Camp 2025 Vibes/Dreamlaser\n\nГенеративный виджеинг",
+    "additional": {
+      "col_0": "New Star Camp 2025 Vibes/Dreamlaser",
+      "col_1": "Генеративный виджеинг",
+      "col_2": "Vjing"
+    }
+  },
+  {
+    "id": 38,
+    "media": {
+      "filename": "38.mp4",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/38",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/38"
+    },
+    "title": "Vjing",
+    "description": "Intervals Festival 2025 Night program\n\nГенеративный виджеинг\n\nVolumetric",
+    "additional": {
+      "col_0": "Intervals Festival 2025 Night program",
+      "col_1": "Генеративный виджеинг",
+      "col_2": "Volumetric",
+      "col_3": "Vjing"
+    }
+  },
+  {
+    "id": 39,
+    "media": {
+      "filename": "39.png",
+      "type": "image",
+      "path": "https://res.cloudinary.com/dwwyducge/image/upload/images/39",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/39"
+    },
+    "title": "Vjing",
+    "description": "801 День города Нижнего Новгорода\n\nГенеративный виджеинг",
+    "additional": {
+      "col_0": "801 День города Нижнего Новгорода",
+      "col_1": "Генеративный виджеинг",
+      "col_2": "Vjing"
+    }
+  },
+  {
+    "id": 40,
+    "media": {
+      "filename": "40.mp4",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/40",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/40"
+    },
+    "title": "Generative graphics",
+    "description": "Отправной точкой для работ был 50-летний юбилей отправки в космос радиосигнала о человечестве группой учёных в Аресибо, Пуэрто-Рико.\nМы решили предположить, что радиосигнал действительно дошёл до некой формы жизни из далёкого космоса, и теперь она пытается его расшифровать. Мы взяли исходный бинарный код сообщения и поняли, что зашифрованная в нём информация очень \"человеческая\", и другая форма разума вряд ли сможет декодировать его.\nПроконсультировавшись с ChatGPT 40, - единственной доступной на данный момент не-человеческой формой разума, - мы попробовали интерпретировать этот код как информацию о 2D или 3D координатах, расстоянии, 3D-объектах и даже данных о цвете. Ничего из этого в итоге не имело смысла, поэтому форма разума перестаёт пытаться расшифровать сообщение и просто наслаждается красотой космоса :)\nВ звуковой дорожке мы сначала буквально воспроизвели исходный радиосигнал, задав сдвижку на полтона вверх либо вниз для 0 и 1, с той же частотой, с которой было отправлено сообщение в 1974 году. Затем, при попытках\n\"расшифровки\", эта звуковая дорожка изменялась с разной логикой.\nУ нас естественным образом получился очень мощный вайб компьтерного арта 1970-х, что в рамках этого опен-колла было очень органично.",
+    "additional": {
+      "col_0": "INBOX: 1 Работа, сделанная совместно с Арсением Тюриным для Опен-колла, в котором мы заняли первое место. Опен-колл проводился немецким фондом art meets science -\nStiftung Herbert W. Franke и назывался CONTACT\nАТТЕМРТ.",
+      "col_1": "Отправной точкой для работ был 50-летний юбилей отправки в космос радиосигнала о человечестве группой учёных в Аресибо, Пуэрто-Рико.\nМы решили предположить, что радиосигнал действительно дошёл до некой формы жизни из далёкого космоса, и теперь она пытается его расшифровать. Мы взяли исходный бинарный код сообщения и поняли, что зашифрованная в нём информация очень \"человеческая\", и другая форма разума вряд ли сможет декодировать его.\nПроконсультировавшись с ChatGPT 40, - единственной доступной на данный момент не-человеческой формой разума, - мы попробовали интерпретировать этот код как информацию о 2D или 3D координатах, расстоянии, 3D-объектах и даже данных о цвете. Ничего из этого в итоге не имело смысла, поэтому форма разума перестаёт пытаться расшифровать сообщение и просто наслаждается красотой космоса :)\nВ звуковой дорожке мы сначала буквально воспроизвели исходный радиосигнал, задав сдвижку на полтона вверх либо вниз для 0 и 1, с той же частотой, с которой было отправлено сообщение в 1974 году. Затем, при попытках\n\"расшифровки\", эта звуковая дорожка изменялась с разной логикой.\nУ нас естественным образом получился очень мощный вайб компьтерного арта 1970-х, что в рамках этого опен-колла было очень органично.",
+      "col_2": "Generative graphics"
+    }
+  },
+  {
+    "id": 41,
+    "media": {
+      "filename": "41.mov",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/41",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/41"
+    },
+    "title": "Vjing",
+    "description": "New Star Camp 2025 Vibes/Dreamlaser\n\nГенеративный виджеинг",
+    "additional": {
+      "col_0": "New Star Camp 2025 Vibes/Dreamlaser",
+      "col_1": "Генеративный виджеинг",
+      "col_2": "Vjing"
+    }
+  },
+  {
+    "id": 42,
+    "media": {
+      "filename": "42.mp4",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/42",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/42"
+    },
+    "title": "RICS Dreamlaser",
+    "description": "Создание генеративного контента для инсталляции\n\nGenerative graphics",
+    "additional": {
+      "col_0": "RICS Dreamlaser",
+      "col_1": "Создание генеративного контента для инсталляции",
+      "col_2": "Generative graphics"
+    }
+  },
+  {
+    "id": 43,
+    "media": {
+      "filename": "43.mov",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/43",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/43"
+    },
+    "title": "Vjing",
+    "description": "New Star Camp 2025 Vibes/Dreamlaser\n\nГенеративный виджеинг",
+    "additional": {
+      "col_0": "New Star Camp 2025 Vibes/Dreamlaser",
+      "col_1": "Генеративный виджеинг",
+      "col_2": "Vjing"
+    }
+  },
+  {
+    "id": 44,
+    "media": {
+      "filename": "44.mov",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/44",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/44"
+    },
+    "title": "Vjing",
+    "description": "New Star Camp 2025 Vibes/Dreamlaser\n\nГенеративный виджеинг",
+    "additional": {
+      "col_0": "New Star Camp 2025 Vibes/Dreamlaser",
+      "col_1": "Генеративный виджеинг",
+      "col_2": "Vjing"
+    }
+  },
+  {
+    "id": 45,
+    "media": {
+      "filename": "45.MP4",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/45",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/45"
+    },
+    "title": "Vjing",
+    "description": "Intervals Festival 2025 Night program\n\nIntervals Festival 2025 Night program\n\nVolumetric",
+    "additional": {
+      "col_0": "Intervals Festival 2025 Night program",
+      "col_1": "Intervals Festival 2025 Night program",
+      "col_2": "Volumetric",
+      "col_3": "Vjing"
+    }
+  },
+  {
+    "id": 46,
+    "media": {
+      "filename": "46.png",
+      "type": "image",
+      "path": "https://res.cloudinary.com/dwwyducge/image/upload/images/46",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/46"
+    },
+    "title": "VK",
+    "description": "Программирование интерактивной фотозоны\n\nInteractive installation\n\nGenerative graphics",
+    "additional": {
+      "col_0": "VK",
+      "col_1": "Программирование интерактивной фотозоны",
+      "col_2": "Interactive installation",
+      "col_3": "Generative graphics"
+    }
+  },
+  {
+    "id": 47,
+    "media": {
+      "filename": "47.mp4",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/47",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/47"
+    },
+    "title": "Generative graphics",
+    "description": "Генеративная графика",
+    "additional": {
+      "col_1": "Генеративная графика",
+      "col_2": "Generative graphics"
+    }
+  },
+  {
+    "id": 48,
+    "media": {
+      "filename": "48.mp4",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/48",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/48"
+    },
+    "title": "CISTERN/Dreamlaser",
+    "description": "Интерактивная инсталляция\n\nInteractive installation\n\nGenerative graphics",
+    "additional": {
+      "col_0": "CISTERN/Dreamlaser",
+      "col_1": "Интерактивная инсталляция",
+      "col_2": "Interactive installation",
+      "col_3": "Generative graphics"
+    }
+  },
+  {
+    "id": 49,
+    "media": {
+      "filename": "49.mp4",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/49",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/49"
+    },
+    "title": "Generative graphics",
+    "description": "Участвовала в создании контента и программировании интерактивного пола",
+    "additional": {
+      "col_0": "Точка Сборки/Radugadesign",
+      "col_1": "Участвовала в создании контента и программировании интерактивного пола",
+      "col_2": "Interactive installation",
+      "col_3": "Generative graphics"
+    }
+  },
+  {
+    "id": 50,
+    "media": {
+      "filename": "50.mp4",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/50",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/50"
+    },
+    "title": "LED",
+    "description": "Программирование аудиореактивной подсветки и интерактивности",
+    "additional": {
+      "col_0": "Звуковая Пергола совместно с Soundartist/Generative Gallery",
+      "col_1": "Программирование аудиореактивной подсветки и интерактивности",
+      "col_2": "Interactive installation",
+      "col_3": "LED"
+    }
+  },
+  {
+    "id": 51,
+    "media": {
+      "filename": "51.mp4",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/51",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/51"
+    },
+    "title": "Vjing",
+    "description": "Intervals Festival 2025 Night program\n\nГенеративный виджеинг\n\nVolumetric",
+    "additional": {
+      "col_0": "Intervals Festival 2025 Night program",
+      "col_1": "Генеративный виджеинг",
+      "col_2": "Volumetric",
+      "col_3": "Vjing"
+    }
+  },
+  {
+    "id": 52,
+    "media": {
+      "filename": "52.MP4",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/52",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/52"
+    },
+    "title": "Vjing",
+    "description": "Intervals Festival 2025 Night program\n\nГенеративный виджеинг\n\nVolumetric",
+    "additional": {
+      "col_0": "Intervals Festival 2025 Night program",
+      "col_1": "Генеративный виджеинг",
+      "col_2": "Volumetric",
+      "col_3": "Vjing"
+    }
+  },
+  {
+    "id": 53,
+    "media": {
+      "filename": "53.jpg",
+      "type": "image",
+      "path": "https://res.cloudinary.com/dwwyducge/image/upload/images/53",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/53"
+    },
+    "title": "Layers/Dreamlaser",
+    "description": "Создание части контента, программирование интерфейса",
+    "additional": {
+      "col_0": "Layers/Dreamlaser",
+      "col_1": "Создание части контента, программирование интерфейса",
+      "col_2": "Interactive installation",
+      "col_3": "Generative graphics"
+    }
+  },
+  {
+    "id": 54,
+    "media": {
+      "filename": "54.mp4",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/54",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/54"
+    },
+    "title": "Generative graphics",
+    "description": "CISTERN/Фотозона Т-Банка\n\nГенеративная графика",
+    "additional": {
+      "col_0": "CISTERN/Фотозона Т-Банка",
+      "col_1": "Генеративная графика",
+      "col_2": "Generative graphics"
+    }
+  },
+  {
+    "id": 55,
+    "media": {
+      "filename": "55.mp4",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/55",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/55"
+    },
+    "title": "CISTERN/Dreamlaser",
+    "description": "Программирование интерактивной инсталляции\n\nInteractive installation\n\nGenerative graphics",
+    "additional": {
+      "col_0": "CISTERN/Dreamlaser",
+      "col_1": "Программирование интерактивной инсталляции",
+      "col_2": "Interactive installation",
+      "col_3": "Generative graphics"
+    }
+  },
+  {
+    "id": 56,
+    "media": {
+      "filename": "56.mp4",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/56",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/56"
+    },
+    "title": "CISTERN/Dreamlaser",
+    "description": "Программирование интерактивной инсталляции\n\nInteractive installation\n\nGenerative graphics",
+    "additional": {
+      "col_0": "CISTERN/Dreamlaser",
+      "col_1": "Программирование интерактивной инсталляции",
+      "col_2": "Interactive installation",
+      "col_3": "Generative graphics"
+    }
+  },
+  {
+    "id": 57,
+    "media": {
+      "filename": "57.MOV",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/57",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/57"
+    },
+    "title": "Game",
+    "description": "Intervals Festival 2024 Аэрохоккей Т2\n\nПрограммирование интерактивной инсталляции\n\nInteractive installation",
+    "additional": {
+      "col_0": "Intervals Festival 2024 Аэрохоккей Т2",
+      "col_1": "Программирование интерактивной инсталляции",
+      "col_2": "Interactive installation",
+      "col_3": "Game"
+    }
+  },
+  {
+    "id": 58,
+    "media": {
+      "filename": "58.MOV",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/58",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/58"
+    },
+    "title": "Game",
+    "description": "Intervals Festival 2024 Аэрохоккей Т2\n\nПрограммирование интерактивной инсталляции\n\nInteractive installation",
+    "additional": {
+      "col_0": "Intervals Festival 2024 Аэрохоккей Т2",
+      "col_1": "Программирование интерактивной инсталляции",
+      "col_2": "Interactive installation",
+      "col_3": "Game"
+    }
+  },
+  {
+    "id": 59,
+    "media": {
+      "filename": "59.MOV",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/59",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/59"
+    },
+    "title": "Vjing",
+    "description": "Intervals Festival 2024 Night program\n\nГенеративный виджеинг",
+    "additional": {
+      "col_0": "Intervals Festival 2024 Night program",
+      "col_1": "Генеративный виджеинг",
+      "col_2": "Vjing"
+    }
+  },
+  {
+    "id": 60,
+    "media": {
+      "filename": "60.MOV",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/60",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/60"
+    },
+    "title": "Vjing",
+    "description": "Intervals Festival 2024 Night program\n\nГенеративный виджеинг",
+    "additional": {
+      "col_0": "Intervals Festival 2024 Night program",
+      "col_1": "Генеративный виджеинг",
+      "col_2": "Vjing"
+    }
+  },
+  {
+    "id": 61,
+    "media": {
+      "filename": "61.png",
+      "type": "image",
+      "path": "https://res.cloudinary.com/dwwyducge/image/upload/images/61",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/61"
+    },
+    "title": "Laser programming",
+    "description": "Мастер класс по программированию аудиореактивной инсталляции с лазерами Dreamlaser",
+    "additional": {
+      "col_0": "Мастер класс по программированию аудиореактивной инсталляции с лазерами Dreamlaser",
+      "col_2": "Laser programming",
+      "col_3": "Interactive installation"
+    }
+  },
+  {
+    "id": 62,
+    "media": {
+      "filename": "62.MOV",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/62",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/62"
+    },
+    "title": "Vjing",
+    "description": "Intervals Festival 2024 Night program\n\nГенеративный виджеинг",
+    "additional": {
+      "col_0": "Intervals Festival 2024 Night program",
+      "col_1": "Генеративный виджеинг",
+      "col_2": "Vjing"
+    }
+  },
+  {
+    "id": 63,
+    "media": {
+      "filename": "63.MOV",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/63",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/63"
+    },
+    "title": "Vjing",
+    "description": "Intervals Festival 2024 Night program\n\nГенеративный виджеинг",
+    "additional": {
+      "col_0": "Intervals Festival 2024 Night program",
+      "col_1": "Генеративный виджеинг",
+      "col_2": "Vjing"
+    }
+  },
+  {
+    "id": 64,
+    "media": {
+      "filename": "64.jpg",
+      "type": "image",
+      "path": "https://res.cloudinary.com/dwwyducge/image/upload/images/64",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/64"
+    },
+    "title": "Vjing",
+    "description": "Горьковская/Dreamlaser Tseh\n\nГенеративный виджеинг",
+    "additional": {
+      "col_0": "Горьковская/Dreamlaser Tseh",
+      "col_1": "Генеративный виджеинг",
+      "col_2": "Vjing"
+    }
+  },
+  {
+    "id": 65,
+    "media": {
+      "filename": "65.jpg",
+      "type": "image",
+      "path": "https://res.cloudinary.com/dwwyducge/image/upload/images/65",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/65"
+    },
+    "title": "LED",
+    "description": "Интерактивная инсталляция из более чем 200\nLED-палок. Цвет LED-палок изменялся над местами, где проходили люди. Система трекинга Black Traxx.",
+    "additional": {
+      "col_0": "Mediatotium / Source by Dreamlaser in Tseh",
+      "col_1": "Интерактивная инсталляция из более чем 200\nLED-палок. Цвет LED-палок изменялся над местами, где проходили люди. Система трекинга Black Traxx.",
+      "col_2": "Interactive installation",
+      "col_3": "LED"
+    }
+  },
+  {
+    "id": 66,
+    "media": {
+      "filename": "66.mp4",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/66",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/66"
+    },
+    "title": "Generative graphics",
+    "description": "Генеративная графика",
+    "additional": {
+      "col_1": "Генеративная графика",
+      "col_2": "Generative graphics"
+    }
+  },
+  {
+    "id": 67,
+    "media": {
+      "filename": "67.png",
+      "type": "image",
+      "path": "https://res.cloudinary.com/dwwyducge/image/upload/images/67",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/67"
+    },
+    "title": "Vjing",
+    "description": "Ambient in Tseh\n\nГенеративный виджеинг",
+    "additional": {
+      "col_0": "Ambient in Tseh",
+      "col_1": "Генеративный виджеинг",
+      "col_2": "Vjing"
+    }
+  },
+  {
+    "id": 68,
+    "media": {
+      "filename": "68.MOV",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/68",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/68"
+    },
+    "title": "AI",
+    "description": "Программирование \"рисовалки\" с использованием нейросети",
+    "additional": {
+      "col_0": "Подготовака к выставке\"Искусственное\" Dreamlaser Tseh",
+      "col_1": "Программирование \"рисовалки\" с использованием нейросети",
+      "col_2": "AI",
+      "col_3": "Interactive installation"
+    }
+  },
+  {
+    "id": 69,
+    "media": {
+      "filename": "69.JPG",
+      "type": "image",
+      "path": "https://res.cloudinary.com/dwwyducge/image/upload/images/69",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/69"
+    },
+    "title": "Layers/Dreamlaser",
+    "description": "Создание части контента, программирование интерфейса",
+    "additional": {
+      "col_0": "Layers/Dreamlaser",
+      "col_1": "Создание части контента, программирование интерфейса",
+      "col_2": "Interactive installation",
+      "col_3": "Generative graphics"
+    }
+  },
+  {
+    "id": 70,
+    "media": {
+      "filename": "70.png",
+      "type": "image",
+      "path": "https://res.cloudinary.com/dwwyducge/image/upload/images/70",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/70"
+    },
+    "title": "Vjing",
+    "description": "Программирование и управление лазерными излучателями, лазер барами и диодной лентой",
+    "additional": {
+      "col_0": "Горьковская/Dreamlaser Tseh",
+      "col_1": "Программирование и управление лазерными излучателями, лазер барами и диодной лентой",
+      "col_2": "Laser programming",
+      "col_3": "Vjing"
+    }
+  },
+  {
+    "id": 71,
+    "media": {
+      "filename": "71.png",
+      "type": "image",
+      "path": "https://res.cloudinary.com/dwwyducge/image/upload/images/71",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/71"
+    },
+    "title": "Vjing",
+    "description": "Ambient in Tseh\n\nГенеративный виджеинг",
+    "additional": {
+      "col_0": "Ambient in Tseh",
+      "col_1": "Генеративный виджеинг",
+      "col_2": "Vjing"
+    }
+  },
+  {
+    "id": 72,
+    "media": {
+      "filename": "72.MOV",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/72",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/72"
+    },
+    "title": "AI",
+    "description": "Программирование интерактивной инсталляции с использованием нейросети",
+    "additional": {
+      "col_0": "Выставка\"Искусственное\" Dreamlaser Tseh",
+      "col_1": "Программирование интерактивной инсталляции с использованием нейросети",
+      "col_2": "AI",
+      "col_3": "Interactive installation"
+    }
+  },
+  {
+    "id": 73,
+    "media": {
+      "filename": "73.MOV",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/73",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/73"
+    },
+    "title": "Vjing",
+    "description": "Intervals Festival 2024 Night program\n\nГенеративный виджеинг",
+    "additional": {
+      "col_0": "Intervals Festival 2024 Night program",
+      "col_1": "Генеративный виджеинг",
+      "col_3": "Vjing"
+    }
+  },
+  {
+    "id": 74,
+    "media": {
+      "filename": "74.MOV",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/74",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/74"
+    },
+    "title": "AI",
+    "description": "Программирование \"рисовалки\" с использованием нейросети",
+    "additional": {
+      "col_0": "Выставка\"Искусственное\" Dreamlaser Tseh",
+      "col_1": "Программирование \"рисовалки\" с использованием нейросети",
+      "col_2": "AI",
+      "col_3": "Interactive installation"
+    }
+  },
+  {
+    "id": 75,
+    "media": {
+      "filename": "75.MOV",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/75",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/75"
+    },
+    "title": "AI",
+    "description": "Программирование интерактивной инсталляции с использованием нейросети",
+    "additional": {
+      "col_0": "Выставка\"Искусственное\" Dreamlaser Tseh",
+      "col_1": "Программирование интерактивной инсталляции с использованием нейросети",
+      "col_2": "AI",
+      "col_3": "Interactive installation"
+    }
+  },
+  {
+    "id": 76,
+    "media": {
+      "filename": "76.HEIC",
+      "type": "image",
+      "path": "https://res.cloudinary.com/dwwyducge/image/upload/images/76",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/76"
+    },
+    "title": "LED",
+    "description": "Интерактивная инсталляция из более чем 200\nLED-палок. Цвет LED-палок изменялся над местами, где проходили люди. Система трекинга Black Traxx.",
+    "additional": {
+      "col_0": "Mediatotium / Source by Dreamlaser in Tseh",
+      "col_1": "Интерактивная инсталляция из более чем 200\nLED-палок. Цвет LED-палок изменялся над местами, где проходили люди. Система трекинга Black Traxx.",
+      "col_2": "Interactive installation",
+      "col_3": "LED"
+    }
+  },
+  {
+    "id": 77,
+    "media": {
+      "filename": "77.MOV",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/77",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/77"
+    },
+    "title": "Vjing",
+    "description": "New Star Camp 2024\n\nГенеративный виджеинг",
+    "additional": {
+      "col_0": "New Star Camp 2024",
+      "col_1": "Генеративный виджеинг",
+      "col_2": "Vjing"
+    }
+  },
+  {
+    "id": 78,
+    "media": {
+      "filename": "78.MOV",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/78",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/78"
+    },
+    "title": "Ципр 2024 Росатом",
+    "description": "Программирование интерактивной инсталляции\n\nInteractive installation",
+    "additional": {
+      "col_0": "Ципр 2024 Росатом",
+      "col_1": "Программирование интерактивной инсталляции",
+      "col_2": "Interactive installation"
+    }
+  },
+  {
+    "id": 79,
+    "media": {
+      "filename": "79.MOV",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/79",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/79"
+    },
+    "title": "Game",
+    "description": "Intervals Festival 2024 Аэрохоккей Т2\n\nПрограммирование интерактивной инсталляции\n\nInteractive installation",
+    "additional": {
+      "col_0": "Intervals Festival 2024 Аэрохоккей Т2",
+      "col_1": "Программирование интерактивной инсталляции",
+      "col_2": "Interactive installation",
+      "col_3": "Game"
+    }
+  },
+  {
+    "id": 80,
+    "media": {
+      "filename": "80.MOV",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/80",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/80"
+    },
+    "title": "Vjing",
+    "description": "New Star Camp 2024\n\nГенеративный виджеинг",
+    "additional": {
+      "col_0": "New Star Camp 2024",
+      "col_1": "Генеративный виджеинг",
+      "col_2": "Vjing"
+    }
+  },
+  {
+    "id": 81,
+    "media": {
+      "filename": "81.MP4",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/81",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/81"
+    },
+    "title": "AI",
+    "description": "BRICS Ракушка\n\nГенеративный виджеинг с использованием нейросети\n\nVjing",
+    "additional": {
+      "col_0": "BRICS Ракушка",
+      "col_1": "Генеративный виджеинг с использованием нейросети",
+      "col_2": "AI",
+      "col_3": "Vjing"
+    }
+  },
+  {
+    "id": 82,
+    "media": {
+      "filename": "82.MP4",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/82",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/82"
+    },
+    "title": "AI",
+    "description": "BRICS Ракушка\n\nГенеративный виджеинг с использованием нейросети\n\nVjing",
+    "additional": {
+      "col_0": "BRICS Ракушка",
+      "col_1": "Генеративный виджеинг с использованием нейросети",
+      "col_2": "AI",
+      "col_3": "Vjing"
+    }
+  },
+  {
+    "id": 83,
+    "media": {
+      "filename": "83.MOV",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/83",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/83"
+    },
+    "title": "AI",
+    "description": "Программирование интерактивной инсталляции с использованием нейросети",
+    "additional": {
+      "col_0": "Выставка\"Искусственное\" Dreamlaser Tseh",
+      "col_1": "Программирование интерактивной инсталляции с использованием нейросети",
+      "col_2": "AI",
+      "col_3": "Interactive installation"
+    }
+  },
+  {
+    "id": 84,
+    "media": {
+      "filename": "84.jpg",
+      "type": "image",
+      "path": "https://res.cloudinary.com/dwwyducge/image/upload/images/84",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/84"
+    },
+    "title": "Vjing",
+    "description": "Горьковская/Dreamlaser Tseh\n\nГенеративный виджеинг",
+    "additional": {
+      "col_0": "Горьковская/Dreamlaser Tseh",
+      "col_1": "Генеративный виджеинг",
+      "col_2": "Vjing"
+    }
+  },
+  {
+    "id": 85,
+    "media": {
+      "filename": "85.MOV",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/85",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/85"
+    },
+    "title": "Generative graphics",
+    "description": "Тест интерактивного LED пола Dreamlaser\n\nГенеративная графика, работа с датчиками LIDAR",
+    "additional": {
+      "col_0": "Тест интерактивного LED пола Dreamlaser",
+      "col_1": "Генеративная графика, работа с датчиками LIDAR",
+      "col_2": "Generative graphics"
+    }
+  },
+  {
+    "id": 86,
+    "media": {
+      "filename": "86.MP4",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/86",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/86"
+    },
+    "title": "Vjing",
+    "description": "Генеративный виджеинг на диодных и вольюметрическом экранах",
+    "additional": {
+      "col_0": "Intervals Festival 2025 Night program",
+      "col_1": "Генеративный виджеинг на диодных и вольюметрическом экранах",
+      "col_2": "Volumetric",
+      "col_3": "Vjing"
+    }
+  },
+  {
+    "id": 87,
+    "media": {
+      "filename": "87.MP4",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/87",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/87"
+    },
+    "title": "Vjing",
+    "description": "Генеративный виджеинг на диодных и вольюметрическом экранах",
+    "additional": {
+      "col_0": "Intervals Festival 2025 Night program",
+      "col_1": "Генеративный виджеинг на диодных и вольюметрическом экранах",
+      "col_2": "Volumetric",
+      "col_3": "Vjing"
+    }
+  },
+  {
+    "id": 88,
+    "media": {
+      "filename": "88.MOV",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/88",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/88"
+    },
+    "title": "Layers/Dreamlaser",
+    "description": "Создание части контента, программирование интерфейса",
+    "additional": {
+      "col_0": "Layers/Dreamlaser",
+      "col_1": "Создание части контента, программирование интерфейса",
+      "col_2": "Interactive installation",
+      "col_3": "Generative graphics"
+    }
+  },
+  {
+    "id": 89,
+    "media": {
+      "filename": "89.MP4",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/89",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/89"
+    },
+    "title": "Vjing",
+    "description": "Генеративный виджеинг на диодных и вольюметрическом экранах",
+    "additional": {
+      "col_0": "Intervals Festival 2025 Night program",
+      "col_1": "Генеративный виджеинг на диодных и вольюметрическом экранах",
+      "col_2": "Volumetric",
+      "col_3": "Vjing"
+    }
+  },
+  {
+    "id": 90,
+    "media": {
+      "filename": "90.MOV",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/90",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/90"
+    },
+    "title": "Layers/Dreamlaser",
+    "description": "Создание части контента, программирование интерфейса",
+    "additional": {
+      "col_0": "Layers/Dreamlaser",
+      "col_1": "Создание части контента, программирование интерфейса",
+      "col_2": "Interactive installation",
+      "col_3": "Generative graphics"
+    }
+  },
+  {
+    "id": 91,
+    "media": {
+      "filename": "91.jpg",
+      "type": "image",
+      "path": "https://res.cloudinary.com/dwwyducge/image/upload/images/91",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/91"
+    },
+    "title": "Vjing",
+    "description": "Горьковская/Dreamlaser Tseh\n\nГенеративный виджеинг",
+    "additional": {
+      "col_0": "Горьковская/Dreamlaser Tseh",
+      "col_1": "Генеративный виджеинг",
+      "col_2": "Vjing"
+    }
+  },
+  {
+    "id": 92,
+    "media": {
+      "filename": "92.png",
+      "type": "image",
+      "path": "https://res.cloudinary.com/dwwyducge/image/upload/images/92",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/92"
+    },
+    "title": "Game",
+    "description": "VK \"Снежки\"\n\nПрограммирование интерактивной инсталляции\n\nInteractive installation",
+    "additional": {
+      "col_0": "VK \"Снежки\"",
+      "col_1": "Программирование интерактивной инсталляции",
+      "col_2": "Interactive installation",
+      "col_3": "Game"
+    }
+  },
+  {
+    "id": 93,
+    "media": {
+      "filename": "93.JPG",
+      "type": "image",
+      "path": "https://res.cloudinary.com/dwwyducge/image/upload/images/93",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/93"
+    },
+    "title": "Game",
+    "description": "ЦИПР Phygital football\n\nПрограммирование интерактивной инсталляции\n\nInteractive installation",
+    "additional": {
+      "col_0": "ЦИПР Phygital football",
+      "col_1": "Программирование интерактивной инсталляции",
+      "col_2": "Interactive installation",
+      "col_3": "Game"
+    }
+  },
+  {
+    "id": 94,
+    "media": {
+      "filename": "94.MP4",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/94",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/94"
+    },
+    "title": "Vjing",
+    "description": "Генеративный виджеинг на диодных и вольюметрическом экранах",
+    "additional": {
+      "col_0": "Intervals Festival 2025 Night program",
+      "col_1": "Генеративный виджеинг на диодных и вольюметрическом экранах",
+      "col_2": "Volumetric",
+      "col_3": "Vjing"
+    }
+  },
+  {
+    "id": 95,
+    "media": {
+      "filename": "95.mp4",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/95",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/95"
+    },
+    "title": "Generative graphics",
+    "description": "Генеративная графика",
+    "additional": {
+      "col_1": "Генеративная графика",
+      "col_2": "Generative graphics"
+    }
+  },
+  {
+    "id": 96,
+    "media": {
+      "filename": "96.MP4",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/96",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/96"
+    },
+    "title": "Vjing",
+    "description": "Генеративный виджеинг на диодных и вольюметрическом экранах",
+    "additional": {
+      "col_0": "Intervals Festival 2025 Night program",
+      "col_1": "Генеративный виджеинг на диодных и вольюметрическом экранах",
+      "col_2": "Volumetric",
+      "col_3": "Vjing"
+    }
+  },
+  {
+    "id": 97,
+    "media": {
+      "filename": "97.mp4",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/97",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/97"
+    },
+    "title": "Vjing",
+    "description": "New Star Camp 2024\n\nГенеративный виджеинг",
+    "additional": {
+      "col_0": "New Star Camp 2024",
+      "col_1": "Генеративный виджеинг",
+      "col_2": "Vjing"
+    }
+  },
+  {
+    "id": 98,
+    "media": {
+      "filename": "98.png",
+      "type": "image",
+      "path": "https://res.cloudinary.com/dwwyducge/image/upload/images/98",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/98"
+    },
+    "title": "LED",
+    "description": "Генеративная графика, создание контента для диодных палок",
+    "additional": {
+      "col_0": "BIOM Tseh",
+      "col_1": "Генеративная графика, создание контента для диодных палок",
+      "col_2": "Generative graphics",
+      "col_3": "LED"
+    }
+  },
+  {
+    "id": 99,
+    "media": {
+      "filename": "99.MP4",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/99",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/99"
+    },
+    "title": "Vjing",
+    "description": "Генеративный виджеинг на диодных и вольюметрическом экранах",
+    "additional": {
+      "col_0": "Intervals Festival 2025 Night program",
+      "col_1": "Генеративный виджеинг на диодных и вольюметрическом экранах",
+      "col_2": "Volumetric",
+      "col_3": "Vjing"
+    }
+  },
+  {
+    "id": 100,
+    "media": {
+      "filename": "100.MP4",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/100",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/100"
+    },
+    "title": "Vjing",
+    "description": "Генеративный виджеинг на диодных и вольюметрическом экранах",
+    "additional": {
+      "col_0": "Intervals Festival 2025 Night program",
+      "col_1": "Генеративный виджеинг на диодных и вольюметрическом экранах",
+      "col_2": "Volumetric",
+      "col_3": "Vjing"
+    }
+  },
+  {
+    "id": 101,
+    "media": {
+      "filename": "101.MP4",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/101",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/101"
+    },
+    "title": "Vjing",
+    "description": "Генеративный виджеинг на диодных и вольюметрическом экранах",
+    "additional": {
+      "col_0": "Intervals Festival 2025 Night program",
+      "col_1": "Генеративный виджеинг на диодных и вольюметрическом экранах",
+      "col_2": "Volumetric",
+      "col_3": "Vjing"
+    }
+  },
+  {
+    "id": 102,
+    "media": {
+      "filename": "102.MP4",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/102",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/102"
+    },
+    "title": "Vjing",
+    "description": "Генеративный виджеинг на диодных и вольюметрическом экранах",
+    "additional": {
+      "col_0": "Intervals Festival 2025 Night program",
+      "col_1": "Генеративный виджеинг на диодных и вольюметрическом экранах",
+      "col_2": "Volumetric",
+      "col_3": "Vjing"
+    }
+  },
+  {
+    "id": 103,
+    "media": {
+      "filename": "103.JPG",
+      "type": "image",
+      "path": "https://res.cloudinary.com/dwwyducge/image/upload/images/103",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/103"
+    },
+    "title": "Generative graphics",
+    "description": "Lab Антона Беляева ВТБ Арена\n\nГенеративная графика",
+    "additional": {
+      "col_0": "Lab Антона Беляева ВТБ Арена",
+      "col_1": "Генеративная графика",
+      "col_2": "Generative graphics"
+    }
+  },
+  {
+    "id": 104,
+    "media": {
+      "filename": "104.jpg",
+      "type": "image",
+      "path": "https://res.cloudinary.com/dwwyducge/image/upload/images/104",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/104"
+    },
+    "title": "Generative graphics",
+    "description": "Lab Антона Беляева ВТБ Арена\n\nГенеративная графика",
+    "additional": {
+      "col_0": "Lab Антона Беляева ВТБ Арена",
+      "col_1": "Генеративная графика",
+      "col_2": "Generative graphics"
+    }
+  },
+  {
+    "id": 105,
+    "media": {
+      "filename": "105.mp4",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/105",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/105"
+    },
+    "title": "Generative graphics",
+    "description": "Генеративная графика",
+    "additional": {
+      "col_1": "Генеративная графика",
+      "col_2": "Generative graphics"
+    }
+  },
+  {
+    "id": 106,
+    "media": {
+      "filename": "106.JPG",
+      "type": "image",
+      "path": "https://res.cloudinary.com/dwwyducge/image/upload/images/106",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/106"
+    },
+    "title": "Generative graphics",
+    "description": "Lab Антона Беляева ВТБ Арена\n\nГенеративная графика",
+    "additional": {
+      "col_0": "Lab Антона Беляева ВТБ Арена",
+      "col_1": "Генеративная графика",
+      "col_2": "Generative graphics"
+    }
+  },
+  {
+    "id": 107,
+    "media": {
+      "filename": "107.mp4",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/107",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/107"
+    },
+    "title": "Generative graphics",
+    "description": "Генеративная графика",
+    "additional": {
+      "col_1": "Генеративная графика",
+      "col_2": "Generative graphics"
+    }
+  },
+  {
+    "id": 108,
+    "media": {
+      "filename": "108.jpg",
+      "type": "image",
+      "path": "https://res.cloudinary.com/dwwyducge/image/upload/images/108",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/108"
+    },
+    "title": "Vjing",
+    "description": "Горьковская/Dreamlaser Tseh\n\nГенеративный виджеинг",
+    "additional": {
+      "col_0": "Горьковская/Dreamlaser Tseh",
+      "col_1": "Генеративный виджеинг",
+      "col_2": "Vjing"
+    }
+  },
+  {
+    "id": 109,
+    "media": {
+      "filename": "109.jpg",
+      "type": "image",
+      "path": "https://res.cloudinary.com/dwwyducge/image/upload/images/109",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/109"
+    },
+    "title": "Generative graphics",
+    "description": "Lab Антона Беляева ВТБ Арена\n\nГенеративная графика",
+    "additional": {
+      "col_0": "Lab Антона Беляева ВТБ Арена",
+      "col_1": "Генеративная графика",
+      "col_2": "Generative graphics"
+    }
+  },
+  {
+    "id": 110,
+    "media": {
+      "filename": "110.jpg",
+      "type": "image",
+      "path": "https://res.cloudinary.com/dwwyducge/image/upload/images/110",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/110"
+    },
+    "title": "Generative graphics",
+    "description": "Lab Антона Беляева ВТБ Арена\n\nГенеративная графика",
+    "additional": {
+      "col_0": "Lab Антона Беляева ВТБ Арена",
+      "col_1": "Генеративная графика",
+      "col_2": "Generative graphics"
+    }
+  },
+  {
+    "id": 111,
+    "media": {
+      "filename": "111.png",
+      "type": "image",
+      "path": "https://res.cloudinary.com/dwwyducge/image/upload/images/111",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/111"
+    },
+    "title": "Vjing",
+    "description": "Long Arm/Tseh\n\nГенеративный виджеинг",
+    "additional": {
+      "col_0": "Long Arm/Tseh",
+      "col_1": "Генеративный виджеинг",
+      "col_2": "Vjing"
+    }
+  },
+  {
+    "id": 112,
+    "media": {
+      "filename": "112.jpg",
+      "type": "image",
+      "path": "https://res.cloudinary.com/dwwyducge/image/upload/images/112",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/112"
+    },
+    "title": "Layers/Dreamlaser",
+    "description": "Создание части контента, программирование интерфейса",
+    "additional": {
+      "col_0": "Layers/Dreamlaser",
+      "col_1": "Создание части контента, программирование интерфейса",
+      "col_2": "Interactive installation",
+      "col_3": "Generative graphics"
+    }
+  },
+  {
+    "id": 113,
+    "media": {
+      "filename": "113.jpg",
+      "type": "image",
+      "path": "https://res.cloudinary.com/dwwyducge/image/upload/images/113",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/113"
+    },
+    "title": "Layers/Dreamlaser",
+    "description": "Создание части контента, программирование интерфейса",
+    "additional": {
+      "col_0": "Layers/Dreamlaser",
+      "col_1": "Создание части контента, программирование интерфейса",
+      "col_2": "Interactive installation",
+      "col_3": "Generative graphics"
+    }
+  },
+  {
+    "id": 114,
+    "media": {
+      "filename": "114.png",
+      "type": "image",
+      "path": "https://res.cloudinary.com/dwwyducge/image/upload/images/114",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/114"
+    },
+    "title": "LED",
+    "description": "Генеративный виджеинг и управление сетапом из диодных палок",
+    "additional": {
+      "col_0": "New Star Camp 2023",
+      "col_1": "Генеративный виджеинг и управление сетапом из диодных палок",
+      "col_2": "LED",
+      "col_3": "Vjing"
+    }
+  },
+  {
+    "id": 115,
+    "media": {
+      "filename": "115.jpg",
+      "type": "image",
+      "path": "https://res.cloudinary.com/dwwyducge/image/upload/images/115",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/115"
+    },
+    "title": "Layers/Dreamlaser",
+    "description": "Создание части контента, программирование интерфейса",
+    "additional": {
+      "col_0": "Layers/Dreamlaser",
+      "col_1": "Создание части контента, программирование интерфейса",
+      "col_2": "Interactive installation",
+      "col_3": "Generative graphics"
+    }
+  },
+  {
+    "id": 116,
+    "media": {
+      "filename": "116.jpg",
+      "type": "image",
+      "path": "https://res.cloudinary.com/dwwyducge/image/upload/images/116",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/116"
+    },
+    "title": "Layers/Dreamlaser",
+    "description": "Создание части контента, программирование интерфейса",
+    "additional": {
+      "col_0": "Layers/Dreamlaser",
+      "col_1": "Создание части контента, программирование интерфейса",
+      "col_2": "Interactive installation",
+      "col_3": "Generative graphics"
+    }
+  },
+  {
+    "id": 117,
+    "media": {
+      "filename": "117.png",
+      "type": "image",
+      "path": "https://res.cloudinary.com/dwwyducge/image/upload/images/117",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/117"
+    },
+    "title": "Game",
+    "description": "Программирование интерактивной инсталляции с симуляцией физики и системой трекинга Black Traxx",
+    "additional": {
+      "col_0": "Phygital хоккей",
+      "col_1": "Программирование интерактивной инсталляции с симуляцией физики и системой трекинга Black Traxx",
+      "col_2": "Interactive installation",
+      "col_3": "Game"
+    }
+  },
+  {
+    "id": 118,
+    "media": {
+      "filename": "118.png",
+      "type": "image",
+      "path": "https://res.cloudinary.com/dwwyducge/image/upload/images/118",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/118"
+    },
+    "title": "Game",
+    "description": "ЦИПР Phygital football\n\nПрограммирование интерактивной инсталляции\n\nInteractive installation",
+    "additional": {
+      "col_0": "ЦИПР Phygital football",
+      "col_1": "Программирование интерактивной инсталляции",
+      "col_2": "Interactive installation",
+      "col_3": "Game"
+    }
+  },
+  {
+    "id": 119,
+    "media": {
+      "filename": "119.jpg",
+      "type": "image",
+      "path": "https://res.cloudinary.com/dwwyducge/image/upload/images/119",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/119"
+    },
+    "title": "Vjing",
+    "description": "Горьковская/Dreamlaser Tseh\n\nГенеративный виджеинг",
+    "additional": {
+      "col_0": "Горьковская/Dreamlaser Tseh",
+      "col_1": "Генеративный виджеинг",
+      "col_2": "Vjing"
+    }
+  },
+  {
+    "id": 120,
+    "media": {
+      "filename": "120.MOV",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/120",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/120"
+    },
+    "title": "Game",
+    "description": "Новогодняя инсталляция \"Снежки\" Tseh\n\nПрограммирование интерактивной инсталляции\n\nInteractive installation",
+    "additional": {
+      "col_0": "Новогодняя инсталляция \"Снежки\" Tseh",
+      "col_1": "Программирование интерактивной инсталляции",
+      "col_2": "Interactive installation",
+      "col_3": "Game"
+    }
+  },
+  {
+    "id": 121,
+    "media": {
+      "filename": "121.MOV",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/121",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/121"
+    },
+    "title": "Game",
+    "description": "Интерактивная инсталляция Tseh\n\nПрограммирование интерактивной инсталляции\n\nInteractive installation",
+    "additional": {
+      "col_0": "Интерактивная инсталляция Tseh",
+      "col_1": "Программирование интерактивной инсталляции",
+      "col_2": "Interactive installation",
+      "col_3": "Game"
+    }
+  },
+  {
+    "id": 122,
+    "media": {
+      "filename": "122.MOV",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/122",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/122"
+    },
+    "title": "Game",
+    "description": "Phygital games\n\nГенеративная графика, работа с системой трекинга\n\nGenerative graphics",
+    "additional": {
+      "col_0": "Phygital games",
+      "col_1": "Генеративная графика, работа с системой трекинга",
+      "col_2": "Generative graphics",
+      "col_3": "Game"
+    }
+  },
+  {
+    "id": 123,
+    "media": {
+      "filename": "123.MOV",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/123",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/123"
+    },
+    "title": "Generative graphics",
+    "description": "Моя Россия стенд Хакассии\n\nПрограммирование интерактивной инсталляции\n\nInteractive installation",
+    "additional": {
+      "col_0": "Моя Россия стенд Хакассии",
+      "col_1": "Программирование интерактивной инсталляции",
+      "col_2": "Interactive installation",
+      "col_3": "Generative graphics"
+    }
+  },
+  {
+    "id": 124,
+    "media": {
+      "filename": "124.MOV",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/124",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/124"
+    },
+    "title": "Vjing",
+    "description": "Генеративный виджеинг",
+    "additional": {
+      "col_1": "Генеративный виджеинг",
+      "col_2": "Vjing"
+    }
+  },
+  {
+    "id": 125,
+    "media": {
+      "filename": "125.mov",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/125",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/125"
+    },
+    "title": "Laser programming",
+    "description": "A.R.R.C 2.0 React Севкабель порт\n\nПрограммирование лазерных излучателей",
+    "additional": {
+      "col_0": "A.R.R.C 2.0 React Севкабель порт",
+      "col_1": "Программирование лазерных излучателей",
+      "col_2": "Laser programming"
+    }
+  },
+  {
+    "id": 126,
+    "media": {
+      "filename": "126.MOV",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/126",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/126"
+    },
+    "title": "Game",
+    "description": "Интерактивная инсталляция Tseh\n\nПрограммирование интерактивной инсталляции\n\nInteractive installation",
+    "additional": {
+      "col_0": "Интерактивная инсталляция Tseh",
+      "col_1": "Программирование интерактивной инсталляции",
+      "col_2": "Interactive installation",
+      "col_3": "Game"
+    }
+  },
+  {
+    "id": 127,
+    "media": {
+      "filename": "127.MOV",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/127",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/127"
+    },
+    "title": "Game",
+    "description": "Новогодняя инсталляция \"Снежки\" Tseh\n\nПрограммирование интерактивной инсталляции\n\nInteractive installation",
+    "additional": {
+      "col_0": "Новогодняя инсталляция \"Снежки\" Tseh",
+      "col_1": "Программирование интерактивной инсталляции",
+      "col_2": "Interactive installation",
+      "col_3": "Game"
+    }
+  },
+  {
+    "id": 128,
+    "media": {
+      "filename": "128.png",
+      "type": "image",
+      "path": "https://res.cloudinary.com/dwwyducge/image/upload/images/128",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/128"
+    },
+    "title": "Vjing",
+    "description": "Ambient in Tseh\n\nГенеративный виджеинг",
+    "additional": {
+      "col_0": "Ambient in Tseh",
+      "col_1": "Генеративный виджеинг",
+      "col_2": "Vjing"
+    }
+  },
+  {
+    "id": 129,
+    "media": {
+      "filename": "129.png",
+      "type": "image",
+      "path": "https://res.cloudinary.com/dwwyducge/image/upload/images/129",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/129"
+    },
+    "title": "Vjing",
+    "description": "Ambient in Tseh\n\nГенеративный виджеинг",
+    "additional": {
+      "col_0": "Ambient in Tseh",
+      "col_1": "Генеративный виджеинг",
+      "col_2": "Vjing"
+    }
+  },
+  {
+    "id": 130,
+    "media": {
+      "filename": "130.HEIC",
+      "type": "image",
+      "path": "https://res.cloudinary.com/dwwyducge/image/upload/images/130",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/130"
+    },
+    "title": "LED",
+    "description": "Тест диодных палое Dreamlaser\n\nГенеративный виджеинг",
+    "additional": {
+      "col_0": "Тест диодных палое Dreamlaser",
+      "col_1": "Генеративный виджеинг",
+      "col_2": "LED"
+    }
+  },
+  {
+    "id": 131,
+    "media": {
+      "filename": "131.JPG",
+      "type": "image",
+      "path": "https://res.cloudinary.com/dwwyducge/image/upload/images/131",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/131"
+    },
+    "title": "Тест для студии \"Тихая\"",
+    "description": "Программирование интерфейса\n\nInteractive installation",
+    "additional": {
+      "col_0": "Тест для студии \"Тихая\"",
+      "col_1": "Программирование интерфейса",
+      "col_2": "Interactive installation"
+    }
+  },
+  {
+    "id": 132,
+    "media": {
+      "filename": "132.JPG",
+      "type": "image",
+      "path": "https://res.cloudinary.com/dwwyducge/image/upload/images/132",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/132"
+    },
+    "title": "Тест для студии \"Тихая\"",
+    "description": "Программирование интерфейса\n\nInteractive installation",
+    "additional": {
+      "col_0": "Тест для студии \"Тихая\"",
+      "col_1": "Программирование интерфейса",
+      "col_2": "Interactive installation"
+    }
+  },
+  {
+    "id": 133,
+    "media": {
+      "filename": "133.MOV",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/133",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/133"
+    },
+    "title": "Generative graphics",
+    "description": "Подготовка к выставке СМЕШАННАЯ ТЕХНИКА со студией \"Тихая\"",
+    "additional": {
+      "col_0": "Подготовка к выставке СМЕШАННАЯ ТЕХНИКА со студией \"Тихая\"",
+      "col_1": "Программирование интерактивной инсталляции",
+      "col_2": "Generative graphics",
+      "col_3": "Interactive installation"
+    }
+  },
+  {
+    "id": 134,
+    "media": {
+      "filename": "134.MOV",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/134",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/134"
+    },
+    "title": "Phygital хоккей",
+    "description": "Программирование интерактивной инсталляции с симуляцией физики и системой трекинга Black Traxx",
+    "additional": {
+      "col_0": "Phygital хоккей",
+      "col_1": "Программирование интерактивной инсталляции с симуляцией физики и системой трекинга Black Traxx",
+      "col_2": "Generative graphics",
+      "col_3": "Interactive installation"
+    }
+  },
+  {
+    "id": 135,
+    "media": {
+      "filename": "135.JPG",
+      "type": "image",
+      "path": "https://res.cloudinary.com/dwwyducge/image/upload/images/135",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/135"
+    },
+    "title": "Vjing",
+    "description": "Тест диодных палое Dreamlaser\n\nГенеративный виджеинг",
+    "additional": {
+      "col_0": "Тест диодных палое Dreamlaser",
+      "col_1": "Генеративный виджеинг",
+      "col_2": "Vjing"
+    }
+  },
+  {
+    "id": 136,
+    "media": {
+      "filename": "136.png",
+      "type": "image",
+      "path": "https://res.cloudinary.com/dwwyducge/image/upload/images/136",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/136"
+    },
+    "title": "LED",
+    "description": "Интерактивная инсталляция из более чем 200\nLED-палок. Цвет LED-палок изменялся над местами, где проходили люди. Система трекинга Black Traxx.",
+    "additional": {
+      "col_0": "Mediatotium / Source by Dreamlaser in Tseh",
+      "col_1": "Интерактивная инсталляция из более чем 200\nLED-палок. Цвет LED-палок изменялся над местами, где проходили люди. Система трекинга Black Traxx.",
+      "col_2": "Interactive installation",
+      "col_3": "LED"
+    }
+  },
+  {
+    "id": 137,
+    "media": {
+      "filename": "137.mp4",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/137",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/137"
+    },
+    "title": "Generative graphics",
+    "description": "Генеративная графика",
+    "additional": {
+      "col_1": "Генеративная графика",
+      "col_2": "Generative graphics"
+    }
+  },
+  {
+    "id": 138,
+    "media": {
+      "filename": "138.png",
+      "type": "image",
+      "path": "https://res.cloudinary.com/dwwyducge/image/upload/images/138",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/138"
+    },
+    "title": "Vjing",
+    "description": "Intervals Festival 2023 Night program\n\nГенеративный виджеинг",
+    "additional": {
+      "col_0": "Intervals Festival 2023 Night program",
+      "col_1": "Генеративный виджеинг",
+      "col_2": "Vjing"
+    }
+  },
+  {
+    "id": 139,
+    "media": {
+      "filename": "139.mp4",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/139",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/139"
+    },
+    "title": "Layers/Dreamlaser",
+    "description": "Создание части контента, программирование интерфейса",
+    "additional": {
+      "col_0": "Layers/Dreamlaser",
+      "col_1": "Создание части контента, программирование интерфейса",
+      "col_2": "Interactive installation",
+      "col_3": "Generative graphics"
+    }
+  },
+  {
+    "id": 140,
+    "media": {
+      "filename": "140.mp4",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/140",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/140"
+    },
+    "title": "Generative graphics",
+    "description": "Генеративная графика",
+    "additional": {
+      "col_1": "Генеративная графика",
+      "col_2": "Generative graphics"
+    }
+  },
+  {
+    "id": 141,
+    "media": {
+      "filename": "141.mp4",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/141",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/141"
+    },
+    "title": "Generative graphics",
+    "description": "Генеративная графика",
+    "additional": {
+      "col_1": "Генеративная графика",
+      "col_2": "Generative graphics"
+    }
+  },
+  {
+    "id": 142,
+    "media": {
+      "filename": "142.mp4",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/142",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/142"
+    },
+    "title": "Generative graphics",
+    "description": "Генеративная графика",
+    "additional": {
+      "col_1": "Генеративная графика",
+      "col_2": "Generative graphics"
+    }
+  },
+  {
+    "id": 143,
+    "media": {
+      "filename": "143.mp4",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/143",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/143"
+    },
+    "title": "Generative graphics",
+    "description": "Генеративная графика",
+    "additional": {
+      "col_1": "Генеративная графика",
+      "col_2": "Generative graphics"
+    }
+  },
+  {
+    "id": 144,
+    "media": {
+      "filename": "144.MOV",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/144",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/144"
+    },
+    "title": "Tracking",
+    "description": "Phygital games\n\nГенеративная графика, работа с системой трекинга\n\nGenerative graphics",
+    "additional": {
+      "col_0": "Phygital games",
+      "col_1": "Генеративная графика, работа с системой трекинга",
+      "col_2": "Tracking",
+      "col_3": "Generative graphics"
+    }
+  },
+  {
+    "id": 145,
+    "media": {
+      "filename": "145.MP4",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/145",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/145"
+    },
+    "title": "Tracking",
+    "description": "Phygital games\n\nГенеративная графика, работа с системой трекинга\n\nGenerative graphics",
+    "additional": {
+      "col_0": "Phygital games",
+      "col_1": "Генеративная графика, работа с системой трекинга",
+      "col_2": "Tracking",
+      "col_3": "Generative graphics"
+    }
+  },
+  {
+    "id": 146,
+    "media": {
+      "filename": "146.MOV",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/146",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/146"
+    },
+    "title": "Game",
+    "description": "Phygital football\n\nПрограммирование интерактивной инсталляции\n\nInteractive installation",
+    "additional": {
+      "col_0": "Phygital football",
+      "col_1": "Программирование интерактивной инсталляции",
+      "col_2": "Interactive installation",
+      "col_3": "Game"
+    }
+  },
+  {
+    "id": 147,
+    "media": {
+      "filename": "147.MOV",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/147",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/147"
+    },
+    "title": "LED",
+    "description": "Интерактивная инсталляция из более чем 200\nLED-палок. Цвет LED-палок изменялся над местами, где проходили люди. Система трекинга Black Traxx.",
+    "additional": {
+      "col_0": "Mediatotium / Source by Dreamlaser in Tseh",
+      "col_1": "Интерактивная инсталляция из более чем 200\nLED-палок. Цвет LED-палок изменялся над местами, где проходили люди. Система трекинга Black Traxx.",
+      "col_2": "Interactive installation",
+      "col_3": "LED"
+    }
+  },
+  {
+    "id": 148,
+    "media": {
+      "filename": "148.jpg",
+      "type": "image",
+      "path": "https://res.cloudinary.com/dwwyducge/image/upload/images/148",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/148"
+    },
+    "title": "Vjing",
+    "description": "Intervals Festival 2023 Night program\n\nГенеративный виджеинг",
+    "additional": {
+      "col_0": "Intervals Festival 2023 Night program",
+      "col_1": "Генеративный виджеинг",
+      "col_2": "Vjing"
+    }
+  },
+  {
+    "id": 149,
+    "media": {
+      "filename": "149.mp4",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/149",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/149"
+    },
+    "title": "Generative graphics",
+    "description": "Генеративная графика",
+    "additional": {
+      "col_1": "Генеративная графика",
+      "col_2": "Generative graphics"
+    }
+  },
+  {
+    "id": 150,
+    "media": {
+      "filename": "150.MOV",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/150",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/150"
+    },
+    "title": "Layers/Dreamlaser",
+    "description": "Создание части контента, программирование интерфейса",
+    "additional": {
+      "col_0": "Layers/Dreamlaser",
+      "col_1": "Создание части контента, программирование интерфейса",
+      "col_2": "Interactive installation",
+      "col_3": "Generative graphics"
+    }
+  },
+  {
+    "id": 151,
+    "media": {
+      "filename": "151.png",
+      "type": "image",
+      "path": "https://res.cloudinary.com/dwwyducge/image/upload/images/151",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/151"
+    },
+    "title": "Vjing",
+    "description": "Концерт Николы Мельникова и Ансамбля Окто\n\nГенеративный виджеинг",
+    "additional": {
+      "col_0": "Концерт Николы Мельникова и Ансамбля Окто",
+      "col_1": "Генеративный виджеинг",
+      "col_2": "Vjing"
+    }
+  },
+  {
+    "id": 152,
+    "media": {
+      "filename": "152.MOV",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/152",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/152"
+    },
+    "title": "VK",
+    "description": "Программирование интерактивной фотозоны\n\nInteractive installation\n\nGenerative graphics",
+    "additional": {
+      "col_0": "VK",
+      "col_1": "Программирование интерактивной фотозоны",
+      "col_2": "Interactive installation",
+      "col_3": "Generative graphics"
+    }
+  },
+  {
+    "id": 153,
+    "media": {
+      "filename": "153.MOV",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/153",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/153"
+    },
+    "title": "Vjing",
+    "description": "Горьковская/Dreamlaser Tseh\n\nГенеративный виджеинг",
+    "additional": {
+      "col_0": "Горьковская/Dreamlaser Tseh",
+      "col_1": "Генеративный виджеинг",
+      "col_2": "Vjing"
+    }
+  },
+  {
+    "id": 154,
+    "media": {
+      "filename": "154.MP4",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/154",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/154"
+    },
+    "title": "Vjing",
+    "description": "Intervals Festival 2024 Night program\n\nГенеративный виджеинг",
+    "additional": {
+      "col_0": "Intervals Festival 2024 Night program",
+      "col_1": "Генеративный виджеинг",
+      "col_2": "Vjing"
+    }
+  },
+  {
+    "id": 155,
+    "media": {
+      "filename": "155.MOV",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/155",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/155"
+    },
+    "title": "VK",
+    "description": "Программирование интерактивной фотозоны\n\nInteractive installation\n\nGenerative graphics",
+    "additional": {
+      "col_0": "VK",
+      "col_1": "Программирование интерактивной фотозоны",
+      "col_2": "Interactive installation",
+      "col_3": "Generative graphics"
+    }
+  },
+  {
+    "id": 156,
+    "media": {
+      "filename": "156.MOV",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/156",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/156"
+    },
+    "title": "Vjing",
+    "description": "STREETBEAT 10 YEARS TAU\n\nГенеративный виджеинг",
+    "additional": {
+      "col_0": "STREETBEAT 10 YEARS TAU",
+      "col_1": "Генеративный виджеинг",
+      "col_2": "Vjing"
+    }
+  },
+  {
+    "id": 157,
+    "media": {
+      "filename": "157.MOV",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/157",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/157"
+    },
+    "title": "Vjing",
+    "description": "STREETBEAT 10 YEARS TAU\n\nГенеративный виджеинг",
+    "additional": {
+      "col_0": "STREETBEAT 10 YEARS TAU",
+      "col_1": "Генеративный виджеинг",
+      "col_2": "Vjing"
+    }
+  },
+  {
+    "id": 158,
+    "media": {
+      "filename": "158.MOV",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/158",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/158"
+    },
+    "title": "Vjing",
+    "description": "Горьковская/Dreamlaser Tseh\n\nГенеративный виджеинг",
+    "additional": {
+      "col_0": "Горьковская/Dreamlaser Tseh",
+      "col_1": "Генеративный виджеинг",
+      "col_2": "Vjing"
+    }
+  },
+  {
+    "id": 159,
+    "media": {
+      "filename": "159.MOV",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/159",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/159"
+    },
+    "title": "LED",
+    "description": "Программирование системы из кинетических лебедок, лазеров и диодных палок, управление в реальном времени",
+    "additional": {
+      "col_0": "Signal 2024",
+      "col_1": "Программирование системы из кинетических лебедок, лазеров и диодных палок, управление в реальном времени",
+      "col_2": "kinetic",
+      "col_3": "LED",
+      "col_4": "Laser programming"
+    }
+  },
+  {
+    "id": 160,
+    "media": {
+      "filename": "160.MOV",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/160",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/160"
+    },
+    "title": "LED",
+    "description": "Программирование системы из кинетических лебедок, лазеров и диодных палок, управление в реальном времени",
+    "additional": {
+      "col_0": "Signal 2024",
+      "col_1": "Программирование системы из кинетических лебедок, лазеров и диодных палок, управление в реальном времени",
+      "col_2": "kinetic",
+      "col_3": "LED",
+      "col_4": "Laser programming"
+    }
+  },
+  {
+    "id": 161,
+    "media": {
+      "filename": "161.mp4",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/161",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/161"
+    },
+    "title": "Generative graphics",
+    "description": "mix cover Radiant - Kibosh",
+    "additional": {
+      "col_0": "mix cover Radiant - Kibosh",
+      "col_2": "Generative graphics"
+    }
+  },
+  {
+    "id": 162,
+    "media": {
+      "filename": "162.png",
+      "type": "image",
+      "path": "https://res.cloudinary.com/dwwyducge/image/upload/images/162",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/162"
+    },
+    "title": "LED",
+    "description": "Программирование и управление лазерными излучателями, лазер барами и диодной лентой",
+    "additional": {
+      "col_0": "Горьковская/Dreamlaser Tseh",
+      "col_1": "Программирование и управление лазерными излучателями, лазер барами и диодной лентой",
+      "col_2": "LED",
+      "col_3": "Laser programming",
+      "col_4": "Vjing"
+    }
+  },
+  {
+    "id": 163,
+    "media": {
+      "filename": "163.MOV",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/163",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/163"
+    },
+    "title": "LED",
+    "description": "Генеративный виджеинг и управление сетапом из диодных палок",
+    "additional": {
+      "col_0": "New Star Camp 2024",
+      "col_1": "Генеративный виджеинг и управление сетапом из диодных палок",
+      "col_2": "LED",
+      "col_3": "Vjing"
+    }
+  },
+  {
+    "id": 164,
+    "media": {
+      "filename": "164.MOV",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/164",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/164"
+    },
+    "title": "Game",
+    "description": "VK \"Снежки\"\n\nПрограммирование интерактивной инсталляции\n\nInteractive installation",
+    "additional": {
+      "col_0": "VK \"Снежки\"",
+      "col_1": "Программирование интерактивной инсталляции",
+      "col_2": "Interactive installation",
+      "col_3": "Game"
+    }
+  },
+  {
+    "id": 165,
+    "media": {
+      "filename": "165.jpg",
+      "type": "image",
+      "path": "https://res.cloudinary.com/dwwyducge/image/upload/images/165",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/165"
+    },
+    "title": "Generative graphics",
+    "description": "На основе работы Якова Хорева со спиралями из текста, я создала интерактивную инсталляцию. Текст жил своей жизнью ,но когда человек останавливался на нем, буквы собирались в вопросы. Яков собрал коллекцию из 200 мотивирующих вопросов, которые волнуют посетителей студии «Тихая» и мультимедиа-арт-пространства ЦЕХ*. Я превратила вопросы в трехмерные объекты, которые двигаются в виртуальном пространстве в соответствии с законами физики. Созданное «пространство вопросов» живет по собственным законам, но вместе с тем открыто к воздействию со стороны зрителей.",
+    "additional": {
+      "col_0": "Смешаная техника/The Pulse of Life студия Тихая и Dreamlaser Tseh",
+      "col_1": "На основе работы Якова Хорева со спиралями из текста, я создала интерактивную инсталляцию. Текст жил своей жизнью ,но когда человек останавливался на нем, буквы собирались в вопросы. Яков собрал коллекцию из 200 мотивирующих вопросов, которые волнуют посетителей студии «Тихая» и мультимедиа-арт-пространства ЦЕХ*. Я превратила вопросы в трехмерные объекты, которые двигаются в виртуальном пространстве в соответствии с законами физики. Созданное «пространство вопросов» живет по собственным законам, но вместе с тем открыто к воздействию со стороны зрителей.",
+      "col_2": "Interactive installation",
+      "col_3": "Generative graphics"
+    }
+  },
+  {
+    "id": 166,
+    "media": {
+      "filename": "166.MP4",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/166",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/166"
+    },
+    "title": "LED",
+    "description": "Интерактивная инсталляция из более чем 200\nLED-палок. Цвет LED-палок изменялся над местами, где проходили люди. Система трекинга Black Traxx.",
+    "additional": {
+      "col_0": "Mediatotium / Source by Dreamlaser in Tseh",
+      "col_1": "Интерактивная инсталляция из более чем 200\nLED-палок. Цвет LED-палок изменялся над местами, где проходили люди. Система трекинга Black Traxx.",
+      "col_2": "Interactive installation",
+      "col_3": "LED"
+    }
+  },
+  {
+    "id": 167,
+    "media": {
+      "filename": "167.MOV",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/167",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/167"
+    },
+    "title": "Game",
+    "description": "Генеративная графика, работа с системой трекинга, программирование игры",
+    "additional": {
+      "col_0": "Phygital games Игра для зрителей",
+      "col_1": "Генеративная графика, работа с системой трекинга, программирование игры",
+      "col_2": "Tracking",
+      "col_3": "Game"
+    }
+  },
+  {
+    "id": 168,
+    "media": {
+      "filename": "168.png",
+      "type": "image",
+      "path": "https://res.cloudinary.com/dwwyducge/image/upload/images/168",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/168"
+    },
+    "title": "Laser programming",
+    "description": "New Star Camp 2022\n\nПрограммирование лазерных излучателей",
+    "additional": {
+      "col_0": "New Star Camp 2022",
+      "col_1": "Программирование лазерных излучателей",
+      "col_2": "Laser programming"
+    }
+  },
+  {
+    "id": 169,
+    "media": {
+      "filename": "169.MOV",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/169",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/169"
+    },
+    "title": "Vjing",
+    "description": "\"Две стороны\" Планетарий Нижний Новгород\n\nГенеративный виджеинг",
+    "additional": {
+      "col_0": "\"Две стороны\" Планетарий Нижний Новгород",
+      "col_1": "Генеративный виджеинг",
+      "col_2": "Vjing"
+    }
+  },
+  {
+    "id": 170,
+    "media": {
+      "filename": "170.MOV",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/170",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/170"
+    },
+    "title": "Vjing",
+    "description": "\"Две стороны\" Планетарий Нижний Новгород\n\nГенеративный виджеинг",
+    "additional": {
+      "col_0": "\"Две стороны\" Планетарий Нижний Новгород",
+      "col_1": "Генеративный виджеинг",
+      "col_2": "Vjing"
+    }
+  },
+  {
+    "id": 171,
+    "media": {
+      "filename": "171.MOV",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/171",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/171"
+    },
+    "title": "Vjing",
+    "description": "Горьковская/Dreamlaser Tseh\n\nГенеративный виджеинг",
+    "additional": {
+      "col_0": "Горьковская/Dreamlaser Tseh",
+      "col_1": "Генеративный виджеинг",
+      "col_2": "Vjing"
+    }
+  },
+  {
+    "id": 172,
+    "media": {
+      "filename": "172.MOV",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/172",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/172"
+    },
+    "title": "Vjing",
+    "description": "\"Две стороны\" Планетарий Нижний Новгород\n\nГенеративный виджеинг",
+    "additional": {
+      "col_0": "\"Две стороны\" Планетарий Нижний Новгород",
+      "col_1": "Генеративный виджеинг",
+      "col_2": "Vjing"
+    }
+  },
+  {
+    "id": 173,
+    "media": {
+      "filename": "173.MOV",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/173",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/173"
+    },
+    "title": "Vjing",
+    "description": "Горьковская/Dreamlaser Москва 2024\n\nГенеративный виджеинг",
+    "additional": {
+      "col_0": "Горьковская/Dreamlaser Москва 2024",
+      "col_1": "Генеративный виджеинг",
+      "col_2": "Vjing"
+    }
+  },
+  {
+    "id": 174,
+    "media": {
+      "filename": "174.MOV",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/174",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/174"
+    },
+    "title": "Tracking",
+    "description": "Тест системы трекинга Dreamlaser\n\nГенеративная графика, работа с LIDAR\n\nGenerative graphics",
+    "additional": {
+      "col_0": "Тест системы трекинга Dreamlaser",
+      "col_1": "Генеративная графика, работа с LIDAR",
+      "col_2": "Generative graphics",
+      "col_3": "Tracking"
+    }
+  },
+  {
+    "id": 175,
+    "media": {
+      "filename": "175.MOV",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/175",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/175"
+    },
+    "title": "Vjing",
+    "description": "STREETBEAT 10 YEARS TAU\n\nГенеративный виджеинг",
+    "additional": {
+      "col_0": "STREETBEAT 10 YEARS TAU",
+      "col_1": "Генеративный виджеинг",
+      "col_2": "Vjing"
+    }
+  },
+  {
+    "id": 176,
+    "media": {
+      "filename": "176.MOV",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/176",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/176"
+    },
+    "title": "Vjing",
+    "description": "STREETBEAT 10 YEARS TAU\n\nГенеративный виджеинг",
+    "additional": {
+      "col_0": "STREETBEAT 10 YEARS TAU",
+      "col_1": "Генеративный виджеинг",
+      "col_2": "Vjing"
+    }
+  },
+  {
+    "id": 177,
+    "media": {
+      "filename": "177.png",
+      "type": "image",
+      "path": "https://res.cloudinary.com/dwwyducge/image/upload/images/177",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/177"
+    },
+    "title": "Laser programming",
+    "description": "NUR 2022/A.R.R.C 1.0 Dreamlaser\n\nКонтент для лазерных модулей и лазер-баров",
+    "additional": {
+      "col_0": "NUR 2022/A.R.R.C 1.0 Dreamlaser",
+      "col_1": "Контент для лазерных модулей и лазер-баров",
+      "col_2": "Laser programming"
+    }
+  },
+  {
+    "id": 178,
+    "media": {
+      "filename": "178.png",
+      "type": "image",
+      "path": "https://res.cloudinary.com/dwwyducge/image/upload/images/178",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/178"
+    },
+    "title": "Vjing",
+    "description": "Ambient in Tseh\n\nГенеративный виджеинг",
+    "additional": {
+      "col_0": "Ambient in Tseh",
+      "col_1": "Генеративный виджеинг",
+      "col_2": "Vjing"
+    }
+  },
+  {
+    "id": 179,
+    "media": {
+      "filename": "179.png",
+      "type": "image",
+      "path": "https://res.cloudinary.com/dwwyducge/image/upload/images/179",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/179"
+    },
+    "title": "Vjing",
+    "description": "Intervals Festival 2023 Night program\n\nГенеративный виджеинг",
+    "additional": {
+      "col_0": "Intervals Festival 2023 Night program",
+      "col_1": "Генеративный виджеинг",
+      "col_2": "Vjing"
+    }
+  },
+  {
+    "id": 180,
+    "media": {
+      "filename": "180.png",
+      "type": "image",
+      "path": "https://res.cloudinary.com/dwwyducge/image/upload/images/180",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/180"
+    },
+    "title": "Laser programming",
+    "description": "NUR 2022/A.R.R.C 1.0 Dreamlaser\n\nКонтент для лазерных модулей и лазер-баров",
+    "additional": {
+      "col_0": "NUR 2022/A.R.R.C 1.0 Dreamlaser",
+      "col_1": "Контент для лазерных модулей и лазер-баров",
+      "col_2": "Laser programming"
+    }
+  },
+  {
+    "id": 181,
+    "media": {
+      "filename": "181.png",
+      "type": "image",
+      "path": "https://res.cloudinary.com/dwwyducge/image/upload/images/181",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/181"
+    },
+    "title": "Generative graphics",
+    "description": "Генеративная графика",
+    "additional": {
+      "col_1": "Генеративная графика",
+      "col_2": "Generative graphics"
+    }
+  },
+  {
+    "id": 182,
+    "media": {
+      "filename": "182.mov",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/182",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/182"
+    },
+    "title": "Generative graphics",
+    "description": "mix cover Radiant - Mac Passion",
+    "additional": {
+      "col_0": "mix cover Radiant - Mac Passion",
+      "col_2": "Generative graphics"
+    }
+  },
+  {
+    "id": 183,
+    "media": {
+      "filename": "183.jpg",
+      "type": "image",
+      "path": "https://res.cloudinary.com/dwwyducge/image/upload/images/183",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/183"
+    },
+    "title": "A.R.R.C 2.0 Aim Tseh",
+    "description": "Программирование интерактивной инсталляции со световыми приборами",
+    "additional": {
+      "col_0": "A.R.R.C 2.0 Aim Tseh",
+      "col_1": "Программирование интерактивной инсталляции со световыми приборами",
+      "col_2": "Interactive installation"
+    }
+  },
+  {
+    "id": 184,
+    "media": {
+      "filename": "184.png",
+      "type": "image",
+      "path": "https://res.cloudinary.com/dwwyducge/image/upload/images/184",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/184"
+    },
+    "title": "Tracking",
+    "description": "Тест интерактивного LED пола Dreamlaser\n\nГенеративная графика, работа с датчиками LIDAR\n\nGenerative graphics",
+    "additional": {
+      "col_0": "Тест интерактивного LED пола Dreamlaser",
+      "col_1": "Генеративная графика, работа с датчиками LIDAR",
+      "col_2": "Generative graphics",
+      "col_3": "Tracking"
+    }
+  },
+  {
+    "id": 185,
+    "media": {
+      "filename": "185.png",
+      "type": "image",
+      "path": "https://res.cloudinary.com/dwwyducge/image/upload/images/185",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/185"
+    },
+    "title": "Vjing",
+    "description": "Столица Закатов Tsrh\n\nГенеративный виджеинг",
+    "additional": {
+      "col_0": "Столица Закатов Tsrh",
+      "col_1": "Генеративный виджеинг",
+      "col_2": "Vjing"
+    }
+  },
+  {
+    "id": 186,
+    "media": {
+      "filename": "186.mp4",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/186",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/186"
+    },
+    "title": "Generative graphics",
+    "description": "mix cover Radiant - Скважин",
+    "additional": {
+      "col_0": "mix cover Radiant - Скважин",
+      "col_2": "Generative graphics"
+    }
+  },
+  {
+    "id": 187,
+    "media": {
+      "filename": "187.png",
+      "type": "image",
+      "path": "https://res.cloudinary.com/dwwyducge/image/upload/images/187",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/187"
+    },
+    "title": "Vjing",
+    "description": "801 День города Нижнего Новгорода\n\nГенеративный виджеинг",
+    "additional": {
+      "col_0": "801 День города Нижнего Новгорода",
+      "col_1": "Генеративный виджеинг",
+      "col_2": "Vjing"
+    }
+  },
+  {
+    "id": 188,
+    "media": {
+      "filename": "188.mp4",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/188",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/188"
+    },
+    "title": "Generative graphics",
+    "description": "mix cover Radiant - What's that noise?",
+    "additional": {
+      "col_0": "mix cover Radiant - What's that noise?",
+      "col_2": "Generative graphics"
+    }
+  },
+  {
+    "id": 189,
+    "media": {
+      "filename": "189.mp4",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/189",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/189"
+    },
+    "title": "Generative graphics",
+    "description": "Генеративная графика",
+    "additional": {
+      "col_1": "Генеративная графика",
+      "col_2": "Generative graphics"
+    }
+  },
+  {
+    "id": 190,
+    "media": {
+      "filename": "190.jpg",
+      "type": "image",
+      "path": "https://res.cloudinary.com/dwwyducge/image/upload/images/190",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/190"
+    },
+    "title": "Generative graphics",
+    "description": "На основе работы Якова Хорева со спиралями из текста, я создала интерактивную инсталляцию. Текст жил своей жизнью ,но когда человек останавливался на нем, буквы собирались в вопросы. Яков собрал коллекцию из 200 мотивирующих вопросов, которые волнуют посетителей студии «Тихая» и мультимедиа-арт-пространства ЦЕХ*. Я превратила вопросы в трехмерные объекты, которые двигаются в виртуальном пространстве в соответствии с законами физики. Созданное «пространство вопросов» живет по собственным законам, но вместе с тем открыто к воздействию со стороны зрителей.",
+    "additional": {
+      "col_0": "Смешаная техника/The Pulse of Life студия Тихая и Dreamlaser Tseh",
+      "col_1": "На основе работы Якова Хорева со спиралями из текста, я создала интерактивную инсталляцию. Текст жил своей жизнью ,но когда человек останавливался на нем, буквы собирались в вопросы. Яков собрал коллекцию из 200 мотивирующих вопросов, которые волнуют посетителей студии «Тихая» и мультимедиа-арт-пространства ЦЕХ*. Я превратила вопросы в трехмерные объекты, которые двигаются в виртуальном пространстве в соответствии с законами физики. Созданное «пространство вопросов» живет по собственным законам, но вместе с тем открыто к воздействию со стороны зрителей.",
+      "col_2": "Interactive installation",
+      "col_3": "Generative graphics"
+    }
+  },
+  {
+    "id": 191,
+    "media": {
+      "filename": "191.jpg",
+      "type": "image",
+      "path": "https://res.cloudinary.com/dwwyducge/image/upload/images/191",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/191"
+    },
+    "title": "Generative graphics",
+    "description": "Подготовка к мероприятию Tseh\n\nГенеративная графика",
+    "additional": {
+      "col_0": "Подготовка к мероприятию Tseh",
+      "col_1": "Генеративная графика",
+      "col_2": "Generative graphics"
+    }
+  },
+  {
+    "id": 192,
+    "media": {
+      "filename": "192.jpg",
+      "type": "image",
+      "path": "https://res.cloudinary.com/dwwyducge/image/upload/images/192",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/192"
+    },
+    "title": "Layers/Dreamlaser",
+    "description": "Создание части контента, программирование интерфейса",
+    "additional": {
+      "col_0": "Layers/Dreamlaser",
+      "col_1": "Создание части контента, программирование интерфейса",
+      "col_2": "Interactive installation",
+      "col_3": "Generative graphics"
+    }
+  },
+  {
+    "id": 193,
+    "media": {
+      "filename": "193.png",
+      "type": "image",
+      "path": "https://res.cloudinary.com/dwwyducge/image/upload/images/193",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/193"
+    },
+    "title": "Laser programming",
+    "description": "Мастер класс по программированию аудиореактивной инсталляции с лазерами Dreamlaser",
+    "additional": {
+      "col_0": "Мастер класс по программированию аудиореактивной инсталляции с лазерами Dreamlaser",
+      "col_2": "Laser programming",
+      "col_3": "Interactive installation"
+    }
+  },
+  {
+    "id": 194,
+    "media": {
+      "filename": "194.jpg",
+      "type": "image",
+      "path": "https://res.cloudinary.com/dwwyducge/image/upload/images/194",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/194"
+    },
+    "title": "Vjing",
+    "description": "Intervals Festival 2024 Night program\n\nГенеративный виджеинг",
+    "additional": {
+      "col_0": "Intervals Festival 2024 Night program",
+      "col_1": "Генеративный виджеинг",
+      "col_2": "Vjing"
+    }
+  },
+  {
+    "id": 195,
+    "media": {
+      "filename": "195.jpg",
+      "type": "image",
+      "path": "https://res.cloudinary.com/dwwyducge/image/upload/images/195",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/195"
+    },
+    "title": "Vjing",
+    "description": "Горьковская/Dreamlaser Tseh\n\nГенеративный виджеинг",
+    "additional": {
+      "col_0": "Горьковская/Dreamlaser Tseh",
+      "col_1": "Генеративный виджеинг",
+      "col_2": "Vjing"
+    }
+  },
+  {
+    "id": 196,
+    "media": {
+      "filename": "196.jpg",
+      "type": "image",
+      "path": "https://res.cloudinary.com/dwwyducge/image/upload/images/196",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/196"
+    },
+    "title": "Layers/Dreamlaser",
+    "description": "Создание части контента, программирование интерфейса",
+    "additional": {
+      "col_0": "Layers/Dreamlaser",
+      "col_1": "Создание части контента, программирование интерфейса",
+      "col_2": "Interactive installation",
+      "col_3": "Generative graphics"
+    }
+  },
+  {
+    "id": 197,
+    "media": {
+      "filename": "197.mp4",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/197",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/197"
+    },
+    "title": "Generative graphics",
+    "description": "Генеративная графика",
+    "additional": {
+      "col_1": "Генеративная графика",
+      "col_2": "Generative graphics"
+    }
+  },
+  {
+    "id": 198,
+    "media": {
+      "filename": "198.png",
+      "type": "image",
+      "path": "https://res.cloudinary.com/dwwyducge/image/upload/images/198",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/198"
+    },
+    "title": "A.R.R.C 2.0 Aim Tseh",
+    "description": "Программирование интерактивной инсталляции со световыми приборами",
+    "additional": {
+      "col_0": "A.R.R.C 2.0 Aim Tseh",
+      "col_1": "Программирование интерактивной инсталляции со световыми приборами",
+      "col_2": "Interactive installation"
+    }
+  },
+  {
+    "id": 199,
+    "media": {
+      "filename": "199.png",
+      "type": "image",
+      "path": "https://res.cloudinary.com/dwwyducge/image/upload/images/199",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/199"
+    },
+    "title": "Generative graphics",
+    "description": "На основе работы Якова Хорева со спиралями из текста, я создала интерактивную инсталляцию. Текст жил своей жизнью ,но когда человек останавливался на нем, буквы собирались в вопросы. Яков собрал коллекцию из 200 мотивирующих вопросов, которые волнуют посетителей студии «Тихая» и мультимедиа-арт-пространства ЦЕХ*. Я превратила вопросы в трехмерные объекты, которые двигаются в виртуальном пространстве в соответствии с законами физики. Созданное «пространство вопросов» живет по собственным законам, но вместе с тем открыто к воздействию со стороны зрителей.",
+    "additional": {
+      "col_0": "Смешаная техника/The Pulse of Life студия Тихая и Dreamlaser Tseh",
+      "col_1": "На основе работы Якова Хорева со спиралями из текста, я создала интерактивную инсталляцию. Текст жил своей жизнью ,но когда человек останавливался на нем, буквы собирались в вопросы. Яков собрал коллекцию из 200 мотивирующих вопросов, которые волнуют посетителей студии «Тихая» и мультимедиа-арт-пространства ЦЕХ*. Я превратила вопросы в трехмерные объекты, которые двигаются в виртуальном пространстве в соответствии с законами физики. Созданное «пространство вопросов» живет по собственным законам, но вместе с тем открыто к воздействию со стороны зрителей.",
+      "col_2": "Interactive installation",
+      "col_3": "Generative graphics"
+    }
+  },
+  {
+    "id": 200,
+    "media": {
+      "filename": "200.mov",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/200",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/200"
+    },
+    "title": "Vjing",
+    "description": "New Star Camp 2025 Vibes/Dreamlaser\n\nГенеративный виджеинг",
+    "additional": {
+      "col_0": "New Star Camp 2025 Vibes/Dreamlaser",
+      "col_1": "Генеративный виджеинг",
+      "col_2": "Vjing"
+    }
+  },
+  {
+    "id": 201,
+    "media": {
+      "filename": "201.png",
+      "type": "image",
+      "path": "https://res.cloudinary.com/dwwyducge/image/upload/images/201",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/201"
+    },
+    "title": "Generative graphics",
+    "description": "На основе работы Якова Хорева со спиралями из текста, я создала интерактивную инсталляцию. Текст жил своей жизнью ,но когда человек останавливался на нем, буквы собирались в вопросы. Яков собрал коллекцию из 200 мотивирующих вопросов, которые волнуют посетителей студии «Тихая» и мультимедиа-арт-пространства ЦЕХ*. Я превратила вопросы в трехмерные объекты, которые двигаются в виртуальном пространстве в соответствии с законами физики. Созданное «пространство вопросов» живет по собственным законам, но вместе с тем открыто к воздействию со стороны зрителей.",
+    "additional": {
+      "col_0": "Смешаная техника/The Pulse of Life студия Тихая и Dreamlaser Tseh",
+      "col_1": "На основе работы Якова Хорева со спиралями из текста, я создала интерактивную инсталляцию. Текст жил своей жизнью ,но когда человек останавливался на нем, буквы собирались в вопросы. Яков собрал коллекцию из 200 мотивирующих вопросов, которые волнуют посетителей студии «Тихая» и мультимедиа-арт-пространства ЦЕХ*. Я превратила вопросы в трехмерные объекты, которые двигаются в виртуальном пространстве в соответствии с законами физики. Созданное «пространство вопросов» живет по собственным законам, но вместе с тем открыто к воздействию со стороны зрителей.",
+      "col_2": "Interactive installation",
+      "col_3": "Generative graphics"
+    }
+  },
+  {
+    "id": 202,
+    "media": {
+      "filename": "202.mov",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/202",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/202"
+    },
+    "title": "Vjing",
+    "description": "New Star Camp 2025 Vibes/Dreamlaser\n\nГенеративный виджеинг",
+    "additional": {
+      "col_0": "New Star Camp 2025 Vibes/Dreamlaser",
+      "col_1": "Генеративный виджеинг",
+      "col_2": "Vjing"
+    }
+  },
+  {
+    "id": 203,
+    "media": {
+      "filename": "203.mov",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/203",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/203"
+    },
+    "title": "Vjing",
+    "description": "New Star Camp 2025 Vibes/Dreamlaser\n\nГенеративный виджеинг",
+    "additional": {
+      "col_0": "New Star Camp 2025 Vibes/Dreamlaser",
+      "col_1": "Генеративный виджеинг",
+      "col_2": "Vjing"
+    }
+  },
+  {
+    "id": 204,
+    "media": {
+      "filename": "204.mov",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/204",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/204"
+    },
+    "title": "Vjing",
+    "description": "New Star Camp 2025 Vibes/Dreamlaser\n\nГенеративный виджеинг",
+    "additional": {
+      "col_0": "New Star Camp 2025 Vibes/Dreamlaser",
+      "col_1": "Генеративный виджеинг",
+      "col_2": "Vjing"
+    }
+  },
+  {
+    "id": 205,
+    "media": {
+      "filename": "205.mp4",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/205",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/205"
+    },
+    "title": "Generative graphics",
+    "description": "mix cover Radiant - KIKOK",
+    "additional": {
+      "col_0": "mix cover Radiant - KIKOK",
+      "col_2": "Generative graphics"
+    }
+  },
+  {
+    "id": 206,
+    "media": {
+      "filename": "206.png",
+      "type": "image",
+      "path": "https://res.cloudinary.com/dwwyducge/image/upload/images/206",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/206"
+    },
+    "title": "Game",
+    "description": "Сбербанкиада \"Снежки\" Казань\n\nПрограммирование интерактивной инсталляции\n\nInteractive installation",
+    "additional": {
+      "col_0": "Сбербанкиада \"Снежки\" Казань",
+      "col_1": "Программирование интерактивной инсталляции",
+      "col_2": "Interactive installation",
+      "col_3": "Game"
+    }
+  },
+  {
+    "id": 207,
+    "media": {
+      "filename": "207.mp4",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/207",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/207"
+    },
+    "title": "Тест в планетарии",
+    "description": "Generative graphics",
+    "additional": {
+      "col_0": "Тест в планетарии",
+      "col_2": "Generative graphics"
+    }
+  },
+  {
+    "id": 208,
+    "media": {
+      "filename": "208.png",
+      "type": "image",
+      "path": "https://res.cloudinary.com/dwwyducge/image/upload/images/208",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/208"
+    },
+    "title": "Vjing",
+    "description": "Концерт Николы Мельникова и Ансамбля Окто\n\nГенеративный виджеинг",
+    "additional": {
+      "col_0": "Концерт Николы Мельникова и Ансамбля Окто",
+      "col_1": "Генеративный виджеинг",
+      "col_2": "Vjing"
+    }
+  },
+  {
+    "id": 209,
+    "media": {
+      "filename": "209.mp4",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/209",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/209"
+    },
+    "title": "Vjing",
+    "description": "Long Arm/Tseh\n\nГенеративный виджеинг",
+    "additional": {
+      "col_0": "Long Arm/Tseh",
+      "col_1": "Генеративный виджеинг",
+      "col_2": "Vjing"
+    }
+  },
+  {
+    "id": 210,
+    "media": {
+      "filename": "210.mp4",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/210",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/210"
+    },
+    "title": "LED",
+    "description": "Программирование и управление лазерными излучателями, лазер барами и диодной лентой",
+    "additional": {
+      "col_0": "Горьковская/Dreamlaser Tseh",
+      "col_1": "Программирование и управление лазерными излучателями, лазер барами и диодной лентой",
+      "col_2": "LED",
+      "col_3": "Laser programming",
+      "col_4": "Vjing"
+    }
+  },
+  {
+    "id": 211,
+    "media": {
+      "filename": "211.jpg",
+      "type": "image",
+      "path": "https://res.cloudinary.com/dwwyducge/image/upload/images/211",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/211"
+    },
+    "title": "Тест в планетарии",
+    "description": "Generative graphics",
+    "additional": {
+      "col_0": "Тест в планетарии",
+      "col_2": "Generative graphics"
+    }
+  },
+  {
+    "id": 212,
+    "media": {
+      "filename": "212.png",
+      "type": "image",
+      "path": "https://res.cloudinary.com/dwwyducge/image/upload/images/212",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/212"
+    },
+    "title": "Vjing",
+    "description": "Intervals Festival 2023 концерт Сюзанны\n\nГенеративный виджеинг",
+    "additional": {
+      "col_0": "Intervals Festival 2023 концерт Сюзанны",
+      "col_1": "Генеративный виджеинг",
+      "col_2": "Vjing"
+    }
+  },
+  {
+    "id": 213,
+    "media": {
+      "filename": "213.png",
+      "type": "image",
+      "path": "https://res.cloudinary.com/dwwyducge/image/upload/images/213",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/213"
+    },
+    "title": "Generative graphics",
+    "description": "Intervals Festival 2024 IMMERSION\n\nГенеративная графика",
+    "additional": {
+      "col_0": "Intervals Festival 2024 IMMERSION",
+      "col_1": "Генеративная графика",
+      "col_2": "Generative graphics"
+    }
+  },
+  {
+    "id": 214,
+    "media": {
+      "filename": "214.mp4",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/214",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/214"
+    },
+    "title": "Generative graphics",
+    "description": "Генеративная графика",
+    "additional": {
+      "col_1": "Генеративная графика",
+      "col_2": "Generative graphics"
+    }
+  },
+  {
+    "id": 215,
+    "media": {
+      "filename": "215.mp4",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/215",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/215"
+    },
+    "title": "Generative graphics",
+    "description": "Генеративная графика",
+    "additional": {
+      "col_1": "Генеративная графика",
+      "col_2": "Generative graphics"
+    }
+  },
+  {
+    "id": 216,
+    "media": {
+      "filename": "216.jpg",
+      "type": "image",
+      "path": "https://res.cloudinary.com/dwwyducge/image/upload/images/216",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/216"
+    },
+    "title": "Vjing",
+    "description": "Intervals Festival 2024 Night program\n\nГенеративный виджеинг",
+    "additional": {
+      "col_0": "Intervals Festival 2024 Night program",
+      "col_1": "Генеративный виджеинг",
+      "col_2": "Vjing"
+    }
+  },
+  {
+    "id": 217,
+    "media": {
+      "filename": "217.png",
+      "type": "image",
+      "path": "https://res.cloudinary.com/dwwyducge/image/upload/images/217",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/217"
+    },
+    "title": "LED",
+    "description": "Генеративный виджеинг и управление сетапом из диодных палок",
+    "additional": {
+      "col_0": "New Star Camp 2023",
+      "col_1": "Генеративный виджеинг и управление сетапом из диодных палок",
+      "col_2": "LED",
+      "col_3": "Vjing"
+    }
+  },
+  {
+    "id": 218,
+    "media": {
+      "filename": "218.png",
+      "type": "image",
+      "path": "https://res.cloudinary.com/dwwyducge/image/upload/images/218",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/218"
+    },
+    "title": "Vjing",
+    "description": "New Star Camp 2024\n\nГенеративный виджеинг",
+    "additional": {
+      "col_0": "New Star Camp 2024",
+      "col_1": "Генеративный виджеинг",
+      "col_2": "Vjing"
+    }
+  },
+  {
+    "id": 219,
+    "media": {
+      "filename": "219.png",
+      "type": "image",
+      "path": "https://res.cloudinary.com/dwwyducge/image/upload/images/219",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/219"
+    },
+    "title": "Tracking",
+    "description": "Тест интерактивного LED пола Dreamlaser\n\nГенеративная графика, работа с датчиками LIDAR\n\nGenerative graphics",
+    "additional": {
+      "col_0": "Тест интерактивного LED пола Dreamlaser",
+      "col_1": "Генеративная графика, работа с датчиками LIDAR",
+      "col_2": "Generative graphics",
+      "col_3": "Tracking"
+    }
+  },
+  {
+    "id": 220,
+    "media": {
+      "filename": "220.jpg",
+      "type": "image",
+      "path": "https://res.cloudinary.com/dwwyducge/image/upload/images/220",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/220"
+    },
+    "title": "Game",
+    "description": "Интерактивная инсталляция Tseh\n\nПрограммирование интерактивной инсталляции\n\nInteractive installation",
+    "additional": {
+      "col_0": "Интерактивная инсталляция Tseh",
+      "col_1": "Программирование интерактивной инсталляции",
+      "col_2": "Interactive installation",
+      "col_3": "Game"
+    }
+  },
+  {
+    "id": 221,
+    "media": {
+      "filename": "221.jpg",
+      "type": "image",
+      "path": "https://res.cloudinary.com/dwwyducge/image/upload/images/221",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/221"
+    },
+    "title": "Generative graphics",
+    "description": "Участвовала в создании контента и программировании интерактивного пола",
+    "additional": {
+      "col_0": "Точка Сборки/Radugadesign",
+      "col_1": "Участвовала в создании контента и программировании интерактивного пола",
+      "col_2": "Generative graphics",
+      "col_3": "Interactive installation"
+    }
+  },
+  {
+    "id": 222,
+    "media": {
+      "filename": "222.mp4",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/222",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/222"
+    },
+    "title": "kinetic",
+    "description": "CISTERN/Dreamlaser\n\nПрограммирование инсталляции с кинетикой",
+    "additional": {
+      "col_0": "CISTERN/Dreamlaser",
+      "col_1": "Программирование инсталляции с кинетикой",
+      "col_2": "kinetic"
+    }
+  },
+  {
+    "id": 223,
+    "media": {
+      "filename": "223.jpg",
+      "type": "image",
+      "path": "https://res.cloudinary.com/dwwyducge/image/upload/images/223",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/223"
+    },
+    "title": "Vjing",
+    "description": "Intervals Festival 2024 Night program\n\nГенеративный виджеинг",
+    "additional": {
+      "col_0": "Intervals Festival 2024 Night program",
+      "col_1": "Генеративный виджеинг",
+      "col_2": "Vjing"
+    }
+  },
+  {
+    "id": 224,
+    "media": {
+      "filename": "224.mp4",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/224",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/224"
+    },
+    "title": "Generative graphics",
+    "description": "Генеративная графика",
+    "additional": {
+      "col_1": "Генеративная графика",
+      "col_2": "Generative graphics"
+    }
+  },
+  {
+    "id": 225,
+    "media": {
+      "filename": "225.png",
+      "type": "image",
+      "path": "https://res.cloudinary.com/dwwyducge/image/upload/images/225",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/225"
+    },
+    "title": "LED",
+    "description": "Программирование и управление лазерными излучателями, лазер барами и диодной лентой",
+    "additional": {
+      "col_0": "Горьковская/Dreamlaser Tseh",
+      "col_1": "Программирование и управление лазерными излучателями, лазер барами и диодной лентой",
+      "col_2": "LED",
+      "col_3": "Laser programming",
+      "col_4": "Vjing"
+    }
+  },
+  {
+    "id": 226,
+    "media": {
+      "filename": "226.mp4",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/226",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/226"
+    },
+    "title": "Generative graphics",
+    "description": "Генеративная графика",
+    "additional": {
+      "col_1": "Генеративная графика",
+      "col_2": "Generative graphics"
+    }
+  },
+  {
+    "id": 227,
+    "media": {
+      "filename": "227.mp4",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/227",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/227"
+    },
+    "title": "Volumetric",
+    "description": "Тест вольюметрического экрана Tseh",
+    "additional": {
+      "col_0": "Тест вольюметрического экрана Tseh",
+      "col_2": "Volumetric"
+    }
+  },
+  {
+    "id": 228,
+    "media": {
+      "filename": "228.png",
+      "type": "image",
+      "path": "https://res.cloudinary.com/dwwyducge/image/upload/images/228",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/228"
+    },
+    "title": "Vjing",
+    "description": "New Star Camp 2024\n\nГенеративный виджеинг",
+    "additional": {
+      "col_0": "New Star Camp 2024",
+      "col_1": "Генеративный виджеинг",
+      "col_2": "Vjing"
+    }
+  },
+  {
+    "id": 229,
+    "media": {
+      "filename": "229.mp4",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/229",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/229"
+    },
+    "title": "Volumetric",
+    "description": "Тест вольюметрического экрана Tseh",
+    "additional": {
+      "col_0": "Тест вольюметрического экрана Tseh",
+      "col_2": "Volumetric"
+    }
+  },
+  {
+    "id": 230,
+    "media": {
+      "filename": "230.png",
+      "type": "image",
+      "path": "https://res.cloudinary.com/dwwyducge/image/upload/images/230",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/230"
+    },
+    "title": "Vjing",
+    "description": "New Star Camp 2024\n\nГенеративный виджеинг",
+    "additional": {
+      "col_0": "New Star Camp 2024",
+      "col_1": "Генеративный виджеинг",
+      "col_2": "Vjing"
+    }
+  },
+  {
+    "id": 231,
+    "media": {
+      "filename": "231.mp4",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/231",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/231"
+    },
+    "title": "Generative graphics",
+    "description": "Отправной точкой для работ был 50-летний юбилей отправки в космос радиосигнала о человечестве группой учёных в Аресибо, Пуэрто-Рико.\nМы решили предположить, что радиосигнал действительно дошёл до некой формы жизни из далёкого космоса, и теперь она пытается его расшифровать. Мы взяли исходный бинарный код сообщения и поняли, что зашифрованная в нём информация очень \"человеческая\", и другая форма разума вряд ли сможет декодировать его.\nПроконсультировавшись с ChatGPT 40, - единственной доступной на данный момент не-человеческой формой разума, - мы попробовали интерпретировать этот код как информацию о 2D или 3D координатах, расстоянии, 3D-объектах и даже данных о цвете. Ничего из этого в итоге не имело смысла, поэтому форма разума перестаёт пытаться расшифровать сообщение и просто наслаждается красотой космоса :)\nВ звуковой дорожке мы сначала буквально воспроизвели исходный радиосигнал, задав сдвижку на полтона вверх либо вниз для 0 и 1, с той же частотой, с которой было отправлено сообщение в 1974 году. Затем, при попытках\n\"расшифровки\", эта звуковая дорожка изменялась с разной логикой.\nУ нас естественным образом получился очень мощный вайб компьтерного арта 1970-х, что в рамках этого опен-колла было очень органично.",
+    "additional": {
+      "col_0": "INBOX: 1 Работа, сделанная совместно с Арсением Тюриным для Опен-колла, в котором мы заняли первое место. Опен-колл проводился немецким фондом art meets science -\nStiftung Herbert W. Franke и назывался CONTACT\nАТТЕМРТ.",
+      "col_1": "Отправной точкой для работ был 50-летний юбилей отправки в космос радиосигнала о человечестве группой учёных в Аресибо, Пуэрто-Рико.\nМы решили предположить, что радиосигнал действительно дошёл до некой формы жизни из далёкого космоса, и теперь она пытается его расшифровать. Мы взяли исходный бинарный код сообщения и поняли, что зашифрованная в нём информация очень \"человеческая\", и другая форма разума вряд ли сможет декодировать его.\nПроконсультировавшись с ChatGPT 40, - единственной доступной на данный момент не-человеческой формой разума, - мы попробовали интерпретировать этот код как информацию о 2D или 3D координатах, расстоянии, 3D-объектах и даже данных о цвете. Ничего из этого в итоге не имело смысла, поэтому форма разума перестаёт пытаться расшифровать сообщение и просто наслаждается красотой космоса :)\nВ звуковой дорожке мы сначала буквально воспроизвели исходный радиосигнал, задав сдвижку на полтона вверх либо вниз для 0 и 1, с той же частотой, с которой было отправлено сообщение в 1974 году. Затем, при попытках\n\"расшифровки\", эта звуковая дорожка изменялась с разной логикой.\nУ нас естественным образом получился очень мощный вайб компьтерного арта 1970-х, что в рамках этого опен-колла было очень органично.",
+      "col_2": "Generative graphics"
+    }
+  },
+  {
+    "id": 232,
+    "media": {
+      "filename": "232.png",
+      "type": "image",
+      "path": "https://res.cloudinary.com/dwwyducge/image/upload/images/232",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/232"
+    },
+    "title": "Vjing",
+    "description": "New Star Camp 2024\n\nГенеративный виджеинг",
+    "additional": {
+      "col_0": "New Star Camp 2024",
+      "col_1": "Генеративный виджеинг",
+      "col_2": "Vjing"
+    }
+  },
+  {
+    "id": 233,
+    "media": {
+      "filename": "233.mp4",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/233",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/233"
+    },
+    "title": "Generative graphics",
+    "description": "Отправной точкой для работ был 50-летний юбилей отправки в космос радиосигнала о человечестве группой учёных в Аресибо, Пуэрто-Рико.\nМы решили предположить, что радиосигнал действительно дошёл до некой формы жизни из далёкого космоса, и теперь она пытается его расшифровать. Мы взяли исходный бинарный код сообщения и поняли, что зашифрованная в нём информация очень \"человеческая\", и другая форма разума вряд ли сможет декодировать его.\nПроконсультировавшись с ChatGPT 40, - единственной доступной на данный момент не-человеческой формой разума, - мы попробовали интерпретировать этот код как информацию о 2D или 3D координатах, расстоянии, 3D-объектах и даже данных о цвете. Ничего из этого в итоге не имело смысла, поэтому форма разума перестаёт пытаться расшифровать сообщение и просто наслаждается красотой космоса :)\nВ звуковой дорожке мы сначала буквально воспроизвели исходный радиосигнал, задав сдвижку на полтона вверх либо вниз для 0 и 1, с той же частотой, с которой было отправлено сообщение в 1974 году. Затем, при попытках\n\"расшифровки\", эта звуковая дорожка изменялась с разной логикой.\nУ нас естественным образом получился очень мощный вайб компьтерного арта 1970-х, что в рамках этого опен-колла было очень органично.",
+    "additional": {
+      "col_0": "INBOX: 1 Работа, сделанная совместно с Арсением Тюриным для Опен-колла, в котором мы заняли первое место. Опен-колл проводился немецким фондом art meets science -\nStiftung Herbert W. Franke и назывался CONTACT\nАТТЕМРТ.",
+      "col_1": "Отправной точкой для работ был 50-летний юбилей отправки в космос радиосигнала о человечестве группой учёных в Аресибо, Пуэрто-Рико.\nМы решили предположить, что радиосигнал действительно дошёл до некой формы жизни из далёкого космоса, и теперь она пытается его расшифровать. Мы взяли исходный бинарный код сообщения и поняли, что зашифрованная в нём информация очень \"человеческая\", и другая форма разума вряд ли сможет декодировать его.\nПроконсультировавшись с ChatGPT 40, - единственной доступной на данный момент не-человеческой формой разума, - мы попробовали интерпретировать этот код как информацию о 2D или 3D координатах, расстоянии, 3D-объектах и даже данных о цвете. Ничего из этого в итоге не имело смысла, поэтому форма разума перестаёт пытаться расшифровать сообщение и просто наслаждается красотой космоса :)\nВ звуковой дорожке мы сначала буквально воспроизвели исходный радиосигнал, задав сдвижку на полтона вверх либо вниз для 0 и 1, с той же частотой, с которой было отправлено сообщение в 1974 году. Затем, при попытках\n\"расшифровки\", эта звуковая дорожка изменялась с разной логикой.\nУ нас естественным образом получился очень мощный вайб компьтерного арта 1970-х, что в рамках этого опен-колла было очень органично.",
+      "col_2": "Generative graphics"
+    }
+  },
+  {
+    "id": 234,
+    "media": {
+      "filename": "234.png",
+      "type": "image",
+      "path": "https://res.cloudinary.com/dwwyducge/image/upload/images/234",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/234"
+    },
+    "title": "Vjing",
+    "description": "New Star Camp 2024\n\nГенеративный виджеинг",
+    "additional": {
+      "col_0": "New Star Camp 2024",
+      "col_1": "Генеративный виджеинг",
+      "col_2": "Vjing"
+    }
+  },
+  {
+    "id": 235,
+    "media": {
+      "filename": "235.png",
+      "type": "image",
+      "path": "https://res.cloudinary.com/dwwyducge/image/upload/images/235",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/235"
+    },
+    "title": "Tracking",
+    "description": "Инсталляция на действующем производстве. Сетап состоял из лазеров, зеркал установленных на кран-балке и дальномеров, с помощью которых мы получали информацию о местоположении кран-балки. Кран-балкой управлял работник производства. Я программировала инсталляцию и прописывала лазерный контент.",
+    "additional": {
+      "col_0": "Ночь Музеев/Dialog Dreamlaser г.Чехов",
+      "col_1": "Инсталляция на действующем производстве. Сетап состоял из лазеров, зеркал установленных на кран-балке и дальномеров, с помощью которых мы получали информацию о местоположении кран-балки. Кран-балкой управлял работник производства. Я программировала инсталляцию и прописывала лазерный контент.",
+      "col_2": "Tracking",
+      "col_3": "Laser programming"
+    }
+  },
+  {
+    "id": 236,
+    "media": {
+      "filename": "236.mp4",
+      "type": "video",
+      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/236",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/236"
+    },
+    "title": "RICS Dreamlaser",
+    "description": "Создание генеративного контента для инсталляции\n\nGenerative graphics",
+    "additional": {
+      "col_0": "RICS Dreamlaser",
+      "col_1": "Создание генеративного контента для инсталляции",
+      "col_2": "Generative graphics"
+    }
+  },
+  {
+    "id": 237,
+    "media": {
+      "filename": "237.png",
+      "type": "image",
+      "path": "https://res.cloudinary.com/dwwyducge/image/upload/images/237",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/237"
+    },
+    "title": "Tracking",
+    "description": "Инсталляция на действующем производстве. Сетап состоял из лазеров, зеркал установленных на кран-балке и дальномеров, с помощью которых мы получали информацию о местоположении кран-балки. Кран-балкой управлял работник производства. Я программировала инсталляцию и прописывала лазерный контент.",
+    "additional": {
+      "col_0": "Ночь Музеев/Dialog Dreamlaser г.Чехов",
+      "col_1": "Инсталляция на действующем производстве. Сетап состоял из лазеров, зеркал установленных на кран-балке и дальномеров, с помощью которых мы получали информацию о местоположении кран-балки. Кран-балкой управлял работник производства. Я программировала инсталляцию и прописывала лазерный контент.",
+      "col_2": "Tracking",
+      "col_3": "Laser programming"
+    }
+  },
+  {
+    "id": 238,
+    "media": {
+      "filename": "238.png",
+      "type": "image",
+      "path": "https://res.cloudinary.com/dwwyducge/image/upload/images/238",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/238"
+    },
+    "title": "Тест для студии \"Тихая\"",
+    "description": "Программирование интерфейса\n\nInteractive installation",
+    "additional": {
+      "col_0": "Тест для студии \"Тихая\"",
+      "col_1": "Программирование интерфейса",
+      "col_2": "Interactive installation"
+    }
+  },
+  {
+    "id": 239,
+    "media": {
+      "filename": "239.jpg",
+      "type": "image",
+      "path": "https://res.cloudinary.com/dwwyducge/image/upload/images/239",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/239"
+    },
+    "title": "Vjing",
+    "description": "Столица Закатов Tsrh\n\nГенеративный виджеинг",
+    "additional": {
+      "col_0": "Столица Закатов Tsrh",
+      "col_1": "Генеративный виджеинг",
+      "col_2": "Vjing"
+    }
+  },
+  {
+    "id": 240,
+    "media": {
+      "filename": "240.png",
+      "type": "image",
+      "path": "https://res.cloudinary.com/dwwyducge/image/upload/images/240",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/240"
+    },
+    "title": "Laser programming",
+    "description": "A.R.R.C 2.0 React Tseh\n\nПрограммирование лазерных излучателей",
+    "additional": {
+      "col_0": "A.R.R.C 2.0 React Tseh",
+      "col_1": "Программирование лазерных излучателей",
+      "col_2": "Laser programming"
+    }
+  },
+  {
+    "id": 241,
+    "media": {
+      "filename": "241.jpg",
+      "type": "image",
+      "path": "https://res.cloudinary.com/dwwyducge/image/upload/images/241",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/241"
+    },
+    "title": "Vjing",
+    "description": "Intervals Festival 2024 Night program\n\nГенеративный виджеинг",
+    "additional": {
+      "col_0": "Intervals Festival 2024 Night program",
+      "col_1": "Генеративный виджеинг",
+      "col_2": "Vjing"
+    }
+  },
+  {
+    "id": 242,
+    "media": {
+      "filename": "242.jpg",
+      "type": "image",
+      "path": "https://res.cloudinary.com/dwwyducge/image/upload/images/242",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/242"
+    },
+    "title": "Vjing",
+    "description": "Горьковская/Dreamlaser Tseh\n\nГенеративный виджеинг",
+    "additional": {
+      "col_0": "Горьковская/Dreamlaser Tseh",
+      "col_1": "Генеративный виджеинг",
+      "col_2": "Vjing"
+    }
+  },
+  {
+    "id": 243,
+    "media": {
+      "filename": "243.png",
+      "type": "image",
+      "path": "https://res.cloudinary.com/dwwyducge/image/upload/images/243",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/243"
+    },
+    "title": "Тест для студии \"Тихая\"",
+    "description": "Программирование интерфейса\n\nInteractive installation",
+    "additional": {
+      "col_0": "Тест для студии \"Тихая\"",
+      "col_1": "Программирование интерфейса",
+      "col_2": "Interactive installation"
+    }
+  },
+  {
+    "id": 244,
+    "media": {
+      "filename": "244.jpg",
+      "type": "image",
+      "path": "https://res.cloudinary.com/dwwyducge/image/upload/images/244",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/244"
+    },
+    "title": "Тест для студии \"Тихая\"",
+    "description": "Программирование интерфейса\n\nInteractive installation",
+    "additional": {
+      "col_0": "Тест для студии \"Тихая\"",
+      "col_1": "Программирование интерфейса",
+      "col_2": "Interactive installation"
+    }
+  },
+  {
+    "id": 245,
+    "media": {
+      "filename": "245.png",
+      "type": "image",
+      "path": "https://res.cloudinary.com/dwwyducge/image/upload/images/245",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/245"
+    },
+    "title": "A.R.R.C 2.0 Aim Tseh",
+    "description": "Программирование интерактивной инсталляции со световыми приборами",
+    "additional": {
+      "col_0": "A.R.R.C 2.0 Aim Tseh",
+      "col_1": "Программирование интерактивной инсталляции со световыми приборами",
+      "col_2": "Interactive installation"
+    }
+  },
+  {
+    "id": 246,
+    "media": {
+      "filename": "246.jpg",
+      "type": "image",
+      "path": "https://res.cloudinary.com/dwwyducge/image/upload/images/246",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/246"
+    },
+    "title": "LED",
+    "description": "Программирование системы из кинетических лебедок, лазеров и диодных палок, управление в реальном времени",
+    "additional": {
+      "col_0": "Signal 2024",
+      "col_1": "Программирование системы из кинетических лебедок, лазеров и диодных палок, управление в реальном времени",
+      "col_2": "kinetic",
+      "col_3": "LED",
+      "col_4": "Laser programming"
+    }
+  },
+  {
+    "id": 247,
+    "media": {
+      "filename": "247.png",
+      "type": "image",
+      "path": "https://res.cloudinary.com/dwwyducge/image/upload/images/247",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/247"
+    },
+    "title": "LED",
+    "description": "Генеративная графика, создание контента для диодных палок",
+    "additional": {
+      "col_0": "BIOM Tseh",
+      "col_1": "Генеративная графика, создание контента для диодных палок",
+      "col_2": "Generative graphics",
+      "col_3": "LED"
+    }
+  },
+  {
+    "id": 248,
+    "media": {
+      "filename": "248.png",
+      "type": "image",
+      "path": "https://res.cloudinary.com/dwwyducge/image/upload/images/248",
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/248"
+    },
+    "title": "Tracking",
+    "description": "Phygital games\n\nГенеративная графика, работа с системой трекинга\n\nGenerative graphics",
+    "additional": {
+      "col_0": "Phygital games",
+      "col_1": "Генеративная графика, работа с системой трекинга",
+      "col_2": "Generative graphics",
+      "col_3": "Tracking"
+    }
+  }
+]
