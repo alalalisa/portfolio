@@ -863,8 +863,8 @@ function updateVisibleIcons() {
             board.appendChild(element);
             
             // Для первых 20 видимых иконок загружаем изображение сразу (не через observer)
-            if (showIndex < 20 && icon.element) {
-                const img = icon.element.querySelector('img');
+            if (showIndex < 20) {
+                const img = element.querySelector('img');
                 if (img && img.dataset.src) {
                     img.src = img.dataset.src;
                     img.removeAttribute('data-src');
