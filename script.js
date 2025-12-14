@@ -16,6 +16,9 @@ const UPDATE_INTERVAL = 16; // ~60 FPS
 const VISIBILITY_UPDATE_INTERVAL = 150; // Обновляем видимость реже
 const Z_INDEX_UPDATE_THRESHOLD = 10; // Обновляем z-index только при значительном изменении
 
+// Intersection Observer для lazy loading изображений
+let imageObserver = null;
+
 // Батчинг для DOM обновлений
 let pendingUpdates = [];
 let rafId = null;
@@ -644,6 +647,9 @@ function initializeIcons() {
 
     console.log(`Инициализация иконок: загружено ${portfolioData.length} элементов`);
     
+    // Инициализируем Intersection Observer для lazy loading
+    initImageObserver();
+    
     // Создаем только структуру данных, не добавляем в DOM сразу
     portfolioData.forEach((item, index) => {
         const icon = createIconData(item, index);
@@ -653,6 +659,28 @@ function initializeIcons() {
     console.log(`Создано ${icons.length} иконок`);
     updateShape();
     updateVisibleIcons();
+}
+
+// Инициализация Intersection Observer для эффективного lazy loading
+function initImageObserver() {
+    if (imageObserver) {
+        return; // Уже инициализирован
+    }
+    
+    imageObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const img = entry.target;
+                if (img.dataset.src) {
+                    img.src = img.dataset.src;
+                    img.removeAttribute('data-src');
+                }
+                imageObserver.unobserve(img);
+            }
+        });
+    }, { 
+        rootMargin: '100px' // Начинаем загрузку за 100px до появления в viewport
+    });
 }
 
 function createIconData(item, index) {
@@ -689,6 +717,21 @@ function getCloudinaryUrlWithFallback(baseUrl, fileNumber, folder) {
     return baseUrl;
 }
 
+// Функция для оптимизации Cloudinary URL с параметрами трансформации
+function optimizeCloudinaryUrl(url, width = 80, height = 80) {
+    if (!url || !url.includes('cloudinary.com')) {
+        return url;
+    }
+    
+    // Проверяем, есть ли уже трансформации в URL
+    if (url.includes('/upload/') && !url.includes('/upload/w_')) {
+        // Добавляем оптимизацию: w_80, h_80, c_fill (обрезка), q_auto (авто качество), f_webp (WebP формат)
+        url = url.replace('/upload/', `/upload/w_${width},h_${height},c_fill,q_auto,f_webp/`);
+    }
+    
+    return url;
+}
+
 function createIconElement(icon) {
     if (icon.element) return icon.element;
 
@@ -705,6 +748,9 @@ function createIconElement(icon) {
     let thumbnailPath = icon.item.media.thumbnail || icon.item.media.path;
     let fullPath = icon.item.media.path;
     
+    // Оптимизируем thumbnail URL для Cloudinary (уменьшаем размер и используем WebP)
+    thumbnailPath = optimizeCloudinaryUrl(thumbnailPath, iconSize, iconSize);
+    
     // Извлекаем номер файла для возможного fallback
     const fileNumberMatch = icon.item.media.filename.match(/^(\d+)/);
     const fileNumber = fileNumberMatch ? fileNumberMatch[1] : null;
@@ -712,9 +758,9 @@ function createIconElement(icon) {
     if (icon.item.media.type === 'video') {
         // Для видео используем thumbnail как превью
         mediaElement = document.createElement('img');
-        mediaElement.src = thumbnailPath;
+        // Используем data-src для lazy loading через Intersection Observer
+        mediaElement.dataset.src = thumbnailPath;
         mediaElement.alt = getTitle(icon.item) || 'Работа';
-        mediaElement.loading = 'lazy';
         mediaElement.decoding = 'async';
         mediaElement.dataset.fullVideo = fullPath; // Сохраняем путь к полному видео
         mediaElement.dataset.isVideo = 'true';
@@ -731,9 +777,9 @@ function createIconElement(icon) {
     } else {
         // Для изображений используем thumbnail в галерее
         mediaElement = document.createElement('img');
-        mediaElement.src = thumbnailPath;
+        // Используем data-src для lazy loading через Intersection Observer
+        mediaElement.dataset.src = thumbnailPath;
         mediaElement.alt = getTitle(icon.item) || 'Работа';
-        mediaElement.loading = 'lazy';
         mediaElement.decoding = 'async';
         mediaElement.dataset.fullImage = fullPath; // Сохраняем путь к полному изображению
         
@@ -750,6 +796,11 @@ function createIconElement(icon) {
 
     div.appendChild(mediaElement);
     div.appendChild(overlay);
+    
+    // Добавляем изображение в Intersection Observer для lazy loading
+    if (imageObserver && mediaElement.dataset.src) {
+        imageObserver.observe(mediaElement);
+    }
     div.addEventListener('click', () => openModal(icon.item));
 
     icon.element = div;
@@ -806,10 +857,22 @@ function updateVisibleIcons() {
     });
     
     // Применяем изменения батчами
-    toShow.forEach(icon => {
+    toShow.forEach((icon, showIndex) => {
         if (!icon.element) {
             const element = createIconElement(icon);
             board.appendChild(element);
+            
+            // Для первых 20 видимых иконок загружаем изображение сразу (не через observer)
+            if (showIndex < 20 && icon.element) {
+                const img = icon.element.querySelector('img');
+                if (img && img.dataset.src) {
+                    img.src = img.dataset.src;
+                    img.removeAttribute('data-src');
+                    if (imageObserver) {
+                        imageObserver.unobserve(img);
+                    }
+                }
+            }
         }
         if (icon.element) {
             icon.element.style.display = 'block';
@@ -825,6 +888,42 @@ function updateVisibleIcons() {
     });
     
     visibleIcons = newVisibleIcons;
+    
+    // Предзагрузка первых видимых иконок для ускорения отображения
+    preloadVisibleIcons();
+}
+
+// Предзагрузка первых видимых иконок
+function preloadVisibleIcons() {
+    const visibleArray = Array.from(visibleIcons).slice(0, 30); // Первые 30 видимых
+    const preloadedUrls = new Set();
+    
+    visibleArray.forEach(index => {
+        const icon = icons[index];
+        if (!icon || !icon.item || !icon.item.media) return;
+        
+        const thumbnailPath = optimizeCloudinaryUrl(
+            icon.item.media.thumbnail || icon.item.media.path, 
+            iconSize, 
+            iconSize
+        );
+        
+        // Избегаем дубликатов
+        if (preloadedUrls.has(thumbnailPath)) return;
+        preloadedUrls.add(thumbnailPath);
+        
+        // Создаем link для предзагрузки
+        const link = document.createElement('link');
+        link.rel = 'preload';
+        link.as = 'image';
+        link.href = thumbnailPath;
+        link.crossOrigin = 'anonymous';
+        
+        // Добавляем только если еще не добавлен
+        if (!document.querySelector(`link[href="${thumbnailPath}"]`)) {
+            document.head.appendChild(link);
+        }
+    });
 }
 
 function getViewportBounds() {
