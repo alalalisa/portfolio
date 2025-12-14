@@ -357,6 +357,7 @@ function filterIconsByTag(selectedTag) {
     // Определяем, какие иконки соответствуют тегу
     const matchingIcons = [];
     const nonMatchingIcons = [];
+    const addedProjectIds = new Set(); // Отслеживаем добавленные проекты по ID
     
     // Нормализуем выбранный тег для сравнения (убираем лишние пробелы)
     const normalizedSelectedTag = selectedTag.trim();
@@ -379,9 +380,9 @@ function filterIconsByTag(selectedTag) {
         }
         
         if (hasTag) {
-            // Проверяем, что иконка еще не добавлена (избегаем дубликатов)
-            const alreadyAdded = matchingIcons.some(m => m.index === index);
-            if (!alreadyAdded) {
+            // Проверяем, что проект с таким ID еще не добавлен (избегаем дубликатов)
+            if (!addedProjectIds.has(item.id)) {
+                addedProjectIds.add(item.id);
                 matchingIcons.push({ icon, index });
             }
         } else {
