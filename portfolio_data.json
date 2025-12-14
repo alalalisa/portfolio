@@ -3723,21 +3723,6 @@
     }
   },
   {
-    "id": 229,
-    "media": {
-      "filename": "229.mp4",
-      "type": "video",
-      "path": "https://res.cloudinary.com/dwwyducge/video/upload/images/229",
-      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/229"
-    },
-    "title": "Volumetric",
-    "description": "Тест вольюметрического экрана Tseh",
-    "additional": {
-      "col_0": "Тест вольюметрического экрана Tseh",
-      "col_2": "Volumetric"
-    }
-  },
-  {
     "id": 230,
     "media": {
       "filename": "230.png",
