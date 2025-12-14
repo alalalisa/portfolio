@@ -1904,7 +1904,7 @@ async function setupSplashScreen() {
         splashPhoto.src = splashConfig.photoPath;
         
         // Увеличиваем картинку в 1.3 раза и сдвигаем влево на 100px
-        splashPhoto.style.transform = 'scale(1.3) translateX(0px)';
+        splashPhoto.style.transform = 'scale(1.3) translateX(-50px)';
         splashPhoto.style.transformOrigin = 'center center';
         
         splashPhoto.onload = () => {
