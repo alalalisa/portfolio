@@ -504,7 +504,7 @@ body {
     height: 2000%;
     object-fit: contain;
     opacity: 0.7;
-    transform: translate(-50%, -50%) scale(0.054) translateX(0px);
+    transform: translate(-50%, -50%) scale(0.054) translateX(100px) translateY(100px);
     transform-origin: center center;
     display: block;
     z-index: 2;
