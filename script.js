@@ -1571,6 +1571,9 @@ window.openModal = function openModal(item) {
     modalDescription.textContent = getDescription(item) || '';
     modal.classList.add('active');
     document.body.style.overflow = 'hidden';
+    
+    // Обновляем URL с hash для проекта
+    window.history.pushState({ projectId: item.id }, '', `#project-${item.id}`);
 }
 
 function closeModal() {
@@ -1581,6 +1584,11 @@ function closeModal() {
     document.body.style.overflow = '';
     modalVideo.pause();
     modalVideo.currentTime = 0;
+    
+    // Удаляем hash из URL
+    if (window.location.hash) {
+        window.history.pushState({}, '', window.location.pathname + window.location.search);
+    }
     
     // Блокируем открытие модальных окон на 500мс после закрытия, чтобы предотвратить автоматическое открытие
     if (typeof blockClicks !== 'undefined') {
@@ -1599,6 +1607,28 @@ function closeModal() {
                 p5Canvas.style.pointerEvents = 'auto';
             }
         }, 500); // Уменьшаем до 500мс
+    }
+}
+
+// Функция для открытия проекта из URL hash
+function openProjectFromURL() {
+    const hash = window.location.hash;
+    if (!hash || !hash.startsWith('#project-')) {
+        return;
+    }
+    
+    const projectId = parseInt(hash.replace('#project-', ''));
+    if (isNaN(projectId)) {
+        return;
+    }
+    
+    // Ищем проект в данных
+    const project = portfolioData.find(item => item.id === projectId);
+    if (project) {
+        // Небольшая задержка, чтобы убедиться, что все загружено
+        setTimeout(() => {
+            openModal(project);
+        }, 500);
     }
 }
 
@@ -2127,6 +2157,9 @@ function hideSplashScreen() {
             // Настраиваем фон после скрытия splash screen
             setupBackground();
             
+            // Проверяем, есть ли hash в URL для открытия проекта
+            openProjectFromURL();
+            
             // Создаем теги после показа контента (с небольшой задержкой для гарантии видимости)
             setTimeout(() => {
                 createTags();
@@ -2185,4 +2218,31 @@ document.addEventListener('DOMContentLoaded', () => {
             closeModal();
         }
     });
+    
+    // Обработчик для кнопок назад/вперед браузера
+    window.addEventListener('popstate', (e) => {
+        const hash = window.location.hash;
+        if (hash && hash.startsWith('#project-')) {
+            // Открываем проект из hash
+            openProjectFromURL();
+        } else {
+            // Закрываем модальное окно, если hash был удален
+            const modal = document.getElementById('modal');
+            if (modal && modal.classList.contains('active')) {
+                closeModal();
+            }
+        }
+    });
+    
+    // Проверяем hash при загрузке страницы (если splash screen уже скрыт)
+    if (window.location.hash && window.location.hash.startsWith('#project-')) {
+        // Если splash screen еще не скрыт, openProjectFromURL будет вызван в hideSplashScreen
+        // Если splash screen уже скрыт, открываем проект сразу
+        const splashScreen = document.getElementById('splash-screen');
+        if (splashScreen && splashScreen.style.display === 'none') {
+            setTimeout(() => {
+                openProjectFromURL();
+            }, 1000);
+        }
+    }
 });
