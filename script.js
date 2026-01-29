@@ -76,8 +76,8 @@ let tagElements = []; // DOM элементы тегов
 let isTagAnimationRunning = false; // Флаг для отслеживания анимации тегов
 const MIN_ICON_DISTANCE = 150; // Минимальное расстояние между иконками
 
-// Режим отображения второй страницы: 'chaotic' — хаотичные иконки и теги, 'orderly' — теги в колонке, проекты по сетке
-let viewMode = 'chaotic';
+// Режим отображения второй страницы: 'chaotic' — хаотичные иконки и теги, 'orderly' — теги в колонке, проекты по сетке (по умолчанию)
+let viewMode = 'orderly';
 
 // ========== ЗАГРУЗКА ДАННЫХ ==========
 async function loadPortfolioData() {
@@ -2431,10 +2431,11 @@ function hideSplashScreen() {
             // Проверяем, есть ли hash в URL для открытия проекта
             openProjectFromURL();
             
-            // Создаем теги после показа контента (с небольшой задержкой для гарантии видимости)
+            // Создаем теги после показа контента; по умолчанию открываем упорядоченный вид
             setTimeout(() => {
                 createTags();
                 setupViewModeToggle();
+                showOrderlyView();
             }, 100);
         }, 500);
     }
