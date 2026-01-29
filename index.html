@@ -17,18 +17,18 @@
             <div class="splash-video-container">
                 <video id="splash-video" class="splash-video" autoplay muted loop playsinline preload="auto"></video>
             </div>
-            <!-- Правая часть: фотография -->
+            <!-- Надпись сверху по центру -->
+            <div class="splash-hint">
+                <p>Кликните по экрану, чтобы увидеть проекты</p>
+            </div>
+            <!-- Справа: фотография -->
             <div class="splash-photo">
                 <img id="splash-photo-img" src="" alt="Alisa Voronina">
             </div>
-            <!-- Описание и кнопка -->
+            <!-- Под надписью: текст и кнопка Telegram -->
             <div class="splash-description">
                 <p>Я медиадизайнер, работающий с широким кругом технологий. Занимаюсь программированием интерактивных инсталляций, создаю генеративную графику, делаю контент и программирую вольюметрические экраны, кинетические лебедки, лазеры. Так же работаю с AI графикой, делаю арт для музыкальных обложек и виджею на мероприятиях</p>
                 <a href="https://t.me/alalisasilala" class="splash-telegram-btn" target="_blank">Telegram</a>
-            </div>
-            <!-- Подсказка -->
-            <div class="splash-hint">
-                <p>Кликните по экрану, чтобы увидеть проекты</p>
             </div>
         </div>
     </div>
@@ -36,8 +36,27 @@
     <!-- Основной контейнер с бесконечной доской -->
     <div id="canvas-container" class="canvas-container" style="display: none;">
         <canvas id="background-canvas"></canvas>
+        <!-- Кнопка переключения: хаотичный вид / упорядоченный вид -->
+        <button id="view-mode-toggle" class="view-mode-toggle" type="button" title="Переключить вид: хаотичный / по сетке" aria-label="Переключить вид">
+            <span class="toggle-icon toggle-icon-chaotic" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="5" height="5" rx="1"/><rect x="12" y="4" width="5" height="5" rx="1"/><rect x="5" y="12" width="5" height="5" rx="1"/><rect x="14" y="14" width="5" height="5" rx="1"/><rect x="8" y="8" width="4" height="4" rx="1"/></svg>
+            </span>
+            <span class="toggle-icon toggle-icon-orderly" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="5" height="5" rx="1"/><rect x="10" y="3" width="5" height="5" rx="1"/><rect x="17" y="3" width="5" height="5" rx="1"/><rect x="3" y="10" width="5" height="5" rx="1"/><rect x="10" y="10" width="5" height="5" rx="1"/><rect x="17" y="10" width="5" height="5" rx="1"/><rect x="3" y="17" width="5" height="5" rx="1"/><rect x="10" y="17" width="5" height="5" rx="1"/><rect x="17" y="17" width="5" height="5" rx="1"/></svg>
+            </span>
+        </button>
         <div id="portfolio-board" class="portfolio-board">
             <!-- Иконки будут добавлены динамически -->
+        </div>
+        <!-- Упорядоченный вид: теги справа, проекты по сетке -->
+        <div id="orderly-view" class="orderly-view" style="display: none;">
+            <div class="orderly-main">
+                <div id="orderly-grid" class="orderly-grid orderly-grid--small"></div>
+            </div>
+            <aside id="orderly-sidebar" class="orderly-sidebar">
+                <div class="orderly-sidebar-header">Теги</div>
+                <div id="orderly-sidebar-tags" class="orderly-sidebar-tags"></div>
+            </aside>
         </div>
     </div>
 
@@ -55,6 +74,13 @@
             </div>
         </div>
     </div>
+
+    <!-- Mobile menu toggle button -->
+    <button id="mobile-menu-toggle" class="mobile-menu-toggle" style="display: none;">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
 
     <script src="p5_3d_shapes.js"></script>
     <script src="script.js"></script>
