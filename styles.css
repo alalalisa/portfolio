@@ -326,11 +326,12 @@ body {
     height: 100%;
 }
 
-.view-mode-toggle .toggle-icon-chaotic { opacity: 1; }
-.view-mode-toggle .toggle-icon-orderly { opacity: 0.5; }
+/* Показываем только один значок: в хаотичном режиме — хаос, в сетке — сетка */
+.view-mode-toggle .toggle-icon-chaotic { opacity: 1; visibility: visible; }
+.view-mode-toggle .toggle-icon-orderly { opacity: 0; visibility: hidden; pointer-events: none; }
 
-.view-mode-toggle.orderly-mode .toggle-icon-chaotic { opacity: 0.5; }
-.view-mode-toggle.orderly-mode .toggle-icon-orderly { opacity: 1; }
+.view-mode-toggle.orderly-mode .toggle-icon-chaotic { opacity: 0; visibility: hidden; pointer-events: none; }
+.view-mode-toggle.orderly-mode .toggle-icon-orderly { opacity: 1; visibility: visible; }
 
 /* Упорядоченный вид: основная область + сайдбар с тегами (поверх хаотичных тегов) */
 .orderly-view {
@@ -343,9 +344,11 @@ body {
     overflow: visible;
 }
 
-/* В упорядоченном режиме хаотичные теги и доска полностью скрыты */
+/* В упорядоченном режиме хаотичные теги и доска полностью скрыты (и на контейнере, и на body) */
 .canvas-container.orderly-mode .portfolio-board,
-.canvas-container.orderly-mode .portfolio-tag {
+.canvas-container.orderly-mode .portfolio-tag,
+body.orderly-mode .portfolio-board,
+body.orderly-mode .portfolio-tag {
     display: none !important;
     visibility: hidden;
     pointer-events: none;
@@ -355,7 +358,7 @@ body {
     flex: 1;
     min-width: 0;
     overflow: auto;
-    padding: 24px 24px 24px 180px;
+    padding: 28px 28px 28px 188px;
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
@@ -369,11 +372,11 @@ body {
 }
 
 .orderly-grid--small {
-    grid-template-columns: repeat(auto-fill, minmax(calc(var(--orderly-icon-size-small, 56px) + 16px), 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(calc(var(--orderly-icon-size-small, 50px) + 16px), 1fr));
 }
 
 .orderly-grid--large {
-    grid-template-columns: repeat(auto-fill, minmax(calc(var(--orderly-icon-size, 120px) + 20px), 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(calc(var(--orderly-icon-size, 108px) + 20px), 1fr));
     gap: 20px;
 }
 
@@ -395,13 +398,13 @@ body {
 }
 
 .orderly-grid--small .orderly-icon {
-    width: var(--orderly-icon-size-small, 56px);
-    height: var(--orderly-icon-size-small, 56px);
+    width: var(--orderly-icon-size-small, 50px);
+    height: var(--orderly-icon-size-small, 50px);
 }
 
 .orderly-grid--large .orderly-icon {
-    width: var(--orderly-icon-size, 120px);
-    height: var(--orderly-icon-size, 120px);
+    width: var(--orderly-icon-size, 108px);
+    height: var(--orderly-icon-size, 108px);
 }
 
 .orderly-icon img {
@@ -425,6 +428,11 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 14px;
+}
+
+/* Скрываем заголовок «Теги» над колонкой тегов, если он когда-либо появится */
+.orderly-sidebar .orderly-sidebar-header {
+    display: none !important;
 }
 
 .orderly-sidebar-tags {
@@ -495,11 +503,11 @@ body {
         min-width: 140px;
     }
     .orderly-grid--small .orderly-icon {
-        width: var(--orderly-icon-size-small, 48px);
-        height: var(--orderly-icon-size-small, 48px);
+        width: var(--orderly-icon-size-small, 43px);
+        height: var(--orderly-icon-size-small, 43px);
     }
     .orderly-grid--small {
-        grid-template-columns: repeat(auto-fill, minmax(calc(var(--orderly-icon-size-small, 48px) + 16px), 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(calc(var(--orderly-icon-size-small, 43px) + 16px), 1fr));
     }
 }
 
@@ -1022,8 +1030,8 @@ body {
 
 .splash-content {
     display: grid;
-    /* Слева колонка с текстом уже на 20%; справа фото */
-    grid-template-columns: minmax(0, 0.96fr) minmax(0, 1fr);
+    /* Колонка с текстом ещё на 10% уже; справа фото */
+    grid-template-columns: minmax(0, 0.864fr) minmax(0, 1fr);
     grid-template-rows: auto auto auto;
     gap: clamp(0.35rem, 1.5vw, 1rem);
     padding: clamp(0.35rem, 1.5vw, 1rem) clamp(1rem, 4vw, 3rem);
@@ -1035,7 +1043,7 @@ body {
     margin-top: 0;
 }
 
-/* Видео — слева; в 1.5 раза больше */
+/* Видео — слева; ещё на 20% больше; слой выше слоя с фото */
 .splash-video-container {
     grid-column: 1;
     grid-row: 1;
@@ -1043,7 +1051,7 @@ body {
     min-height: 0;
     min-width: 0;
     aspect-ratio: 1;
-    max-height: 63vh;
+    max-height: 76vh;
     width: 100%;
     display: flex;
     align-items: center;
@@ -1076,17 +1084,17 @@ body {
 }
 
 .splash-description .splash-telegram-btn {
-    align-self: flex-start;
+    align-self: flex-end;
 }
 
-/* Подсказка — ниже текста; поднята на 20% выше */
+/* Подсказка «Кликните по экрану…» — справа, на 10% ниже */
 .splash-hint {
     grid-column: 1;
     grid-row: 3;
     padding-top: clamp(0.15rem, 0.4vh, 0.35rem);
     padding-bottom: 0;
-    text-align: left;
-    margin-top: -12vh;
+    text-align: right;
+    margin-top: -2vh;
 }
 
 .splash-hint p {
@@ -1097,7 +1105,7 @@ body {
     letter-spacing: 0.05em;
 }
 
-/* Фото — справа; поднято на 20% выше */
+/* Фото — справа; на 10% правее и на 10% выше; слой ниже слоя с видео */
 .splash-photo {
     grid-column: 2;
     grid-row: 1 / -1;
@@ -1107,7 +1115,8 @@ body {
     min-height: 0;
     min-width: 0;
     position: relative;
-    margin-top: 8vh;
+    margin-top: -2vh;
+    margin-left: 10vw;
 }
 
 .splash-photo img {
