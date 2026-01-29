@@ -332,15 +332,23 @@ body {
 .view-mode-toggle.orderly-mode .toggle-icon-chaotic { opacity: 0.5; }
 .view-mode-toggle.orderly-mode .toggle-icon-orderly { opacity: 1; }
 
-/* Упорядоченный вид: основная область + сайдбар с тегами */
+/* Упорядоченный вид: основная область + сайдбар с тегами (поверх хаотичных тегов) */
 .orderly-view {
     position: absolute;
     inset: 0;
-    z-index: 10;
+    z-index: 200;
     display: flex;
     flex-direction: row;
     pointer-events: auto;
     overflow: visible;
+}
+
+/* В упорядоченном режиме хаотичные теги и доска полностью скрыты */
+.canvas-container.orderly-mode .portfolio-board,
+.canvas-container.orderly-mode .portfolio-tag {
+    display: none !important;
+    visibility: hidden;
+    pointer-events: none;
 }
 
 .orderly-main {
@@ -417,15 +425,6 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 14px;
-}
-
-.orderly-sidebar-header {
-    font-size: 0.85rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: rgba(124, 191, 214, 0.7);
-    margin-bottom: 2px;
 }
 
 .orderly-sidebar-tags {
@@ -833,7 +832,7 @@ body {
     }
 
     .splash-description .splash-telegram-btn {
-        align-self: flex-end;
+        align-self: flex-start;
     }
 
     .splash-video-container {
@@ -878,9 +877,10 @@ body {
 
     .splash-description .splash-telegram-btn {
         display: block;
-        text-align: center;
-        margin: clamp(1rem, 2vh, 1.25rem) auto 0;
+        text-align: left;
+        margin: clamp(1rem, 2vh, 1.25rem) 0 0 0;
         width: fit-content;
+        align-self: flex-start;
     }
 
     /* Text squares - smaller on mobile */
@@ -1022,8 +1022,8 @@ body {
 
 .splash-content {
     display: grid;
-    /* Слева: видео, текст, подсказка. Справа: фото. Всё влезает на экран */
-    grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+    /* Слева колонка с текстом уже на 20%; справа фото */
+    grid-template-columns: minmax(0, 0.96fr) minmax(0, 1fr);
     grid-template-rows: auto auto auto;
     gap: clamp(0.35rem, 1.5vw, 1rem);
     padding: clamp(0.35rem, 1.5vw, 1rem) clamp(1rem, 4vw, 3rem);
@@ -1035,7 +1035,7 @@ body {
     margin-top: 0;
 }
 
-/* Видео — слева; выше на 20% страницы; высота подобрана, чтобы всё влезало */
+/* Видео — слева; в 1.5 раза больше */
 .splash-video-container {
     grid-column: 1;
     grid-row: 1;
@@ -1043,7 +1043,7 @@ body {
     min-height: 0;
     min-width: 0;
     aspect-ratio: 1;
-    max-height: 42vh;
+    max-height: 63vh;
     width: 100%;
     display: flex;
     align-items: center;
@@ -1076,17 +1076,17 @@ body {
 }
 
 .splash-description .splash-telegram-btn {
-    align-self: flex-end;
+    align-self: flex-start;
 }
 
-/* Подсказка — ниже текста; поднята на 40% страницы вверх */
+/* Подсказка — ниже текста; поднята на 20% выше */
 .splash-hint {
     grid-column: 1;
     grid-row: 3;
     padding-top: clamp(0.15rem, 0.4vh, 0.35rem);
     padding-bottom: 0;
     text-align: left;
-    margin-top: 8vh;
+    margin-top: -12vh;
 }
 
 .splash-hint p {
@@ -1097,7 +1097,7 @@ body {
     letter-spacing: 0.05em;
 }
 
-/* Фото — справа; на 20% меньше; слой чуть ниже */
+/* Фото — справа; поднято на 20% выше */
 .splash-photo {
     grid-column: 2;
     grid-row: 1 / -1;
@@ -1107,7 +1107,7 @@ body {
     min-height: 0;
     min-width: 0;
     position: relative;
-    margin-top: 28vh;
+    margin-top: 8vh;
 }
 
 .splash-photo img {
