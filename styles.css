@@ -1032,7 +1032,7 @@ body {
     max-width: 100%;
     min-height: 100%;
     box-sizing: border-box;
-    margin-top: -20vh;
+    margin-top: 0;
 }
 
 /* Видео — слева; выше на 20% страницы; высота подобрана, чтобы всё влезало */
@@ -1072,7 +1072,7 @@ body {
     max-width: 100%;
     padding: 0;
     min-width: 0;
-    margin-top: -28vh;
+    margin-top: -8vh;
 }
 
 .splash-description .splash-telegram-btn {
@@ -1086,7 +1086,7 @@ body {
     padding-top: clamp(0.15rem, 0.4vh, 0.35rem);
     padding-bottom: 0;
     text-align: left;
-    margin-top: -12vh;
+    margin-top: 8vh;
 }
 
 .splash-hint p {
@@ -1107,7 +1107,7 @@ body {
     min-height: 0;
     min-width: 0;
     position: relative;
-    margin-top: 8vh;
+    margin-top: 28vh;
 }
 
 .splash-photo img {
