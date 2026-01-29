@@ -1031,7 +1031,7 @@ body {
     box-sizing: border-box;
 }
 
-/* Видео — слева, выше; высота уменьшена, чтобы влезали текст, кнопка и подсказка */
+/* Видео — слева, в 1.5 раза больше; слой выше слоя с фото */
 .splash-video-container {
     grid-column: 1;
     grid-row: 1;
@@ -1039,7 +1039,7 @@ body {
     min-height: 0;
     min-width: 0;
     aspect-ratio: 1;
-    max-height: 50vh;
+    max-height: 75vh;
     width: 100%;
     display: flex;
     align-items: center;
@@ -1056,7 +1056,7 @@ body {
     display: block;
 }
 
-/* Текст и кнопка Telegram — под видео, кнопка справа; меньше отступы, чтобы всё влезало */
+/* Текст и кнопка Telegram — под видео, кнопка справа; блок поднят на ~40% выше */
 .splash-description {
     grid-column: 1;
     grid-row: 2;
@@ -1068,19 +1068,21 @@ body {
     max-width: 100%;
     padding: 0;
     min-width: 0;
+    margin-top: -8vh;
 }
 
 .splash-description .splash-telegram-btn {
     align-self: flex-end;
 }
 
-/* Подсказка — ниже текста с описанием */
+/* Подсказка — ниже текста с описанием; поднята вместе с текстом */
 .splash-hint {
     grid-column: 1;
     grid-row: 3;
     padding-top: clamp(0.25rem, 0.5vh, 0.5rem);
     padding-bottom: 0;
     text-align: left;
+    margin-top: -4vh;
 }
 
 .splash-hint p {
@@ -1091,7 +1093,7 @@ body {
     letter-spacing: 0.05em;
 }
 
-/* Фото — справа, в полтора раза больше */
+/* Фото — справа; слой на 10% ниже (видео выше фото) */
 .splash-photo {
     grid-column: 2;
     grid-row: 1 / -1;
@@ -1101,6 +1103,7 @@ body {
     min-height: 0;
     min-width: 0;
     position: relative;
+    margin-top: 10vh;
 }
 
 .splash-photo img {
