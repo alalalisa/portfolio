@@ -287,13 +287,13 @@ body {
 .view-mode-toggle {
     position: fixed;
     top: 20px;
-    right: 20px;
+    left: 20px;
     z-index: 150;
-    width: 52px;
-    height: 52px;
+    width: 156px;
+    height: 156px;
     padding: 0;
     border: 2px solid rgba(124, 191, 214, 0.5);
-    border-radius: 12px;
+    border-radius: 16px;
     background: rgba(10, 10, 10, 0.85);
     backdrop-filter: blur(10px);
     cursor: pointer;
@@ -312,8 +312,8 @@ body {
 
 .view-mode-toggle .toggle-icon {
     position: absolute;
-    width: 26px;
-    height: 26px;
+    width: 78px;
+    height: 78px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -402,18 +402,18 @@ body {
     display: block;
 }
 
-/* Сайдбар с тегами справа */
+/* Сайдбар с тегами справа — без фона и рамки, как на первой странице */
 .orderly-sidebar {
-    width: 220px;
-    min-width: 220px;
+    width: 260px;
+    min-width: 260px;
     flex-shrink: 0;
-    background: rgba(10, 10, 10, 0.9);
-    border-left: 1px solid rgba(124, 191, 214, 0.2);
-    padding: 20px 16px;
+    background: transparent;
+    border: none;
+    padding: 24px 20px;
     overflow-y: auto;
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 14px;
 }
 
 .orderly-sidebar-header {
@@ -421,38 +421,46 @@ body {
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    color: rgba(124, 191, 214, 0.9);
-    margin-bottom: 4px;
+    color: rgba(124, 191, 214, 0.7);
+    margin-bottom: 2px;
 }
 
 .orderly-sidebar-tags {
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    gap: 10px;
 }
 
+/* Теги как на первой странице: тот же размер, свечение, без рамки, подсветка при наведении */
 .orderly-tag-btn {
     width: 100%;
-    padding: 10px 14px;
+    padding: 20px 40px;
     text-align: left;
-    border: 1px solid rgba(124, 191, 214, 0.25);
-    border-radius: 8px;
-    background: transparent;
-    color: var(--text-color);
-    font-size: 0.9rem;
+    border: none;
+    border-radius: 25px;
+    background: rgba(124, 191, 214, 0.2);
+    color: #7CBFD6;
+    font-size: 1.8rem;
+    font-weight: 500;
     cursor: pointer;
-    transition: all 0.2s ease;
+    transition: all 0.8s ease-out;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    user-select: none;
+    white-space: nowrap;
 }
 
 .orderly-tag-btn:hover {
-    background: rgba(124, 191, 214, 0.15);
-    border-color: rgba(124, 191, 214, 0.4);
+    background: rgba(124, 191, 214, 0.3);
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(124, 191, 214, 0.4);
 }
 
 .orderly-tag-btn.active {
-    background: rgba(124, 191, 214, 0.3);
-    border-color: #7CBFD6;
+    background: rgba(124, 191, 214, 0.5);
     color: #7CBFD6;
+    box-shadow: 0 0 30px rgba(124, 191, 214, 0.8);
+    transform: scale(1.15);
 }
 
 @media (max-width: 768px) {
@@ -990,9 +998,10 @@ body {
     background-color: #000000;
     z-index: 1000;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     overflow: auto;
+    padding-top: clamp(0.5rem, 2vh, 1.5rem);
 }
 
 .splash-content {
@@ -1000,8 +1009,8 @@ body {
     /* Слева: видео, текст, подсказка. Справа: фото */
     grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
     grid-template-rows: auto auto auto;
-    gap: clamp(1rem, 3vw, 2.5rem);
-    padding: clamp(1rem, 4vw, 3rem);
+    gap: clamp(0.5rem, 2vw, 1.5rem);
+    padding: clamp(0.5rem, 2vw, 1.5rem) clamp(1rem, 4vw, 3rem);
     align-items: start;
     width: 100%;
     max-width: 100%;
@@ -1009,7 +1018,7 @@ body {
     box-sizing: border-box;
 }
 
-/* Видео — слева, в 3 раза больше (крупнее) */
+/* Видео — слева, выше; высота уменьшена, чтобы влезали текст, кнопка и подсказка */
 .splash-video-container {
     grid-column: 1;
     grid-row: 1;
@@ -1017,7 +1026,7 @@ body {
     min-height: 0;
     min-width: 0;
     aspect-ratio: 1;
-    max-height: 95vh;
+    max-height: 50vh;
     width: 100%;
     display: flex;
     align-items: center;
@@ -1034,7 +1043,7 @@ body {
     display: block;
 }
 
-/* Текст и кнопка Telegram — под видео, кнопка справа */
+/* Текст и кнопка Telegram — под видео, кнопка справа; меньше отступы, чтобы всё влезало */
 .splash-description {
     grid-column: 1;
     grid-row: 2;
@@ -1042,7 +1051,7 @@ body {
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    gap: clamp(0.75rem, 2vh, 1.25rem);
+    gap: clamp(0.5rem, 1.5vh, 0.75rem);
     max-width: 100%;
     padding: 0;
     min-width: 0;
@@ -1056,7 +1065,7 @@ body {
 .splash-hint {
     grid-column: 1;
     grid-row: 3;
-    padding-top: clamp(0.5rem, 1vh, 1rem);
+    padding-top: clamp(0.25rem, 0.5vh, 0.5rem);
     padding-bottom: 0;
     text-align: left;
 }
