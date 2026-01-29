@@ -76,6 +76,9 @@ let tagElements = []; // DOM элементы тегов
 let isTagAnimationRunning = false; // Флаг для отслеживания анимации тегов
 const MIN_ICON_DISTANCE = 150; // Минимальное расстояние между иконками
 
+// Режим отображения второй страницы: 'chaotic' — хаотичные иконки и теги, 'orderly' — теги в колонке, проекты по сетке
+let viewMode = 'chaotic';
+
 // ========== ЗАГРУЗКА ДАННЫХ ==========
 async function loadPortfolioData() {
     try {
@@ -290,8 +293,8 @@ function createTags() {
 
 // Анимация плавания тегов
 function animateTags() {
-    if (tags.length === 0) {
-        isTagAnimationRunning = false;
+    if (tags.length === 0 || viewMode === 'orderly') {
+        if (tags.length === 0) isTagAnimationRunning = false;
         return;
     }
     
@@ -649,6 +652,130 @@ function preventOverlap(x, y, currentIndex, otherIndices, allPositions = null) {
     }
     
     return { x: finalX, y: finalY };
+}
+
+// ========== УПОРЯДОЧЕННЫЙ ВИД (ТЕГИ СПРАВА, ПРОЕКТЫ ПО СЕТКЕ) ==========
+function getIconsByTag(selectedTag) {
+    if (!selectedTag) return icons.map((icon, index) => ({ icon, index }));
+    const normalizedTag = selectedTag.trim();
+    const result = [];
+    icons.forEach((icon, index) => {
+        let hasTag = false;
+        if (icon.item.additional) {
+            ['col_2', 'col_3', 'col_4'].forEach(colKey => {
+                const tag = icon.item.additional[colKey];
+                if (tag && typeof tag === 'string' && tag.trim() === normalizedTag) hasTag = true;
+            });
+        }
+        if (hasTag) result.push({ icon, index });
+    });
+    return result;
+}
+
+function createOrderlyIconElement(icon, size) {
+    const div = document.createElement('div');
+    div.className = 'orderly-icon';
+    div.dataset.id = icon.item.id;
+    let thumbnailPath = icon.item.media.thumbnail || icon.item.media.path;
+    thumbnailPath = optimizeCloudinaryUrl(thumbnailPath, size, size);
+    const img = document.createElement('img');
+    img.src = thumbnailPath;
+    img.alt = getTitle(icon.item) || 'Работа';
+    img.loading = 'lazy';
+    div.appendChild(img);
+    div.addEventListener('click', (e) => { e.stopPropagation(); openModal(icon.item); });
+    return div;
+}
+
+function buildOrderlySidebar() {
+    const container = document.getElementById('orderly-sidebar-tags');
+    if (!container) return;
+    container.innerHTML = '';
+    const allBtn = document.createElement('button');
+    allBtn.type = 'button';
+    allBtn.className = 'orderly-tag-btn' + (!activeTag ? ' active' : '');
+    allBtn.textContent = 'Все';
+    allBtn.addEventListener('click', () => selectOrderlyTag(null));
+    container.appendChild(allBtn);
+    allTags.forEach(tagText => {
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'orderly-tag-btn' + (activeTag === tagText ? ' active' : '');
+        btn.textContent = tagText;
+        btn.addEventListener('click', () => selectOrderlyTag(tagText));
+        container.appendChild(btn);
+    });
+}
+
+function selectOrderlyTag(tagText) {
+    if (activeTag === tagText) return;
+    activeTag = tagText;
+    buildOrderlySidebar();
+    renderOrderlyProjects(tagText);
+}
+
+function renderOrderlyProjects(selectedTag) {
+    const gridEl = document.getElementById('orderly-grid');
+    if (!gridEl) return;
+    const items = getIconsByTag(selectedTag);
+    const isLarge = !!selectedTag && items.length > 0;
+    gridEl.className = 'orderly-grid ' + (isLarge ? 'orderly-grid--large' : 'orderly-grid--small');
+    const size = isLarge ? 120 : 56;
+    gridEl.innerHTML = '';
+    items.forEach(({ icon }) => {
+        const el = createOrderlyIconElement(icon, size);
+        gridEl.appendChild(el);
+    });
+}
+
+function showChaoticView() {
+    viewMode = 'chaotic';
+    const board = document.getElementById('portfolio-board');
+    const orderlyView = document.getElementById('orderly-view');
+    const toggle = document.getElementById('view-mode-toggle');
+    const container = document.getElementById('canvas-container');
+    if (board) board.style.display = 'block';
+    if (orderlyView) orderlyView.style.display = 'none';
+    if (toggle) toggle.classList.remove('orderly-mode');
+    if (container) container.classList.remove('orderly-mode');
+    tagElements.forEach(el => { if (el && el.style) el.style.display = ''; });
+    if (isTagAnimationRunning && tags.length > 0) animateTags();
+}
+
+function showOrderlyView() {
+    viewMode = 'orderly';
+    const board = document.getElementById('portfolio-board');
+    const orderlyView = document.getElementById('orderly-view');
+    const toggle = document.getElementById('view-mode-toggle');
+    const container = document.getElementById('canvas-container');
+    if (board) board.style.display = 'none';
+    if (orderlyView) orderlyView.style.display = 'flex';
+    if (toggle) toggle.classList.add('orderly-mode');
+    if (container) container.classList.add('orderly-mode');
+    tagElements.forEach(el => { if (el && el.style) el.style.display = 'none'; });
+    buildOrderlySidebar();
+    renderOrderlyProjects(activeTag);
+}
+
+function setupViewModeToggle() {
+    const toggle = document.getElementById('view-mode-toggle');
+    const container = document.getElementById('canvas-container');
+    if (!toggle || !container) return;
+    toggle.addEventListener('click', (e) => {
+        e.stopPropagation();
+        e.preventDefault();
+        if (viewMode === 'chaotic') {
+            showOrderlyView();
+        } else {
+            showChaoticView();
+            if (activeTag) {
+                activeTag = null;
+                tagElements.forEach(el => el.classList.remove('active'));
+                updateShape();
+                updateVisibleIcons();
+            }
+        }
+    });
 }
 
 // ========== ИНИЦИАЛИЗАЦИЯ ИКОНОК ==========
@@ -2307,9 +2434,41 @@ function hideSplashScreen() {
             // Создаем теги после показа контента (с небольшой задержкой для гарантии видимости)
             setTimeout(() => {
                 createTags();
+                setupViewModeToggle();
             }, 100);
         }, 500);
     }
+}
+
+// ========== MOBILE MENU FUNCTIONALITY ==========
+const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+const controlPanel = document.querySelector('.control-panel');
+
+// Show/hide mobile menu button based on screen size
+function checkMobileView() {
+    if (window.innerWidth <= 768) {
+        if (mobileMenuToggle) {
+            mobileMenuToggle.style.display = 'flex';
+        }
+        if (controlPanel) {
+            controlPanel.classList.remove('mobile-visible');
+        }
+    } else {
+        if (mobileMenuToggle) {
+            mobileMenuToggle.style.display = 'none';
+        }
+        if (controlPanel) {
+            controlPanel.classList.add('mobile-visible');
+        }
+    }
+}
+
+// Toggle mobile menu
+if (mobileMenuToggle && controlPanel) {
+    mobileMenuToggle.addEventListener('click', () => {
+        mobileMenuToggle.classList.toggle('active');
+        controlPanel.classList.toggle('mobile-visible');
+    });
 }
 
 // ========== ИНИЦИАЛИЗАЦИЯ ==========
@@ -2328,20 +2487,24 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     
     animateIcons();
+    
+    // Initialize mobile menu
+    checkMobileView();
 
     let resizeTimeout;
     window.addEventListener('resize', () => {
         clearTimeout(resizeTimeout);
         resizeTimeout = setTimeout(() => {
-            updateVisibleIcons();
-            // Пересоздаем теги при изменении размера окна
-            if (tags.length > 0) {
-                createTags();
-                // Если был активен тег, применяем фильтр заново
-                if (activeTag) {
-                    filterIconsByTag(activeTag);
+            if (viewMode === 'orderly') {
+                renderOrderlyProjects(activeTag);
+            } else {
+                updateVisibleIcons();
+                if (tags.length > 0) {
+                    createTags();
+                    if (activeTag) filterIconsByTag(activeTag);
                 }
             }
+            checkMobileView();
         }, 200);
     });
 
