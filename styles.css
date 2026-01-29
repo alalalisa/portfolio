@@ -1016,25 +1016,26 @@ body {
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    overflow: auto;
-    padding-top: clamp(0.5rem, 2vh, 1.5rem);
+    overflow: hidden;
+    padding-top: 0;
 }
 
 .splash-content {
     display: grid;
-    /* Слева: видео, текст, подсказка. Справа: фото */
+    /* Слева: видео, текст, подсказка. Справа: фото. Всё влезает на экран */
     grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
     grid-template-rows: auto auto auto;
-    gap: clamp(0.5rem, 2vw, 1.5rem);
-    padding: clamp(0.5rem, 2vw, 1.5rem) clamp(1rem, 4vw, 3rem);
+    gap: clamp(0.35rem, 1.5vw, 1rem);
+    padding: clamp(0.35rem, 1.5vw, 1rem) clamp(1rem, 4vw, 3rem);
     align-items: start;
     width: 100%;
     max-width: 100%;
     min-height: 100%;
     box-sizing: border-box;
+    margin-top: -20vh;
 }
 
-/* Видео — слева, в 1.5 раза больше; слой выше слоя с фото */
+/* Видео — слева; выше на 20% страницы; высота подобрана, чтобы всё влезало */
 .splash-video-container {
     grid-column: 1;
     grid-row: 1;
@@ -1042,7 +1043,7 @@ body {
     min-height: 0;
     min-width: 0;
     aspect-ratio: 1;
-    max-height: 75vh;
+    max-height: 42vh;
     width: 100%;
     display: flex;
     align-items: center;
@@ -1059,7 +1060,7 @@ body {
     display: block;
 }
 
-/* Текст и кнопка Telegram — под видео, кнопка справа; блок поднят на ~40% выше */
+/* Текст и кнопка Telegram — под видео; блок поднят на 40% страницы вверх */
 .splash-description {
     grid-column: 1;
     grid-row: 2;
@@ -1067,25 +1068,25 @@ body {
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    gap: clamp(0.5rem, 1.5vh, 0.75rem);
+    gap: clamp(0.35rem, 1vh, 0.5rem);
     max-width: 100%;
     padding: 0;
     min-width: 0;
-    margin-top: -8vh;
+    margin-top: -28vh;
 }
 
 .splash-description .splash-telegram-btn {
     align-self: flex-end;
 }
 
-/* Подсказка — ниже текста с описанием; поднята вместе с текстом */
+/* Подсказка — ниже текста; поднята на 40% страницы вверх */
 .splash-hint {
     grid-column: 1;
     grid-row: 3;
-    padding-top: clamp(0.25rem, 0.5vh, 0.5rem);
+    padding-top: clamp(0.15rem, 0.4vh, 0.35rem);
     padding-bottom: 0;
     text-align: left;
-    margin-top: -4vh;
+    margin-top: -12vh;
 }
 
 .splash-hint p {
@@ -1096,7 +1097,7 @@ body {
     letter-spacing: 0.05em;
 }
 
-/* Фото — справа; слой на 10% ниже (видео выше фото) */
+/* Фото — справа; на 20% меньше; слой чуть ниже */
 .splash-photo {
     grid-column: 2;
     grid-row: 1 / -1;
@@ -1106,13 +1107,13 @@ body {
     min-height: 0;
     min-width: 0;
     position: relative;
-    margin-top: 10vh;
+    margin-top: 8vh;
 }
 
 .splash-photo img {
     width: 100%;
     height: auto;
-    max-height: 95vh;
+    max-height: 76vh;
     max-width: 100%;
     object-fit: contain;
     border-radius: 0.5rem;
