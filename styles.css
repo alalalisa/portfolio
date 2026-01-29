@@ -142,6 +142,11 @@ body {
     opacity: 0.9;
 }
 
+/* Mobile menu toggle - hidden by default on desktop */
+.mobile-menu-toggle {
+    display: none;
+}
+
 /* Контейнер с бесконечной доской */
 .canvas-container {
     position: relative;
@@ -383,163 +388,554 @@ body {
     white-space: pre-wrap;
 }
 
-/* Адаптивность */
-@media (max-width: 768px) {
+/* ========== MOBILE RESPONSIVE DESIGN ========== */
+
+/* Tablets (768px - 1024px) */
+@media (max-width: 1024px) and (min-width: 769px) {
     .control-panel {
-        min-width: 240px;
-        max-width: 280px;
-        padding: 15px;
+        min-width: 200px;
+        max-width: 240px;
+        padding: 12px;
+        top: 10px;
+        left: 10px;
+        font-size: 0.8rem;
+    }
+
+    .control-section h3 {
+        font-size: 0.75rem;
+    }
+
+    .control-btn {
+        padding: 8px 12px;
+        font-size: 0.75rem;
     }
 
     .portfolio-icon {
-        width: 100px;
-        height: 100px;
+        width: 90px;
+        height: 90px;
+    }
+
+    .portfolio-tag {
+        font-size: 1.2rem;
+        padding: 12px 24px;
+    }
+
+    .modal-content {
+        width: 95%;
+        margin: 5% auto;
+    }
+
+    .modal-title {
+        font-size: 1.4rem;
+    }
+
+    .modal-description {
+        font-size: 0.9rem;
+    }
+
+    /* Splash — grid уже задаёт раскладку, только размеры текста */
+    .splash-content {
+        gap: clamp(0.75rem, 2vw, 1.5rem);
+        padding: clamp(0.75rem, 3vw, 2rem);
+    }
+
+    .splash-description p {
+        font-size: clamp(0.85rem, 1em, 1rem);
+    }
+
+    .splash-hint p {
+        font-size: 0.85rem;
     }
 }
 
-/* Начальный экран (splash screen) */
+/* Mobile phones (up to 768px) */
+@media (max-width: 768px) {
+    /* Control panel - make it collapsible/hidden by default on mobile */
+    .control-panel {
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        min-width: 200px;
+        max-width: 85vw;
+        padding: 12px;
+        font-size: 0.75rem;
+        transform: translateX(-100%);
+        opacity: 0;
+        pointer-events: none;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .control-panel.mobile-visible {
+        transform: translateX(0);
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+        /* Mobile menu toggle button */
+    .mobile-menu-toggle {
+        position: fixed;
+        top: 15px;
+        left: 15px;
+        width: 45px;
+        height: 45px;
+        background: var(--panel-bg);
+        border: 1px solid var(--panel-border);
+        border-radius: 8px;
+        z-index: 1001;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        cursor: pointer;
+        backdrop-filter: blur(10px);
+    }
+
+    .mobile-menu-toggle span {
+        width: 24px;
+        height: 2px;
+        background: var(--accent-color);
+        transition: all 0.3s ease;
+    }
+
+    .mobile-menu-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(7px, 7px);
+    }
+
+    .mobile-menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .mobile-menu-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -7px);
+    }
+
+    .control-section {
+        margin-bottom: 15px;
+        padding-bottom: 15px;
+    }
+
+    .control-section h3 {
+        font-size: 0.7rem;
+        margin-bottom: 10px;
+    }
+
+    .control-btn {
+        padding: 8px 10px;
+        font-size: 0.7rem;
+    }
+
+    .color-picker-group input[type="color"] {
+        width: 40px;
+        height: 25px;
+    }
+
+    /* Portfolio icons - smaller on mobile */
+    .portfolio-icon {
+        width: 70px;
+        height: 70px;
+    }
+
+    .portfolio-icon:hover {
+        transform: scale(1.15); /* Slightly larger scale for touch */
+    }
+
+    /* Portfolio tags */
+    .portfolio-tag {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+
+    /* Modal window - full screen on mobile */
+    .modal-content {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        border-radius: 0;
+        max-width: none;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .modal-close {
+        top: 10px;
+        right: 10px;
+        width: 35px;
+        height: 35px;
+        font-size: 2rem;
+    }
+
+    .modal-media-container {
+        flex: 1;
+        min-height: 50vh;
+        max-height: 60vh;
+    }
+
+    .modal-info {
+        padding: 1.5rem;
+        flex-shrink: 0;
+    }
+
+    .modal-title {
+        font-size: 1.3rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .modal-description {
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+
+    /* Splash — вертикальная раскладка на мобильном (flex вместо grid) */
+    .splash-content {
+        display: flex;
+        flex-direction: column;
+        padding: clamp(1rem, 4vw, 1.25rem);
+        gap: clamp(1rem, 3vh, 1.25rem);
+        justify-content: center;
+        grid-template-columns: none;
+        grid-template-rows: none;
+    }
+
+    .splash-video-container {
+        width: 100%;
+        height: 40vh;
+        min-height: min(12.5rem, 40vh);
+        max-height: 40vh;
+        aspect-ratio: auto;
+    }
+
+    .splash-video {
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    .splash-photo {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        flex: 0 0 auto;
+    }
+
+    .splash-photo img {
+        max-height: 50vh;
+    }
+
+    .splash-description {
+        width: 100%;
+        max-width: 100%;
+        padding: 0 clamp(0.625rem, 2vw, 1rem);
+        margin-top: 0;
+        align-items: center;
+        text-align: center;
+    }
+
+    .splash-description p {
+        font-size: 0.9rem;
+        text-align: center;
+    }
+
+    .splash-description .splash-telegram-btn {
+        display: block;
+        text-align: center;
+        margin: clamp(1rem, 2vh, 1.25rem) auto 0;
+        width: fit-content;
+    }
+
+    .splash-hint {
+        margin-top: clamp(1rem, 2vh, 1.25rem);
+        padding: 0 clamp(1rem, 4vw, 1.25rem);
+        padding-bottom: 0;
+    }
+
+    .splash-hint p {
+        font-size: 0.8rem;
+    }
+
+    /* Text squares - smaller on mobile */
+    .splash-text-square {
+        width: 8px !important;
+        height: 8px !important;
+    }
+
+    .splash-text-coords {
+        min-height: min(18.75rem, 40vh);
+    }
+}
+
+/* Small mobile phones (up to 480px) */
+@media (max-width: 480px) {
+    .control-panel {
+        min-width: 180px;
+        max-width: 90vw;
+        padding: 10px;
+    }
+
+    .portfolio-icon {
+        width: 60px;
+        height: 60px;
+    }
+
+    .portfolio-tag {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+
+    .modal-title {
+        font-size: 1.1rem;
+    }
+
+    .modal-description {
+        font-size: 0.85rem;
+    }
+
+    .splash-description p {
+        font-size: 0.85rem;
+    }
+
+    .splash-text-square {
+        width: 6px !important;
+        height: 6px !important;
+    }
+}
+
+/* Landscape orientation on mobile */
+@media (max-width: 768px) and (orientation: landscape) {
+    .splash-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr auto auto;
+        gap: clamp(0.5rem, 2vw, 1rem);
+        flex-direction: row;
+    }
+
+    .splash-video-container {
+        grid-column: 1;
+        grid-row: 1;
+        height: 80vh;
+        max-height: 80vh;
+        aspect-ratio: auto;
+    }
+
+    .splash-photo {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .splash-description {
+        grid-column: 1 / -1;
+        grid-row: 2;
+        justify-self: center;
+        width: 90%;
+        max-width: min(50rem, 90vw);
+        align-items: center;
+        text-align: center;
+    }
+
+    .splash-description p {
+        font-size: 0.8rem;
+        text-align: center;
+    }
+
+    .splash-hint {
+        grid-column: 1 / -1;
+        grid-row: 3;
+    }
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+    /* Larger touch targets */
+    .control-btn {
+        min-height: 44px; /* Apple's recommended touch target size */
+    }
+
+    .portfolio-icon {
+        min-width: 60px;
+        min-height: 60px;
+    }
+
+    /* Remove hover effects, use active instead */
+    .portfolio-icon:hover {
+        transform: none;
+    }
+
+    .portfolio-icon:active {
+        transform: scale(1.1);
+    }
+
+    .control-btn:hover {
+        background: transparent;
+        border-color: var(--panel-border);
+    }
+
+    .control-btn:active {
+        background: rgba(255, 255, 255, 0.1);
+    }
+}
+
+/* Начальный экран (splash screen) — Grid + Flex, относительные единицы */
 .splash-screen {
     position: fixed;
-    top: 0;
-    left: 0;
+    inset: 0;
     width: 100%;
-    height: 100%;
+    height: 100vh;
+    height: 100dvh;
     background-color: #000000;
     z-index: 1000;
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: visible;
+    overflow: auto;
 }
 
 .splash-content {
-    display: flex;
-    width: 100%;
-    max-width: none;
-    height: 100%;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr) minmax(0, 1fr);
+    grid-template-rows: 1fr auto;
+    gap: clamp(1rem, 3vw, 2.5rem);
+    padding: clamp(1rem, 4vw, 3rem);
     align-items: center;
-    justify-content: space-between;
-    gap: 40px;
+    width: 100%;
+    max-width: 100%;
+    min-height: 100%;
+    box-sizing: border-box;
+}
+
+.splash-video-container {
+    grid-column: 1;
+    grid-row: 1;
     position: relative;
-    overflow: visible;
+    min-height: 0;
+    min-width: 0;
+    aspect-ratio: 1;
+    max-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.splash-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    opacity: 0.7;
+    display: block;
+}
+
+.splash-photo {
+    grid-column: 2;
+    grid-row: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 0;
+    min-width: 0;
+    position: relative;
+}
+
+.splash-photo img {
+    width: 100%;
+    height: auto;
+    max-height: 70vh;
+    max-width: 100%;
+    object-fit: contain;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.625rem 2.5rem rgba(0, 0, 0, 0.5);
+    display: block;
+    transition: transform 0.3s ease;
 }
 
 .splash-description {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-925px) translateY(50px);
-    z-index: 20;
-    pointer-events: auto;
+    grid-column: 3;
+    grid-row: 1;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    width: 1000px;
+    justify-content: center;
+    gap: clamp(0.75rem, 2vh, 1.25rem);
+    max-width: 100%;
+    padding: 0;
+    min-width: 0;
 }
 
 .splash-description p {
-    font-size: 1.21176em;
+    font-size: clamp(0.9rem, 1.15em, 1.25rem);
     color: #7CBFD6;
-    margin-bottom: 20px;
+    margin: 0;
     font-weight: 300;
-    letter-spacing: 0px;
-    max-width: 100%;
+    letter-spacing: 0;
     line-height: 1.6;
     white-space: normal;
 }
 
 .splash-description .splash-telegram-btn {
     display: inline-block;
-    padding: 12px 30px;
+    padding: clamp(0.5rem, 1.5vh, 0.75rem) clamp(1rem, 3vw, 1.875rem);
     background-color: rgba(255, 255, 255, 0.1);
     color: #7CBFD6;
     text-decoration: none;
     border: none;
-    border-radius: 25px;
+    border-radius: 1.5625rem;
     font-size: 1em;
-    transition: all 0.3s ease;
-    transform: translateX(700px) translateY(150px);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 0.25rem;
 }
 
 .splash-description .splash-telegram-btn:hover {
     background-color: rgba(255, 255, 255, 0.2);
-    transform: translateX(700px) translateY(150px) scale(1.05);
+    transform: scale(1.05);
 }
 
 .splash-hint {
-    position: absolute;
-    bottom: 160px;
-    left: 50%;
-    transform: translateX(-750px);
-    z-index: 20;
-    pointer-events: auto;
+    grid-column: 1 / -1;
+    grid-row: 2;
+    justify-self: center;
+    padding-bottom: clamp(1rem, 5vh, 3rem);
+    text-align: center;
 }
 
 .splash-hint p {
-    font-size: 0.96em;
+    font-size: clamp(0.8rem, 1vw + 0.5rem, 1rem);
     color: #7CBFD6;
-    text-align: center;
+    margin: 0;
     font-weight: 300;
-    letter-spacing: 1px;
+    letter-spacing: 0.05em;
 }
 
-.splash-video-container {
-    flex: 1;
-    position: relative;
-    z-index: 2;
-    overflow: visible;
-    width: 100%;
-    height: 100%;
-    min-width: 0;
-    min-height: 0;
-    max-width: none;
-    max-height: none;
-}
-
-.splash-video {
-    position: absolute;
-    top: calc(50% - 240px);
-    left: 50%;
-    width: 2000%;
-    height: 2000%;
-    object-fit: contain;
-    opacity: 0.7;
-    transform: translate(-50%, -50%) scale(0.054) translateX(400px) translateY(200px);
-    transform-origin: center center;
-    display: block;
-    z-index: 2;
-    visibility: visible;
-}
-
+/* Текстовые квадратики (если используются) */
 .splash-text {
-    flex: 1;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    gap: 30px;
+    gap: clamp(1rem, 2vh, 1.875rem);
     position: relative;
-    z-index: 10; /* Надпись поверх картинки */
-    overflow: visible; /* Показываем все квадратики */
+    z-index: 10;
+    overflow: visible;
 }
 
 .splash-text-word {
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 0.25rem;
 }
 
 .splash-text-coords {
     position: relative;
     width: 100%;
-    min-height: 450px;
+    min-height: min(28rem, 50vh);
     height: auto;
-    overflow: visible; /* Показываем все квадратики, даже если они выходят за границы */
+    overflow: visible;
 }
 
 .splash-text-row {
     display: flex;
-    gap: 8px;
+    gap: 0.5rem;
     align-items: center;
 }
 
@@ -547,19 +943,17 @@ body {
     flex-shrink: 0;
     transition: transform 0.2s, opacity 0.2s, background-color 0.5s ease;
     position: absolute;
-    display: block; /* Убеждаемся, что квадратик виден */
-    opacity: 1; /* Полная непрозрачность */
-    visibility: visible; /* Видимость */
-    box-sizing: border-box; /* Размер включает border и padding */
-    border: none; /* Нет границы, чтобы не влиять на размер */
-    padding: 0; /* Нет отступов */
-    margin: 0; /* Нет внешних отступов */
-    /* Принудительное сглаживание для одинакового рендеринга */
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    box-sizing: border-box;
+    border: none;
+    padding: 0;
+    margin: 0;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     image-rendering: -webkit-optimize-contrast;
     image-rendering: crisp-edges;
-    /* Убеждаемся, что размер точно задан */
     min-width: 0;
     min-height: 0;
     max-width: none;
@@ -569,49 +963,4 @@ body {
 .splash-text-square:hover {
     transform: scale(1.1);
     opacity: 0.8;
-}
-
-.splash-photo {
-    flex: 2;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    max-width: 900px;
-    min-width: 400px;
-    position: relative;
-    z-index: 1; /* Картинка под надписью */
-}
-
-.splash-photo img {
-    width: 100%;
-    height: auto;
-    max-height: 80vh;
-    max-width: 100%;
-    object-fit: contain;
-    border-radius: 8px;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
-    display: block;
-    opacity: 1;
-    visibility: visible;
-    transition: transform 0.3s ease;
-}
-
-@media (max-width: 1024px) {
-    .splash-content {
-        flex-direction: column;
-        gap: 40px;
-    }
-    
-    .splash-text {
-        align-items: center;
-    }
-    
-    .splash-photo {
-        max-width: 100%;
-    }
-    
-    .splash-text-square {
-        width: 15px !important;
-        height: 15px !important;
-    }
 }
