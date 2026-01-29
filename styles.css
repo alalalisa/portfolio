@@ -466,18 +466,22 @@ body {
 @media (max-width: 768px) {
     .view-mode-toggle {
         top: 12px;
-        right: 12px;
-        width: 44px;
-        height: 44px;
+        left: 12px;
+        width: 132px;
+        height: 132px;
     }
     .view-mode-toggle .toggle-icon {
-        width: 22px;
-        height: 22px;
+        width: 66px;
+        height: 66px;
     }
     .orderly-sidebar {
-        width: 180px;
-        min-width: 180px;
-        padding: 12px 10px;
+        width: 200px;
+        min-width: 200px;
+        padding: 16px 12px;
+    }
+    .orderly-tag-btn {
+        font-size: 1.4rem;
+        padding: 16px 32px;
     }
     .orderly-grid--small .orderly-icon {
         width: 48px;
