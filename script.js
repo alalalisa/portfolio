@@ -714,18 +714,41 @@ function selectOrderlyTag(tagText) {
     renderOrderlyProjects(tagText);
 }
 
+const ORDERLY_ICON_MAX = 120;
+const ORDERLY_ICON_MIN = 56;
+
 function renderOrderlyProjects(selectedTag) {
     const gridEl = document.getElementById('orderly-grid');
+    const mainEl = document.querySelector('.orderly-main');
     if (!gridEl) return;
     const items = getIconsByTag(selectedTag);
     const isLarge = !!selectedTag && items.length > 0;
     gridEl.className = 'orderly-grid ' + (isLarge ? 'orderly-grid--large' : 'orderly-grid--small');
-    const size = isLarge ? 120 : 56;
+    gridEl.removeAttribute('style');
+    const size = isLarge ? ORDERLY_ICON_MAX : ORDERLY_ICON_MIN;
     gridEl.innerHTML = '';
     items.forEach(({ icon }) => {
         const el = createOrderlyIconElement(icon, size);
         gridEl.appendChild(el);
     });
+
+    if (isLarge && mainEl) {
+        gridEl.style.setProperty('--orderly-icon-size', ORDERLY_ICON_MAX + 'px');
+        requestAnimationFrame(() => {
+            let currentSize = ORDERLY_ICON_MAX;
+            const gap = 20;
+            const availableHeight = mainEl.clientHeight;
+            const availableWidth = mainEl.clientWidth;
+
+            while (currentSize > ORDERLY_ICON_MIN) {
+                const contentHeight = gridEl.scrollHeight;
+                const contentWidth = gridEl.scrollWidth;
+                if (contentHeight <= availableHeight && contentWidth <= availableWidth) break;
+                currentSize = Math.max(ORDERLY_ICON_MIN, Math.floor(currentSize * 0.9));
+                gridEl.style.setProperty('--orderly-icon-size', currentSize + 'px');
+            }
+        });
+    }
 }
 
 function showChaoticView() {

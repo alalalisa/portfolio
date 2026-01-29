@@ -365,7 +365,7 @@ body {
 }
 
 .orderly-grid--large {
-    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(calc(var(--orderly-icon-size, 120px) + 20px), 1fr));
     gap: 20px;
 }
 
@@ -392,8 +392,8 @@ body {
 }
 
 .orderly-grid--large .orderly-icon {
-    width: 120px;
-    height: 120px;
+    width: var(--orderly-icon-size, 120px);
+    height: var(--orderly-icon-size, 120px);
 }
 
 .orderly-icon img {
