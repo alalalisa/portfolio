@@ -347,7 +347,7 @@ body {
     flex: 1;
     min-width: 0;
     overflow: auto;
-    padding: 24px;
+    padding: 24px 24px 24px 180px;
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
@@ -361,7 +361,7 @@ body {
 }
 
 .orderly-grid--small {
-    grid-template-columns: repeat(auto-fill, minmax(56px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(calc(var(--orderly-icon-size-small, 56px) + 16px), 1fr));
 }
 
 .orderly-grid--large {
@@ -387,8 +387,8 @@ body {
 }
 
 .orderly-grid--small .orderly-icon {
-    width: 56px;
-    height: 56px;
+    width: var(--orderly-icon-size-small, 56px);
+    height: var(--orderly-icon-size-small, 56px);
 }
 
 .orderly-grid--large .orderly-icon {
@@ -403,7 +403,7 @@ body {
     display: block;
 }
 
-/* Сайдбар с тегами справа — без фона и рамки; шире, теги не обрезаются, свечение видно */
+/* Сайдбар с тегами справа — без фона и рамки; теги по центру колонки */
 .orderly-sidebar {
     width: 420px;
     min-width: 420px;
@@ -415,7 +415,7 @@ body {
     overflow: visible;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     gap: 14px;
 }
 
@@ -431,7 +431,7 @@ body {
 .orderly-sidebar-tags {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     gap: 10px;
     overflow: visible;
 }
@@ -481,6 +481,9 @@ body {
         width: 66px;
         height: 66px;
     }
+    .orderly-main {
+        padding-left: 150px;
+    }
     .orderly-sidebar {
         width: 280px;
         min-width: 280px;
@@ -493,11 +496,11 @@ body {
         min-width: 140px;
     }
     .orderly-grid--small .orderly-icon {
-        width: 48px;
-        height: 48px;
+        width: var(--orderly-icon-size-small, 48px);
+        height: var(--orderly-icon-size-small, 48px);
     }
     .orderly-grid--small {
-        grid-template-columns: repeat(auto-fill, minmax(48px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(calc(var(--orderly-icon-size-small, 48px) + 16px), 1fr));
     }
 }
 

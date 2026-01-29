@@ -691,12 +691,6 @@ function buildOrderlySidebar() {
     const container = document.getElementById('orderly-sidebar-tags');
     if (!container) return;
     container.innerHTML = '';
-    const allBtn = document.createElement('button');
-    allBtn.type = 'button';
-    allBtn.className = 'orderly-tag-btn' + (!activeTag ? ' active' : '');
-    allBtn.textContent = 'Все';
-    allBtn.addEventListener('click', () => selectOrderlyTag(null));
-    container.appendChild(allBtn);
     allTags.forEach(tagText => {
         const btn = document.createElement('button');
         btn.type = 'button';
@@ -708,7 +702,12 @@ function buildOrderlySidebar() {
 }
 
 function selectOrderlyTag(tagText) {
-    if (activeTag === tagText) return;
+    if (activeTag === tagText) {
+        activeTag = null;
+        buildOrderlySidebar();
+        renderOrderlyProjects(null);
+        return;
+    }
     activeTag = tagText;
     buildOrderlySidebar();
     renderOrderlyProjects(tagText);
@@ -716,12 +715,16 @@ function selectOrderlyTag(tagText) {
 
 const ORDERLY_ICON_MAX = 120;
 const ORDERLY_ICON_MIN = 56;
+const ORDERLY_ICON_SMALL_MIN = 32;
 
 function renderOrderlyProjects(selectedTag) {
     const gridEl = document.getElementById('orderly-grid');
     const mainEl = document.querySelector('.orderly-main');
     if (!gridEl) return;
-    const items = getIconsByTag(selectedTag);
+    let items = getIconsByTag(selectedTag);
+    if (!selectedTag && items.length > 0) {
+        items = items.slice(0, Math.floor(items.length / 2));
+    }
     const isLarge = !!selectedTag && items.length > 0;
     gridEl.className = 'orderly-grid ' + (isLarge ? 'orderly-grid--large' : 'orderly-grid--small');
     gridEl.removeAttribute('style');
@@ -736,16 +739,26 @@ function renderOrderlyProjects(selectedTag) {
         gridEl.style.setProperty('--orderly-icon-size', ORDERLY_ICON_MAX + 'px');
         requestAnimationFrame(() => {
             let currentSize = ORDERLY_ICON_MAX;
-            const gap = 20;
             const availableHeight = mainEl.clientHeight;
             const availableWidth = mainEl.clientWidth;
-
             while (currentSize > ORDERLY_ICON_MIN) {
-                const contentHeight = gridEl.scrollHeight;
-                const contentWidth = gridEl.scrollWidth;
-                if (contentHeight <= availableHeight && contentWidth <= availableWidth) break;
+                if (gridEl.scrollHeight <= availableHeight && gridEl.scrollWidth <= availableWidth) break;
                 currentSize = Math.max(ORDERLY_ICON_MIN, Math.floor(currentSize * 0.9));
                 gridEl.style.setProperty('--orderly-icon-size', currentSize + 'px');
+            }
+        });
+    }
+
+    if (!isLarge && mainEl && items.length > 0) {
+        gridEl.style.setProperty('--orderly-icon-size-small', ORDERLY_ICON_MIN + 'px');
+        requestAnimationFrame(() => {
+            let currentSize = ORDERLY_ICON_MIN;
+            const availableHeight = mainEl.clientHeight;
+            const availableWidth = mainEl.clientWidth;
+            while (currentSize > ORDERLY_ICON_SMALL_MIN) {
+                if (gridEl.scrollHeight <= availableHeight && gridEl.scrollWidth <= availableWidth) break;
+                currentSize = Math.max(ORDERLY_ICON_SMALL_MIN, Math.floor(currentSize * 0.9));
+                gridEl.style.setProperty('--orderly-icon-size-small', currentSize + 'px');
             }
         });
     }
