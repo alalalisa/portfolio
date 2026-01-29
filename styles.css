@@ -326,12 +326,12 @@ body {
     height: 100%;
 }
 
-/* Показываем только один значок: в хаотичном режиме — хаос, в сетке — сетка */
-.view-mode-toggle .toggle-icon-chaotic { opacity: 1; visibility: visible; }
-.view-mode-toggle .toggle-icon-orderly { opacity: 0; visibility: hidden; pointer-events: none; }
+/* Показываем только один значок — второй полностью убран из вёрстки, чтобы не было «второй кнопки» */
+.view-mode-toggle .toggle-icon-chaotic { display: flex; opacity: 1; }
+.view-mode-toggle .toggle-icon-orderly { display: none !important; }
 
-.view-mode-toggle.orderly-mode .toggle-icon-chaotic { opacity: 0; visibility: hidden; pointer-events: none; }
-.view-mode-toggle.orderly-mode .toggle-icon-orderly { opacity: 1; visibility: visible; }
+.view-mode-toggle.orderly-mode .toggle-icon-chaotic { display: none !important; }
+.view-mode-toggle.orderly-mode .toggle-icon-orderly { display: flex !important; opacity: 1; }
 
 /* Упорядоченный вид: основная область + сайдбар с тегами (поверх хаотичных тегов) */
 .orderly-view {
@@ -1043,7 +1043,7 @@ body.orderly-mode .portfolio-tag {
     margin-top: 0;
 }
 
-/* Видео — слева; ещё на 20% больше; слой выше слоя с фото */
+/* Видео — слева; ещё на 30% больше */
 .splash-video-container {
     grid-column: 1;
     grid-row: 1;
@@ -1051,7 +1051,7 @@ body.orderly-mode .portfolio-tag {
     min-height: 0;
     min-width: 0;
     aspect-ratio: 1;
-    max-height: 76vh;
+    max-height: 99vh;
     width: 100%;
     display: flex;
     align-items: center;
@@ -1080,21 +1080,21 @@ body.orderly-mode .portfolio-tag {
     max-width: 100%;
     padding: 0;
     min-width: 0;
-    margin-top: -8vh;
+    margin-top: -18vh;
 }
 
 .splash-description .splash-telegram-btn {
     align-self: flex-end;
 }
 
-/* Подсказка «Кликните по экрану…» — справа, на 10% ниже */
+/* Подсказка «Кликните по экрану…» — справа; текст и кнопки подняты на 10% */
 .splash-hint {
     grid-column: 1;
     grid-row: 3;
     padding-top: clamp(0.15rem, 0.4vh, 0.35rem);
     padding-bottom: 0;
     text-align: right;
-    margin-top: -2vh;
+    margin-top: -12vh;
 }
 
 .splash-hint p {
@@ -1105,7 +1105,7 @@ body.orderly-mode .portfolio-tag {
     letter-spacing: 0.05em;
 }
 
-/* Фото — справа; на 10% правее и на 10% выше; слой ниже слоя с видео */
+/* Фото — справа; на 10% ниже */
 .splash-photo {
     grid-column: 2;
     grid-row: 1 / -1;
@@ -1115,7 +1115,7 @@ body.orderly-mode .portfolio-tag {
     min-height: 0;
     min-width: 0;
     position: relative;
-    margin-top: -2vh;
+    margin-top: 8vh;
     margin-left: 10vw;
 }
 
