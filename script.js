@@ -2541,8 +2541,32 @@ if (mobileMenuToggle && controlPanel) {
     });
 }
 
+// ========== ИНДИКАТОР БРЕЙКПОИНТА (для проверки: ?breakpoint=1 в URL) ==========
+// Браузер не передаёт тип устройства — только ширину окна (viewport). На неё опираются медиазапросы.
+function getBreakpointLabel() {
+    const w = window.innerWidth;
+    if (w >= 1025) return 'desktop';
+    if (w >= 769) return 'tablet';
+    return 'phone';
+}
+function updateBreakpointIndicator() {
+    const el = document.getElementById('breakpoint-indicator');
+    if (!el) return;
+    const show = new URLSearchParams(window.location.search).get('breakpoint') === '1';
+    if (!show) {
+        el.classList.remove('visible');
+        el.textContent = '';
+        return;
+    }
+    const w = window.innerWidth;
+    const label = getBreakpointLabel();
+    el.textContent = `Viewport: ${w}px → ${label}`;
+    el.classList.add('visible');
+}
+
 // ========== ИНИЦИАЛИЗАЦИЯ ==========
 document.addEventListener('DOMContentLoaded', () => {
+    updateBreakpointIndicator();
     loadPortfolioData();
     setupBoardControls();
     // setupControlPanel(); // Закомментировано - панель управления удалена
@@ -2563,6 +2587,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let resizeTimeout;
     window.addEventListener('resize', () => {
+        updateBreakpointIndicator();
         clearTimeout(resizeTimeout);
         resizeTimeout = setTimeout(() => {
             if (viewMode === 'orderly') {
