@@ -359,7 +359,7 @@ body.orderly-mode .portfolio-tag {
     flex: 1;
     min-width: 0;
     overflow: hidden;
-    padding: 28px 196px 28px 196px;
+    padding: 28px 196px 28px 372px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -505,7 +505,7 @@ body.orderly-mode .portfolio-tag {
         height: 66px;
     }
     .orderly-main {
-        padding: 28px 150px 28px 150px;
+        padding: 28px 150px 28px 294px;
     }
     .orderly-sidebar {
         width: 280px;
