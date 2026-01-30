@@ -991,11 +991,6 @@ body.orderly-mode .portfolio-tag {
         font-size: 0.8rem;
     }
 
-    .splash-hint {
-        grid-column: 1;
-        grid-row: 2;
-    }
-
     .splash-hint p {
         font-size: clamp(0.8rem, 2vw, 1rem);
     }
@@ -1050,9 +1045,9 @@ body.orderly-mode .portfolio-tag {
 
 .splash-content {
     display: grid;
-    /* Слева текст, справа зона медиа (фото + видео поверх) */
+    /* Слева текст (описание + кнопка + подсказка), справа зона медиа */
     grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
-    grid-template-rows: auto auto;
+    grid-template-rows: auto;
     gap: clamp(0.35rem, 1.5vw, 1rem);
     padding: clamp(0.35rem, 1.5vw, 1rem) clamp(1rem, 4vw, 3rem);
     align-items: start;
@@ -1082,14 +1077,12 @@ body.orderly-mode .portfolio-tag {
     align-self: flex-end;
 }
 
-/* Подсказка «Кликните по экрану…» — справа */
+/* Подсказка «Кликните по экрану…» — под кнопкой, внутри блока описания */
 .splash-hint {
-    grid-column: 1;
-    grid-row: 2;
-    padding-top: clamp(0.15rem, 0.4vh, 0.35rem);
+    padding-top: clamp(0.5rem, 1.5vh, 1rem);
     padding-bottom: 0;
     text-align: right;
-    margin-top: 28vh;
+    margin-top: 0;
 }
 
 .splash-hint p {
@@ -1143,7 +1136,7 @@ body.orderly-mode .portfolio-tag {
     position: absolute;
     left: 0;
     top: 25%;
-    transform: translate(-50vw, -50%);
+    transform: translate(-40vw, -50%);
     width: 130vh;
     height: 130vh;
     min-width: 130vh;
