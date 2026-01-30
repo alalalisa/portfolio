@@ -1157,12 +1157,12 @@ body.orderly-mode .portfolio-tag {
     transition: transform 0.3s ease;
 }
 
-/* Видео — поверх фото (наложение); 10% влево */
+/* Видео — поверх фото (наложение); 3% вправо */
 .splash-video-container {
     position: absolute;
     left: 0;
     top: 27%;
-    transform: translate(-54vw, -50%);
+    transform: translate(-51vw, -50%);
     width: 130vh;
     height: 130vh;
     min-width: 130vh;
@@ -1205,11 +1205,12 @@ body.orderly-mode .portfolio-tag {
     font-size: 1em;
     transition: background-color 0.3s ease, transform 0.3s ease;
     margin-top: 0.25rem;
+    transform: translateX(20vw);
 }
 
 .splash-description .splash-telegram-btn:hover {
     background-color: rgba(255, 255, 255, 0.2);
-    transform: scale(1.05);
+    transform: translateX(20vw) scale(1.05);
 }
 
 /* Текстовые квадратики (если используются) */
