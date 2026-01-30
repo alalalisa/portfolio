@@ -363,6 +363,13 @@ body.orderly-mode .portfolio-tag {
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
+}
+
+.orderly-grid-wrap {
+    display: inline-block;
+    width: fit-content;
+    max-width: 100%;
 }
 
 .orderly-grid {
@@ -373,7 +380,7 @@ body.orderly-mode .portfolio-tag {
 }
 
 .orderly-grid--small {
-    grid-template-columns: repeat(auto-fill, minmax(calc(var(--orderly-icon-size-small, 45px) + 16px), 1fr));
+    grid-template-columns: repeat(5, calc(var(--orderly-icon-size-small, 36px) + 16px));
 }
 
 .orderly-grid--large {
@@ -399,8 +406,8 @@ body.orderly-mode .portfolio-tag {
 }
 
 .orderly-grid--small .orderly-icon {
-    width: var(--orderly-icon-size-small, 45px);
-    height: var(--orderly-icon-size-small, 45px);
+    width: var(--orderly-icon-size-small, 36px);
+    height: var(--orderly-icon-size-small, 36px);
 }
 
 .orderly-grid--large .orderly-icon {
@@ -505,11 +512,11 @@ body.orderly-mode .portfolio-tag {
         min-width: 0;
     }
     .orderly-grid--small .orderly-icon {
-        width: var(--orderly-icon-size-small, 39px);
-        height: var(--orderly-icon-size-small, 39px);
+        width: var(--orderly-icon-size-small, 31px);
+        height: var(--orderly-icon-size-small, 31px);
     }
     .orderly-grid--small {
-        grid-template-columns: repeat(auto-fill, minmax(calc(var(--orderly-icon-size-small, 39px) + 16px), 1fr));
+        grid-template-columns: repeat(5, calc(var(--orderly-icon-size-small, 31px) + 16px));
     }
 }
 
@@ -1063,8 +1070,8 @@ body.orderly-mode .portfolio-tag {
 
 .splash-content {
     display: grid;
-    /* Слева текст (описание + кнопка + подсказка), справа зона медиа */
-    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    /* Слева текст (колонка на 10% шире), справа зона медиа */
+    grid-template-columns: minmax(0, 0.99fr) minmax(0, 1.01fr);
     grid-template-rows: auto;
     gap: clamp(0.35rem, 1.5vw, 1rem);
     padding: clamp(0.35rem, 1.5vw, 1rem) clamp(1rem, 4vw, 3rem);
@@ -1095,13 +1102,13 @@ body.orderly-mode .portfolio-tag {
     align-self: flex-end;
 }
 
-/* Подсказка «Кликните по экрану…» — под кнопкой; ещё 5% влево */
+/* Подсказка «Кликните по экрану…» — под кнопкой; ещё 20% вправо */
 .splash-hint {
     padding-top: clamp(0.5rem, 1.5vh, 1rem);
     padding-bottom: 0;
     text-align: right;
     margin-top: 0;
-    transform: translateX(10vw);
+    transform: translateX(50vw);
 }
 
 .splash-hint p {
@@ -1150,12 +1157,12 @@ body.orderly-mode .portfolio-tag {
     transition: transform 0.3s ease;
 }
 
-/* Видео — поверх фото (наложение); 2% ниже, 3% влево */
+/* Видео — поверх фото (наложение); сдвиг 2% вправо от прежней позиции */
 .splash-video-container {
     position: absolute;
     left: 0;
     top: 27%;
-    transform: translate(-47vw, -50%);
+    transform: translate(-45vw, -50%);
     width: 130vh;
     height: 130vh;
     min-width: 130vh;
@@ -1198,12 +1205,12 @@ body.orderly-mode .portfolio-tag {
     font-size: 1em;
     transition: background-color 0.3s ease, transform 0.3s ease;
     margin-top: 0.25rem;
-    transform: translateX(-2vw);
+    transform: translateX(-62vw);
 }
 
 .splash-description .splash-telegram-btn:hover {
     background-color: rgba(255, 255, 255, 0.2);
-    transform: translateX(-2vw) scale(1.05);
+    transform: translateX(-62vw) scale(1.05);
 }
 
 /* Текстовые квадратики (если используются) */
