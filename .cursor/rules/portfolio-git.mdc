@@ -1,0 +1,18 @@
+---
+description: After every portfolio/splash change, commit AND push to GitHub so the user sees updates on GitHub Pages
+globs: index.html, script.js, styles.css
+alwaysApply: false
+---
+
+# Portfolio: commit and push after every change
+
+When you make **any** change to the portfolio site (splash layout, index.html, script.js, styles.css, or related edits in this topic):
+
+1. **Immediately after completing the edits** (do not skip):
+   - `git add` for the changed files (only index.html, script.js, styles.css as relevant)
+   - `git commit -m "Brief description of the change"`
+   - `git push origin main`
+
+2. Do **not** add unrelated files (docs, .py scripts, assets, etc.) unless the user asked for them.
+
+3. The user expects every change to be committed and pushed to GitHub without being asked. Do this automatically after each edit in this topic.
