@@ -13,10 +13,7 @@
     <!-- Начальный экран (splash screen) -->
     <div id="splash-screen" class="splash-screen">
         <div class="splash-content">
-            <!-- Левая колонка: видео, под ним текст, кнопка справа, подсказка внизу -->
-            <div class="splash-video-container">
-                <video id="splash-video" class="splash-video" autoplay muted loop playsinline preload="auto"></video>
-            </div>
+            <!-- Левая колонка: текст и подсказка -->
             <div class="splash-description">
                 <p>Я медиадизайнер, работающий с широким кругом технологий. Занимаюсь программированием интерактивных инсталляций, создаю генеративную графику, делаю контент и программирую вольюметрические экраны, кинетические лебедки, лазеры. Так же работаю с AI графикой, делаю арт для музыкальных обложек и виджею на мероприятиях</p>
                 <a href="https://t.me/alalisasilala" class="splash-telegram-btn" target="_blank">Telegram</a>
@@ -24,9 +21,14 @@
             <div class="splash-hint">
                 <p>Кликните по экрану, чтобы увидеть проекты</p>
             </div>
-            <!-- Правая колонка: фотография -->
-            <div class="splash-photo">
-                <img id="splash-photo-img" src="" alt="Alisa Voronina">
+            <!-- Правая зона: фото (большое) + видео поверх фото (наложение) -->
+            <div class="splash-media">
+                <div class="splash-photo">
+                    <img id="splash-photo-img" src="" alt="Alisa Voronina">
+                </div>
+                <div class="splash-video-container">
+                    <video id="splash-video" class="splash-video" autoplay muted loop playsinline preload="auto"></video>
+                </div>
             </div>
         </div>
     </div>
@@ -52,7 +54,6 @@
                 <div id="orderly-grid" class="orderly-grid orderly-grid--small"></div>
             </div>
             <aside id="orderly-sidebar" class="orderly-sidebar">
-                <div class="orderly-sidebar-header">Теги</div>
                 <div id="orderly-sidebar-tags" class="orderly-sidebar-tags"></div>
             </aside>
         </div>

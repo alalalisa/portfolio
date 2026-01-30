@@ -843,12 +843,23 @@ body.orderly-mode .portfolio-tag {
         align-self: flex-start;
     }
 
-    .splash-video-container {
+    .splash-media {
         width: 100%;
-        height: 40vh;
-        min-height: min(12.5rem, 40vh);
+        min-height: 50vh;
+        order: 0;
+    }
+
+    .splash-video-container {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        width: 45vw;
+        height: 45vw;
+        min-width: 0;
+        min-height: 0;
+        max-width: 40vh;
         max-height: 40vh;
-        aspect-ratio: auto;
     }
 
     .splash-video {
@@ -860,8 +871,7 @@ body.orderly-mode .portfolio-tag {
 
     .splash-photo {
         width: 100%;
-        max-width: 100%;
-        min-width: 0;
+        min-height: 45vh;
         flex: 0 0 auto;
     }
 
@@ -943,21 +953,30 @@ body.orderly-mode .portfolio-tag {
     .splash-content {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto auto auto;
+        grid-template-rows: auto auto;
         gap: clamp(0.5rem, 2vw, 1rem);
     }
 
+    .splash-media {
+        grid-column: 2;
+        grid-row: 1 / -1;
+        min-height: 80vh;
+    }
+
     .splash-video-container {
-        grid-column: 1;
-        grid-row: 1;
-        height: 80vh;
-        max-height: 80vh;
-        aspect-ratio: auto;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 45vh;
+        height: 45vh;
+        min-width: 45vh;
+        min-height: 45vh;
     }
 
     .splash-description {
         grid-column: 1;
-        grid-row: 2;
+        grid-row: 1;
         width: 100%;
         max-width: 100%;
     }
@@ -968,16 +987,11 @@ body.orderly-mode .portfolio-tag {
 
     .splash-hint {
         grid-column: 1;
-        grid-row: 3;
+        grid-row: 2;
     }
 
     .splash-hint p {
         font-size: clamp(0.8rem, 2vw, 1rem);
-    }
-
-    .splash-photo {
-        grid-column: 2;
-        grid-row: 1 / -1;
     }
 }
 
@@ -1030,9 +1044,9 @@ body.orderly-mode .portfolio-tag {
 
 .splash-content {
     display: grid;
-    /* Левая колонка шире, чтобы видео реально было в 1.5 раза больше (не только max-height) */
-    grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
-    grid-template-rows: auto auto auto;
+    /* Слева текст, справа зона медиа (фото + видео поверх) */
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    grid-template-rows: auto auto;
     gap: clamp(0.35rem, 1.5vw, 1rem);
     padding: clamp(0.35rem, 1.5vw, 1rem) clamp(1rem, 4vw, 3rem);
     align-items: start;
@@ -1043,36 +1057,10 @@ body.orderly-mode .portfolio-tag {
     margin-top: 0;
 }
 
-/* Видео — слева; размер задаётся шириной колонки (1.35fr) + мин. размер; поднято на 20% выше */
-.splash-video-container {
-    grid-column: 1;
-    grid-row: 1;
-    position: relative;
-    min-width: 52vh;
-    min-height: 52vh;
-    aspect-ratio: 1;
-    max-height: 90vh;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: -20vh;
-}
-
-.splash-video {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    opacity: 0.7;
-    display: block;
-}
-
-/* Текст и кнопка Telegram — под видео; блок поднят на 40% страницы вверх */
+/* Левая колонка: текст и подсказка */
 .splash-description {
     grid-column: 1;
-    grid-row: 2;
+    grid-row: 1;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -1088,10 +1076,10 @@ body.orderly-mode .portfolio-tag {
     align-self: flex-end;
 }
 
-/* Подсказка «Кликните по экрану…» — справа; текст и кнопка опущены на 20% ниже */
+/* Подсказка «Кликните по экрану…» — справа */
 .splash-hint {
     grid-column: 1;
-    grid-row: 3;
+    grid-row: 2;
     padding-top: clamp(0.15rem, 0.4vh, 0.35rem);
     padding-bottom: 0;
     text-align: right;
@@ -1106,30 +1094,67 @@ body.orderly-mode .portfolio-tag {
     letter-spacing: 0.05em;
 }
 
-/* Фото — справа; на 10% ниже */
-.splash-photo {
+/* Зона медиа: фото (большое) + видео поверх */
+.splash-media {
     grid-column: 2;
     grid-row: 1 / -1;
+    position: relative;
+    width: 100%;
+    min-height: 80vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 0;
-    min-width: 0;
+}
+
+/* Фото — большой слой, заполняет зону */
+.splash-photo {
     position: relative;
-    margin-top: 8vh;
-    margin-left: 10vw;
+    width: 100%;
+    height: 100%;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
 }
 
 .splash-photo img {
     width: 100%;
     height: auto;
-    max-height: 84vh;
+    max-height: 90vh;
     max-width: 100%;
     object-fit: contain;
     border-radius: 0.5rem;
     box-shadow: 0 0.625rem 2.5rem rgba(0, 0, 0, 0.5);
     display: block;
     transition: transform 0.3s ease;
+}
+
+/* Видео — поверх фото (наложение), крупное */
+.splash-video-container {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 55vh;
+    height: 55vh;
+    min-width: 55vh;
+    min-height: 55vh;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+}
+
+.splash-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    opacity: 0.7;
+    display: block;
 }
 
 .splash-description p {
