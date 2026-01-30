@@ -686,21 +686,29 @@ body.orderly-mode .portfolio-tag {
         font-size: 0.9rem;
     }
 
-    /* Splash iPad — видео ещё −20%, фото +10%, весь текст и кнопка +10% */
+    /* Splash iPad — видео −20%, текст и кнопка на 10% выше, фото на 5% ниже */
     .splash-content {
         gap: clamp(0.75rem, 2vw, 1.5rem);
         padding: clamp(0.75rem, 3vw, 2rem);
     }
 
     .splash-video-container {
-        width: 83vh;
-        height: 83vh;
-        min-width: 83vh;
-        min-height: 83vh;
+        width: 66vh;
+        height: 66vh;
+        min-width: 66vh;
+        min-height: 66vh;
+    }
+
+    .splash-photo {
+        transform: translate(10vw, 0);
     }
 
     .splash-photo img {
         max-height: 79vh;
+    }
+
+    .splash-description {
+        margin-top: 52vh;
     }
 
     .splash-description p {
