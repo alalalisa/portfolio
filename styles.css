@@ -1080,13 +1080,13 @@ body.orderly-mode .portfolio-tag {
     align-self: flex-end;
 }
 
-/* Подсказка «Кликните по экрану…» — под кнопкой; на 15% влево */
+/* Подсказка «Кликните по экрану…» — под кнопкой; ещё 5% влево */
 .splash-hint {
     padding-top: clamp(0.5rem, 1.5vh, 1rem);
     padding-bottom: 0;
     text-align: right;
     margin-top: 0;
-    transform: translateX(15vw);
+    transform: translateX(10vw);
 }
 
 .splash-hint p {
@@ -1135,12 +1135,12 @@ body.orderly-mode .portfolio-tag {
     transition: transform 0.3s ease;
 }
 
-/* Видео — поверх фото (наложение); ещё 5% вправо и 5% выше */
+/* Видео — поверх фото (наложение); 2% ниже, 3% влево */
 .splash-video-container {
     position: absolute;
     left: 0;
-    top: 25%;
-    transform: translate(-40vw, -50%);
+    top: 27%;
+    transform: translate(-43vw, -50%);
     width: 130vh;
     height: 130vh;
     min-width: 130vh;
