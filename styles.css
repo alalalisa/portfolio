@@ -375,16 +375,17 @@ body.orderly-mode .portfolio-tag {
 .orderly-grid {
     display: grid;
     gap: 16px;
-    width: max-content;
     max-width: 100%;
     transition: gap 0.2s ease;
 }
 
 .orderly-grid--small {
+    width: max-content;
     grid-template-columns: repeat(4, calc(var(--orderly-icon-size-small, 36px) + 16px));
 }
 
 .orderly-grid--large {
+    width: 100%;
     grid-template-columns: repeat(auto-fill, minmax(calc(var(--orderly-icon-size, 97px) + 20px), 1fr));
     gap: 20px;
 }
