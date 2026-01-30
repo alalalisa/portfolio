@@ -366,11 +366,9 @@ body.orderly-mode .portfolio-tag {
 }
 
 .orderly-grid {
-    display: grid;
+    display: inline-grid;
     gap: 16px;
-    width: fit-content;
     max-width: 100%;
-    margin: 0 auto;
     transition: gap 0.2s ease;
 }
 
@@ -1086,7 +1084,7 @@ body.orderly-mode .portfolio-tag {
     padding-bottom: 0;
     text-align: right;
     margin-top: 0;
-    transform: translateX(10vw);
+    transform: translateX(5vw);
 }
 
 .splash-hint p {
@@ -1140,7 +1138,7 @@ body.orderly-mode .portfolio-tag {
     position: absolute;
     left: 0;
     top: 27%;
-    transform: translate(-43vw, -50%);
+    transform: translate(-48vw, -50%);
     width: 130vh;
     height: 130vh;
     min-width: 130vh;
