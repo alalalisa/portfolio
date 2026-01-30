@@ -725,7 +725,7 @@ function selectOrderlyTag(tagText) {
 
 const ORDERLY_ICON_MAX = 97;
 const ORDERLY_ICON_MIN = 32;
-const ORDERLY_ICON_SMALL_MIN = 26;
+const ORDERLY_ICON_SMALL_MIN = 20;
 
 function renderOrderlyProjects(selectedTag) {
     const gridEl = document.getElementById('orderly-grid');
@@ -733,11 +733,17 @@ function renderOrderlyProjects(selectedTag) {
     if (!gridEl) return;
     let items = getIconsByTag(selectedTag);
     if (!selectedTag && items.length > 0) {
-        items = items.slice(0, Math.floor(items.length / 2));
+        const maxInitial = 25;
+        items = items.slice(0, Math.min(maxInitial, items.length));
     }
     const isLarge = !!selectedTag && items.length > 0;
     gridEl.className = 'orderly-grid ' + (isLarge ? 'orderly-grid--large' : 'orderly-grid--small');
     gridEl.removeAttribute('style');
+    if (!isLarge) {
+        gridEl.style.setProperty('--orderly-icon-size-small', '36px');
+        const cols = Math.max(1, Math.round(Math.sqrt(items.length)));
+        gridEl.style.gridTemplateColumns = 'repeat(' + cols + ', calc(var(--orderly-icon-size-small, 36px) + 16px))';
+    }
     const size = isLarge ? ORDERLY_ICON_MAX : ORDERLY_ICON_MIN;
     gridEl.innerHTML = '';
     items.forEach(({ icon }) => {
@@ -761,14 +767,14 @@ function renderOrderlyProjects(selectedTag) {
     }
     function shrinkSmallGrid() {
         if (!mainEl) return;
-        let currentSize = ORDERLY_ICON_MIN;
+        let currentSize = 36;
         const availableHeight = mainEl.clientHeight - fitMargin;
         const availableWidth = mainEl.clientWidth - fitMargin;
         gridEl.style.setProperty('--orderly-icon-size-small', currentSize + 'px');
         while (currentSize > ORDERLY_ICON_SMALL_MIN) {
             void gridEl.offsetHeight;
             if (gridEl.scrollHeight <= availableHeight && gridEl.scrollWidth <= availableWidth) break;
-            currentSize = Math.max(ORDERLY_ICON_SMALL_MIN, Math.floor(currentSize * 0.88));
+            currentSize = Math.max(ORDERLY_ICON_SMALL_MIN, Math.floor(currentSize * 0.85));
             gridEl.style.setProperty('--orderly-icon-size-small', currentSize + 'px');
         }
     }

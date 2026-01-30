@@ -1099,16 +1099,16 @@ body.orderly-mode .portfolio-tag {
 }
 
 .splash-description .splash-telegram-btn {
-    align-self: flex-end;
+    align-self: flex-start;
 }
 
-/* Подсказка «Кликните по экрану…» — под кнопкой; 5% влево */
+/* Подсказка «Кликните по экрану…» — под кнопкой; 20% влево */
 .splash-hint {
     padding-top: clamp(0.5rem, 1.5vh, 1rem);
     padding-bottom: 0;
     text-align: right;
     margin-top: 0;
-    transform: translateX(35vw);
+    transform: translateX(15vw);
 }
 
 .splash-hint p {
@@ -1157,12 +1157,12 @@ body.orderly-mode .portfolio-tag {
     transition: transform 0.3s ease;
 }
 
-/* Видео — поверх фото (наложение); ещё 1% вправо */
+/* Видео — поверх фото (наложение); 10% влево */
 .splash-video-container {
     position: absolute;
     left: 0;
     top: 27%;
-    transform: translate(-44vw, -50%);
+    transform: translate(-54vw, -50%);
     width: 130vh;
     height: 130vh;
     min-width: 130vh;
@@ -1205,12 +1205,11 @@ body.orderly-mode .portfolio-tag {
     font-size: 1em;
     transition: background-color 0.3s ease, transform 0.3s ease;
     margin-top: 0.25rem;
-    transform: translateX(-62vw);
 }
 
 .splash-description .splash-telegram-btn:hover {
     background-color: rgba(255, 255, 255, 0.2);
-    transform: translateX(-62vw) scale(1.05);
+    transform: scale(1.05);
 }
 
 /* Текстовые квадратики (если используются) */
