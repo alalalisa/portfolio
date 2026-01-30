@@ -192,17 +192,18 @@ function createTags() {
     tagElements = [];
     tags = [];
     
-    // Создаем теги, разбросанные по странице
-    const tagCount = Math.min(allTags.length, 60); // Увеличено до 60 тегов (в два раза)
+    // Создаем теги, разбросанные по странице (на мобильных — меньше тегов)
+    const isMobileView = window.innerWidth <= 768;
+    const maxTags = isMobileView ? Math.min(allTags.length, 8) : Math.min(allTags.length, 60);
     
-    console.log(`Создаем ${tagCount} тегов из ${allTags.length} доступных`);
+    console.log(`Создаем ${maxTags} тегов из ${allTags.length} доступных${isMobileView ? ' (мобильная версия)' : ''}`);
     
     // Распределяем теги случайно по экрану с проверкой пересечений
     const margin = 150; // Отступ от краев экрана (увеличен)
     const minTagDistance = 200; // Минимальное расстояние между тегами
     const tagPositions = [];
     
-    allTags.slice(0, tagCount).forEach((tagText, index) => {
+    allTags.slice(0, maxTags).forEach((tagText, index) => {
         let x, y;
         let attempts = 0;
         const maxAttempts = 100;
@@ -242,8 +243,8 @@ function createTags() {
         // Сохраняем позицию
         tagPositions.push({ x, y });
         
-        // Случайные параметры для плавания
-        const speedX = (Math.random() - 0.5) * 0.1; // Очень медленная и плавная скорость
+        // Случайные параметры для плавания (замедление на мобильных задаётся в animateTags)
+        const speedX = (Math.random() - 0.5) * 0.1;
         const speedY = (Math.random() - 0.5) * 0.1;
         const amplitudeX = 20 + Math.random() * 40; // Уменьшенная амплитуда для более плавного движения
         const amplitudeY = 20 + Math.random() * 40;
@@ -299,12 +300,14 @@ function animateTags() {
     }
     
     const now = Date.now();
+    const isMobileView = window.innerWidth <= 768;
+    const timeScale = isMobileView ? 1 / 3 : 1; // на мобильных движение в 3 раза медленнее
     
     tags.forEach(tag => {
         if (!tag.element || !tag.element.parentNode) return;
         
         // Вычисляем время с начала анимации
-        const elapsed = (now - tag.startTime) / 1000; // в секундах
+        const elapsed = (now - tag.startTime) / 1000 * timeScale; // в секундах (на мобильных медленнее)
         
         // Плавное движение по синусоиде
         const offsetX = Math.sin(elapsed * tag.speedX + tag.phaseX) * tag.amplitudeX;
@@ -688,10 +691,17 @@ function createOrderlyIconElement(icon, size) {
 }
 
 function buildOrderlySidebar() {
+    const sidebar = document.getElementById('orderly-sidebar');
+    if (sidebar) {
+        const header = sidebar.querySelector('.orderly-sidebar-header');
+        if (header) header.remove();
+    }
     const container = document.getElementById('orderly-sidebar-tags');
     if (!container) return;
     container.innerHTML = '';
     allTags.forEach(tagText => {
+        const t = String(tagText).trim();
+        if (t === 'Теги' || t === 'Tags' || t === 'tags' || t === 'теги') return;
         const btn = document.createElement('button');
         btn.type = 'button';
         btn.className = 'orderly-tag-btn' + (activeTag === tagText ? ' active' : '');
@@ -713,9 +723,9 @@ function selectOrderlyTag(tagText) {
     renderOrderlyProjects(tagText);
 }
 
-const ORDERLY_ICON_MAX = 120;
-const ORDERLY_ICON_MIN = 56;
-const ORDERLY_ICON_SMALL_MIN = 32;
+const ORDERLY_ICON_MAX = 97;
+const ORDERLY_ICON_MIN = 32;
+const ORDERLY_ICON_SMALL_MIN = 26;
 
 function renderOrderlyProjects(selectedTag) {
     const gridEl = document.getElementById('orderly-grid');
@@ -735,31 +745,41 @@ function renderOrderlyProjects(selectedTag) {
         gridEl.appendChild(el);
     });
 
+    const fitMargin = 32;
+    function shrinkLargeGrid() {
+        if (!mainEl) return;
+        let currentSize = ORDERLY_ICON_MAX;
+        const availableHeight = mainEl.clientHeight - fitMargin;
+        const availableWidth = mainEl.clientWidth - fitMargin;
+        gridEl.style.setProperty('--orderly-icon-size', currentSize + 'px');
+        while (currentSize > ORDERLY_ICON_MIN) {
+            void gridEl.offsetHeight;
+            if (gridEl.scrollHeight <= availableHeight && gridEl.scrollWidth <= availableWidth) break;
+            currentSize = Math.max(ORDERLY_ICON_MIN, Math.floor(currentSize * 0.88));
+            gridEl.style.setProperty('--orderly-icon-size', currentSize + 'px');
+        }
+    }
+    function shrinkSmallGrid() {
+        if (!mainEl) return;
+        let currentSize = ORDERLY_ICON_MIN;
+        const availableHeight = mainEl.clientHeight - fitMargin;
+        const availableWidth = mainEl.clientWidth - fitMargin;
+        gridEl.style.setProperty('--orderly-icon-size-small', currentSize + 'px');
+        while (currentSize > ORDERLY_ICON_SMALL_MIN) {
+            void gridEl.offsetHeight;
+            if (gridEl.scrollHeight <= availableHeight && gridEl.scrollWidth <= availableWidth) break;
+            currentSize = Math.max(ORDERLY_ICON_SMALL_MIN, Math.floor(currentSize * 0.88));
+            gridEl.style.setProperty('--orderly-icon-size-small', currentSize + 'px');
+        }
+    }
     if (isLarge && mainEl) {
-        gridEl.style.setProperty('--orderly-icon-size', ORDERLY_ICON_MAX + 'px');
         requestAnimationFrame(() => {
-            let currentSize = ORDERLY_ICON_MAX;
-            const availableHeight = mainEl.clientHeight;
-            const availableWidth = mainEl.clientWidth;
-            while (currentSize > ORDERLY_ICON_MIN) {
-                if (gridEl.scrollHeight <= availableHeight && gridEl.scrollWidth <= availableWidth) break;
-                currentSize = Math.max(ORDERLY_ICON_MIN, Math.floor(currentSize * 0.9));
-                gridEl.style.setProperty('--orderly-icon-size', currentSize + 'px');
-            }
+            shrinkLargeGrid();
         });
     }
-
     if (!isLarge && mainEl && items.length > 0) {
-        gridEl.style.setProperty('--orderly-icon-size-small', ORDERLY_ICON_MIN + 'px');
         requestAnimationFrame(() => {
-            let currentSize = ORDERLY_ICON_MIN;
-            const availableHeight = mainEl.clientHeight;
-            const availableWidth = mainEl.clientWidth;
-            while (currentSize > ORDERLY_ICON_SMALL_MIN) {
-                if (gridEl.scrollHeight <= availableHeight && gridEl.scrollWidth <= availableWidth) break;
-                currentSize = Math.max(ORDERLY_ICON_SMALL_MIN, Math.floor(currentSize * 0.9));
-                gridEl.style.setProperty('--orderly-icon-size-small', currentSize + 'px');
-            }
+            shrinkSmallGrid();
         });
     }
 }
@@ -774,7 +794,19 @@ function showChaoticView() {
     if (orderlyView) orderlyView.style.display = 'none';
     if (toggle) toggle.classList.remove('orderly-mode');
     if (container) container.classList.remove('orderly-mode');
+    document.body.classList.remove('orderly-mode');
     tagElements.forEach(el => { if (el && el.style) el.style.display = ''; });
+    if (activeTag) {
+        tagElements.forEach(el => {
+            if (el.dataset.tag === activeTag) el.classList.add('active');
+            else el.classList.remove('active');
+        });
+        filterIconsByTag(activeTag);
+    } else {
+        tagElements.forEach(el => el.classList.remove('active'));
+        updateShape();
+        updateVisibleIcons();
+    }
     if (isTagAnimationRunning && tags.length > 0) animateTags();
 }
 
@@ -788,6 +820,7 @@ function showOrderlyView() {
     if (orderlyView) orderlyView.style.display = 'flex';
     if (toggle) toggle.classList.add('orderly-mode');
     if (container) container.classList.add('orderly-mode');
+    document.body.classList.add('orderly-mode');
     tagElements.forEach(el => { if (el && el.style) el.style.display = 'none'; });
     buildOrderlySidebar();
     renderOrderlyProjects(activeTag);
@@ -804,12 +837,6 @@ function setupViewModeToggle() {
             showOrderlyView();
         } else {
             showChaoticView();
-            if (activeTag) {
-                activeTag = null;
-                tagElements.forEach(el => el.classList.remove('active'));
-                updateShape();
-                updateVisibleIcons();
-            }
         }
     });
 }
