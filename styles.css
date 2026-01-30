@@ -372,6 +372,11 @@ body.orderly-mode .portfolio-tag {
     max-width: 100%;
 }
 
+.orderly-grid-wrap.orderly-grid-wrap--large {
+    display: block;
+    width: 100%;
+}
+
 .orderly-grid {
     display: grid;
     gap: 16px;

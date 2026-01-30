@@ -737,6 +737,10 @@ function renderOrderlyProjects(selectedTag) {
         items = items.slice(0, Math.min(maxInitial, items.length));
     }
     const isLarge = !!selectedTag && items.length > 0;
+    const wrapEl = document.getElementById('orderly-grid-wrap');
+    if (wrapEl) {
+        wrapEl.classList.toggle('orderly-grid-wrap--large', isLarge);
+    }
     gridEl.className = 'orderly-grid ' + (isLarge ? 'orderly-grid--large' : 'orderly-grid--small');
     gridEl.removeAttribute('style');
     if (!isLarge) gridEl.style.setProperty('--orderly-icon-size-small', '36px');
