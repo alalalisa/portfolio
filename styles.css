@@ -679,11 +679,15 @@ body.orderly-mode .portfolio-tag {
     }
 
     .splash-description p {
-        font-size: clamp(0.85rem, 1em, 1rem);
+        font-size: clamp(0.75rem, 0.9em, 0.9rem);
     }
 
     .splash-hint p {
-        font-size: clamp(0.85rem, 1.5vw, 1rem);
+        font-size: clamp(0.75rem, 1.2vw, 0.9rem);
+    }
+
+    .splash-description .splash-telegram-btn {
+        font-size: 0.9em;
     }
 }
 
@@ -896,8 +900,12 @@ body.orderly-mode .portfolio-tag {
     }
 
     .splash-description p {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
         text-align: center;
+    }
+
+    .splash-hint p {
+        font-size: clamp(0.75rem, 2vw, 0.9rem);
     }
 
     .splash-description .splash-telegram-btn {
@@ -906,6 +914,7 @@ body.orderly-mode .portfolio-tag {
         margin: clamp(1rem, 2vh, 1.25rem) 0 0 0;
         width: fit-content;
         align-self: flex-start;
+        font-size: 0.9rem;
     }
 
     /* Text squares - smaller on mobile */
@@ -946,6 +955,14 @@ body.orderly-mode .portfolio-tag {
     }
 
     .splash-description p {
+        font-size: 0.75rem;
+    }
+
+    .splash-hint p {
+        font-size: 0.8rem;
+    }
+
+    .splash-description .splash-telegram-btn {
         font-size: 0.85rem;
     }
 
@@ -1084,7 +1101,7 @@ body.orderly-mode .portfolio-tag {
     padding-bottom: 0;
     text-align: right;
     margin-top: 0;
-    transform: translateX(5vw);
+    transform: translateX(10vw);
 }
 
 .splash-hint p {
@@ -1138,7 +1155,7 @@ body.orderly-mode .portfolio-tag {
     position: absolute;
     left: 0;
     top: 27%;
-    transform: translate(-48vw, -50%);
+    transform: translate(-47vw, -50%);
     width: 130vh;
     height: 130vh;
     min-width: 130vh;
@@ -1181,11 +1198,12 @@ body.orderly-mode .portfolio-tag {
     font-size: 1em;
     transition: background-color 0.3s ease, transform 0.3s ease;
     margin-top: 0.25rem;
+    transform: translateX(-2vw);
 }
 
 .splash-description .splash-telegram-btn:hover {
     background-color: rgba(255, 255, 255, 0.2);
-    transform: scale(1.05);
+    transform: translateX(-2vw) scale(1.05);
 }
 
 /* Текстовые квадратики (если используются) */
