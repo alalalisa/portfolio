@@ -1102,13 +1102,13 @@ body.orderly-mode .portfolio-tag {
     align-self: flex-start;
 }
 
-/* Подсказка «Кликните по экрану…» — под кнопкой; 20% влево */
+/* Подсказка «Кликните по экрану…» — под кнопкой; 20% влево, 7% ниже */
 .splash-hint {
     padding-top: clamp(0.5rem, 1.5vh, 1rem);
     padding-bottom: 0;
     text-align: right;
     margin-top: 0;
-    transform: translateX(15vw);
+    transform: translate(15vw, 7vh);
 }
 
 .splash-hint p {
@@ -1205,12 +1205,12 @@ body.orderly-mode .portfolio-tag {
     font-size: 1em;
     transition: background-color 0.3s ease, transform 0.3s ease;
     margin-top: 0.25rem;
-    transform: translateX(20vw);
+    transform: translate(20vw, 5vh);
 }
 
 .splash-description .splash-telegram-btn:hover {
     background-color: rgba(255, 255, 255, 0.2);
-    transform: translateX(20vw) scale(1.05);
+    transform: translate(20vw, 5vh) scale(1.05);
 }
 
 /* Текстовые квадратики (если используются) */
