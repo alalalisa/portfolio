@@ -1043,7 +1043,7 @@ body.orderly-mode .portfolio-tag {
     margin-top: 0;
 }
 
-/* Видео — слева; ещё на 30% больше */
+/* Видео — слева; в 1.5 раза больше; поднято на 20% выше */
 .splash-video-container {
     grid-column: 1;
     grid-row: 1;
@@ -1056,6 +1056,7 @@ body.orderly-mode .portfolio-tag {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: -20vh;
 }
 
 .splash-video {
@@ -1080,21 +1081,21 @@ body.orderly-mode .portfolio-tag {
     max-width: 100%;
     padding: 0;
     min-width: 0;
-    margin-top: -18vh;
+    margin-top: -48vh;
 }
 
 .splash-description .splash-telegram-btn {
     align-self: flex-end;
 }
 
-/* Подсказка «Кликните по экрану…» — справа; текст и кнопки подняты на 10% */
+/* Подсказка «Кликните по экрану…» — справа; текст и кнопки подняты на 30% выше */
 .splash-hint {
     grid-column: 1;
     grid-row: 3;
     padding-top: clamp(0.15rem, 0.4vh, 0.35rem);
     padding-bottom: 0;
     text-align: right;
-    margin-top: -12vh;
+    margin-top: -42vh;
 }
 
 .splash-hint p {
@@ -1122,7 +1123,7 @@ body.orderly-mode .portfolio-tag {
 .splash-photo img {
     width: 100%;
     height: auto;
-    max-height: 76vh;
+    max-height: 84vh;
     max-width: 100%;
     object-fit: contain;
     border-radius: 0.5rem;
