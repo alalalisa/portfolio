@@ -1080,13 +1080,13 @@ body.orderly-mode .portfolio-tag {
     align-self: flex-end;
 }
 
-/* Подсказка «Кликните по экрану…» — под кнопкой; на 30% правее */
+/* Подсказка «Кликните по экрану…» — под кнопкой; на 15% влево */
 .splash-hint {
     padding-top: clamp(0.5rem, 1.5vh, 1rem);
     padding-bottom: 0;
     text-align: right;
     margin-top: 0;
-    transform: translateX(30vw);
+    transform: translateX(15vw);
 }
 
 .splash-hint p {
@@ -1109,7 +1109,7 @@ body.orderly-mode .portfolio-tag {
     justify-content: center;
 }
 
-/* Фото — большой слой; сдвинуто на 20% вправо */
+/* Фото — большой слой; сдвинуто вправо; поднято на 5% */
 .splash-photo {
     position: relative;
     width: 100%;
@@ -1119,7 +1119,7 @@ body.orderly-mode .portfolio-tag {
     align-items: center;
     justify-content: center;
     z-index: 1;
-    transform: translateX(10vw);
+    transform: translate(10vw, -5vh);
     flex-shrink: 0;
 }
 
@@ -1135,12 +1135,12 @@ body.orderly-mode .portfolio-tag {
     transition: transform 0.3s ease;
 }
 
-/* Видео — поверх фото (наложение); на 5% вправо и 5% выше */
+/* Видео — поверх фото (наложение); ещё 5% вправо и 5% выше */
 .splash-video-container {
     position: absolute;
     left: 0;
-    top: 30%;
-    transform: translate(-45vw, -50%);
+    top: 25%;
+    transform: translate(-40vw, -50%);
     width: 130vh;
     height: 130vh;
     min-width: 130vh;
