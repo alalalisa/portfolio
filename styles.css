@@ -362,13 +362,15 @@ body.orderly-mode .portfolio-tag {
     padding: 28px 28px 28px 188px;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
 }
 
 .orderly-grid {
     display: grid;
     gap: 16px;
-    width: 100%;
+    width: fit-content;
+    max-width: 100%;
+    margin: 0 auto;
     transition: gap 0.2s ease;
 }
 
@@ -415,7 +417,7 @@ body.orderly-mode .portfolio-tag {
     display: block;
 }
 
-/* Сайдбар с тегами справа — без фона и рамки; теги по центру колонки */
+/* Сайдбар с тегами справа — теги по центру колонки по вертикали и горизонтали */
 .orderly-sidebar {
     width: 420px;
     min-width: 420px;
@@ -428,6 +430,7 @@ body.orderly-mode .portfolio-tag {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     gap: 14px;
 }
 
@@ -1077,12 +1080,13 @@ body.orderly-mode .portfolio-tag {
     align-self: flex-end;
 }
 
-/* Подсказка «Кликните по экрану…» — под кнопкой, внутри блока описания */
+/* Подсказка «Кликните по экрану…» — под кнопкой; на 30% правее */
 .splash-hint {
     padding-top: clamp(0.5rem, 1.5vh, 1rem);
     padding-bottom: 0;
     text-align: right;
     margin-top: 0;
+    transform: translateX(30vw);
 }
 
 .splash-hint p {
@@ -1131,12 +1135,12 @@ body.orderly-mode .portfolio-tag {
     transition: transform 0.3s ease;
 }
 
-/* Видео — поверх фото (наложение); 130vh (может выходить за экран — ок) */
+/* Видео — поверх фото (наложение); на 10% влево и 10% ниже */
 .splash-video-container {
     position: absolute;
     left: 0;
-    top: 25%;
-    transform: translate(-40vw, -50%);
+    top: 35%;
+    transform: translate(-50vw, -50%);
     width: 130vh;
     height: 130vh;
     min-width: 130vh;
