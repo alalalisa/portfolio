@@ -686,21 +686,21 @@ body.orderly-mode .portfolio-tag {
         font-size: 0.9rem;
     }
 
-    /* Splash iPad — видео −20%, текст и кнопка на 10% выше, фото на 5% ниже */
+    /* Splash iPad — видео в 1.5 раза меньше, фото на 10% ниже, текст на 20% выше */
     .splash-content {
         gap: clamp(0.75rem, 2vw, 1.5rem);
         padding: clamp(0.75rem, 3vw, 2rem);
     }
 
     .splash-video-container {
-        width: 66vh;
-        height: 66vh;
-        min-width: 66vh;
-        min-height: 66vh;
+        width: 44vh;
+        height: 44vh;
+        min-width: 44vh;
+        min-height: 44vh;
     }
 
     .splash-photo {
-        transform: translate(10vw, 0);
+        transform: translate(10vw, 10vh);
     }
 
     .splash-photo img {
@@ -708,7 +708,7 @@ body.orderly-mode .portfolio-tag {
     }
 
     .splash-description {
-        margin-top: 52vh;
+        margin-top: 32vh;
     }
 
     .splash-description p {
@@ -893,18 +893,18 @@ body.orderly-mode .portfolio-tag {
         order: 0;
     }
 
-    /* Splash phone — видео в 2 раза меньше по центру, текст на всю ширину, фото в 2 раза меньше по центру */
+    /* Splash phone — видео в 2 раза меньше, фото в 2 раза меньше */
     .splash-video-container {
         position: absolute;
         left: 50%;
         transform: translate(-50%, -50%);
         top: 50%;
-        width: 5.625vw;
-        height: 5.625vw;
+        width: 2.8vw;
+        height: 2.8vw;
         min-width: 0;
         min-height: 0;
-        max-width: 5vh;
-        max-height: 5vh;
+        max-width: 2.5vh;
+        max-height: 2.5vh;
     }
 
     .splash-video {
@@ -916,7 +916,7 @@ body.orderly-mode .portfolio-tag {
 
     .splash-photo {
         width: 100%;
-        min-height: 11.25vh;
+        min-height: 6vh;
         flex: 0 0 auto;
         transform: none;
         display: flex;
@@ -925,7 +925,7 @@ body.orderly-mode .portfolio-tag {
     }
 
     .splash-photo img {
-        max-height: 12.5vh;
+        max-height: 6.25vh;
         width: auto;
     }
 
