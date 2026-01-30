@@ -386,7 +386,7 @@ body.orderly-mode .portfolio-tag {
 
 .orderly-grid--small {
     width: max-content;
-    grid-template-columns: repeat(4, calc(var(--orderly-icon-size-small, 36px) + 16px));
+    grid-template-columns: repeat(4, calc(var(--orderly-icon-size-small, 12px) + 16px));
 }
 
 .orderly-grid--large {
@@ -413,8 +413,8 @@ body.orderly-mode .portfolio-tag {
 }
 
 .orderly-grid--small .orderly-icon {
-    width: var(--orderly-icon-size-small, 36px);
-    height: var(--orderly-icon-size-small, 36px);
+    width: var(--orderly-icon-size-small, 12px);
+    height: var(--orderly-icon-size-small, 12px);
 }
 
 .orderly-grid--large .orderly-icon {
@@ -519,11 +519,11 @@ body.orderly-mode .portfolio-tag {
         min-width: 0;
     }
     .orderly-grid--small .orderly-icon {
-        width: var(--orderly-icon-size-small, 31px);
-        height: var(--orderly-icon-size-small, 31px);
+        width: var(--orderly-icon-size-small, 10px);
+        height: var(--orderly-icon-size-small, 10px);
     }
     .orderly-grid--small {
-        grid-template-columns: repeat(4, calc(var(--orderly-icon-size-small, 31px) + 16px));
+        grid-template-columns: repeat(4, calc(var(--orderly-icon-size-small, 10px) + 16px));
     }
 }
 
