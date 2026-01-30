@@ -1201,23 +1201,28 @@ body.orderly-mode .portfolio-tag {
     white-space: normal;
 }
 
+/* Кнопка Telegram на первом экране — в стиле тегов второй страницы: прозрачная, цвет #7CBFD6, свечение при наведении */
 .splash-description .splash-telegram-btn {
     display: inline-block;
     padding: clamp(0.5rem, 1.5vh, 0.75rem) clamp(1rem, 3vw, 1.875rem);
-    background-color: rgba(255, 255, 255, 0.1);
+    background: rgba(124, 191, 214, 0.2);
     color: #7CBFD6;
     text-decoration: none;
     border: none;
-    border-radius: 1.5625rem;
+    border-radius: 25px;
     font-size: 1em;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-weight: 500;
+    transition: all 0.8s ease-out;
     margin-top: 0.25rem;
     transform: translate(19vw, 4vh);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 .splash-description .splash-telegram-btn:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-    transform: translate(19vw, 4vh) scale(1.05);
+    background: rgba(124, 191, 214, 0.3);
+    transform: translate(19vw, 4vh) scale(1.1);
+    box-shadow: 0 6px 20px rgba(124, 191, 214, 0.4);
 }
 
 /* Текстовые квадратики (если используются) */
