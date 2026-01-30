@@ -1106,7 +1106,7 @@ body.orderly-mode .portfolio-tag {
     justify-content: center;
 }
 
-/* Фото — большой слой; сдвинуто на 30% вправо */
+/* Фото — большой слой; сдвинуто на 30% вправо (transform, чтобы не менять размер) */
 .splash-photo {
     position: relative;
     width: 100%;
@@ -1116,7 +1116,8 @@ body.orderly-mode .portfolio-tag {
     align-items: center;
     justify-content: center;
     z-index: 1;
-    margin-left: 30vw;
+    transform: translateX(30vw);
+    flex-shrink: 0;
 }
 
 .splash-photo img {
