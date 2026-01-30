@@ -361,7 +361,7 @@ body.orderly-mode .portfolio-tag {
     overflow: hidden;
     padding: 28px 28px 28px 188px;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: flex-start;
 }
 
@@ -1075,7 +1075,7 @@ body.orderly-mode .portfolio-tag {
     max-width: 100%;
     padding: 0;
     min-width: 0;
-    margin-top: 42vh;
+    margin-top: 62vh;
 }
 
 .splash-description .splash-telegram-btn {
@@ -1089,7 +1089,7 @@ body.orderly-mode .portfolio-tag {
     padding-top: clamp(0.15rem, 0.4vh, 0.35rem);
     padding-bottom: 0;
     text-align: right;
-    margin-top: 48vh;
+    margin-top: 28vh;
 }
 
 .splash-hint p {
@@ -1143,7 +1143,7 @@ body.orderly-mode .portfolio-tag {
     position: absolute;
     left: 0;
     top: 25%;
-    transform: translate(-30vw, -50%);
+    transform: translate(-50vw, -50%);
     width: 130vh;
     height: 130vh;
     min-width: 130vh;
