@@ -686,22 +686,33 @@ body.orderly-mode .portfolio-tag {
         font-size: 0.9rem;
     }
 
-    /* Splash — две колонки (видео+текст слева, фото справа) */
+    /* Splash iPad — те же колонки, но видео и фото на 20% меньше, шрифты ~20% меньше */
     .splash-content {
         gap: clamp(0.75rem, 2vw, 1.5rem);
         padding: clamp(0.75rem, 3vw, 2rem);
     }
 
+    .splash-video-container {
+        width: 104vh;
+        height: 104vh;
+        min-width: 104vh;
+        min-height: 104vh;
+    }
+
+    .splash-photo img {
+        max-height: 72vh;
+    }
+
     .splash-description p {
-        font-size: clamp(0.75rem, 0.9em, 0.9rem);
+        font-size: clamp(0.72rem, 0.92em, 1rem);
     }
 
     .splash-hint p {
-        font-size: clamp(0.75rem, 1.2vw, 0.9rem);
+        font-size: clamp(0.72rem, 1vw + 0.4rem, 0.88rem);
     }
 
     .splash-description .splash-telegram-btn {
-        font-size: 0.9em;
+        font-size: 0.8em;
     }
 }
 
