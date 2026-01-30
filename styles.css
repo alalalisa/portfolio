@@ -288,7 +288,7 @@ body {
     position: fixed;
     top: 20px;
     left: 20px;
-    z-index: 150;
+    z-index: 250;
     width: 156px;
     height: 156px;
     padding: 0;
@@ -326,12 +326,12 @@ body {
     height: 100%;
 }
 
-/* Показываем только один значок — второй полностью убран из вёрстки, чтобы не было «второй кнопки» */
-.view-mode-toggle .toggle-icon-chaotic { display: flex; opacity: 1; }
-.view-mode-toggle .toggle-icon-orderly { display: none !important; }
+/* Иконка = режим, на который переключимся: в сетке показываем хаос, в хаосе — сетку */
+.view-mode-toggle .toggle-icon-chaotic { display: none !important; }
+.view-mode-toggle .toggle-icon-orderly { display: flex !important; opacity: 1; }
 
-.view-mode-toggle.orderly-mode .toggle-icon-chaotic { display: none !important; }
-.view-mode-toggle.orderly-mode .toggle-icon-orderly { display: flex !important; opacity: 1; }
+.view-mode-toggle.orderly-mode .toggle-icon-chaotic { display: flex !important; opacity: 1; }
+.view-mode-toggle.orderly-mode .toggle-icon-orderly { display: none !important; }
 
 /* Упорядоченный вид: основная область + сайдбар с тегами (поверх хаотичных тегов) */
 .orderly-view {
@@ -372,11 +372,11 @@ body.orderly-mode .portfolio-tag {
 }
 
 .orderly-grid--small {
-    grid-template-columns: repeat(auto-fill, minmax(calc(var(--orderly-icon-size-small, 50px) + 16px), 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(calc(var(--orderly-icon-size-small, 45px) + 16px), 1fr));
 }
 
 .orderly-grid--large {
-    grid-template-columns: repeat(auto-fill, minmax(calc(var(--orderly-icon-size, 108px) + 20px), 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(calc(var(--orderly-icon-size, 97px) + 20px), 1fr));
     gap: 20px;
 }
 
@@ -398,13 +398,13 @@ body.orderly-mode .portfolio-tag {
 }
 
 .orderly-grid--small .orderly-icon {
-    width: var(--orderly-icon-size-small, 50px);
-    height: var(--orderly-icon-size-small, 50px);
+    width: var(--orderly-icon-size-small, 45px);
+    height: var(--orderly-icon-size-small, 45px);
 }
 
 .orderly-grid--large .orderly-icon {
-    width: var(--orderly-icon-size, 108px);
-    height: var(--orderly-icon-size, 108px);
+    width: var(--orderly-icon-size, 97px);
+    height: var(--orderly-icon-size, 97px);
 }
 
 .orderly-icon img {
@@ -503,11 +503,11 @@ body.orderly-mode .portfolio-tag {
         min-width: 140px;
     }
     .orderly-grid--small .orderly-icon {
-        width: var(--orderly-icon-size-small, 43px);
-        height: var(--orderly-icon-size-small, 43px);
+        width: var(--orderly-icon-size-small, 39px);
+        height: var(--orderly-icon-size-small, 39px);
     }
     .orderly-grid--small {
-        grid-template-columns: repeat(auto-fill, minmax(calc(var(--orderly-icon-size-small, 43px) + 16px), 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(calc(var(--orderly-icon-size-small, 39px) + 16px), 1fr));
     }
 }
 
@@ -1030,8 +1030,8 @@ body.orderly-mode .portfolio-tag {
 
 .splash-content {
     display: grid;
-    /* Колонка с текстом ещё на 10% уже; справа фото */
-    grid-template-columns: minmax(0, 0.864fr) minmax(0, 1fr);
+    /* Левая колонка шире, чтобы видео реально было в 1.5 раза больше (не только max-height) */
+    grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
     grid-template-rows: auto auto auto;
     gap: clamp(0.35rem, 1.5vw, 1rem);
     padding: clamp(0.35rem, 1.5vw, 1rem) clamp(1rem, 4vw, 3rem);
@@ -1043,15 +1043,15 @@ body.orderly-mode .portfolio-tag {
     margin-top: 0;
 }
 
-/* Видео — слева; в 1.5 раза больше; поднято на 20% выше */
+/* Видео — слева; размер задаётся шириной колонки (1.35fr) + мин. размер; поднято на 20% выше */
 .splash-video-container {
     grid-column: 1;
     grid-row: 1;
     position: relative;
-    min-height: 0;
-    min-width: 0;
+    min-width: 52vh;
+    min-height: 52vh;
     aspect-ratio: 1;
-    max-height: 99vh;
+    max-height: 90vh;
     width: 100%;
     display: flex;
     align-items: center;
@@ -1081,21 +1081,21 @@ body.orderly-mode .portfolio-tag {
     max-width: 100%;
     padding: 0;
     min-width: 0;
-    margin-top: -48vh;
+    margin-top: -28vh;
 }
 
 .splash-description .splash-telegram-btn {
     align-self: flex-end;
 }
 
-/* Подсказка «Кликните по экрану…» — справа; текст и кнопки подняты на 30% выше */
+/* Подсказка «Кликните по экрану…» — справа; текст и кнопка опущены на 20% ниже */
 .splash-hint {
     grid-column: 1;
     grid-row: 3;
     padding-top: clamp(0.15rem, 0.4vh, 0.35rem);
     padding-bottom: 0;
     text-align: right;
-    margin-top: -42vh;
+    margin-top: -22vh;
 }
 
 .splash-hint p {
