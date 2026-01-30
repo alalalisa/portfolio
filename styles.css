@@ -885,17 +885,18 @@ body.orderly-mode .portfolio-tag {
         order: 0;
     }
 
+    /* Splash phone — видео и фото на 50% меньше */
     .splash-video-container {
         position: absolute;
         left: 50%;
         transform: translate(-50%, -50%);
         top: 50%;
-        width: 45vw;
-        height: 45vw;
+        width: 22.5vw;
+        height: 22.5vw;
         min-width: 0;
         min-height: 0;
-        max-width: 40vh;
-        max-height: 40vh;
+        max-width: 20vh;
+        max-height: 20vh;
     }
 
     .splash-video {
@@ -907,12 +908,12 @@ body.orderly-mode .portfolio-tag {
 
     .splash-photo {
         width: 100%;
-        min-height: 45vh;
+        min-height: 22.5vh;
         flex: 0 0 auto;
     }
 
     .splash-photo img {
-        max-height: 50vh;
+        max-height: 25vh;
     }
 
     .splash-description {
