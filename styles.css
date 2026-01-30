@@ -686,29 +686,29 @@ body.orderly-mode .portfolio-tag {
         font-size: 0.9rem;
     }
 
-    /* Splash iPad — видео в 1.5 раза меньше, фото на 10% ниже, текст на 20% выше */
+    /* Splash iPad — видео в 1.5 раза меньше, фото на 10% ниже, текст на 20% выше ( !important т.к. base splash идёт позже в файле) */
     .splash-content {
         gap: clamp(0.75rem, 2vw, 1.5rem);
         padding: clamp(0.75rem, 3vw, 2rem);
     }
 
     .splash-video-container {
-        width: 44vh;
-        height: 44vh;
-        min-width: 44vh;
-        min-height: 44vh;
+        width: 44vh !important;
+        height: 44vh !important;
+        min-width: 44vh !important;
+        min-height: 44vh !important;
     }
 
     .splash-photo {
-        transform: translate(10vw, 10vh);
+        transform: translate(10vw, 10vh) !important;
     }
 
     .splash-photo img {
-        max-height: 79vh;
+        max-height: 79vh !important;
     }
 
     .splash-description {
-        margin-top: 32vh;
+        margin-top: 32vh !important;
     }
 
     .splash-description p {
@@ -862,10 +862,10 @@ body.orderly-mode .portfolio-tag {
         line-height: 1.6;
     }
 
-    /* Splash — вертикальная раскладка: надпись сверху, под ней текст и Telegram */
+    /* Splash phone — вертикальная раскладка ( !important т.к. base splash идёт позже в файле) */
     .splash-content {
-        display: flex;
-        flex-direction: column;
+        display: flex !important;
+        flex-direction: column !important;
         padding: clamp(1rem, 4vw, 1.25rem);
         gap: clamp(1rem, 3vh, 1.25rem);
         justify-content: center;
@@ -877,6 +877,7 @@ body.orderly-mode .portfolio-tag {
         margin-top: 0;
         padding: 0 clamp(1rem, 4vw, 1.25rem);
         padding-bottom: 0;
+        transform: none !important;
     }
 
     .splash-hint p {
@@ -885,6 +886,7 @@ body.orderly-mode .portfolio-tag {
 
     .splash-description .splash-telegram-btn {
         align-self: flex-start;
+        transform: none !important;
     }
 
     .splash-media {
@@ -897,14 +899,14 @@ body.orderly-mode .portfolio-tag {
     .splash-video-container {
         position: absolute;
         left: 50%;
-        transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%) !important;
         top: 50%;
-        width: 2.8vw;
-        height: 2.8vw;
-        min-width: 0;
-        min-height: 0;
-        max-width: 2.5vh;
-        max-height: 2.5vh;
+        width: 2.8vw !important;
+        height: 2.8vw !important;
+        min-width: 0 !important;
+        min-height: 0 !important;
+        max-width: 2.5vh !important;
+        max-height: 2.5vh !important;
     }
 
     .splash-video {
@@ -918,14 +920,14 @@ body.orderly-mode .portfolio-tag {
         width: 100%;
         min-height: 6vh;
         flex: 0 0 auto;
-        transform: none;
+        transform: none !important;
         display: flex;
         justify-content: center;
         align-items: center;
     }
 
     .splash-photo img {
-        max-height: 6.25vh;
+        max-height: 6.25vh !important;
         width: auto;
     }
 
@@ -933,7 +935,7 @@ body.orderly-mode .portfolio-tag {
         width: 100%;
         max-width: 100%;
         padding: 0 clamp(0.5rem, 2vw, 0.75rem);
-        margin-top: 0;
+        margin-top: 0 !important;
         align-items: center;
         text-align: center;
         box-sizing: border-box;
