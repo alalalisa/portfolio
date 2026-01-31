@@ -493,7 +493,7 @@ body.orderly-mode .portfolio-tag {
 @media (max-width: 768px) {
     .view-mode-toggle {
         top: 12px;
-        left: calc(10vw + 12px);
+        left: 12px;
         width: 66px;
         height: 66px;
     }
@@ -778,7 +778,7 @@ body.orderly-mode .portfolio-tag {
     }
 
     .canvas-container {
-        transform: translateX(-10vw);
+        transform: translateX(0);
     }
 
     .orderly-view {
@@ -999,7 +999,7 @@ body.orderly-mode .portfolio-tag {
         width: 100%;
         max-width: 100%;
         padding: 0 clamp(0.5rem, 2vw, 0.75rem);
-        margin-top: 75vh !important;
+        margin-top: 72vh !important;
         align-items: center;
         text-align: center;
         box-sizing: border-box;

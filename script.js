@@ -725,10 +725,10 @@ function selectOrderlyTag(tagText) {
 
 const ORDERLY_ICON_MAX = 97;
 const ORDERLY_ICON_MAX_TABLET = 110;
-const ORDERLY_ICON_MAX_PHONE = 126;
+const ORDERLY_ICON_MAX_PHONE = 140;
 const ORDERLY_ICON_MIN = 32;
 const ORDERLY_ICON_MIN_TABLET = 70;
-const ORDERLY_ICON_MIN_PHONE = 50;
+const ORDERLY_ICON_MIN_PHONE = 140;
 const ORDERLY_ICON_SMALL_MIN = 10;
 
 function renderOrderlyProjects(selectedTag) {
