@@ -2583,7 +2583,7 @@ document.addEventListener('DOMContentLoaded', () => {
     animateIcons();
 
     let resizeTimeout;
-    window.addEventListener('resize', () => {
+    function onLayoutChange() {
         updateBreakpointIndicator();
         clearTimeout(resizeTimeout);
         resizeTimeout = setTimeout(() => {
@@ -2597,7 +2597,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             }
         }, 200);
-    });
+    }
+    window.addEventListener('resize', onLayoutChange);
+    window.addEventListener('orientationchange', onLayoutChange);
 
     document.querySelector('.modal-close').addEventListener('click', (e) => {
         e.stopPropagation();

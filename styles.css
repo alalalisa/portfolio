@@ -791,6 +791,19 @@ body.orderly-mode .portfolio-tag {
     }
 }
 
+/* Планшет вертикально (portrait) — видео −30%, на второй странице 2 колонки во всех тегах */
+@media (min-width: 769px) and (max-width: 1280px) and (orientation: portrait) {
+    .splash-video-container {
+        width: 80vh !important;
+        height: 80vh !important;
+        min-width: 80vh !important;
+        min-height: 80vh !important;
+    }
+    .orderly-grid--large {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    }
+}
+
 /* Mobile phones (up to 768px) */
 @media (max-width: 768px) {
     html {
