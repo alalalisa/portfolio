@@ -6,13 +6,13 @@ alwaysApply: false
 
 # Portfolio: commit and push after every change
 
-When you make **any** change to the portfolio site (splash layout, index.html, script.js, styles.css, or related edits in this topic):
+When you make **any** change to the portfolio site (splash layout, index.html, script.js, styles.css, or related edits):
 
-1. **Immediately after completing the edits** (do not skip):
-   - `git add` for the changed files (only index.html, script.js, styles.css as relevant)
+1. **Immediately after completing the edits** — do NOT skip, do NOT wait for user reminder:
+   - `git add` for the changed files (index.html, script.js, styles.css as relevant)
    - `git commit -m "Brief description of the change"`
    - `git push origin main`
 
-2. Do **not** add unrelated files (docs, .py scripts, assets, etc.) unless the user asked for them.
+2. Do **not** add unrelated files (docs, .py scripts, assets, toe, fonts, etc.) unless the user asked.
 
-3. The user expects every change to be committed and pushed to GitHub without being asked. Do this automatically after each edit in this topic.
+3. **Always** commit and push automatically after each correction — the user should never have to ask.
