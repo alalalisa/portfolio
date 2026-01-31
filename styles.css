@@ -646,15 +646,20 @@ body.orderly-mode .portfolio-tag {
     .orderly-grid--large { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 }
 
-/* Tablet shared styles — view-mode, tags, grid gap, scroll */
+/* Tablet shared styles — view-mode, tags, grid gap, scroll. Без height:0 — не ломаем layout */
 @media (max-width: 1280px) and (min-width: 769px) {
+    .orderly-view {
+        overflow: hidden;
+    }
     .orderly-main {
         min-height: 0;
-        overflow-y: auto;
+        overflow-y: scroll;
         overflow-x: hidden;
         -webkit-overflow-scrolling: touch;
+        touch-action: pan-y;
         justify-content: flex-start;
         align-items: flex-start;
+        padding-left: calc(10vw + clamp(40px, 6vw, 100px));
     }
     .view-mode-toggle {
         width: 78px;
@@ -717,7 +722,7 @@ body.orderly-mode .portfolio-tag {
 
     .modal-content {
         width: 95%;
-        margin: 10vh auto 5% auto;
+        margin: 20vh auto 5% auto; /* +10% down for tablet (10vh → 20vh) */
     }
 
     .modal-title {

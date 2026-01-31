@@ -79,6 +79,10 @@ const MIN_ICON_DISTANCE = 150; // Минимальное расстояние м
 // Режим отображения второй страницы: 'chaotic' — хаотичные иконки и теги, 'orderly' — теги в колонке, проекты по сетке (по умолчанию)
 let viewMode = 'orderly';
 
+// Обработчики wheel/touchmove — снимаются в orderly режиме для скролла в .orderly-main (без touchstart — не трогаем layout)
+let boardWheelHandler = null;
+let boardTouchmoveHandler = null;
+
 // ========== ЗАГРУЗКА ДАННЫХ ==========
 async function loadPortfolioData() {
     try {
@@ -819,6 +823,11 @@ function showChaoticView() {
     if (container) container.classList.remove('orderly-mode');
     document.body.classList.remove('orderly-mode');
     tagElements.forEach(el => { if (el && el.style) el.style.display = ''; });
+    // Возвращаем wheel/touchmove для хаотичного режима
+    if (container && boardWheelHandler) {
+        container.addEventListener('wheel', boardWheelHandler);
+        container.addEventListener('touchmove', boardTouchmoveHandler);
+    }
     if (activeTag) {
         tagElements.forEach(el => {
             if (el.dataset.tag === activeTag) el.classList.add('active');
@@ -845,6 +854,11 @@ function showOrderlyView() {
     if (container) container.classList.add('orderly-mode');
     document.body.classList.add('orderly-mode');
     tagElements.forEach(el => { if (el && el.style) el.style.display = 'none'; });
+    // Снимаем wheel/touchmove — скролл в .orderly-main (без height:0 — не ломаем layout)
+    if (container && boardWheelHandler) {
+        container.removeEventListener('wheel', boardWheelHandler);
+        container.removeEventListener('touchmove', boardTouchmoveHandler);
+    }
     buildOrderlySidebar();
     renderOrderlyProjects(activeTag);
 }
@@ -1442,26 +1456,23 @@ function setupBoardControls() {
     });
 
     // Зум колесиком мыши
-    container.addEventListener('wheel', (e) => {
+    boardWheelHandler = (e) => {
         if (viewMode === 'orderly') return;
         e.preventDefault();
         const delta = e.deltaY > 0 ? 0.9 : 1.1;
         const newScale = Math.max(0.1, Math.min(3, boardTransform.scale * delta));
-        
         const rect = container.getBoundingClientRect();
         const mouseX = e.clientX - rect.left;
         const mouseY = e.clientY - rect.top;
-        
         const worldX = (mouseX - boardTransform.x) / boardTransform.scale;
         const worldY = (mouseY - boardTransform.y) / boardTransform.scale;
-        
         boardTransform.scale = newScale;
         boardTransform.x = mouseX - worldX * boardTransform.scale;
         boardTransform.y = mouseY - worldY * boardTransform.scale;
-        
         updateBoardTransform();
         updateVisibleIcons();
-    });
+    };
+    container.addEventListener('wheel', boardWheelHandler);
 
     // Touch поддержка
     let touchStartDistance = 0;
@@ -1480,7 +1491,7 @@ function setupBoardControls() {
         }
     });
 
-    container.addEventListener('touchmove', (e) => {
+    boardTouchmoveHandler = (e) => {
         if (viewMode === 'orderly') return;
         e.preventDefault();
         if (e.touches.length === 1 && isDragging) {
@@ -1496,7 +1507,8 @@ function setupBoardControls() {
             updateBoardTransform();
             updateVisibleIcons();
         }
-    });
+    };
+    container.addEventListener('touchmove', boardTouchmoveHandler);
 
     container.addEventListener('touchend', () => {
         isDragging = false;
