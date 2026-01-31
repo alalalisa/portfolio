@@ -640,14 +640,24 @@ body.orderly-mode .portfolio-tag {
 
 /* ========== MOBILE RESPONSIVE DESIGN ========== */
 
-/* Smaller tablets (769px - 1023px) — 4 колонки */
-@media (max-width: 1023px) and (min-width: 769px) {
-    .orderly-grid--large {
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-    }
+/* Адаптивные колонки и padding для планшетов — 2/3/4/6 колонок */
+@media (max-width: 849px) and (min-width: 769px) {
+    .orderly-main { padding: 20px 30px; }
+    .orderly-grid--large { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 949px) and (min-width: 850px) {
+    .orderly-main { padding: 24px 50px; }
+    .orderly-grid--large { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (max-width: 1023px) and (min-width: 950px) {
+    .orderly-main { padding: 28px 80px; }
+    .orderly-grid--large { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+@media (max-width: 1280px) and (min-width: 1024px) {
+    .orderly-main { padding: 28px clamp(60px, 8vw, 120px) 28px clamp(80px, 12vw, 180px); }
 }
 
-/* Larger tablets & iPad (1024px - 1280px) — 6 колонок */
+/* Larger tablets & iPad (1024px - 1280px) — 6 колонок, адаптивный padding */
 @media (max-width: 1280px) and (min-width: 769px) {
     .view-mode-toggle {
         width: 78px;
@@ -697,10 +707,6 @@ body.orderly-mode .portfolio-tag {
 
     .orderly-sidebar {
         transform: translateX(15%);
-    }
-
-    .orderly-main {
-        padding: 28px 120px 28px 180px;
     }
 
     .orderly-grid--large {
