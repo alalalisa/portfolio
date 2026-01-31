@@ -693,8 +693,8 @@ body.orderly-mode .portfolio-tag {
     }
 
     .orderly-grid--large {
-        row-gap: 60px !important;
-        column-gap: 60px !important;
+        row-gap: 30px !important;
+        column-gap: 30px !important;
     }
 
     .orderly-sidebar-tags {
@@ -810,8 +810,8 @@ body.orderly-mode .portfolio-tag {
         padding-top: 0.5rem;
         flex: 1;
         overflow-y: auto;
-        justify-content: flex-start;
-        align-items: center;
+        justify-content: center;
+        align-items: flex-start;
         margin-top: 0;
     }
 
@@ -962,11 +962,11 @@ body.orderly-mode .portfolio-tag {
         order: 0;
     }
 
-    /* Splash phone — фото и видео на 5% ниже */
+    /* Splash phone — фото и видео на 2% ниже */
     .splash-video-container {
         position: absolute;
         left: 50%;
-        transform: translate(calc(-50% + 45vw), calc(-50% - 145vh)) !important;
+        transform: translate(calc(-50% + 45vw), calc(-50% - 143vh)) !important;
         top: 50%;
         width: 105vw !important;
         height: 105vw !important;
@@ -987,7 +987,7 @@ body.orderly-mode .portfolio-tag {
         width: 100%;
         min-height: 43vh;
         flex: 0 0 auto;
-        transform: translate(15vw, -137vh) !important;
+        transform: translate(15vw, -135vh) !important;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -1002,7 +1002,7 @@ body.orderly-mode .portfolio-tag {
         width: 100%;
         max-width: 100%;
         padding: 0 clamp(0.5rem, 2vw, 0.75rem);
-        margin-top: 72vh !important;
+        margin-top: 74vh !important;
         align-items: center;
         text-align: center;
         box-sizing: border-box;

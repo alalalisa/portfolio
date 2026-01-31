@@ -765,7 +765,7 @@ function renderOrderlyProjects(selectedTag) {
         const isTabletView = w >= 769 && w <= 1280;
         const isPhoneView = w <= 768;
         const cols = isPhoneView ? 3 : 6;
-        const gap = isTabletView ? 60 : 20;
+        const gap = isTabletView ? 30 : 20;
         const maxSize = isPhoneView ? ORDERLY_ICON_MAX_PHONE : (isTabletView ? ORDERLY_ICON_MAX_TABLET : ORDERLY_ICON_MAX);
         const minSize = isPhoneView ? ORDERLY_ICON_MIN_PHONE : (isTabletView ? ORDERLY_ICON_MIN_TABLET : ORDERLY_ICON_MIN);
         const availableHeight = mainEl.clientHeight - fitMargin - (isTabletView ? 3 * gap : 0);
