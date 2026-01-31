@@ -272,7 +272,7 @@ body {
     animation: tagGlowPulse 2.5s ease-in-out infinite;
 }
 
-@media (max-width: 768px), (min-width: 769px) and (max-width: 1280px) and (orientation: portrait) {
+@media (max-width: 768px) {
     .portfolio-tag {
         font-size: 1.4rem;
         padding: 16px 32px;
@@ -490,7 +490,7 @@ body.orderly-mode .portfolio-tag {
     animation: tagGlowPulse 2.5s ease-in-out infinite;
 }
 
-@media (max-width: 768px), (min-width: 769px) and (max-width: 1280px) and (orientation: portrait) {
+@media (max-width: 768px) {
     .view-mode-toggle {
         top: 12px;
         left: 12px;
@@ -640,14 +640,14 @@ body.orderly-mode .portfolio-tag {
 
 /* ========== MOBILE RESPONSIVE DESIGN ========== */
 
-/* Планшет горизонтально (769px - 1280px, landscape) — всегда 4 колонки; вертикально — режим телефона */
-@media (max-width: 1280px) and (min-width: 769px) and (orientation: landscape) {
+/* Планшет (769px - 1280px) — всегда 4 колонки, адаптивный padding */
+@media (max-width: 1280px) and (min-width: 769px) {
     .orderly-main { padding: 28px clamp(40px, 6vw, 100px); }
     .orderly-grid--large { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 }
 
 /* Tablet shared styles — view-mode, tags, grid gap, scroll. Без height:0 — не ломаем layout */
-@media (max-width: 1280px) and (min-width: 769px) and (orientation: landscape) {
+@media (max-width: 1280px) and (min-width: 769px) {
     .orderly-view {
         overflow: hidden;
     }
@@ -791,8 +791,8 @@ body.orderly-mode .portfolio-tag {
     }
 }
 
-/* Телефоны (до 768px) + планшет вертикально (769-1280px portrait) — режим телефона */
-@media (max-width: 768px), (min-width: 769px) and (max-width: 1280px) and (orientation: portrait) {
+/* Mobile phones (up to 768px) */
+@media (max-width: 768px) {
     html {
         background-color: #000;
         overflow-x: hidden;
