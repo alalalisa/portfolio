@@ -694,7 +694,7 @@ body.orderly-mode .portfolio-tag {
     }
 
     .splash-description {
-        margin-top: 40vh !important;
+        margin-top: 45vh !important;
         z-index: 10 !important;
         transform: translateX(-2vw) !important;
     }
@@ -704,11 +704,11 @@ body.orderly-mode .portfolio-tag {
     }
 
     .splash-video-container {
-        width: 88vh !important;
-        height: 88vh !important;
-        min-width: 88vh !important;
-        min-height: 88vh !important;
-        top: 22% !important;
+        width: 114vh !important;
+        height: 114vh !important;
+        min-width: 114vh !important;
+        min-height: 114vh !important;
+        top: 27% !important;
         left: 0 !important;
         transform: translate(-60vw, -50%) !important;
     }
@@ -726,7 +726,7 @@ body.orderly-mode .portfolio-tag {
     }
 
     .splash-hint {
-        transform: translate(13vw, 7vh) !important;
+        transform: translate(16vw, 7vh) !important;
     }
 
     .splash-hint p {
@@ -735,11 +735,11 @@ body.orderly-mode .portfolio-tag {
 
     .splash-description .splash-telegram-btn {
         font-size: 0.49em;
-        transform: translate(13vw, 4vh) !important;
+        transform: translate(13vw, 6vh) !important;
     }
 
     .splash-description .splash-telegram-btn:hover {
-        transform: translate(13vw, 4vh) scale(1.1) !important;
+        transform: translate(13vw, 6vh) scale(1.1) !important;
     }
 }
 
@@ -945,7 +945,7 @@ body.orderly-mode .portfolio-tag {
         width: 100%;
         min-height: 43vh;
         flex: 0 0 auto;
-        transform: translate(20vw, -150vh) !important;
+        transform: translate(15vw, -110vh) !important;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -977,10 +977,10 @@ body.orderly-mode .portfolio-tag {
 
     .splash-description .splash-telegram-btn {
         display: block;
-        text-align: left;
-        margin: clamp(1rem, 2vh, 1.25rem) 0 0 0;
+        text-align: center;
+        margin: clamp(1rem, 2vh, 1.25rem) auto 0;
         width: fit-content;
-        align-self: flex-start;
+        align-self: center;
         font-size: 0.9rem;
     }
 
