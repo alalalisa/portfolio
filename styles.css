@@ -695,6 +695,7 @@ body.orderly-mode .portfolio-tag {
     .splash-description {
         margin-top: 42vh !important;
         z-index: 10 !important;
+        transform: translateX(-2vw) !important;
     }
 
     .splash-media {
@@ -706,7 +707,7 @@ body.orderly-mode .portfolio-tag {
         height: 88vh !important;
         min-width: 88vh !important;
         min-height: 88vh !important;
-        top: 26% !important;
+        top: 24% !important;
     }
 
     .splash-photo {
@@ -722,7 +723,7 @@ body.orderly-mode .portfolio-tag {
     }
 
     .splash-hint {
-        transform: translate(10vw, 7vh) !important;
+        transform: translate(8vw, 7vh) !important;
     }
 
     .splash-hint p {
@@ -731,11 +732,11 @@ body.orderly-mode .portfolio-tag {
 
     .splash-description .splash-telegram-btn {
         font-size: 0.49em;
-        transform: translate(9vw, 4vh) !important;
+        transform: translate(7vw, 4vh) !important;
     }
 
     .splash-description .splash-telegram-btn:hover {
-        transform: translate(9vw, 4vh) scale(1.1) !important;
+        transform: translate(7vw, 4vh) scale(1.1) !important;
     }
 }
 
@@ -916,11 +917,11 @@ body.orderly-mode .portfolio-tag {
         order: 0;
     }
 
-    /* Splash phone — видео 20% вправо и 30% вверх; фото 30% вправо; текст+кнопка+подсказка 40% вниз */
+    /* Splash phone — текст 20% уже; видео 10% вправо 40% вверх; фото 30% влево 40% вверх; текст+кнопка 30% вниз */
     .splash-video-container {
         position: absolute;
         left: 50%;
-        transform: translate(calc(-50% + 20vw), calc(-50% - 30vh)) !important;
+        transform: translate(calc(-50% + 10vw), calc(-50% - 40vh)) !important;
         top: 50%;
         width: 105vw !important;
         height: 105vw !important;
@@ -941,7 +942,7 @@ body.orderly-mode .portfolio-tag {
         width: 100%;
         min-height: 30vh;
         flex: 0 0 auto;
-        transform: translateX(80vw) !important;
+        transform: translate(50vw, -40vh) !important;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -953,10 +954,10 @@ body.orderly-mode .portfolio-tag {
     }
 
     .splash-description {
-        width: 100%;
-        max-width: 100%;
+        width: 80%;
+        max-width: 80%;
         padding: 0 clamp(0.5rem, 2vw, 0.75rem);
-        margin-top: 40vh !important;
+        margin-top: 70vh !important;
         align-items: center;
         text-align: center;
         box-sizing: border-box;
