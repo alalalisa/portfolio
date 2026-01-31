@@ -692,7 +692,12 @@ body.orderly-mode .portfolio-tag {
         transform: translateX(15%);
     }
 
+    .orderly-main {
+        padding: 28px 120px 28px 180px;
+    }
+
     .orderly-grid--large {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
         row-gap: 30px !important;
         column-gap: 30px !important;
     }
@@ -810,6 +815,8 @@ body.orderly-mode .portfolio-tag {
         padding-top: 0.5rem;
         flex: 1;
         overflow-y: auto;
+        overflow-x: hidden;
+        -webkit-overflow-scrolling: touch;
         justify-content: center;
         align-items: flex-start;
         margin-top: 0;
