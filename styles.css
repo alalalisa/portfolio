@@ -735,11 +735,11 @@ body.orderly-mode .portfolio-tag {
 
     .splash-description .splash-telegram-btn {
         font-size: 0.49em;
-        transform: translate(13vw, 1vh) !important;
+        transform: translate(13vw, 3vh) !important;
     }
 
     .splash-description .splash-telegram-btn:hover {
-        transform: translate(13vw, 1vh) scale(1.1) !important;
+        transform: translate(13vw, 3vh) scale(1.1) !important;
     }
 }
 
