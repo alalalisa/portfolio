@@ -792,8 +792,9 @@ body.orderly-mode .portfolio-tag {
         transform: none;
         padding: 16px;
         margin-right: 0;
-        margin-bottom: 12px;
+        margin-bottom: 0.5rem;
         order: -1;
+        flex-shrink: 0;
     }
 
     .orderly-sidebar-tags {
@@ -806,11 +807,12 @@ body.orderly-mode .portfolio-tag {
 
     .orderly-main {
         padding: 16px;
+        padding-top: 0.5rem;
         flex: 1;
         overflow-y: auto;
         justify-content: flex-start;
         align-items: center;
-        margin-top: -5vh;
+        margin-top: 0;
     }
 
     .orderly-grid--large {
