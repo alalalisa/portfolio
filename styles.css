@@ -492,13 +492,13 @@ body.orderly-mode .portfolio-tag {
 @media (max-width: 768px) {
     .view-mode-toggle {
         top: 12px;
-        left: 12px;
-        width: 132px;
-        height: 132px;
-    }
-    .view-mode-toggle .toggle-icon {
+        left: calc(20vw + 12px);
         width: 66px;
         height: 66px;
+    }
+    .view-mode-toggle .toggle-icon {
+        width: 33px;
+        height: 33px;
     }
     .orderly-main {
         padding: 28px 150px 28px 294px;
@@ -671,8 +671,8 @@ body.orderly-mode .portfolio-tag {
     }
 
     .orderly-tag-btn {
-        font-size: 0.91rem;
-        padding: 10px 20px;
+        font-size: 1.09rem;
+        padding: 12px 24px;
     }
 
     .orderly-sidebar-tags {
@@ -751,6 +751,10 @@ body.orderly-mode .portfolio-tag {
 
 /* Mobile phones (up to 768px) */
 @media (max-width: 768px) {
+    .canvas-container {
+        transform: translateX(-20vw);
+    }
+
     /* Control panel - make it collapsible/hidden by default on mobile */
     .control-panel {
         position: fixed;
