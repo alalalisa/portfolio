@@ -686,17 +686,17 @@ body.orderly-mode .portfolio-tag {
         font-size: 0.9rem;
     }
 
-    /* Splash iPad — видео в 1.5 раза меньше, фото на 10% ниже, текст на 20% выше ( !important т.к. base splash идёт позже в файле) */
+    /* Splash iPad — видео в 3 раза больше, шрифты −20%, кнопка −10% влево, подсказка −5% влево */
     .splash-content {
         gap: clamp(0.75rem, 2vw, 1.5rem);
         padding: clamp(0.75rem, 3vw, 2rem);
     }
 
     .splash-video-container {
-        width: 44vh !important;
-        height: 44vh !important;
-        min-width: 44vh !important;
-        min-height: 44vh !important;
+        width: 132vh !important;
+        height: 132vh !important;
+        min-width: 132vh !important;
+        min-height: 132vh !important;
     }
 
     .splash-photo {
@@ -712,15 +712,24 @@ body.orderly-mode .portfolio-tag {
     }
 
     .splash-description p {
-        font-size: clamp(0.79rem, 1em, 1.1rem);
+        font-size: clamp(0.63rem, 0.8em, 0.88rem);
+    }
+
+    .splash-hint {
+        transform: translate(20vw, 7vh) !important;
     }
 
     .splash-hint p {
-        font-size: clamp(0.79rem, 1vw + 0.44rem, 0.97rem);
+        font-size: clamp(0.63rem, 0.8vw + 0.35rem, 0.78rem);
     }
 
     .splash-description .splash-telegram-btn {
-        font-size: 0.88em;
+        font-size: 0.7em;
+        transform: translate(9vw, 4vh) !important;
+    }
+
+    .splash-description .splash-telegram-btn:hover {
+        transform: translate(9vw, 4vh) scale(1.1) !important;
     }
 }
 
@@ -895,18 +904,18 @@ body.orderly-mode .portfolio-tag {
         order: 0;
     }
 
-    /* Splash phone — видео в 2 раза меньше, фото в 2 раза меньше */
+    /* Splash phone — видео в 5 раз больше, фото на 30% вправо */
     .splash-video-container {
         position: absolute;
         left: 50%;
         transform: translate(-50%, -50%) !important;
         top: 50%;
-        width: 14vw !important;
-        height: 14vw !important;
+        width: 70vw !important;
+        height: 70vw !important;
         min-width: 0 !important;
         min-height: 0 !important;
-        max-width: 12.5vh !important;
-        max-height: 12.5vh !important;
+        max-width: 62.5vh !important;
+        max-height: 62.5vh !important;
     }
 
     .splash-video {
@@ -920,7 +929,7 @@ body.orderly-mode .portfolio-tag {
         width: 100%;
         min-height: 30vh;
         flex: 0 0 auto;
-        transform: none !important;
+        transform: translateX(30vw) !important;
         display: flex;
         justify-content: center;
         align-items: center;
