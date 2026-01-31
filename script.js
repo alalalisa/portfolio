@@ -79,6 +79,18 @@ const MIN_ICON_DISTANCE = 150; // Минимальное расстояние м
 // Режим отображения второй страницы: 'chaotic' — хаотичные иконки и теги, 'orderly' — теги в колонке, проекты по сетке (по умолчанию)
 let viewMode = 'orderly';
 
+// Планшет вертикально (portrait) → режим телефона; горизонтально (landscape) → режим планшета
+function isPhoneLayout() {
+    const w = window.innerWidth;
+    if (w <= 768) return true;
+    if (w >= 769 && w <= 1280 && window.matchMedia('(orientation: portrait)').matches) return true;
+    return false;
+}
+function isTabletLayout() {
+    const w = window.innerWidth;
+    return w >= 769 && w <= 1280 && window.matchMedia('(orientation: landscape)').matches;
+}
+
 // Обработчики wheel/touchmove — снимаются в orderly режиме для скролла в .orderly-main (без touchstart — не трогаем layout)
 let boardWheelHandler = null;
 let boardTouchmoveHandler = null;
@@ -196,8 +208,8 @@ function createTags() {
     tagElements = [];
     tags = [];
     
-    // Создаем теги, разбросанные по странице (на мобильных — меньше тегов)
-    const isMobileView = window.innerWidth <= 768;
+    // Создаем теги, разбросанные по странице (на мобильных и планшете вертикально — меньше тегов)
+    const isMobileView = isPhoneLayout();
     const maxTags = isMobileView ? Math.min(allTags.length, 8) : Math.min(allTags.length, 60);
     
     console.log(`Создаем ${maxTags} тегов из ${allTags.length} доступных${isMobileView ? ' (мобильная версия)' : ''}`);
@@ -304,7 +316,7 @@ function animateTags() {
     }
     
     const now = Date.now();
-    const isMobileView = window.innerWidth <= 768;
+    const isMobileView = isPhoneLayout();
     const timeScale = isMobileView ? 1 / 3 : 1; // на мобильных движение в 3 раза медленнее
     
     tags.forEach(tag => {
@@ -752,9 +764,8 @@ function renderOrderlyProjects(selectedTag) {
         const cols = Math.max(1, Math.round(Math.sqrt(items.length)));
         gridEl.style.gridTemplateColumns = 'repeat(' + cols + ', calc(var(--orderly-icon-size-small, 12px) + 16px))';
     }
-    const w = window.innerWidth;
-    const isTablet = w >= 769 && w <= 1280;
-    const isPhone = w <= 768;
+    const isTablet = isTabletLayout();
+    const isPhone = isPhoneLayout();
     const size = isLarge ? (isPhone ? ORDERLY_ICON_MAX_PHONE : isTablet ? ORDERLY_ICON_MAX_TABLET : ORDERLY_ICON_MAX) : ORDERLY_ICON_MIN;
     gridEl.innerHTML = '';
     items.forEach(({ icon }) => {
@@ -765,9 +776,8 @@ function renderOrderlyProjects(selectedTag) {
     const fitMargin = 32;
     function shrinkLargeGrid() {
         if (!mainEl) return;
-        const w = window.innerWidth;
-        const isTabletView = w >= 769 && w <= 1280;
-        const isPhoneView = w <= 768;
+        const isTabletView = isTabletLayout();
+        const isPhoneView = isPhoneLayout();
         const cols = isPhoneView ? 3 : (isTabletView ? 4 : 6);
         if (isTabletView) {
             gridEl.style.setProperty('--orderly-icon-size', ORDERLY_ICON_MAX_TABLET + 'px');
@@ -2546,7 +2556,7 @@ function hideSplashScreen() {
 function getBreakpointLabel() {
     const w = window.innerWidth;
     if (w >= 1281) return 'desktop';
-    if (w >= 769) return 'tablet';
+    if (isTabletLayout()) return 'tablet';
     return 'phone';
 }
 function updateBreakpointIndicator() {
@@ -2583,7 +2593,7 @@ document.addEventListener('DOMContentLoaded', () => {
     animateIcons();
 
     let resizeTimeout;
-    window.addEventListener('resize', () => {
+    function onLayoutChange() {
         updateBreakpointIndicator();
         clearTimeout(resizeTimeout);
         resizeTimeout = setTimeout(() => {
@@ -2597,7 +2607,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             }
         }, 200);
-    });
+    }
+    window.addEventListener('resize', onLayoutChange);
+    window.addEventListener('orientationchange', onLayoutChange);
 
     document.querySelector('.modal-close').addEventListener('click', (e) => {
         e.stopPropagation();
