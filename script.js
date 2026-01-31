@@ -764,18 +764,17 @@ function renderOrderlyProjects(selectedTag) {
         const w = window.innerWidth;
         const isTabletView = w >= 769 && w <= 1280;
         const isPhoneView = w <= 768;
+        const cols = isPhoneView ? 3 : 6;
+        const gap = isTabletView ? 60 : 20;
         const maxSize = isPhoneView ? ORDERLY_ICON_MAX_PHONE : (isTabletView ? ORDERLY_ICON_MAX_TABLET : ORDERLY_ICON_MAX);
         const minSize = isPhoneView ? ORDERLY_ICON_MIN_PHONE : (isTabletView ? ORDERLY_ICON_MIN_TABLET : ORDERLY_ICON_MIN);
-        let currentSize = maxSize;
-        const availableHeight = mainEl.clientHeight - fitMargin;
-        const availableWidth = mainEl.clientWidth - fitMargin;
+        const availableHeight = mainEl.clientHeight - fitMargin - (isTabletView ? 3 * gap : 0);
+        const availableWidth = mainEl.clientWidth - fitMargin - (cols - 1) * gap;
+        const maxSizeByWidth = Math.floor(availableWidth / cols);
+        const maxSizeByHeight = Math.floor(availableHeight / Math.ceil(items.length / cols));
+        let currentSize = Math.min(maxSize, maxSizeByWidth, maxSizeByHeight);
+        currentSize = Math.max(minSize, Math.min(currentSize, maxSize));
         gridEl.style.setProperty('--orderly-icon-size', currentSize + 'px');
-        while (currentSize > minSize) {
-            void gridEl.offsetHeight;
-            if (gridEl.scrollHeight <= availableHeight && gridEl.scrollWidth <= availableWidth) break;
-            currentSize = Math.max(minSize, Math.floor(currentSize * 0.88));
-            gridEl.style.setProperty('--orderly-icon-size', currentSize + 'px');
-        }
     }
     function shrinkSmallGrid() {
         if (!mainEl) return;

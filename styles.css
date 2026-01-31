@@ -693,7 +693,8 @@ body.orderly-mode .portfolio-tag {
     }
 
     .orderly-grid--large {
-        gap: 60px;
+        row-gap: 60px !important;
+        column-gap: 60px !important;
     }
 
     .orderly-sidebar-tags {
@@ -999,7 +1000,7 @@ body.orderly-mode .portfolio-tag {
         width: 100%;
         max-width: 100%;
         padding: 0 clamp(0.5rem, 2vw, 0.75rem);
-        margin-top: 67vh !important;
+        margin-top: 72vh !important;
         align-items: center;
         text-align: center;
         box-sizing: border-box;
