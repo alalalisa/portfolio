@@ -386,7 +386,7 @@ body.orderly-mode .portfolio-tag {
 
 .orderly-grid--large {
     width: 100%;
-    grid-template-columns: repeat(auto-fill, minmax(calc(var(--orderly-icon-size, 97px) + 20px), 1fr));
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 20px;
 }
 
@@ -641,6 +641,18 @@ body.orderly-mode .portfolio-tag {
 
 /* Tablets (769px - 1280px) — iPad 1080px теперь tablet, не desktop */
 @media (max-width: 1280px) and (min-width: 769px) {
+    .view-mode-toggle {
+        width: 78px;
+        height: 78px;
+        top: 12px;
+        left: 12px;
+    }
+
+    .view-mode-toggle .toggle-icon {
+        width: 39px;
+        height: 39px;
+    }
+
     .control-panel {
         min-width: 200px;
         max-width: 240px;
@@ -673,6 +685,10 @@ body.orderly-mode .portfolio-tag {
     .orderly-tag-btn {
         font-size: 1.09rem;
         padding: 12px 24px;
+    }
+
+    .orderly-sidebar {
+        transform: translateX(-20%);
     }
 
     .orderly-sidebar-tags {
@@ -751,8 +767,40 @@ body.orderly-mode .portfolio-tag {
 
 /* Mobile phones (up to 768px) */
 @media (max-width: 768px) {
+    html {
+        background-color: #000;
+        overflow-x: hidden;
+    }
+
     .canvas-container {
         transform: translateX(-20vw);
+    }
+
+    .orderly-view {
+        flex-direction: column;
+    }
+
+    .orderly-sidebar {
+        width: 100%;
+        min-width: 0;
+        transform: none;
+        padding: 16px;
+        margin-right: 0;
+        margin-bottom: 12px;
+        order: -1;
+    }
+
+    .orderly-sidebar-tags {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        transform: none;
+    }
+
+    .orderly-main {
+        padding: 16px;
+        flex: 1;
     }
 
     /* Control panel - make it collapsible/hidden by default on mobile */
@@ -891,11 +939,11 @@ body.orderly-mode .portfolio-tag {
         order: 0;
     }
 
-    /* Splash phone — фото и видео ещё на 10% вверх */
+    /* Splash phone — фото и видео на 20% ниже */
     .splash-video-container {
         position: absolute;
         left: 50%;
-        transform: translate(calc(-50% + 45vw), calc(-50% - 170vh)) !important;
+        transform: translate(calc(-50% + 45vw), calc(-50% - 150vh)) !important;
         top: 50%;
         width: 105vw !important;
         height: 105vw !important;
@@ -916,7 +964,7 @@ body.orderly-mode .portfolio-tag {
         width: 100%;
         min-height: 43vh;
         flex: 0 0 auto;
-        transform: translate(15vw, -162vh) !important;
+        transform: translate(15vw, -142vh) !important;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -931,7 +979,7 @@ body.orderly-mode .portfolio-tag {
         width: 100%;
         max-width: 100%;
         padding: 0 clamp(0.5rem, 2vw, 0.75rem);
-        margin-top: 55vh !important;
+        margin-top: 75vh !important;
         align-items: center;
         text-align: center;
         box-sizing: border-box;
