@@ -791,13 +791,13 @@ body.orderly-mode .portfolio-tag {
     }
 }
 
-/* Планшет вертикально (portrait) — видео −30%, на второй странице 2 колонки во всех тегах */
+/* Планшет вертикально (portrait) — видео −30% затем −20% (80vh → 64vh), на второй странице 2 колонки */
 @media (min-width: 769px) and (max-width: 1280px) and (orientation: portrait) {
     .splash-video-container {
-        width: 80vh !important;
-        height: 80vh !important;
-        min-width: 80vh !important;
-        min-height: 80vh !important;
+        width: 64vh !important;
+        height: 64vh !important;
+        min-width: 64vh !important;
+        min-height: 64vh !important;
     }
     .orderly-grid--large {
         grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
