@@ -693,7 +693,7 @@ body.orderly-mode .portfolio-tag {
     }
 
     .orderly-grid--large {
-        column-gap: 60px;
+        gap: 60px;
     }
 
     .orderly-sidebar-tags {
@@ -800,7 +800,7 @@ body.orderly-mode .portfolio-tag {
         flex-wrap: wrap;
         justify-content: center;
         gap: 8px;
-        transform: none;
+        transform: translateX(2vw);
     }
 
     .orderly-main {
@@ -809,7 +809,7 @@ body.orderly-mode .portfolio-tag {
         overflow-y: auto;
         justify-content: flex-start;
         align-items: center;
-        margin-top: -10vh;
+        margin-top: -5vh;
     }
 
     .orderly-grid--large {
@@ -999,7 +999,7 @@ body.orderly-mode .portfolio-tag {
         width: 100%;
         max-width: 100%;
         padding: 0 clamp(0.5rem, 2vw, 0.75rem);
-        margin-top: 72vh !important;
+        margin-top: 67vh !important;
         align-items: center;
         text-align: center;
         box-sizing: border-box;
