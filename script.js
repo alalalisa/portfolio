@@ -243,11 +243,11 @@ function createTags() {
         // Сохраняем позицию
         tagPositions.push({ x, y });
         
-        // Случайные параметры для плавания (замедление на мобильных задаётся в animateTags)
-        const speedX = (Math.random() - 0.5) * 0.1;
-        const speedY = (Math.random() - 0.5) * 0.1;
-        const amplitudeX = 20 + Math.random() * 40; // Уменьшенная амплитуда для более плавного движения
-        const amplitudeY = 20 + Math.random() * 40;
+        // Плавное плавание (без дёрганья): малая амплитуда, медленная скорость
+        const speedX = (Math.random() - 0.5) * 0.04;
+        const speedY = (Math.random() - 0.5) * 0.04;
+        const amplitudeX = 5 + Math.random() * 8;
+        const amplitudeY = 5 + Math.random() * 8;
         const phaseX = Math.random() * Math.PI * 2; // Начальная фаза
         const phaseY = Math.random() * Math.PI * 2;
         

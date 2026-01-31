@@ -424,7 +424,7 @@ body.orderly-mode .portfolio-tag {
     display: block;
 }
 
-/* Сайдбар с тегами справа — теги по центру колонки по вертикали и горизонтали */
+/* Сайдбар с тегами справа — сдвинут на 30% влево, теги на 30% меньше */
 .orderly-sidebar {
     width: 420px;
     min-width: 420px;
@@ -433,6 +433,7 @@ body.orderly-mode .portfolio-tag {
     border: none;
     padding: 24px 24px 24px 48px;
     margin-right: 24px;
+    transform: translateX(-30%);
     overflow: visible;
     display: flex;
     flex-direction: column;
@@ -454,17 +455,17 @@ body.orderly-mode .portfolio-tag {
     overflow: visible;
 }
 
-/* Теги по сетке — такой же размер по контенту, как в хаотичном виде (без min-width) */
+/* Теги по сетке — на 30% меньше */
 .orderly-tag-btn {
     width: fit-content;
     min-width: 0;
-    padding: 20px 40px;
+    padding: 14px 28px;
     text-align: center;
     border: none;
     border-radius: 25px;
     background: rgba(124, 191, 214, 0.2);
     color: #7CBFD6;
-    font-size: 1.8rem;
+    font-size: 1.26rem;
     font-weight: 500;
     cursor: pointer;
     transition: all 0.8s ease-out;
@@ -509,8 +510,8 @@ body.orderly-mode .portfolio-tag {
         margin-right: 16px;
     }
     .orderly-tag-btn {
-        font-size: 1.4rem;
-        padding: 16px 32px;
+        font-size: 0.98rem;
+        padding: 11px 22px;
         min-width: 0;
     }
     .orderly-grid--small .orderly-icon {
@@ -670,8 +671,8 @@ body.orderly-mode .portfolio-tag {
     }
 
     .orderly-tag-btn {
-        font-size: 1.44rem;
-        padding: 16px 32px;
+        font-size: 1.01rem;
+        padding: 11px 22px;
     }
 
     .modal-content {
