@@ -671,8 +671,12 @@ body.orderly-mode .portfolio-tag {
     }
 
     .orderly-tag-btn {
-        font-size: 1.01rem;
-        padding: 11px 22px;
+        font-size: 0.91rem;
+        padding: 10px 20px;
+    }
+
+    .orderly-sidebar-tags {
+        transform: translateY(-5vh);
     }
 
     .modal-content {
