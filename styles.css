@@ -643,8 +643,8 @@ body.orderly-mode .portfolio-tag {
 
 /* ========== MOBILE RESPONSIVE DESIGN ========== */
 
-/* Tablets (768px - 1024px) */
-@media (max-width: 1024px) and (min-width: 769px) {
+/* Tablets (769px - 1280px) — iPad 1080px теперь tablet, не desktop */
+@media (max-width: 1280px) and (min-width: 769px) {
     .control-panel {
         min-width: 200px;
         max-width: 240px;
@@ -918,7 +918,7 @@ body.orderly-mode .portfolio-tag {
 
     .splash-photo {
         width: 100%;
-        min-height: 6vh;
+        min-height: 30vh;
         flex: 0 0 auto;
         transform: none !important;
         display: flex;
@@ -927,7 +927,7 @@ body.orderly-mode .portfolio-tag {
     }
 
     .splash-photo img {
-        max-height: 6.25vh !important;
+        max-height: 31.25vh !important;
         width: auto;
     }
 

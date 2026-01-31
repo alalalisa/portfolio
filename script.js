@@ -2545,7 +2545,7 @@ if (mobileMenuToggle && controlPanel) {
 // Браузер не передаёт тип устройства — только ширину окна (viewport). На неё опираются медиазапросы.
 function getBreakpointLabel() {
     const w = window.innerWidth;
-    if (w >= 1025) return 'desktop';
+    if (w >= 1281) return 'desktop';
     if (w >= 769) return 'tablet';
     return 'phone';
 }
