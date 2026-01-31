@@ -710,11 +710,11 @@ body.orderly-mode .portfolio-tag {
         min-height: 114vh !important;
         top: 27% !important;
         left: 0 !important;
-        transform: translate(-60vw, -50%) !important;
+        transform: translate(-59vw, -50%) !important;
     }
 
     .splash-photo {
-        transform: translate(15vw, 10vh) !important;
+        transform: translate(5vw, 10vh) !important;
     }
 
     .splash-photo img {
@@ -726,7 +726,7 @@ body.orderly-mode .portfolio-tag {
     }
 
     .splash-hint {
-        transform: translate(16vw, 4vh) !important;
+        transform: translate(21vw, 4vh) !important;
     }
 
     .splash-hint p {
@@ -920,11 +920,11 @@ body.orderly-mode .portfolio-tag {
         order: 0;
     }
 
-    /* Splash phone — видео 20% вправо 10% вниз; фото +20% размер */
+    /* Splash phone — видео 20% вправо 10% вверх; фото 20% вверх */
     .splash-video-container {
         position: absolute;
         left: 50%;
-        transform: translate(calc(-50% + 20vw), calc(-50% - 140vh)) !important;
+        transform: translate(calc(-50% + 20vw), calc(-50% - 150vh)) !important;
         top: 50%;
         width: 105vw !important;
         height: 105vw !important;
@@ -945,7 +945,7 @@ body.orderly-mode .portfolio-tag {
         width: 100%;
         min-height: 43vh;
         flex: 0 0 auto;
-        transform: translate(15vw, -130vh) !important;
+        transform: translate(15vw, -150vh) !important;
         display: flex;
         justify-content: center;
         align-items: center;
