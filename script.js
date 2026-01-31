@@ -2510,37 +2510,6 @@ function hideSplashScreen() {
     }
 }
 
-// ========== MOBILE MENU FUNCTIONALITY ==========
-const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
-const controlPanel = document.querySelector('.control-panel');
-
-// Show/hide mobile menu button based on screen size
-function checkMobileView() {
-    if (window.innerWidth <= 768) {
-        if (mobileMenuToggle) {
-            mobileMenuToggle.style.display = 'flex';
-        }
-        if (controlPanel) {
-            controlPanel.classList.remove('mobile-visible');
-        }
-    } else {
-        if (mobileMenuToggle) {
-            mobileMenuToggle.style.display = 'none';
-        }
-        if (controlPanel) {
-            controlPanel.classList.add('mobile-visible');
-        }
-    }
-}
-
-// Toggle mobile menu
-if (mobileMenuToggle && controlPanel) {
-    mobileMenuToggle.addEventListener('click', () => {
-        mobileMenuToggle.classList.toggle('active');
-        controlPanel.classList.toggle('mobile-visible');
-    });
-}
-
 // ========== ИНДИКАТОР БРЕЙКПОИНТА (для проверки: ?breakpoint=1 в URL) ==========
 // Браузер не передаёт тип устройства — только ширину окна (viewport). На неё опираются медиазапросы.
 function getBreakpointLabel() {
@@ -2581,9 +2550,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     
     animateIcons();
-    
-    // Initialize mobile menu
-    checkMobileView();
 
     let resizeTimeout;
     window.addEventListener('resize', () => {
@@ -2599,7 +2565,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     if (activeTag) filterIconsByTag(activeTag);
                 }
             }
-            checkMobileView();
         }, 200);
     });
 
