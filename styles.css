@@ -812,6 +812,8 @@ body.orderly-mode .portfolio-tag {
     }
     .orderly-main {
         padding-right: 30px;
+        align-items: center;
+        justify-content: center;
     }
 }
 
