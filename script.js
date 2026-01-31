@@ -727,7 +727,7 @@ const ORDERLY_ICON_MAX = 97;
 const ORDERLY_ICON_MAX_TABLET = 120;
 const ORDERLY_ICON_MAX_PHONE = 112;
 const ORDERLY_ICON_MIN = 32;
-const ORDERLY_ICON_MIN_TABLET = 55;
+const ORDERLY_ICON_MIN_TABLET = 120;
 const ORDERLY_ICON_MIN_PHONE = 112;
 const ORDERLY_ICON_SMALL_MIN = 10;
 
@@ -765,11 +765,15 @@ function renderOrderlyProjects(selectedTag) {
         const isTabletView = w >= 769 && w <= 1280;
         const isPhoneView = w <= 768;
         const cols = isPhoneView ? 3 : (isTabletView ? 4 : 6);
-        const gap = isTabletView ? 30 : 20;
-        const maxSize = isPhoneView ? ORDERLY_ICON_MAX_PHONE : (isTabletView ? ORDERLY_ICON_MAX_TABLET : ORDERLY_ICON_MAX);
-        const minSize = isPhoneView ? ORDERLY_ICON_MIN_PHONE : (isTabletView ? ORDERLY_ICON_MIN_TABLET : ORDERLY_ICON_MIN);
+        if (isTabletView) {
+            gridEl.style.setProperty('--orderly-icon-size', ORDERLY_ICON_MAX_TABLET + 'px');
+            return;
+        }
+        const gap = 20;
+        const maxSize = isPhoneView ? ORDERLY_ICON_MAX_PHONE : ORDERLY_ICON_MAX;
+        const minSize = isPhoneView ? ORDERLY_ICON_MIN_PHONE : ORDERLY_ICON_MIN;
         const rows = Math.ceil(items.length / cols);
-        const rowGaps = Math.max(0, rows - 1) * (isTabletView ? gap : 20);
+        const rowGaps = Math.max(0, rows - 1) * gap;
         const availableHeight = mainEl.clientHeight - fitMargin - rowGaps;
         const availableWidth = mainEl.clientWidth - fitMargin - (cols - 1) * gap;
         const maxSizeByWidth = Math.floor(availableWidth / cols);

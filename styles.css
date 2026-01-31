@@ -646,8 +646,15 @@ body.orderly-mode .portfolio-tag {
     .orderly-grid--large { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 }
 
-/* Tablet shared styles — view-mode, tags, grid gap */
+/* Tablet shared styles — view-mode, tags, grid gap, scroll */
 @media (max-width: 1280px) and (min-width: 769px) {
+    .orderly-main {
+        overflow-y: auto;
+        overflow-x: hidden;
+        -webkit-overflow-scrolling: touch;
+        justify-content: flex-start;
+        align-items: center;
+    }
     .view-mode-toggle {
         width: 78px;
         height: 78px;
