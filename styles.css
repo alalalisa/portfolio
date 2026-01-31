@@ -802,10 +802,10 @@ body.orderly-mode .portfolio-tag {
         left: 2% !important;
     }
     .splash-photo {
-        transform: translate(8vw, 0) !important; /* 10% down from previous -10vh */
+        transform: translate(8vw, -3vh) !important; /* 3% up */
     }
     .splash-description {
-        margin-top: 65vh !important; /* 30% down from previous 35vh */
+        margin-top: 55vh !important; /* 10% up from 65vh */
     }
     .orderly-grid--large {
         grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
