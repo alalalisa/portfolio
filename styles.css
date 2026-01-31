@@ -722,7 +722,7 @@ body.orderly-mode .portfolio-tag {
 
     .modal-content {
         width: 95%;
-        margin: 20vh auto 5% auto; /* +10% down for tablet (10vh → 20vh) */
+        margin: 30vh auto 5% auto; /* +10% down more for tablet (20vh → 30vh) */
     }
 
     .modal-title {
