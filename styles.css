@@ -640,7 +640,14 @@ body.orderly-mode .portfolio-tag {
 
 /* ========== MOBILE RESPONSIVE DESIGN ========== */
 
-/* Tablets (769px - 1280px) — iPad 1080px теперь tablet, не desktop */
+/* Smaller tablets (769px - 1023px) — 4 колонки */
+@media (max-width: 1023px) and (min-width: 769px) {
+    .orderly-grid--large {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+}
+
+/* Larger tablets & iPad (1024px - 1280px) — 6 колонок */
 @media (max-width: 1280px) and (min-width: 769px) {
     .view-mode-toggle {
         width: 78px;
@@ -697,7 +704,6 @@ body.orderly-mode .portfolio-tag {
     }
 
     .orderly-grid--large {
-        grid-template-columns: repeat(4, minmax(0, 1fr));
         row-gap: 30px !important;
         column-gap: 30px !important;
     }
@@ -969,11 +975,11 @@ body.orderly-mode .portfolio-tag {
         order: 0;
     }
 
-    /* Splash phone — фото и видео на 2% ниже */
+    /* Splash phone — фото −2%, видео −1% ниже */
     .splash-video-container {
         position: absolute;
         left: 50%;
-        transform: translate(calc(-50% + 45vw), calc(-50% - 143vh)) !important;
+        transform: translate(calc(-50% + 45vw), calc(-50% - 142vh)) !important;
         top: 50%;
         width: 105vw !important;
         height: 105vw !important;
@@ -994,7 +1000,7 @@ body.orderly-mode .portfolio-tag {
         width: 100%;
         min-height: 43vh;
         flex: 0 0 auto;
-        transform: translate(15vw, -135vh) !important;
+        transform: translate(15vw, -133vh) !important;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -1009,7 +1015,7 @@ body.orderly-mode .portfolio-tag {
         width: 100%;
         max-width: 100%;
         padding: 0 clamp(0.5rem, 2vw, 0.75rem);
-        margin-top: 74vh !important;
+        margin-top: 76vh !important;
         align-items: center;
         text-align: center;
         box-sizing: border-box;
