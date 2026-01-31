@@ -924,7 +924,7 @@ body.orderly-mode .portfolio-tag {
     .splash-video-container {
         position: absolute;
         left: 50%;
-        transform: translate(calc(-50% + 45vw), calc(-50% - 130vh)) !important;
+        transform: translate(calc(-50% + 45vw), calc(-50% - 140vh)) !important;
         top: 50%;
         width: 105vw !important;
         height: 105vw !important;
@@ -945,7 +945,7 @@ body.orderly-mode .portfolio-tag {
         width: 100%;
         min-height: 43vh;
         flex: 0 0 auto;
-        transform: translate(15vw, -120vh) !important;
+        transform: translate(15vw, -130vh) !important;
         display: flex;
         justify-content: center;
         align-items: center;
