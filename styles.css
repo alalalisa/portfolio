@@ -649,11 +649,12 @@ body.orderly-mode .portfolio-tag {
 /* Tablet shared styles — view-mode, tags, grid gap, scroll */
 @media (max-width: 1280px) and (min-width: 769px) {
     .orderly-main {
+        min-height: 0;
         overflow-y: auto;
         overflow-x: hidden;
         -webkit-overflow-scrolling: touch;
         justify-content: flex-start;
-        align-items: center;
+        align-items: flex-start;
     }
     .view-mode-toggle {
         width: 78px;
