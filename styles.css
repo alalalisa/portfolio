@@ -353,7 +353,8 @@ body.orderly-mode .portfolio-tag {
 .orderly-main {
     flex: 1;
     min-width: 0;
-    overflow: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
     padding: 28px 196px 28px 372px;
     display: flex;
     align-items: center;
@@ -386,7 +387,7 @@ body.orderly-mode .portfolio-tag {
 
 .orderly-grid--large {
     width: 100%;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(6, minmax(0, 1fr));
     gap: 20px;
 }
 
@@ -688,7 +689,7 @@ body.orderly-mode .portfolio-tag {
     }
 
     .orderly-sidebar {
-        transform: translateX(-20%);
+        transform: translateX(10%);
     }
 
     .orderly-sidebar-tags {

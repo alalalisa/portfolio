@@ -724,7 +724,9 @@ function selectOrderlyTag(tagText) {
 }
 
 const ORDERLY_ICON_MAX = 97;
+const ORDERLY_ICON_MAX_TABLET = 110;
 const ORDERLY_ICON_MIN = 32;
+const ORDERLY_ICON_MIN_TABLET = 70;
 const ORDERLY_ICON_SMALL_MIN = 10;
 
 function renderOrderlyProjects(selectedTag) {
@@ -744,7 +746,8 @@ function renderOrderlyProjects(selectedTag) {
         const cols = Math.max(1, Math.round(Math.sqrt(items.length)));
         gridEl.style.gridTemplateColumns = 'repeat(' + cols + ', calc(var(--orderly-icon-size-small, 12px) + 16px))';
     }
-    const size = isLarge ? ORDERLY_ICON_MAX : ORDERLY_ICON_MIN;
+    const isTablet = window.innerWidth >= 769 && window.innerWidth <= 1280;
+    const size = isLarge ? (isTablet ? ORDERLY_ICON_MAX_TABLET : ORDERLY_ICON_MAX) : ORDERLY_ICON_MIN;
     gridEl.innerHTML = '';
     items.forEach(({ icon }) => {
         const el = createOrderlyIconElement(icon, size);
@@ -754,14 +757,17 @@ function renderOrderlyProjects(selectedTag) {
     const fitMargin = 32;
     function shrinkLargeGrid() {
         if (!mainEl) return;
-        let currentSize = ORDERLY_ICON_MAX;
+        const isTabletView = window.innerWidth >= 769 && window.innerWidth <= 1280;
+        const maxSize = isTabletView ? ORDERLY_ICON_MAX_TABLET : ORDERLY_ICON_MAX;
+        const minSize = isTabletView ? ORDERLY_ICON_MIN_TABLET : ORDERLY_ICON_MIN;
+        let currentSize = maxSize;
         const availableHeight = mainEl.clientHeight - fitMargin;
         const availableWidth = mainEl.clientWidth - fitMargin;
         gridEl.style.setProperty('--orderly-icon-size', currentSize + 'px');
-        while (currentSize > ORDERLY_ICON_MIN) {
+        while (currentSize > minSize) {
             void gridEl.offsetHeight;
             if (gridEl.scrollHeight <= availableHeight && gridEl.scrollWidth <= availableWidth) break;
-            currentSize = Math.max(ORDERLY_ICON_MIN, Math.floor(currentSize * 0.88));
+            currentSize = Math.max(minSize, Math.floor(currentSize * 0.88));
             gridEl.style.setProperty('--orderly-icon-size', currentSize + 'px');
         }
     }
