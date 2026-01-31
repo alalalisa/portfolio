@@ -689,7 +689,11 @@ body.orderly-mode .portfolio-tag {
     }
 
     .orderly-sidebar {
-        transform: translateX(10%);
+        transform: translateX(15%);
+    }
+
+    .orderly-grid--large {
+        column-gap: 60px;
     }
 
     .orderly-sidebar-tags {
