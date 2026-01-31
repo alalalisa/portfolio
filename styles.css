@@ -882,11 +882,11 @@ body.orderly-mode .portfolio-tag {
         order: 0;
     }
 
-    /* Splash phone — видео 5% вправо 20% вниз; фото 30% вниз; текст+кнопка 25% вниз */
+    /* Splash phone — всё сдвинуто на 10% вверх */
     .splash-video-container {
         position: absolute;
         left: 50%;
-        transform: translate(calc(-50% + 45vw), calc(-50% - 150vh)) !important;
+        transform: translate(calc(-50% + 45vw), calc(-50% - 160vh)) !important;
         top: 50%;
         width: 105vw !important;
         height: 105vw !important;
@@ -907,7 +907,7 @@ body.orderly-mode .portfolio-tag {
         width: 100%;
         min-height: 43vh;
         flex: 0 0 auto;
-        transform: translate(15vw, -142vh) !important;
+        transform: translate(15vw, -152vh) !important;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -922,7 +922,7 @@ body.orderly-mode .portfolio-tag {
         width: 100%;
         max-width: 100%;
         padding: 0 clamp(0.5rem, 2vw, 0.75rem);
-        margin-top: 75vh !important;
+        margin-top: 65vh !important;
         align-items: center;
         text-align: center;
         box-sizing: border-box;
