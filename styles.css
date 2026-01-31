@@ -660,6 +660,7 @@ body.orderly-mode .portfolio-tag {
         justify-content: flex-start;
         align-items: flex-start;
         padding-left: calc(10vw + clamp(40px, 6vw, 100px));
+        padding-bottom: 80px;
     }
     .view-mode-toggle {
         width: 78px;
@@ -827,6 +828,7 @@ body.orderly-mode .portfolio-tag {
     .orderly-main {
         padding: 16px;
         padding-top: 0.5rem;
+        padding-bottom: 80px;
         flex: 1;
         overflow-y: auto;
         overflow-x: hidden;
