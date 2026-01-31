@@ -717,7 +717,7 @@ body.orderly-mode .portfolio-tag {
 
     .modal-content {
         width: 95%;
-        margin: 5% auto;
+        margin: 10vh auto 5% auto;
     }
 
     .modal-title {
