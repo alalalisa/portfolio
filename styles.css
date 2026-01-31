@@ -493,7 +493,7 @@ body.orderly-mode .portfolio-tag {
 @media (max-width: 768px) {
     .view-mode-toggle {
         top: 12px;
-        left: calc(20vw + 12px);
+        left: calc(10vw + 12px);
         width: 66px;
         height: 66px;
     }
@@ -774,7 +774,7 @@ body.orderly-mode .portfolio-tag {
     }
 
     .canvas-container {
-        transform: translateX(-20vw);
+        transform: translateX(-10vw);
     }
 
     .orderly-view {
@@ -802,6 +802,21 @@ body.orderly-mode .portfolio-tag {
     .orderly-main {
         padding: 16px;
         flex: 1;
+        overflow-y: auto;
+        justify-content: flex-start;
+        align-items: center;
+        margin-top: -10vh;
+    }
+
+    .orderly-grid--large {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .orderly-grid-wrap.orderly-grid-wrap--large {
+        width: 100%;
+        max-width: 100%;
     }
 
     /* Control panel - make it collapsible/hidden by default on mobile */
@@ -940,11 +955,11 @@ body.orderly-mode .portfolio-tag {
         order: 0;
     }
 
-    /* Splash phone — фото и видео на 20% ниже */
+    /* Splash phone — фото и видео на 5% ниже */
     .splash-video-container {
         position: absolute;
         left: 50%;
-        transform: translate(calc(-50% + 45vw), calc(-50% - 150vh)) !important;
+        transform: translate(calc(-50% + 45vw), calc(-50% - 145vh)) !important;
         top: 50%;
         width: 105vw !important;
         height: 105vw !important;
@@ -965,7 +980,7 @@ body.orderly-mode .portfolio-tag {
         width: 100%;
         min-height: 43vh;
         flex: 0 0 auto;
-        transform: translate(15vw, -142vh) !important;
+        transform: translate(15vw, -137vh) !important;
         display: flex;
         justify-content: center;
         align-items: center;
