@@ -791,23 +791,33 @@ body.orderly-mode .portfolio-tag {
     }
 }
 
-/* Планшет вертикально (portrait) — видео 7% вправо; фото +10%, выше видео; 2 колонки */
+/* Планшет вертикально (portrait) — фото 5% вниз, видео 5% вверх; текст на всю ширину */
 @media (min-width: 769px) and (max-width: 1280px) and (orientation: portrait) {
     .splash-video-container {
         width: 64vh !important;
         height: 64vh !important;
         min-width: 64vh !important;
         min-height: 64vh !important;
-        top: 47% !important; /* +30% down from 17% */
+        top: 42% !important; /* 5% up from 47% */
         left: 7% !important;
         z-index: 1 !important;
     }
     .splash-photo {
-        transform: translate(8vw, -33vh) scale(1.1) !important; /* +30% up from -3vh */
+        transform: translate(8vw, -28vh) scale(1.1) !important; /* 5% down from -33vh */
         z-index: 2 !important;
     }
+    .splash-content {
+        grid-template-columns: 1fr !important;
+    }
+    .splash-media {
+        grid-column: 1 !important;
+        width: 100% !important;
+    }
     .splash-description {
-        margin-top: 55vh !important; /* 10% up from 65vh */
+        margin-top: 55vh !important;
+        grid-column: 1 !important;
+        width: 100% !important;
+        max-width: 100% !important;
     }
     .orderly-grid--large {
         grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
