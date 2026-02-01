@@ -803,7 +803,7 @@ body.orderly-mode .portfolio-tag {
         z-index: 1 !important;
     }
     .splash-photo {
-        transform: translate(8vw, -28vh) scale(1.1) !important; /* 5% down from -33vh */
+        transform: translate(8vw, -33vh) scale(1.1) !important; /* 5% up from -28vh */
         z-index: 2 !important;
     }
     .splash-content {
