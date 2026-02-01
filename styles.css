@@ -798,12 +798,12 @@ body.orderly-mode .portfolio-tag {
         height: 77.44vh !important;
         min-width: 77.44vh !important;
         min-height: 77.44vh !important;
-        top: 15% !important; /* 2% up from 17% */
-        left: 59% !important; /* 10% right from 49% */
+        top: 25% !important; /* 10% down from 15% */
+        left: 60% !important; /* 1% right from 59% */
         z-index: 2 !important;
     }
     .splash-photo {
-        transform: translate(8vw, 23vh) scale(0.85) !important; /* 3% down from 20vh */
+        transform: translate(8vw, 26vh) scale(0.85) !important; /* 3% down from 23vh */
         z-index: 0 !important; /* lowest layer */
     }
     .splash-content {
