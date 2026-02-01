@@ -794,16 +794,16 @@ body.orderly-mode .portfolio-tag {
 /* Планшет вертикально (portrait) — фото 20% вниз, нижний слой; текст/кнопки/видео поверх */
 @media (min-width: 769px) and (max-width: 1280px) and (orientation: portrait) {
     .splash-video-container {
-        width: 64vh !important;
-        height: 64vh !important;
-        min-width: 64vh !important;
-        min-height: 64vh !important;
+        width: 70.4vh !important;
+        height: 70.4vh !important;
+        min-width: 70.4vh !important;
+        min-height: 70.4vh !important;
         top: 17% !important; /* 30% up from 47% */
         left: 69% !important; /* 3% left from 72% */
         z-index: 2 !important;
     }
     .splash-photo {
-        transform: translate(13vw, 7vh) scale(0.85) !important; /* 10% smaller from 0.945 */
+        transform: translate(8vw, 7vh) scale(0.85) !important; /* 5% left from 13vw */
         z-index: 0 !important; /* lowest layer */
     }
     .splash-content {
