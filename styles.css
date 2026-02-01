@@ -791,20 +791,20 @@ body.orderly-mode .portfolio-tag {
     }
 }
 
-/* Планшет вертикально (portrait) — фото 5% вниз, видео 5% вверх; текст на всю ширину */
+/* Планшет вертикально (portrait) — фото 20% вниз, нижний слой; текст/кнопки/видео поверх */
 @media (min-width: 769px) and (max-width: 1280px) and (orientation: portrait) {
     .splash-video-container {
         width: 64vh !important;
         height: 64vh !important;
         min-width: 64vh !important;
         min-height: 64vh !important;
-        top: 42% !important; /* 5% up from 47% */
+        top: 42% !important;
         left: 7% !important;
-        z-index: 1 !important;
+        z-index: 2 !important; /* above photo */
     }
     .splash-photo {
-        transform: translate(8vw, -33vh) scale(1.1) !important; /* 5% up from -28vh */
-        z-index: 2 !important;
+        transform: translate(8vw, -13vh) scale(1.1) !important; /* 20% down from -33vh */
+        z-index: 0 !important; /* lowest layer */
     }
     .splash-content {
         grid-template-columns: 1fr !important;
@@ -812,12 +812,15 @@ body.orderly-mode .portfolio-tag {
     .splash-media {
         grid-column: 1 !important;
         width: 100% !important;
+        position: relative;
     }
     .splash-description {
         margin-top: 55vh !important;
         grid-column: 1 !important;
         width: 100% !important;
         max-width: 100% !important;
+        z-index: 3 !important; /* above video and photo */
+        position: relative;
     }
     .orderly-grid--large {
         grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
