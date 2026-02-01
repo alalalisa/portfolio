@@ -835,10 +835,10 @@ body.orderly-mode .portfolio-tag {
         grid-column: 2 !important;
         width: 25% !important; /* horizontally 2× narrower (was 50%) */
         max-width: 25% !important;
-        transform: translate(29vw, 41vh) !important; /* 15% right from 14vw */
+        transform: translate(34vw, 26vh) !important; /* 15% up, 5% right */
     }
     .splash-description .splash-telegram-btn:hover {
-        transform: translate(29vw, 41vh) scale(1.1) !important;
+        transform: translate(34vw, 26vh) scale(1.1) !important;
     }
     .splash-hint {
         grid-column: 2 !important;
