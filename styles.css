@@ -798,8 +798,8 @@ body.orderly-mode .portfolio-tag {
         height: 64vh !important;
         min-width: 64vh !important;
         min-height: 64vh !important;
-        top: 22% !important; /* 20% up from 42% */
-        left: 27% !important; /* 20% right from 7% */
+        top: 17% !important; /* 5% up from 22% */
+        left: 57% !important; /* 30% right from 27% */
         z-index: 2 !important;
     }
     .splash-photo {
@@ -815,7 +815,7 @@ body.orderly-mode .portfolio-tag {
         position: relative;
     }
     .splash-description {
-        margin-top: 55vh !important;
+        margin-top: 45vh !important; /* 10% up from 55vh */
         grid-column: 1 !important;
         width: 100% !important;
         max-width: 100% !important;
