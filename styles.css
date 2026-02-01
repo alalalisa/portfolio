@@ -822,7 +822,7 @@ body.orderly-mode .portfolio-tag {
         z-index: 3 !important;
         position: relative;
         display: grid !important;
-        grid-template-columns: 0.33fr 0.75fr !important; /* first col 1.5× narrower, second 1.5× wider */
+        grid-template-columns: 0.4fr 1fr !important; /* first col +20%, second +30% */
         gap: 0.5rem 1rem;
         align-items: start;
     }
@@ -833,12 +833,12 @@ body.orderly-mode .portfolio-tag {
     }
     .splash-description .splash-telegram-btn {
         grid-column: 2 !important;
-        width: 25% !important; /* horizontally 2× narrower (was 50%) */
+        width: 25% !important;
         max-width: 25% !important;
-        transform: translate(-2vw, 51vh) !important; /* 15% down from 36vh */
+        transform: translate(-22vw, 31vh) !important; /* 20% left, 20% up */
     }
     .splash-description .splash-telegram-btn:hover {
-        transform: translate(-2vw, 51vh) scale(1.1) !important;
+        transform: translate(-22vw, 31vh) scale(1.1) !important;
     }
     .splash-hint {
         grid-column: 2 !important;
