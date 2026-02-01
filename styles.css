@@ -829,18 +829,18 @@ body.orderly-mode .portfolio-tag {
     .splash-description p {
         grid-column: 1 !important;
         max-width: 100% !important;
-        transform: translate(10vw, -10vh) !important; /* 10% right, 10% up */
+        transform: translate(50vw, -10vh) !important; /* 40% right from 10vw */
     }
     .splash-description .splash-telegram-btn {
         grid-column: 2 !important;
-        transform: translate(8vw, -24vh) !important;
+        transform: translate(-12vw, 16vh) !important; /* 40% down, 20% left */
     }
     .splash-description .splash-telegram-btn:hover {
-        transform: translate(8vw, -24vh) scale(1.1) !important;
+        transform: translate(-12vw, 16vh) scale(1.1) !important;
     }
     .splash-hint {
         grid-column: 2 !important;
-        transform: translate(0, -20vh) !important;
+        transform: translate(-30vw, -20vh) !important; /* 30% left */
     }
     .orderly-grid--large {
         grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
