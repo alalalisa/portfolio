@@ -798,7 +798,7 @@ body.orderly-mode .portfolio-tag {
         height: 77.44vh !important;
         min-width: 77.44vh !important;
         min-height: 77.44vh !important;
-        top: 22% !important; /* 2% down from 20% */
+        top: 23% !important; /* 1% down from 22% */
         left: 60% !important;
         z-index: 2 !important;
     }
@@ -815,7 +815,7 @@ body.orderly-mode .portfolio-tag {
         position: relative;
     }
     .splash-description {
-        margin-top: 70vh !important; /* 15% down from 55vh */
+        margin-top: 68vh !important; /* 2% up from 70vh */
         grid-column: 1 !important;
         width: 100% !important;
         max-width: 100% !important;
