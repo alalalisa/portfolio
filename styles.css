@@ -791,7 +791,7 @@ body.orderly-mode .portfolio-tag {
     }
 }
 
-/* Планшет вертикально (portrait) — видео 2% вправо, фото 10% вниз, текст/кнопки 30% вниз; 2 колонки, больше gap */
+/* Планшет вертикально (portrait) — видео 7% вправо; фото +10%, выше видео; 2 колонки */
 @media (min-width: 769px) and (max-width: 1280px) and (orientation: portrait) {
     .splash-video-container {
         width: 64vh !important;
@@ -799,10 +799,12 @@ body.orderly-mode .portfolio-tag {
         min-width: 64vh !important;
         min-height: 64vh !important;
         top: 17% !important;
-        left: 2% !important;
+        left: 7% !important; /* 5% right from 2% */
+        z-index: 1 !important;
     }
     .splash-photo {
-        transform: translate(8vw, -3vh) !important; /* 3% up */
+        transform: translate(8vw, -3vh) scale(1.1) !important; /* +10% */
+        z-index: 2 !important;
     }
     .splash-description {
         margin-top: 55vh !important; /* 10% up from 65vh */
