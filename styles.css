@@ -835,14 +835,14 @@ body.orderly-mode .portfolio-tag {
         grid-column: 2 !important;
         width: 25% !important; /* horizontally 2× narrower (was 50%) */
         max-width: 25% !important;
-        transform: translate(-1vw, 41vh) !important; /* 1% right from -2vw */
+        transform: translate(14vw, 41vh) !important; /* 15% right from -1vw */
     }
     .splash-description .splash-telegram-btn:hover {
-        transform: translate(-1vw, 41vh) scale(1.1) !important;
+        transform: translate(14vw, 41vh) scale(1.1) !important;
     }
     .splash-hint {
         grid-column: 2 !important;
-        transform: translate(-104vw, 0vh) !important; /* 1% right from -105vw */
+        transform: translate(-103vw, -1vh) !important; /* 1% right, 1% up */
     }
     .orderly-grid--large {
         grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
