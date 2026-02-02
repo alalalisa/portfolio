@@ -803,7 +803,7 @@ body.orderly-mode .portfolio-tag {
         z-index: 2 !important;
     }
     .splash-photo {
-        transform: translate(7vw, 22vh) scale(0.85) !important; /* 4% up, 1% left */
+        transform: translate(7vw, 21vh) scale(0.85) !important; /* 1% up from 22vh */
         z-index: 0 !important; /* lowest layer */
     }
     .splash-content {
@@ -815,7 +815,7 @@ body.orderly-mode .portfolio-tag {
         position: relative;
     }
     .splash-description {
-        margin-top: 48vh !important;
+        margin-top: 47vh !important; /* 1% up (whole text + button) */
         grid-column: 1 !important;
         width: 100% !important;
         max-width: 100% !important;
