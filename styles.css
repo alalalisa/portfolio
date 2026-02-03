@@ -650,7 +650,7 @@ body.orderly-mode .portfolio-tag {
         width: max-content !important;
     }
     .orderly-grid--large {
-        grid-template-columns: repeat(8, var(--orderly-icon-size, 97px)) !important;
+        grid-template-columns: repeat(10, var(--orderly-icon-size, 97px)) !important;
         gap: 12px !important;
         width: max-content !important;
     }

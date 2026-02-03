@@ -768,7 +768,7 @@ function renderOrderlyProjects(selectedTag) {
         const w = window.innerWidth;
         const isTabletView = w >= 769 && w <= 1280;
         const isPhoneView = w <= 768;
-        const cols = isPhoneView ? 3 : (isTabletView ? 4 : 8);
+        const cols = isPhoneView ? 3 : (isTabletView ? 4 : 10);
         if (isTabletView) {
             gridEl.style.setProperty('--orderly-icon-size', ORDERLY_ICON_MAX_TABLET + 'px');
             return;
