@@ -1236,7 +1236,7 @@
       "filename": "76.HEIC",
       "type": "image",
       "path": "https://res.cloudinary.com/dwwyducge/image/upload/images/76",
-      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/76"
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/76?v=2"
     },
     "title": "LED",
     "description": "Интерактивная инсталляция из более чем 200\nLED-палок. Цвет LED-палок изменялся над местами, где проходили люди. Система трекинга Black Traxx.",
@@ -2128,7 +2128,7 @@
       "filename": "130.HEIC",
       "type": "image",
       "path": "https://res.cloudinary.com/dwwyducge/image/upload/images/130",
-      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/130"
+      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/130?v=2"
     },
     "title": "LED",
     "description": "Тест диодных палое Dreamlaser\n\nГенеративный виджеинг",
