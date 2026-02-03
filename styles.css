@@ -655,7 +655,7 @@ body.orderly-mode .portfolio-tag {
         width: max-content !important;
     }
     .orderly-sidebar {
-        transform: translateX(-25%) !important; /* 10% right from -35% */
+        transform: translateX(-15%) !important; /* 10% right from -25% */
     }
 }
 
