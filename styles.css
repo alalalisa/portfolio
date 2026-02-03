@@ -640,6 +640,17 @@ body.orderly-mode .portfolio-tag {
 
 /* ========== MOBILE RESPONSIVE DESIGN ========== */
 
+/* Desktop (1281px+) — без скролла, компактная сетка (не трогаем планшет/телефон) */
+@media (min-width: 1281px) {
+    .orderly-main {
+        overflow: hidden !important;
+        overflow-y: hidden !important;
+    }
+    .orderly-grid--large {
+        gap: 12px !important;
+    }
+}
+
 /* Планшет (769px - 1280px) — всегда 4 колонки, адаптивный padding */
 @media (max-width: 1280px) and (min-width: 769px) {
     .orderly-main { padding: 28px clamp(40px, 6vw, 100px); }
