@@ -773,7 +773,7 @@ function renderOrderlyProjects(selectedTag) {
             gridEl.style.setProperty('--orderly-icon-size', ORDERLY_ICON_MAX_TABLET + 'px');
             return;
         }
-        const gap = isPhoneView ? 20 : 8;
+        const gap = isPhoneView ? 20 : 12;
         const maxSize = isPhoneView ? ORDERLY_ICON_MAX_PHONE : ORDERLY_ICON_MAX;
         const minSize = isPhoneView ? ORDERLY_ICON_MIN_PHONE : ORDERLY_ICON_MIN;
         const rows = Math.ceil(items.length / cols);
