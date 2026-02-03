@@ -640,14 +640,16 @@ body.orderly-mode .portfolio-tag {
 
 /* ========== MOBILE RESPONSIVE DESIGN ========== */
 
-/* Desktop (1281px+) — без скролла, компактная сетка (не трогаем планшет/телефон) */
+/* Desktop (1281px+) — без скролла, 8 колонок, меньше расстояние по горизонтали */
 @media (min-width: 1281px) {
     .orderly-main {
         overflow: hidden !important;
         overflow-y: hidden !important;
     }
     .orderly-grid--large {
-        gap: 12px !important;
+        grid-template-columns: repeat(8, minmax(0, 1fr)) !important;
+        column-gap: 8px !important;
+        row-gap: 12px;
     }
 }
 
