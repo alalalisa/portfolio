@@ -640,7 +640,7 @@ body.orderly-mode .portfolio-tag {
 
 /* ========== MOBILE RESPONSIVE DESIGN ========== */
 
-/* Desktop (1281px+) — равномерная сетка: колонки = размер иконки, один gap 12px, без скролла */
+/* Desktop (1281px+) — равномерная сетка, колонка тегов 5% вправо */
 @media (min-width: 1281px) {
     .orderly-main {
         overflow: hidden !important;
@@ -653,6 +653,9 @@ body.orderly-mode .portfolio-tag {
         grid-template-columns: repeat(10, var(--orderly-icon-size, 97px)) !important;
         gap: 12px !important;
         width: max-content !important;
+    }
+    .orderly-sidebar {
+        transform: translateX(-35%) !important; /* 5% right from -40% */
     }
 }
 
