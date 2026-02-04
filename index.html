@@ -63,17 +63,21 @@
         </div>
     </div>
 
-    <!-- Модальное окно для просмотра работы -->
+    <!-- Модальное окно для просмотра работы (проект = одна карточка, внутри — несколько медиа по порядку 25A, 25B, 25C) -->
     <div id="modal" class="modal">
         <div class="modal-content">
             <span class="modal-close">&times;</span>
-            <div class="modal-media-container">
-                <img id="modal-image" class="modal-media" style="display: none;" alt="Работа">
-                <video id="modal-video" class="modal-media" style="display: none;" controls></video>
-            </div>
-            <div class="modal-info">
+            <div class="modal-info modal-info--top">
                 <h2 id="modal-title" class="modal-title"></h2>
                 <p id="modal-description" class="modal-description"></p>
+            </div>
+            <div class="modal-body">
+                <div id="modal-media-list" class="modal-media-list"></div>
+                <!-- Один медиа (обратная совместимость): скрытые элементы для одного файла -->
+                <div id="modal-single-container" class="modal-media-container" style="display: none;">
+                    <img id="modal-image" class="modal-media" style="display: none;" alt="Работа">
+                    <video id="modal-video" class="modal-media" style="display: none;" controls></video>
+                </div>
             </div>
         </div>
     </div>

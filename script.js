@@ -395,22 +395,15 @@ function filterIconsByTag(selectedTag) {
     icons.forEach((icon, index) => {
         const item = icon.item;
         let hasTag = false;
-        
-        if (item.additional) {
+        if (item.items) {
+            hasTag = item.items.some(i => itemHasTag(i, normalizedSelectedTag));
+        } else if (item.additional) {
             ['col_2', 'col_3', 'col_4'].forEach(colKey => {
                 const tag = item.additional[colKey];
-                if (tag && typeof tag === 'string') {
-                    // Простое сравнение с нормализацией пробелов
-                    const normalizedTag = tag.trim();
-                    if (normalizedTag === normalizedSelectedTag) {
-                        hasTag = true;
-                    }
-                }
+                if (tag && typeof tag === 'string' && tag.trim() === normalizedSelectedTag) hasTag = true;
             });
         }
-        
         if (hasTag) {
-            // Проверяем, что проект с таким ID еще не добавлен (избегаем дубликатов)
             if (!addedProjectIds.has(item.id)) {
                 addedProjectIds.add(item.id);
                 matchingIcons.push({ icon, index });
@@ -662,17 +655,26 @@ function preventOverlap(x, y, currentIndex, otherIndices, allPositions = null) {
 }
 
 // ========== УПОРЯДОЧЕННЫЙ ВИД (ТЕГИ СПРАВА, ПРОЕКТЫ ПО СЕТКЕ) ==========
+function itemHasTag(item, normalizedTag) {
+    if (!item || !item.additional) return false;
+    for (const colKey of ['col_2', 'col_3', 'col_4']) {
+        const tag = item.additional[colKey];
+        if (tag && typeof tag === 'string' && tag.trim() === normalizedTag) return true;
+    }
+    return false;
+}
+
 function getIconsByTag(selectedTag) {
     if (!selectedTag) return icons.map((icon, index) => ({ icon, index }));
     const normalizedTag = selectedTag.trim();
     const result = [];
     icons.forEach((icon, index) => {
+        const item = icon.item;
         let hasTag = false;
-        if (icon.item.additional) {
-            ['col_2', 'col_3', 'col_4'].forEach(colKey => {
-                const tag = icon.item.additional[colKey];
-                if (tag && typeof tag === 'string' && tag.trim() === normalizedTag) hasTag = true;
-            });
+        if (item.items) {
+            hasTag = item.items.some(i => itemHasTag(i, normalizedTag));
+        } else {
+            hasTag = itemHasTag(item, normalizedTag);
         }
         if (hasTag) result.push({ icon, index });
     });
@@ -878,6 +880,53 @@ function setupViewModeToggle() {
     });
 }
 
+// ========== ГРУППИРОВКА ПО ПРОЕКТАМ (25a, 25b, 25c → один проект 25) ==========
+function getProjectKey(item) {
+    if (item.projectId !== undefined && item.projectId !== null) return Number(item.projectId);
+    const id = item.id;
+    if (typeof id === 'string') {
+        const num = parseInt(id.replace(/^(\d+).*$/, '$1'), 10);
+        return isNaN(num) ? id : num;
+    }
+    return Number(id);
+}
+
+function getProjectSortKey(item) {
+    const id = item.id;
+    if (typeof id === 'string') return String(id).toLowerCase();
+    return id;
+}
+
+function buildProjectsFromData() {
+    const map = new Map();
+    portfolioData.forEach((item) => {
+        const key = getProjectKey(item);
+        if (!map.has(key)) map.set(key, []);
+        map.get(key).push(item);
+    });
+    const projects = [];
+    map.forEach((items, projectKey) => {
+        items.sort((a, b) => {
+            const sa = getProjectSortKey(a), sb = getProjectSortKey(b);
+            if (sa < sb) return -1;
+            if (sa > sb) return 1;
+            return 0;
+        });
+        const first = items[0];
+        projects.push({
+            projectKey,
+            items,
+            id: projectKey,
+            media: first.media,
+            title: getTitle(first),
+            description: getDescription(first),
+            additional: first.additional
+        });
+    });
+    projects.sort((a, b) => Number(a.projectKey) - Number(b.projectKey));
+    return projects;
+}
+
 // ========== ИНИЦИАЛИЗАЦИЯ ИКОНОК ==========
 function initializeIcons() {
     const board = document.getElementById('portfolio-board');
@@ -889,14 +938,13 @@ function initializeIcons() {
     icons = [];
     visibleIcons.clear();
 
-    console.log(`Инициализация иконок: загружено ${portfolioData.length} элементов`);
-    
-    // Инициализируем Intersection Observer для lazy loading
+    const projects = buildProjectsFromData();
+    console.log(`Инициализация иконок: ${portfolioData.length} элементов → ${projects.length} проектов`);
+
     initImageObserver();
-    
-    // Создаем только структуру данных, не добавляем в DOM сразу
-    portfolioData.forEach((item, index) => {
-        const icon = createIconData(item, index);
+
+    projects.forEach((project, index) => {
+        const icon = createIconData(project, index);
         icons.push(icon);
     });
 
@@ -1877,56 +1925,94 @@ window.openModal = function openModal(item) {
     console.log('openModal: открываем модальное окно для', item.id);
     
     const modal = document.getElementById('modal');
-    const modalImage = document.getElementById('modal-image');
-    const modalVideo = document.getElementById('modal-video');
     const modalTitle = document.getElementById('modal-title');
     const modalDescription = document.getElementById('modal-description');
-
-    modalImage.style.display = 'none';
-    modalVideo.style.display = 'none';
-
-    // В модальном окне загружаем полные файлы в хорошем качестве
-    const fullPath = item.media.path;
-    
-    if (item.media.type === 'video') {
-        modalVideo.src = fullPath;
-        modalVideo.style.display = 'block';
-        modalVideo.load(); // Принудительно загружаем видео
-        modalVideo.play().catch(() => {});
-    } else {
-        // Загружаем полное изображение
-        modalImage.src = fullPath;
-        modalImage.alt = getTitle(item) || 'Работа';
-        modalImage.style.display = 'block';
-        
-        // Показываем placeholder пока загружается
-        if (item.media.thumbnail) {
-            modalImage.src = item.media.thumbnail; // Сначала показываем thumbnail
-            const fullImg = new Image();
-            fullImg.onload = () => {
-                modalImage.src = fullPath; // Заменяем на полное изображение
-            };
-            fullImg.src = fullPath;
-        }
-    }
+    const modalMediaList = document.getElementById('modal-media-list');
+    const modalSingleContainer = document.getElementById('modal-single-container');
+    const modalImage = document.getElementById('modal-image');
+    const modalVideo = document.getElementById('modal-video');
 
     modalTitle.textContent = getTitle(item) || 'Работа';
     modalDescription.textContent = getDescription(item) || '';
+
+    const isProject = item.items && item.items.length > 0;
+    if (isProject) {
+        modalSingleContainer.style.display = 'none';
+        modalImage.style.display = 'none';
+        modalVideo.style.display = 'none';
+        modalMediaList.style.display = 'block';
+        modalMediaList.innerHTML = '';
+        item.items.forEach((mediaItem) => {
+            const block = document.createElement('div');
+            block.className = 'modal-media-block';
+            const fullPath = mediaItem.media.path;
+            if (mediaItem.media.type === 'video') {
+                const video = document.createElement('video');
+                video.className = 'modal-media';
+                video.controls = true;
+                video.src = fullPath;
+                video.preload = 'auto';
+                block.appendChild(video);
+            } else {
+                const img = document.createElement('img');
+                img.className = 'modal-media';
+                img.alt = getTitle(mediaItem) || 'Работа';
+                if (mediaItem.media.thumbnail) {
+                    img.src = mediaItem.media.thumbnail;
+                    const fullImg = new Image();
+                    fullImg.onload = () => { img.src = fullPath; };
+                    fullImg.src = fullPath;
+                } else {
+                    img.src = fullPath;
+                }
+                block.appendChild(img);
+            }
+            modalMediaList.appendChild(block);
+        });
+        modalMediaList.scrollTop = 0;
+    } else {
+        modalMediaList.style.display = 'none';
+        modalSingleContainer.style.display = 'block';
+        modalImage.style.display = 'none';
+        modalVideo.style.display = 'none';
+        const fullPath = item.media.path;
+        if (item.media.type === 'video') {
+            modalVideo.src = fullPath;
+            modalVideo.style.display = 'block';
+            modalVideo.load();
+            modalVideo.play().catch(() => {});
+        } else {
+            modalImage.src = item.media.thumbnail || fullPath;
+            modalImage.alt = getTitle(item) || 'Работа';
+            modalImage.style.display = 'block';
+            if (item.media.thumbnail) {
+                const fullImg = new Image();
+                fullImg.onload = () => { modalImage.src = fullPath; };
+                fullImg.src = fullPath;
+            }
+        }
+    }
+
     modal.classList.add('active');
     document.body.style.overflow = 'hidden';
-    
-    // Обновляем URL с hash для проекта
     window.history.pushState({ projectId: item.id }, '', `#project-${item.id}`);
 }
 
 function closeModal() {
     const modal = document.getElementById('modal');
     const modalVideo = document.getElementById('modal-video');
+    const modalMediaList = document.getElementById('modal-media-list');
     
     modal.classList.remove('active');
     document.body.style.overflow = '';
     modalVideo.pause();
     modalVideo.currentTime = 0;
+    if (modalMediaList) {
+        modalMediaList.querySelectorAll('video').forEach(v => {
+            v.pause();
+            v.currentTime = 0;
+        });
+    }
     
     // Удаляем hash из URL
     if (window.location.hash) {
@@ -1960,17 +2046,15 @@ function openProjectFromURL() {
         return;
     }
     
-    const projectId = parseInt(hash.replace('#project-', ''));
+    const projectId = parseInt(hash.replace('#project-', ''), 10);
     if (isNaN(projectId)) {
         return;
     }
     
-    // Ищем проект в данных
-    const project = portfolioData.find(item => item.id === projectId);
-    if (project) {
-        // Небольшая задержка, чтобы убедиться, что все загружено
+    const projectIcon = icons.find(ic => Number(ic.item.id) === projectId || Number(ic.item.projectKey) === projectId);
+    if (projectIcon) {
         setTimeout(() => {
-            openModal(project);
+            openModal(projectIcon.item);
         }, 500);
     }
 }
