@@ -20,6 +20,17 @@ body {
     height: 100vh;
 }
 
+/* Метка версии сборки (v2 = новая логика: мало иконок, карточки со скроллом) */
+.build-version {
+    position: fixed;
+    bottom: 8px;
+    right: 10px;
+    z-index: 9999;
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.35);
+    pointer-events: none;
+}
+
 /* Панель управления */
 .control-panel {
     position: fixed;
