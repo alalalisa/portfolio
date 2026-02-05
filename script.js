@@ -705,6 +705,13 @@ function buildOrderlySidebar() {
     const container = document.getElementById('orderly-sidebar-tags');
     if (!container) return;
     container.innerHTML = '';
+    if (allTags.length === 0) {
+        const hint = document.createElement('p');
+        hint.className = 'orderly-sidebar-hint';
+        hint.textContent = 'Теги появятся, когда в portfolio_data.json у записей будут заполнены additional.col_2, col_3, col_4';
+        container.appendChild(hint);
+        return;
+    }
     allTags.forEach(tagText => {
         const t = String(tagText).trim();
         if (t === 'Теги' || t === 'Tags' || t === 'tags' || t === 'теги') return;
@@ -1965,10 +1972,14 @@ window.openModal = function openModal(item) {
                     img.src = mediaItem.media.thumbnail;
                     const fullImg = new Image();
                     fullImg.onload = () => { img.src = fullPath; };
+                    fullImg.onerror = () => { /* оставляем thumbnail */ };
                     fullImg.src = fullPath;
                 } else {
                     img.src = fullPath;
                 }
+                img.onerror = function() {
+                    if (mediaItem.media.thumbnail) this.src = mediaItem.media.thumbnail;
+                };
                 block.appendChild(img);
             }
             modalMediaList.appendChild(block);
@@ -2070,6 +2081,15 @@ function getTitle(item) {
     }
     if (item.additional && item.additional.col_0) {
         return item.additional.col_0;
+    }
+    // Для проектов и записей без title — показываем номер проекта вместо «Работа»
+    const projectKey = item.projectKey !== undefined ? item.projectKey : (typeof getProjectKey !== 'undefined' ? getProjectKey(item) : null);
+    if (projectKey != null) {
+        return 'Project ' + projectKey;
+    }
+    if (item.id !== undefined && item.id !== '') {
+        const pk = typeof getProjectKey !== 'undefined' ? getProjectKey(item) : item.id;
+        return 'Project ' + pk;
     }
     return 'Работа';
 }
@@ -2261,8 +2281,9 @@ async function loadSplashVideo() {
         return;
     }
     
-    // Видео в папке alisa: alisa05 (без пробела) — новая версия вместо alisa04
+    // Видео: сначала Alisa/alisa05 (папка Alisa на Cloudinary), затем старые варианты
     const videoVariants = [
+        'Alisa/alisa05',
         'alisa/alisa05',
         'alisa/alisa04_dzo5os',
         'alisa/alisa04',

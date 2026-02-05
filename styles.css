@@ -459,6 +459,13 @@ body.orderly-mode .portfolio-tag {
     display: none !important;
 }
 
+.orderly-sidebar-hint {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.5);
+    line-height: 1.4;
+    padding: 0.5rem 0;
+}
+
 .orderly-sidebar-tags {
     display: flex;
     flex-direction: column;
