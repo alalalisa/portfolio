@@ -2261,8 +2261,10 @@ async function loadSplashVideo() {
         return;
     }
     
-    // Пробуем разные варианты имени файла
+    // Пробуем разные варианты имени файла (alisa05 = новая версия вместо alisa04)
     const videoVariants = [
+        'alisa/alisa05',
+        'alisa/Alisa 05',  // если папка на Cloudinary с пробелом
         'alisa/alisa04_dzo5os',
         'alisa/alisa04',
         'alisa/alisa03' // Fallback
