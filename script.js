@@ -880,12 +880,16 @@ function setupViewModeToggle() {
     });
 }
 
-// ========== ГРУППИРОВКА ПО ПРОЕКТАМ (25a, 25b, 25c → один проект 25) ==========
+// ========== ГРУППИРОВКА ПО ПРОЕКТАМ (новый нейминг: 25a, 25b, 25c → один проект 25) ==========
+// Ожидаемый формат в portfolio_data.json после загрузки на Cloudinary:
+// - Одна запись на каждый медиафайл; id = строка "25a", "104b" или число 25 (число = номер проекта, буква = порядок медиа).
+// - media.path / media.thumbnail — URL Cloudinary (например images/25a, icons/25a).
+// Иконка на доске = один проект (по числу); в карточке — все медиа по порядку букв (25a, 25b, 25c).
 function getProjectKey(item) {
     if (item.projectId !== undefined && item.projectId !== null) return Number(item.projectId);
     const id = item.id;
     if (typeof id === 'string') {
-        const num = parseInt(id.replace(/^(\d+).*$/, '$1'), 10);
+        const num = parseInt(id.replace(/^(\d+).*$/i, '$1'), 10);
         return isNaN(num) ? id : num;
     }
     return Number(id);
