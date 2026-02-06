@@ -52,7 +52,7 @@ let colors = {
 // Настройки начального экрана (первая страница). Ссылки с хранилища: подставьте свои URL для фото и видео.
 // Иконки и медиа проектов задаются в portfolio_data.json (path, thumbnail).
 const splashConfig = {
-    photoPath: 'https://res.cloudinary.com/dwwyducge/image/upload/f_auto,q_auto/Alisa/images/alisa05', // Фото первой страницы (синхронно с storage_links.json)
+    photoPath: 'https://res.cloudinary.com/dwwyducge/image/upload/v1770312490/85c_kqj4bt.png', // Фото первой страницы (синхронно с storage_links.json)
     videoPath: '', // Видео первой страницы — если задано, используется этот URL; иначе пробуются варианты Cloudinary
     textLines: ['ALISA', 'VORONINA'], // запасной вариант, если координаты не загрузятся
     squareSize: 6, // Размер квадратиков (целое число для одинакового размера всех квадратиков)
@@ -1091,8 +1091,8 @@ function createIconElement(icon) {
     // Оптимизируем thumbnail URL для Cloudinary (уменьшаем размер и используем WebP)
     thumbnailPath = optimizeCloudinaryUrl(thumbnailPath, iconSize, iconSize);
     
-    // Извлекаем номер файла для возможного fallback
-    const fileNumberMatch = icon.item.media.filename.match(/^(\d+)/);
+    // Извлекаем номер файла для возможного fallback (безопасно, если filename отсутствует)
+    const fileNumberMatch = (icon.item.media.filename || '').match(/^(\d+)/);
     const fileNumber = fileNumberMatch ? fileNumberMatch[1] : null;
     
     if (icon.item.media.type === 'video') {
@@ -2259,46 +2259,6 @@ async function loadNameCoordinates() {
     }
 }
 
-async function loadSplashPhoto(splashPhoto) {
-    if (!splashPhoto) return;
-    const customPhoto = (storageLinks.splashPhoto && storageLinks.splashPhoto.trim()) ? storageLinks.splashPhoto.trim() : (splashConfig.photoPath && splashConfig.photoPath.trim()) ? splashConfig.photoPath.trim() : '';
-    const cloudinaryPhotoVariants = [
-        'Alisa/images/alisa05',
-        'Alisa/images/alisa5',
-        'Alisa/alisa05',
-        'Alisa/alisa5',
-        'alisa/images/alisa05',
-        'alisa/alisa05'
-    ];
-    const urlsToTry = customPhoto
-        ? [customPhoto, ...cloudinaryPhotoVariants.map(p => getCloudinaryImageUrl(p))]
-        : [splashConfig.photoPath, ...cloudinaryPhotoVariants.map(p => getCloudinaryImageUrl(p))].filter(Boolean);
-    splashPhoto.style.display = 'block';
-    splashPhoto.style.opacity = '1';
-    splashPhoto.style.visibility = 'visible';
-    splashPhoto.style.transform = 'scale(1.3) translateX(-50px)';
-    splashPhoto.style.transformOrigin = 'center center';
-    for (const photoUrl of urlsToTry) {
-        if (!photoUrl) continue;
-        const loaded = await new Promise((resolve) => {
-            let settled = false;
-            const done = (ok) => { if (settled) return; settled = true; splashPhoto.removeEventListener('load', onLoad); splashPhoto.removeEventListener('error', onErr); resolve(ok); };
-            const onLoad = () => done(true);
-            const onErr = () => done(false);
-            splashPhoto.addEventListener('load', onLoad);
-            splashPhoto.addEventListener('error', onErr);
-            splashPhoto.src = photoUrl;
-            setTimeout(() => done(splashPhoto.complete), 8000);
-        });
-        if (loaded) {
-            console.log('✓ Фотография первой страницы загружена:', photoUrl);
-            return;
-        }
-        console.warn('✗ Не загружено:', photoUrl);
-    }
-    console.error('Фото первой страницы: ни один URL не загрузился. Проверьте storage_links.json (splashPhoto) или пути в Cloudinary.');
-}
-
 async function setupSplashScreen() {
     const splashScreen = document.getElementById('splash-screen');
     const splashPhoto = document.getElementById('splash-photo-img');
@@ -2309,8 +2269,18 @@ async function setupSplashScreen() {
     // Загружаем видео вместо композиции из квадратов
     await loadSplashVideo();
 
-    // Загружаем фотографию: перебираем варианты URL до первой успешной загрузки
-    await loadSplashPhoto(splashPhoto);
+    // Фото первой страницы — только URL, который вы указали (storage_links.json или splashConfig.photoPath)
+    const photoUrl = (storageLinks.splashPhoto && storageLinks.splashPhoto.trim()) ? storageLinks.splashPhoto.trim() : (splashConfig.photoPath && splashConfig.photoPath.trim()) ? splashConfig.photoPath.trim() : '';
+    if (photoUrl && splashPhoto) {
+        splashPhoto.style.display = 'block';
+        splashPhoto.style.opacity = '1';
+        splashPhoto.style.visibility = 'visible';
+        splashPhoto.style.transform = 'scale(1.3) translateX(-50px)';
+        splashPhoto.style.transformOrigin = 'center center';
+        splashPhoto.src = photoUrl;
+        splashPhoto.onload = () => console.log('✓ Фотография загружена:', photoUrl);
+        splashPhoto.onerror = () => console.error('✗ Ошибка загрузки фото. Проверьте URL в storage_links.json (splashPhoto):', photoUrl);
+    }
     
     // Скрываем основной контент
     if (canvasContainer) {
