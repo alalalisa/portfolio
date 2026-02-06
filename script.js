@@ -147,13 +147,16 @@ function extractTags() {
     let processedItems = 0;
     let foundTagsCount = 0;
     
+    // Русские дубликаты тегов → показываем только английские варианты в списке тегов
+    const tagNormalize = { 'Генеративная графика': 'Generative graphics', 'Генеративный виджеинг': 'Vjing' };
     // Извлекаем все теги из col_2, col_3, col_4 (колонки C, D, E в Excel)
     portfolioData.forEach((item, itemIndex) => {
         if (item.additional) {
             ['col_2', 'col_3', 'col_4'].forEach(colKey => {
                 const tag = item.additional[colKey];
                 if (tag && typeof tag === 'string') {
-                    const trimmedTag = tag.trim();
+                    let trimmedTag = tag.trim();
+                    trimmedTag = tagNormalize[trimmedTag] || trimmedTag;
                     // Игнорируем пустые значения, URL и очень короткие строки (меньше 2 символов)
                     if (trimmedTag.length >= 2 && 
                         !trimmedTag.startsWith('http') && 
@@ -416,7 +419,7 @@ function filterIconsByTag(selectedTag) {
         } else if (item.additional) {
             ['col_2', 'col_3', 'col_4'].forEach(colKey => {
                 const tag = item.additional[colKey];
-                if (tag && typeof tag === 'string' && tag.trim() === normalizedSelectedTag) hasTag = true;
+                if (tagMatches(normalizedSelectedTag, tag)) hasTag = true;
             });
         }
         if (hasTag) {
@@ -671,11 +674,20 @@ function preventOverlap(x, y, currentIndex, otherIndices, allPositions = null) {
 }
 
 // ========== УПОРЯДОЧЕННЫЙ ВИД (ТЕГИ СПРАВА, ПРОЕКТЫ ПО СЕТКЕ) ==========
+// Совпадение тега: выбранный тег (англ.) совпадает с тегом в данных (в т.ч. русский дубликат)
+function tagMatches(selectedTag, itemTagValue) {
+    if (!itemTagValue || typeof itemTagValue !== 'string') return false;
+    const t = itemTagValue.trim();
+    if (t === selectedTag) return true;
+    if (selectedTag === 'Generative graphics' && t === 'Генеративная графика') return true;
+    if (selectedTag === 'Vjing' && t === 'Генеративный виджеинг') return true;
+    return false;
+}
 function itemHasTag(item, normalizedTag) {
     if (!item || !item.additional) return false;
     for (const colKey of ['col_2', 'col_3', 'col_4']) {
         const tag = item.additional[colKey];
-        if (tag && typeof tag === 'string' && tag.trim() === normalizedTag) return true;
+        if (tagMatches(normalizedTag, tag)) return true;
     }
     return false;
 }
