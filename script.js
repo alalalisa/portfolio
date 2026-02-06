@@ -52,7 +52,7 @@ let colors = {
 // Настройки начального экрана (первая страница). Ссылки с хранилища: подставьте свои URL для фото и видео.
 // Иконки и медиа проектов задаются в portfolio_data.json (path, thumbnail).
 const splashConfig = {
-    photoPath: 'https://res.cloudinary.com/dwwyducge/image/upload/Alisa/images/alisa05', // Фото справа — замените на свой URL с хранилища
+    photoPath: 'https://res.cloudinary.com/dwwyducge/image/upload/f_auto,q_auto/Alisa/images/alisa05', // Фото первой страницы (синхронно с storage_links.json)
     videoPath: '', // Видео первой страницы — если задано, используется этот URL; иначе пробуются варианты Cloudinary
     textLines: ['ALISA', 'VORONINA'], // запасной вариант, если координаты не загрузятся
     squareSize: 6, // Размер квадратиков (целое число для одинакового размера всех квадратиков)
@@ -2398,7 +2398,7 @@ async function loadSplashVideo() {
     }
     
     if (!loaded) {
-        console.error('Не удалось загрузить ни одно видео из вариантов:', videoVariants);
+        console.error('Не удалось загрузить ни одно видео из вариантов:', cloudinaryVariants);
     }
 }
 
