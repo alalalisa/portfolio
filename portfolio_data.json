@@ -239,25 +239,6 @@
     }
   },
   {
-    "id": "10",
-    "media": {
-      "filename": "10.jpg",
-      "type": "image",
-      "path": "https://res.cloudinary.com/dwwyducge/image/upload/images/10",
-      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/images/10"
-    },
-    "title": "33",
-    "description": "Программирование и управление лазерными излучателями, лазер барами и диодной лентой",
-    "additional": {
-      "col_0": "33",
-      "col_1": "Горьковская/Dreamlaser Tseh 2022",
-      "col_2": "Программирование и управление лазерными излучателями, лазер барами и диодной лентой",
-      "col_3": "Laser programming",
-      "col_4": "Vjing",
-      "col_5": "LED"
-    }
-  },
-  {
     "id": "15",
     "media": {
       "filename": "15.png",
