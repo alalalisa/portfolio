@@ -1,10 +1,16 @@
 #!/usr/bin/env python3
 """
 Переносит данные из таблицы сайт_портфолио.xlsx в portfolio_data.json.
-Ищет строку по номеру проекта: в первой колонке (col_0) должен быть номер проекта.
-Все записи с project_key N (например 3a, 3b, 3c) получают title, description
-и additional из найденной строки. Если первая колонка не число — используется
-старая логика: строка N = проект N (первая строка = проект 1).
+
+Структура таблицы:
+  Колонка 1 — номер проекта (соответствует иконкам и медиафайлам)
+  Колонка 2 — название проекта
+  Колонка 3 — описание проекта
+  Колонка 4 и 5 — теги проекта (попадают в колонку тегов на сайте)
+
+Ищет строку по номеру в первой колонке. Все записи с project_key N
+(2, 3a, 3b, …) получают title из кол.2, description из кол.3,
+additional.col_0 = номер, col_1 = название, col_2/col_3 = теги из кол.4–5.
 
 Запуск из корня проекта: python merge_table_into_portfolio.py
 Требуется: portfolio_data.json и сайт_портфолио.xlsx
@@ -32,35 +38,42 @@ def get_project_key(entry_id):
     return int(m.group(1)) if m else 0
 
 
+def safe_cell(row, idx):
+    """Значение ячейки как строка или пустая строка."""
+    if idx >= len(row):
+        return ""
+    value = row.iloc[idx] if hasattr(row, "iloc") else row[idx]
+    if pd.isna(value):
+        return ""
+    return str(value).strip()
+
+
 def row_to_additional_and_title_desc(row, num_columns):
-    """Из строки Excel собираем additional (col_0, col_1, ...), title, description."""
+    """
+    Таблица: кол.0 = номер, кол.1 = название, кол.2 = описание, кол.3–4 = теги.
+    additional.col_0 = номер, col_1 = название, col_2/col_3 = теги (для сайдбара).
+    """
+    col0 = safe_cell(row, 0)
+    col1 = safe_cell(row, 1)   # название проекта
+    col2 = safe_cell(row, 2)   # описание
+    tag1 = safe_cell(row, 3)   # тег 1
+    tag2 = safe_cell(row, 4)   # тег 2
+    tag3 = safe_cell(row, 5) if num_columns > 5 else ""
+
     additional = {}
-    texts = []
-    for col_idx in range(num_columns):
-        if col_idx >= len(row):
-            break
-        value = row.iloc[col_idx] if hasattr(row, "iloc") else row[col_idx]
-        if pd.notna(value):
-            value_str = str(value).strip()
-            if value_str:
-                additional[f"col_{col_idx}"] = value_str
-                texts.append(value_str)
+    if col0:
+        additional["col_0"] = col0
+    if col1:
+        additional["col_1"] = col1
+    if tag1:
+        additional["col_2"] = tag1
+    if tag2:
+        additional["col_3"] = tag2
+    if tag3:
+        additional["col_4"] = tag3
 
-    title = ""
-    description = ""
-    if texts:
-        sorted_texts = sorted(texts, key=len)
-        title = sorted_texts[0] if sorted_texts else ""
-        description = sorted_texts[-1] if sorted_texts else ""
-        if title == description and len(texts) > 1:
-            title = additional.get("col_0", title)
-            desc_parts = [additional.get(f"col_{i}", "") for i in range(1, num_columns) if additional.get(f"col_{i}")]
-            desc_parts = [x for x in desc_parts if x]
-            if desc_parts:
-                description = "\n\n".join(desc_parts)
-        if len(description) < 50 and len(texts) > 1:
-            description = "\n\n".join([t for t in texts if t != title])
-
+    title = col1
+    description = col2
     return additional, title, description
 
 
