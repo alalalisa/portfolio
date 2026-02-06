@@ -52,7 +52,22 @@
 
 Public_id можно взять из URL в медиабиблиотеке Cloudinary (часть после последнего `/` до расширения, например `98_gel9bi`). После создания маппинга запустите снова `python build_portfolio_from_folders.py`, затем `python merge_table_into_portfolio.py` чтобы вернуть названия и теги.
 
-**Если иконки или медиа в карточках не загружаются** — скорее всего на Cloudinary у файлов другие имена (с суффиксом). Заполните `cloudinary_mapping.json` реальными public_id, пересоберите данные скриптами выше.
+**Если иконки или медиа в карточках не загружаются** — скорее всего на Cloudinary у файлов другие имена (с суффиксом).
+
+### Автоматическое получение ссылок (рекомендуется)
+
+Скрипт **fetch_cloudinary_urls.py** вызывает Cloudinary API, получает список всех файлов в папках `Alisa/images` и `Alisa/icons` (включая суффиксы) и сам обновляет `portfolio_data.json` и создаёт `cloudinary_mapping.json`.
+
+1. В корне проекта создайте файл **.env** (скопируйте из env.example) и укажите:
+   - `CLOUDINARY_CLOUD_NAME=dwwyducge`
+   - `CLOUDINARY_API_KEY=...` и `CLOUDINARY_API_SECRET=...` (взять в Cloudinary: Settings → API Keys)
+2. Запустите: **python fetch_cloudinary_urls.py**
+
+Скрипт подставит реальные public_id (с суффиксами) для всех 500+ медиа и иконок. Вручную ссылки подставлять не нужно.
+
+### Ручной вариант
+
+Заполните `cloudinary_mapping.json` реальными public_id, пересоберите данные: `python build_portfolio_from_folders.py`, затем `python merge_table_into_portfolio.py`.
 
 ## Перенос тегов и названий из таблицы
 

@@ -18,6 +18,8 @@ function getCloudinaryVideoUrl(filename) {
 // ========== ГЛОБАЛЬНЫЕ ПЕРЕМЕННЫЕ ==========
 let portfolioData = [];
 let icons = [];
+/** Links from storage_links.json (splash photo/video). Paste your working URLs there. */
+let storageLinks = {};
 let visibleIcons = new Set();
 let shapesCoordinates = null; // Координаты из файла
 let currentShape = 'random'; // Всегда в режиме random
@@ -47,9 +49,11 @@ let colors = {
     text: '#e0e0e0'
 };
 
-// Настройки начального экрана
+// Настройки начального экрана (первая страница). Ссылки с хранилища: подставьте свои URL для фото и видео.
+// Иконки и медиа проектов задаются в portfolio_data.json (path, thumbnail).
 const splashConfig = {
-    photoPath: 'https://res.cloudinary.com/dwwyducge/image/upload/icons/219.png', // Фотография справа
+    photoPath: 'https://res.cloudinary.com/dwwyducge/image/upload/Alisa/images/alisa05', // Фото справа — замените на свой URL с хранилища
+    videoPath: '', // Видео первой страницы — если задано, используется этот URL; иначе пробуются варианты Cloudinary
     textLines: ['ALISA', 'VORONINA'], // запасной вариант, если координаты не загрузятся
     squareSize: 6, // Размер квадратиков (целое число для одинакового размера всех квадратиков)
     squareSpacing: 4, // Расстояние между квадратиками
@@ -87,6 +91,18 @@ let boardTouchmoveHandler = null;
 async function loadPortfolioData() {
     try {
         console.log('Начинаем загрузку данных портфолио...');
+        // Загружаем ссылки с хранилища (первая страница: фото и видео). Файл storage_links.json — подставьте свои URL.
+        try {
+            const linksRes = await fetch('storage_links.json?v=' + Date.now());
+            if (linksRes.ok) {
+                storageLinks = await linksRes.json();
+                if (storageLinks.splashPhoto || storageLinks.splashVideo) {
+                    console.log('Загружены ссылки из storage_links.json');
+                }
+            }
+        } catch (e) {
+            console.log('storage_links.json не найден или ошибка — используем splashConfig');
+        }
         // Загружаем данные портфолио
         const response = await fetch('portfolio_data.json');
         if (!response.ok) {
@@ -1035,6 +1051,15 @@ function optimizeCloudinaryUrl(url, width = 80, height = 80) {
     return url;
 }
 
+// Для полноразмерных изображений Cloudinary: f_auto,q_auto помогает отдать правильный формат
+function ensureCloudinaryImageUrl(url) {
+    if (!url || !url.includes('cloudinary.com') || url.includes('/video/')) return url;
+    if (url.includes('/upload/') && !url.includes('/upload/f_') && !url.includes('/upload/w_')) {
+        return url.replace('/upload/', '/upload/f_auto,q_auto/');
+    }
+    return url;
+}
+
 function createIconElement(icon) {
     if (icon.element) return icon.element;
 
@@ -1968,14 +1993,15 @@ window.openModal = function openModal(item) {
                 const img = document.createElement('img');
                 img.className = 'modal-media';
                 img.alt = getTitle(mediaItem) || 'Работа';
+                const imageUrl = ensureCloudinaryImageUrl(fullPath);
                 if (mediaItem.media.thumbnail) {
                     img.src = mediaItem.media.thumbnail;
                     const fullImg = new Image();
-                    fullImg.onload = () => { img.src = fullPath; };
+                    fullImg.onload = () => { img.src = imageUrl; };
                     fullImg.onerror = () => { /* оставляем thumbnail */ };
-                    fullImg.src = fullPath;
+                    fullImg.src = imageUrl;
                 } else {
-                    img.src = fullPath;
+                    img.src = imageUrl;
                 }
                 img.onerror = function() {
                     if (mediaItem.media.thumbnail) this.src = mediaItem.media.thumbnail;
@@ -1997,13 +2023,14 @@ window.openModal = function openModal(item) {
             modalVideo.load();
             modalVideo.play().catch(() => {});
         } else {
-            modalImage.src = item.media.thumbnail || fullPath;
+            const imageUrl = ensureCloudinaryImageUrl(fullPath);
+            modalImage.src = item.media.thumbnail || imageUrl;
             modalImage.alt = getTitle(item) || 'Работа';
             modalImage.style.display = 'block';
             if (item.media.thumbnail) {
                 const fullImg = new Image();
-                fullImg.onload = () => { modalImage.src = fullPath; };
-                fullImg.src = fullPath;
+                fullImg.onload = () => { modalImage.src = imageUrl; };
+                fullImg.src = imageUrl;
             }
         }
     }
@@ -2230,34 +2257,34 @@ async function setupSplashScreen() {
     // Загружаем видео вместо композиции из квадратов
     await loadSplashVideo();
 
-    // Устанавливаем фотографию (если путь указан)
-    if (splashConfig.photoPath && splashPhoto) {
-        console.log('Загружаем фотографию:', splashConfig.photoPath);
+    // Устанавливаем фотографию: приоритет storage_links.json, иначе splashConfig
+    const photoUrl = (storageLinks.splashPhoto && storageLinks.splashPhoto.trim()) ? storageLinks.splashPhoto.trim() : (splashConfig.photoPath || '');
+    if (photoUrl && splashPhoto) {
+        console.log('Загружаем фотографию:', photoUrl);
         splashPhoto.style.display = 'block';
         splashPhoto.style.opacity = '1';
         splashPhoto.style.visibility = 'visible';
-        splashPhoto.src = splashConfig.photoPath;
+        splashPhoto.src = photoUrl;
         
-        // Увеличиваем картинку в 1.3 раза и сдвигаем влево на 100px
         splashPhoto.style.transform = 'scale(1.3) translateX(-50px)';
         splashPhoto.style.transformOrigin = 'center center';
         
         splashPhoto.onload = () => {
-            console.log('✓ Фотография успешно загружена:', splashConfig.photoPath);
+            console.log('✓ Фотография успешно загружена:', photoUrl);
             splashPhoto.style.display = 'block';
             splashPhoto.style.opacity = '1';
         };
         
         splashPhoto.onerror = (e) => {
-            console.error('✗ Ошибка загрузки фотографии:', splashConfig.photoPath, e);
-            console.error('Проверьте путь к файлу');
+            console.error('✗ Ошибка загрузки фотографии:', photoUrl, e);
+            console.error('Вставьте рабочий URL в storage_links.json (splashPhoto) или в script.js splashConfig.photoPath');
         };
     } else {
         if (!splashPhoto) {
             console.error('Элемент splash-photo-img не найден');
         }
-        if (!splashConfig.photoPath) {
-            console.warn('Путь к фотографии не указан в splashConfig.photoPath');
+        if (!photoUrl) {
+            console.warn('Укажите splashPhoto в storage_links.json или photoPath в script.js');
         }
     }
     
@@ -2281,29 +2308,33 @@ async function loadSplashVideo() {
         return;
     }
     
-    // Только Alisa 5 на сплеше (без пробела в имени, папка Alisa на Cloudinary)
-    const videoVariants = [
+    // Первая страница — видео: приоритет storage_links.json (splashVideo), затем splashConfig.videoPath, затем варианты Cloudinary
+    const cloudinaryVariants = [
+        'Alisa/images/alisa05',
+        'Alisa/images/alisa5',
         'Alisa/alisa05',
-        'alisa/alisa05',
         'Alisa/alisa5',
+        'alisa/alisa05',
         'alisa/alisa5'
     ];
+    const customVideo = (storageLinks.splashVideo && storageLinks.splashVideo.trim()) ? storageLinks.splashVideo.trim() : (splashConfig.videoPath && splashConfig.videoPath.trim()) ? splashConfig.videoPath.trim() : '';
+    const urlsToTry = customVideo
+        ? [customVideo, ...cloudinaryVariants.map(v => getCloudinaryVideoUrl(v))]
+        : cloudinaryVariants.map(v => getCloudinaryVideoUrl(v));
     
-    let videoSrc = null;
     let loaded = false;
-    
-    for (const variant of videoVariants) {
-        videoSrc = getCloudinaryVideoUrl(variant);
-        console.log('Пробуем загрузить видео:', videoSrc);
+    for (const videoSrc of urlsToTry) {
+        const currentSrc = videoSrc;
+        console.log('Пробуем загрузить видео:', currentSrc);
         
-        splashVideo.src = videoSrc;
+        splashVideo.src = currentSrc;
         splashVideo.style.display = 'block';
         splashVideo.style.opacity = '1';
         
         // Ждем загрузки или ошибки
         await new Promise((resolve) => {
             const onLoaded = () => {
-                console.log('✓ Видео успешно загружено:', videoSrc);
+                console.log('✓ Видео успешно загружено:', currentSrc);
                 loaded = true;
                 splashVideo.removeEventListener('loadeddata', onLoaded);
                 splashVideo.removeEventListener('error', onError);
@@ -2311,7 +2342,7 @@ async function loadSplashVideo() {
             };
             
             const onError = () => {
-                console.warn('✗ Ошибка загрузки:', videoSrc);
+                console.warn('✗ Ошибка загрузки:', currentSrc);
                 splashVideo.removeEventListener('loadeddata', onLoaded);
                 splashVideo.removeEventListener('error', onError);
                 resolve();
