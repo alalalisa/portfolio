@@ -60,16 +60,19 @@ def row_to_additional_and_title_desc(row, num_columns):
     tag2 = safe_cell(row, 4)   # тег 2
     tag3 = safe_cell(row, 5) if num_columns > 5 else ""
 
+    # В теги попадают только короткие подписи (до 50 символов), не длинные описания
+    MAX_TAG_LEN = 50
+
     additional = {}
     if col0:
         additional["col_0"] = col0
     if col1:
         additional["col_1"] = col1
-    if tag1:
+    if tag1 and len(tag1) <= MAX_TAG_LEN:
         additional["col_2"] = tag1
-    if tag2:
+    if tag2 and len(tag2) <= MAX_TAG_LEN:
         additional["col_3"] = tag2
-    if tag3:
+    if tag3 and len(tag3) <= MAX_TAG_LEN:
         additional["col_4"] = tag3
 
     title = col1

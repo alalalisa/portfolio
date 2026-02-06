@@ -143,7 +143,7 @@ function extractTags() {
                         !trimmedTag.startsWith('http') && 
                         !trimmedTag.startsWith('www.') &&
                         trimmedTag !== 'с' && // Игнорируем одиночные буквы
-                        trimmedTag.length < 100) { // Игнорируем слишком длинные значения (вероятно описания)
+                        trimmedTag.length <= 50) { // Только короткие подписи как теги, не длинные описания
                         tagSet.add(trimmedTag);
                         foundTagsCount++;
                         if (foundTagsCount <= 5) { // Показываем первые 5 найденных тегов для отладки
@@ -2281,13 +2281,12 @@ async function loadSplashVideo() {
         return;
     }
     
-    // Видео: сначала Alisa/alisa05 (папка Alisa на Cloudinary), затем старые варианты
+    // Только Alisa 5 на сплеше (без пробела в имени, папка Alisa на Cloudinary)
     const videoVariants = [
         'Alisa/alisa05',
         'alisa/alisa05',
-        'alisa/alisa04_dzo5os',
-        'alisa/alisa04',
-        'alisa/alisa03' // Fallback
+        'Alisa/alisa5',
+        'alisa/alisa5'
     ];
     
     let videoSrc = null;
