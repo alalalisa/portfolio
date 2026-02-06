@@ -580,7 +580,6 @@ body.orderly-mode .portfolio-tag {
     border-radius: 8px;
     overflow: hidden;
     animation: slideIn 0.3s;
-    border: 1px solid var(--panel-border);
 }
 
 @keyframes slideIn {
@@ -660,7 +659,8 @@ body.orderly-mode .portfolio-tag {
     flex-direction: column;
     align-items: center;
     gap: 1rem;
-    padding: 0 1rem 1rem;
+    padding: 0 1rem 1.5rem 1rem;
+    min-height: min-content;
 }
 
 .modal-media-block {
@@ -705,14 +705,15 @@ body.orderly-mode .portfolio-tag {
 .modal-title {
     font-size: 1.8rem;
     margin-bottom: 1rem;
-    color: var(--accent-color);
-    font-weight: 400;
+    color: #7CBFD6;
+    font-weight: 300;
 }
 
 .modal-description {
     font-size: 1rem;
     line-height: 1.8;
-    color: var(--text-color);
+    color: #7CBFD6;
+    font-weight: 300;
     white-space: pre-wrap;
 }
 
