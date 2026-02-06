@@ -1,18 +1,18 @@
 ---
-description: After every portfolio/splash change, commit AND push to GitHub so the user sees updates on GitHub Pages
-globs: index.html, script.js, styles.css
+description: After every portfolio/splash change or correction, commit AND push to GitHub so the user sees updates on GitHub Pages
+globs: index.html, script.js, styles.css, portfolio_data.json
 alwaysApply: false
 ---
 
-# Portfolio: commit and push after every change
+# Portfolio: commit and push after every change / correction
 
-When you make **any** change to the portfolio site (splash layout, index.html, script.js, styles.css, or related edits):
+When you make **any** change or correction to the portfolio site (splash, index.html, script.js, styles.css, portfolio_data.json, merge script, or related docs):
 
 1. **Immediately after completing the edits** — do NOT skip, do NOT wait for user reminder:
-   - `git add` for the changed files (index.html, script.js, styles.css as relevant)
+   - `git add` the changed files (only what was part of this correction)
    - `git commit -m "Brief description of the change"`
    - `git push origin main`
 
-2. Do **not** add unrelated files (docs, .py scripts, assets, toe, fonts, etc.) unless the user asked.
+2. Include in the commit: any file you edited for this correction (e.g. script.js, portfolio_data.json, merge_table_into_portfolio.py, CLOUDINARY_NEW_NAMING.md). Do **not** add unrelated files (other docs, assets, toe, fonts, xlsx) unless the user asked.
 
-3. **Always** commit and push automatically after each correction — the user should never have to ask.
+3. **After each correction, send commit to GitHub** — the user should not have to ask.

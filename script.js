@@ -708,7 +708,7 @@ function buildOrderlySidebar() {
     if (allTags.length === 0) {
         const hint = document.createElement('p');
         hint.className = 'orderly-sidebar-hint';
-        hint.textContent = 'Теги появятся, когда в portfolio_data.json у записей будут заполнены additional.col_2, col_3, col_4';
+        hint.textContent = 'Пока нет тегов';
         container.appendChild(hint);
         return;
     }
