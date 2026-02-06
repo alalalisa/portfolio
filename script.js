@@ -2259,6 +2259,46 @@ async function loadNameCoordinates() {
     }
 }
 
+async function loadSplashPhoto(splashPhoto) {
+    if (!splashPhoto) return;
+    const customPhoto = (storageLinks.splashPhoto && storageLinks.splashPhoto.trim()) ? storageLinks.splashPhoto.trim() : (splashConfig.photoPath && splashConfig.photoPath.trim()) ? splashConfig.photoPath.trim() : '';
+    const cloudinaryPhotoVariants = [
+        'Alisa/images/alisa05',
+        'Alisa/images/alisa5',
+        'Alisa/alisa05',
+        'Alisa/alisa5',
+        'alisa/images/alisa05',
+        'alisa/alisa05'
+    ];
+    const urlsToTry = customPhoto
+        ? [customPhoto, ...cloudinaryPhotoVariants.map(p => getCloudinaryImageUrl(p))]
+        : [splashConfig.photoPath, ...cloudinaryPhotoVariants.map(p => getCloudinaryImageUrl(p))].filter(Boolean);
+    splashPhoto.style.display = 'block';
+    splashPhoto.style.opacity = '1';
+    splashPhoto.style.visibility = 'visible';
+    splashPhoto.style.transform = 'scale(1.3) translateX(-50px)';
+    splashPhoto.style.transformOrigin = 'center center';
+    for (const photoUrl of urlsToTry) {
+        if (!photoUrl) continue;
+        const loaded = await new Promise((resolve) => {
+            let settled = false;
+            const done = (ok) => { if (settled) return; settled = true; splashPhoto.removeEventListener('load', onLoad); splashPhoto.removeEventListener('error', onErr); resolve(ok); };
+            const onLoad = () => done(true);
+            const onErr = () => done(false);
+            splashPhoto.addEventListener('load', onLoad);
+            splashPhoto.addEventListener('error', onErr);
+            splashPhoto.src = photoUrl;
+            setTimeout(() => done(splashPhoto.complete), 8000);
+        });
+        if (loaded) {
+            console.log('✓ Фотография первой страницы загружена:', photoUrl);
+            return;
+        }
+        console.warn('✗ Не загружено:', photoUrl);
+    }
+    console.error('Фото первой страницы: ни один URL не загрузился. Проверьте storage_links.json (splashPhoto) или пути в Cloudinary.');
+}
+
 async function setupSplashScreen() {
     const splashScreen = document.getElementById('splash-screen');
     const splashPhoto = document.getElementById('splash-photo-img');
@@ -2269,36 +2309,8 @@ async function setupSplashScreen() {
     // Загружаем видео вместо композиции из квадратов
     await loadSplashVideo();
 
-    // Устанавливаем фотографию: приоритет storage_links.json, иначе splashConfig
-    const photoUrl = (storageLinks.splashPhoto && storageLinks.splashPhoto.trim()) ? storageLinks.splashPhoto.trim() : (splashConfig.photoPath || '');
-    if (photoUrl && splashPhoto) {
-        console.log('Загружаем фотографию:', photoUrl);
-        splashPhoto.style.display = 'block';
-        splashPhoto.style.opacity = '1';
-        splashPhoto.style.visibility = 'visible';
-        splashPhoto.src = photoUrl;
-        
-        splashPhoto.style.transform = 'scale(1.3) translateX(-50px)';
-        splashPhoto.style.transformOrigin = 'center center';
-        
-        splashPhoto.onload = () => {
-            console.log('✓ Фотография успешно загружена:', photoUrl);
-            splashPhoto.style.display = 'block';
-            splashPhoto.style.opacity = '1';
-        };
-        
-        splashPhoto.onerror = (e) => {
-            console.error('✗ Ошибка загрузки фотографии:', photoUrl, e);
-            console.error('Вставьте рабочий URL в storage_links.json (splashPhoto) или в script.js splashConfig.photoPath');
-        };
-    } else {
-        if (!splashPhoto) {
-            console.error('Элемент splash-photo-img не найден');
-        }
-        if (!photoUrl) {
-            console.warn('Укажите splashPhoto в storage_links.json или photoPath в script.js');
-        }
-    }
+    // Загружаем фотографию: перебираем варианты URL до первой успешной загрузки
+    await loadSplashPhoto(splashPhoto);
     
     // Скрываем основной контент
     if (canvasContainer) {
