@@ -1073,13 +1073,15 @@ function ensureCloudinaryImageUrl(url) {
     return url;
 }
 
-// Для видео Cloudinary: f_mp4 гарантирует отдачу в формате MP4 и правильный Content-Type (часть видео без этого не воспроизводится в браузере)
+// Для видео Cloudinary: видео лежат в папке images; f_mp4 — отдача в MP4 с правильным Content-Type
 function ensureCloudinaryVideoUrl(url) {
     if (!url || !url.includes('cloudinary.com') || !url.includes('/video/')) return url;
-    if (url.includes('/upload/') && !url.includes('/upload/f_')) {
-        return url.replace('/upload/', '/upload/f_mp4/');
+    // Путь к видео — папка images, не icons (иконки — только превью)
+    let out = url.replace(/\/video\/upload\/([^/]*?)icons\//, '/video/upload/$1images/');
+    if (out.includes('/upload/') && !out.includes('/upload/f_')) {
+        out = out.replace('/upload/', '/upload/f_mp4/');
     }
-    return url;
+    return out;
 }
 
 function createIconElement(icon) {
