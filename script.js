@@ -1082,6 +1082,10 @@ function ensureCloudinaryVideoUrl(url) {
     if (out.includes('/upload/') && !out.includes('/upload/f_') && !out.includes('/upload/vc_')) {
         out = out.replace('/upload/', '/upload/f_mp4,vc_h264/');
     }
+    // Суффикс .mp4 помогает браузеру и CDN распознать тип (важно для части роликов, напр. проект 36)
+    if (!/\.(mp4|webm|mov|m4v)$/i.test(out)) {
+        out = out.replace(/\?.*$/, '') + '.mp4';
+    }
     return out;
 }
 
@@ -2014,7 +2018,11 @@ window.openModal = function openModal(item) {
                 video.className = 'modal-media';
                 video.controls = true;
                 video.preload = 'auto';
-                video.src = ensureCloudinaryVideoUrl(fullPath);
+                video.playsInline = true;
+                video.setAttribute('playsinline', '');
+                const videoUrl = ensureCloudinaryVideoUrl(fullPath);
+                video.src = videoUrl;
+                video.load();
                 block.appendChild(video);
             } else {
                 const img = document.createElement('img');
