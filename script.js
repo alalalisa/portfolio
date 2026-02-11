@@ -1073,11 +1073,11 @@ function ensureCloudinaryImageUrl(url) {
     return url;
 }
 
-// Для видео Cloudinary: f_mp4 даёт совместимый с браузером формат, меньше проблем с воспроизведением
+// Для видео Cloudinary: f_mp4 гарантирует отдачу в формате MP4 и правильный Content-Type (часть видео без этого не воспроизводится в браузере)
 function ensureCloudinaryVideoUrl(url) {
     if (!url || !url.includes('cloudinary.com') || !url.includes('/video/')) return url;
-    if (url.includes('/video/upload/') && !url.includes('/upload/f_')) {
-        return url.replace('/video/upload/', '/video/upload/f_mp4,q_auto/');
+    if (url.includes('/upload/') && !url.includes('/upload/f_')) {
+        return url.replace('/upload/', '/upload/f_mp4/');
     }
     return url;
 }
@@ -2010,16 +2010,8 @@ window.openModal = function openModal(item) {
                 const video = document.createElement('video');
                 video.className = 'modal-media';
                 video.controls = true;
-                video.preload = 'metadata';
-                video.setAttribute('crossorigin', 'anonymous');
+                video.preload = 'auto';
                 video.src = ensureCloudinaryVideoUrl(fullPath);
-                video.onerror = function() {
-                    if (this.src !== fullPath) {
-                        this.removeAttribute('crossorigin');
-                        this.src = fullPath;
-                        this.load();
-                    }
-                };
                 block.appendChild(video);
             } else {
                 const img = document.createElement('img');
@@ -2050,20 +2042,10 @@ window.openModal = function openModal(item) {
         modalVideo.style.display = 'none';
         const fullPath = item.media.path;
         if (item.media.type === 'video') {
-            modalVideo.setAttribute('crossorigin', 'anonymous');
-            modalVideo.preload = 'metadata';
-            const videoUrl = ensureCloudinaryVideoUrl(fullPath);
-            modalVideo.src = videoUrl;
+            modalVideo.src = ensureCloudinaryVideoUrl(fullPath);
             modalVideo.style.display = 'block';
             modalVideo.load();
             modalVideo.play().catch(() => {});
-            modalVideo.onerror = function() {
-                if (modalVideo.src !== fullPath) {
-                    modalVideo.removeAttribute('crossorigin');
-                    modalVideo.src = fullPath;
-                    modalVideo.load();
-                }
-            };
         } else {
             const imageUrl = ensureCloudinaryImageUrl(fullPath);
             modalImage.src = item.media.thumbnail || imageUrl;
@@ -2356,7 +2338,7 @@ async function loadSplashVideo() {
     
     let loaded = false;
     for (const videoSrc of urlsToTry) {
-        const currentSrc = videoSrc;
+        const currentSrc = ensureCloudinaryVideoUrl(videoSrc);
         console.log('Пробуем загрузить видео:', currentSrc);
         
         splashVideo.src = currentSrc;
