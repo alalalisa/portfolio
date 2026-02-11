@@ -1133,7 +1133,7 @@ function createIconElement(icon) {
 
     const overlay = document.createElement('div');
     overlay.className = 'icon-overlay';
-    overlay.textContent = getDisplayTitle(icon.item) || getDescription(icon.item) || '';
+    overlay.textContent = getTitle(icon.item) || 'Работа';
 
     div.appendChild(mediaElement);
     div.appendChild(overlay);
@@ -1946,7 +1946,11 @@ function setupControlPanel() {
 // ========== МОДАЛЬНОЕ ОКНО ==========
 // Делаем openModal глобальной для доступа из p5.js
 window.openModal = function openModal(item) {
-    console.log('openModal вызван для item:', item ? (item.id + ' - ' + (item.title || 'без названия')) : 'null');
+    if (!item) {
+        console.warn('openModal: item отсутствует');
+        return;
+    }
+    console.log('openModal вызван для item:', item.id + ' - ' + (item.title || 'без названия'));
     
     // Проверяем, не заблокированы ли клики (переключение формы)
     if (typeof blockClicks !== 'undefined' && blockClicks) {
