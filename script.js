@@ -959,6 +959,7 @@ function buildProjectsFromData() {
             media: first.media,
             title: getTitle(first),
             description: getDescription(first),
+            descriptionEn: first.descriptionEn || '',
             additional: first.additional
         });
     });
@@ -1981,7 +1982,9 @@ window.openModal = function openModal(item) {
     const modalVideo = document.getElementById('modal-video');
 
     modalTitle.textContent = getTitle(item) || 'Работа';
-    modalDescription.textContent = getDescription(item) || '';
+    const descRu = getDescription(item) || '';
+    const descEn = (item.descriptionEn && item.descriptionEn.trim()) ? item.descriptionEn.trim() : '';
+    modalDescription.textContent = descEn ? descEn + '\n\n' + descRu : descRu;
 
     const isProject = item.items && item.items.length > 0;
     if (isProject) {
