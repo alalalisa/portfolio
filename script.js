@@ -1073,13 +1073,14 @@ function ensureCloudinaryImageUrl(url) {
     return url;
 }
 
-// Для видео Cloudinary: видео лежат в папке images; f_mp4 — отдача в MP4 с правильным Content-Type
+// Для видео Cloudinary: папка images; f_mp4 + vc_h264 — принудительный MP4/H.264 для воспроизведения в браузере (особенно для .MOV и нестандартных кодеков)
 function ensureCloudinaryVideoUrl(url) {
     if (!url || !url.includes('cloudinary.com') || !url.includes('/video/')) return url;
     // Путь к видео — папка images, не icons (иконки — только превью)
     let out = url.replace(/\/video\/upload\/([^/]*?)icons\//, '/video/upload/$1images/');
-    if (out.includes('/upload/') && !out.includes('/upload/f_')) {
-        out = out.replace('/upload/', '/upload/f_mp4/');
+    // Всегда отдавать MP4 с кодеком H.264 — иначе часть видео (особенно из .MOV) не воспроизводится
+    if (out.includes('/upload/') && !out.includes('/upload/f_') && !out.includes('/upload/vc_')) {
+        out = out.replace('/upload/', '/upload/f_mp4,vc_h264/');
     }
     return out;
 }
