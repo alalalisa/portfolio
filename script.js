@@ -1073,6 +1073,15 @@ function ensureCloudinaryImageUrl(url) {
     return url;
 }
 
+// Для видео Cloudinary: f_mp4 даёт совместимый с браузером формат, меньше проблем с воспроизведением
+function ensureCloudinaryVideoUrl(url) {
+    if (!url || !url.includes('cloudinary.com') || !url.includes('/video/')) return url;
+    if (url.includes('/video/upload/') && !url.includes('/upload/f_')) {
+        return url.replace('/video/upload/', '/video/upload/f_mp4,q_auto/');
+    }
+    return url;
+}
+
 function createIconElement(icon) {
     if (icon.element) return icon.element;
 
@@ -1981,7 +1990,7 @@ window.openModal = function openModal(item) {
     const modalImage = document.getElementById('modal-image');
     const modalVideo = document.getElementById('modal-video');
 
-    modalTitle.textContent = getTitle(item) || 'Работа';
+    modalTitle.textContent = getDisplayTitle(item);
     const descRu = getDescription(item) || '';
     const descEn = (item.descriptionEn && item.descriptionEn.trim()) ? item.descriptionEn.trim() : '';
     modalDescription.textContent = descEn ? descEn + '\n\n' + descRu : descRu;
@@ -2001,8 +2010,16 @@ window.openModal = function openModal(item) {
                 const video = document.createElement('video');
                 video.className = 'modal-media';
                 video.controls = true;
-                video.src = fullPath;
-                video.preload = 'auto';
+                video.preload = 'metadata';
+                video.setAttribute('crossorigin', 'anonymous');
+                video.src = ensureCloudinaryVideoUrl(fullPath);
+                video.onerror = function() {
+                    if (this.src !== fullPath) {
+                        this.removeAttribute('crossorigin');
+                        this.src = fullPath;
+                        this.load();
+                    }
+                };
                 block.appendChild(video);
             } else {
                 const img = document.createElement('img');
@@ -2033,10 +2050,20 @@ window.openModal = function openModal(item) {
         modalVideo.style.display = 'none';
         const fullPath = item.media.path;
         if (item.media.type === 'video') {
-            modalVideo.src = fullPath;
+            modalVideo.setAttribute('crossorigin', 'anonymous');
+            modalVideo.preload = 'metadata';
+            const videoUrl = ensureCloudinaryVideoUrl(fullPath);
+            modalVideo.src = videoUrl;
             modalVideo.style.display = 'block';
             modalVideo.load();
             modalVideo.play().catch(() => {});
+            modalVideo.onerror = function() {
+                if (modalVideo.src !== fullPath) {
+                    modalVideo.removeAttribute('crossorigin');
+                    modalVideo.src = fullPath;
+                    modalVideo.load();
+                }
+            };
         } else {
             const imageUrl = ensureCloudinaryImageUrl(fullPath);
             modalImage.src = item.media.thumbnail || imageUrl;
@@ -2134,6 +2161,14 @@ function getTitle(item) {
         return 'Project ' + pk;
     }
     return 'Работа';
+}
+
+/** Если название проекта — только цифра, возвращаем пустую строку (в модалке показываем только описание). */
+function getDisplayTitle(item) {
+    const t = getTitle(item);
+    if (!t || !String(t).trim()) return '';
+    if (/^\d+$/.test(String(t).trim())) return '';
+    return t;
 }
 
 function getDescription(item) {

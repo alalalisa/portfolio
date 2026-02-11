@@ -709,6 +709,10 @@ body.orderly-mode .portfolio-tag {
     font-weight: 300;
 }
 
+.modal-title:empty {
+    display: none;
+}
+
 .modal-description {
     font-size: 1rem;
     line-height: 1.8;
