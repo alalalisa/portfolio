@@ -1946,11 +1946,7 @@ function setupControlPanel() {
 // ========== МОДАЛЬНОЕ ОКНО ==========
 // Делаем openModal глобальной для доступа из p5.js
 window.openModal = function openModal(item) {
-    if (!item) {
-        console.warn('openModal: item отсутствует');
-        return;
-    }
-    console.log('openModal вызван для item:', item.id + ' - ' + (item.title || 'без названия'));
+    console.log('openModal вызван для item:', item ? (item.id + ' - ' + (item.title || 'без названия')) : 'null');
     
     // Проверяем, не заблокированы ли клики (переключение формы)
     if (typeof blockClicks !== 'undefined' && blockClicks) {
@@ -1985,7 +1981,7 @@ window.openModal = function openModal(item) {
     const modalImage = document.getElementById('modal-image');
     const modalVideo = document.getElementById('modal-video');
 
-    modalTitle.textContent = getDisplayTitle(item);
+    modalTitle.textContent = getTitle(item) || 'Работа';
     const descRu = getDescription(item) || '';
     const descEn = (item.descriptionEn && item.descriptionEn.trim()) ? item.descriptionEn.trim() : '';
     modalDescription.textContent = descEn ? descEn + '\n\n' + descRu : descRu;
@@ -2138,14 +2134,6 @@ function getTitle(item) {
         return 'Project ' + pk;
     }
     return 'Работа';
-}
-
-/** Если название проекта — только цифра, возвращаем пустую строку (показываем только описание). */
-function getDisplayTitle(item) {
-    const t = getTitle(item);
-    if (!t || !String(t).trim()) return '';
-    if (/^\d+$/.test(String(t).trim())) return '';
-    return t;
 }
 
 function getDescription(item) {
