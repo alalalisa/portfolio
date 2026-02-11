@@ -1133,7 +1133,7 @@ function createIconElement(icon) {
 
     const overlay = document.createElement('div');
     overlay.className = 'icon-overlay';
-    overlay.textContent = getTitle(icon.item) || 'Работа';
+    overlay.textContent = getDisplayTitle(icon.item) || getDescription(icon.item) || '';
 
     div.appendChild(mediaElement);
     div.appendChild(overlay);
@@ -1981,7 +1981,7 @@ window.openModal = function openModal(item) {
     const modalImage = document.getElementById('modal-image');
     const modalVideo = document.getElementById('modal-video');
 
-    modalTitle.textContent = getTitle(item) || 'Работа';
+    modalTitle.textContent = getDisplayTitle(item);
     const descRu = getDescription(item) || '';
     const descEn = (item.descriptionEn && item.descriptionEn.trim()) ? item.descriptionEn.trim() : '';
     modalDescription.textContent = descEn ? descEn + '\n\n' + descRu : descRu;
@@ -2134,6 +2134,14 @@ function getTitle(item) {
         return 'Project ' + pk;
     }
     return 'Работа';
+}
+
+/** Если название проекта — только цифра, возвращаем пустую строку (показываем только описание). */
+function getDisplayTitle(item) {
+    const t = getTitle(item);
+    if (!t || !String(t).trim()) return '';
+    if (/^\d+$/.test(String(t).trim())) return '';
+    return t;
 }
 
 function getDescription(item) {
