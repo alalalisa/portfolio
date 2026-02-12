@@ -1082,8 +1082,9 @@ function ensureCloudinaryVideoUrl(url) {
     if (out.includes('/upload/') && !out.includes('/upload/f_') && !out.includes('/upload/vc_')) {
         out = out.replace('/upload/', '/upload/f_mp4,vc_h264/');
     }
-    // Суффикс .mp4 помогает браузеру и CDN распознать тип (важно для части роликов, напр. проект 36)
-    if (!/\.(mp4|webm|mov|m4v)$/i.test(out)) {
+    // .mp4 только для путей вида images/2 или icons/2; для public_id с хешем (36a_ar25e2) не добавлять — даёт 404 на Cloudinary
+    const hasFolderPath = /\/video\/upload\/([^/]*)(images|icons)\/[^/]+$/.test(out);
+    if (hasFolderPath && !/\.(mp4|webm|mov|m4v)$/i.test(out)) {
         out = out.replace(/\?.*$/, '') + '.mp4';
     }
     return out;
