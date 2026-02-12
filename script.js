@@ -1082,11 +1082,7 @@ function ensureCloudinaryVideoUrl(url) {
     if (out.includes('/upload/') && !out.includes('/upload/f_') && !out.includes('/upload/vc_')) {
         out = out.replace('/upload/', '/upload/f_mp4,vc_h264/');
     }
-    // .mp4 только для путей вида images/2 или icons/2; для public_id с хешем (36a_ar25e2) не добавлять — даёт 404 на Cloudinary
-    const hasFolderPath = /\/video\/upload\/([^/]*)(images|icons)\/[^/]+$/.test(out);
-    if (hasFolderPath && !/\.(mp4|webm|mov|m4v)$/i.test(out)) {
-        out = out.replace(/\?.*$/, '') + '.mp4';
-    }
+    // Не добавляем .mp4 к URL — на Cloudinary public_id без расширения (36a_ar25e2 и т.д.), добавление .mp4 даёт 404
     return out;
 }
 
