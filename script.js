@@ -31,6 +31,10 @@ let iconSize = 120; // Фиксированный средний размер
 let lastUpdateTime = 0;
 let lastVisibilityUpdate = 0;
 let lastModalOpenTime = 0; // Время последнего открытия модального окна
+/** Текущий язык интерфейса карточек проектов: 'ru' | 'en' */
+let currentLang = 'ru';
+/** Последний открытый item в модалке (для обновления текста при смене языка) */
+let lastOpenedModalItem = null;
 const UPDATE_INTERVAL = 16; // ~60 FPS
 const VISIBILITY_UPDATE_INTERVAL = 150; // Обновляем видимость реже
 const Z_INDEX_UPDATE_THRESHOLD = 10; // Обновляем z-index только при значительном изменении
@@ -1994,10 +1998,8 @@ window.openModal = function openModal(item) {
     const modalImage = document.getElementById('modal-image');
     const modalVideo = document.getElementById('modal-video');
 
-    modalTitle.textContent = getDisplayTitle(item);
-    const descRu = getDescription(item) || '';
-    const descEn = (item.descriptionEn && item.descriptionEn.trim()) ? item.descriptionEn.trim() : '';
-    modalDescription.textContent = descEn ? descEn + '\n\n' + descRu : descRu;
+    lastOpenedModalItem = item;
+    setModalTextByLang(item, modalTitle, modalDescription);
 
     const isProject = item.items && item.items.length > 0;
     if (isProject) {
@@ -2159,6 +2161,16 @@ function getDisplayTitle(item) {
     if (!t || !String(t).trim()) return '';
     if (/^\d+$/.test(String(t).trim())) return '';
     return t;
+}
+
+/** Заполняет заголовок и описание модалки по выбранному языку (только один язык, без дублирования). */
+function setModalTextByLang(item, modalTitleEl, modalDescriptionEl) {
+    if (!modalTitleEl || !modalDescriptionEl) return;
+    modalTitleEl.textContent = getDisplayTitle(item);
+    const descRu = getDescription(item) || '';
+    const descEn = (item.descriptionEn && item.descriptionEn.trim()) ? item.descriptionEn.trim() : '';
+    const useEn = typeof currentLang !== 'undefined' && currentLang === 'en';
+    modalDescriptionEl.textContent = useEn ? (descEn || descRu) : descRu;
 }
 
 function getDescription(item) {
@@ -2773,6 +2785,28 @@ document.addEventListener('DOMContentLoaded', () => {
             closeModal();
         }
     });
+
+    // Переключатель языка RU / EN
+    const langSwitcher = document.getElementById('lang-switcher');
+    if (langSwitcher) {
+        langSwitcher.querySelectorAll('.lang-btn').forEach((btn) => {
+            btn.addEventListener('click', () => {
+                const lang = btn.getAttribute('data-lang');
+                if (lang !== currentLang) {
+                    currentLang = lang;
+                    document.documentElement.lang = lang;
+                    langSwitcher.querySelectorAll('.lang-btn').forEach((b) => {
+                        b.setAttribute('aria-pressed', b.getAttribute('data-lang') === lang ? 'true' : 'false');
+                    });
+                    if (lastOpenedModalItem && document.getElementById('modal').classList.contains('active')) {
+                        const modalTitle = document.getElementById('modal-title');
+                        const modalDescription = document.getElementById('modal-description');
+                        setModalTextByLang(lastOpenedModalItem, modalTitle, modalDescription);
+                    }
+                }
+            });
+        });
+    }
 
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') {

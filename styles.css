@@ -31,6 +31,43 @@ body {
     pointer-events: none;
 }
 
+/* Переключатель языка RU / EN */
+.lang-switcher {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 250;
+    display: flex;
+    border: 2px solid rgba(124, 191, 214, 0.5);
+    border-radius: 10px;
+    background: rgba(10, 10, 10, 0.85);
+    backdrop-filter: blur(10px);
+    overflow: hidden;
+}
+
+.lang-btn {
+    padding: 10px 18px;
+    border: none;
+    background: transparent;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: color 0.2s, background 0.2s;
+}
+
+.lang-btn:hover {
+    color: #fff;
+}
+
+.lang-btn[aria-pressed="true"] {
+    background: rgba(124, 191, 214, 0.35);
+    color: #7CBFD6;
+}
+
+.lang-btn--ru { border-radius: 8px 0 0 8px; }
+.lang-btn--en { border-radius: 0 8px 8px 0; }
+
 /* Панель управления */
 .control-panel {
     position: fixed;

@@ -471,23 +471,6 @@
     "descriptionEn": "Content creation for volumetric screen"
   },
   {
-    "id": "35",
-    "media": {
-      "filename": "35.png",
-      "type": "image",
-      "path": "https://res.cloudinary.com/dwwyducge/image/upload/images/35",
-      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/images/35"
-    },
-    "title": "35",
-    "description": "Vjing",
-    "additional": {
-      "col_0": "35",
-      "col_1": "35",
-      "col_2": "Vjing"
-    },
-    "descriptionEn": "VJing"
-  },
-  {
     "id": "36a",
     "media": {
       "filename": "36a.mp4",
@@ -624,24 +607,6 @@
     "descriptionEn": "Creating generative content for the installation"
   },
   {
-    "id": "45",
-    "media": {
-      "filename": "45.mp4",
-      "type": "video",
-      "path": "https://res.cloudinary.com/dwwyducge/video/upload/icons/45",
-      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/45"
-    },
-    "title": "130",
-    "description": "Тест диодных палок Dreamlaser\n\nГенеративный виджеинг\n\nLED",
-    "additional": {
-      "col_0": "130",
-      "col_1": "Тест диодных палок Dreamlaser",
-      "col_2": "Генеративный виджеинг",
-      "col_3": "LED"
-    },
-    "descriptionEn": "Dreamlaser LED sticks test\n\nGenerative VJing\n\nLED"
-  },
-  {
     "id": "46a",
     "media": {
       "filename": "46a.png",
@@ -728,23 +693,6 @@
       "col_3": "LED"
     },
     "descriptionEn": "Audio-reactive lighting and interactivity programming"
-  },
-  {
-    "id": "51",
-    "media": {
-      "filename": "51.mp4",
-      "type": "video",
-      "path": "https://res.cloudinary.com/dwwyducge/video/upload/icons/51",
-      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/51"
-    },
-    "title": "141",
-    "description": "Генеративная графика\n\nGenerative graphics",
-    "additional": {
-      "col_0": "141",
-      "col_2": "Генеративная графика",
-      "col_3": "Generative graphics"
-    },
-    "descriptionEn": "Generative graphics\n\nGenerative graphics"
   },
   {
     "id": "52a",
@@ -1280,25 +1228,6 @@
     "descriptionEn": "Interactive installation programming with neural network"
   },
   {
-    "id": "74",
-    "media": {
-      "filename": "74.MOV",
-      "type": "video",
-      "path": "https://res.cloudinary.com/dwwyducge/video/upload/icons/74",
-      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/74"
-    },
-    "title": "192",
-    "description": "Создание части контента, программирование интерфейса",
-    "additional": {
-      "col_0": "192",
-      "col_1": "Layers/Dreamlaser",
-      "col_2": "Создание части контента, программирование интерфейса",
-      "col_3": "Interactive installation",
-      "col_4": "Generative graphics"
-    },
-    "descriptionEn": "Content creation, interface programming"
-  },
-  {
     "id": "76a",
     "media": {
       "filename": "76a.HEIC",
@@ -1494,24 +1423,6 @@
     "descriptionEn": "Generative graphics, working with LIDAR sensors"
   },
   {
-    "id": "86",
-    "media": {
-      "filename": "86.mp4",
-      "type": "video",
-      "path": "https://res.cloudinary.com/dwwyducge/video/upload/icons/86",
-      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/86"
-    },
-    "title": "218",
-    "description": "New Star Camp 2023 Vibes\n\nГенеративный виджеинг\n\nVjing",
-    "additional": {
-      "col_0": "218",
-      "col_1": "New Star Camp 2023 Vibes",
-      "col_2": "Генеративный виджеинг",
-      "col_3": "Vjing"
-    },
-    "descriptionEn": "New Star Camp 2023 Vibes\n\nGenerative VJing\n\nVJing"
-  },
-  {
     "id": "93b",
     "media": {
       "filename": "93b.png",
@@ -1548,24 +1459,6 @@
     "descriptionEn": "Interactive installation programming"
   },
   {
-    "id": "94",
-    "media": {
-      "filename": "94.mp4",
-      "type": "video",
-      "path": "https://res.cloudinary.com/dwwyducge/video/upload/icons/94",
-      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/94"
-    },
-    "title": "239",
-    "description": "Столица Закатов Tsrh\n\nГенеративный виджеинг\n\nVjing",
-    "additional": {
-      "col_0": "239",
-      "col_1": "Столица Закатов Tsrh",
-      "col_2": "Генеративный виджеинг",
-      "col_3": "Vjing"
-    },
-    "descriptionEn": "Sunset Capital Tsrh\n\nGenerative VJing\n\nVJing"
-  },
-  {
     "id": "95",
     "media": {
       "filename": "95.mp4",
@@ -1580,24 +1473,6 @@
       "col_2": "Generative graphics"
     },
     "descriptionEn": "Generative graphics"
-  },
-  {
-    "id": "96",
-    "media": {
-      "filename": "96.mp4",
-      "type": "video",
-      "path": "https://res.cloudinary.com/dwwyducge/video/upload/icons/96",
-      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/96"
-    },
-    "title": "241",
-    "description": "Intervals Festival 2024 Night program\n\nГенеративный виджеинг\n\nVjing",
-    "additional": {
-      "col_0": "241",
-      "col_1": "Intervals Festival 2024 Night program",
-      "col_2": "Генеративный виджеинг",
-      "col_3": "Vjing"
-    },
-    "descriptionEn": "Intervals Festival 2024 Night program\n\nGenerative VJing\n\nVJing"
   },
   {
     "id": "98a",
@@ -2195,19 +2070,6 @@
     "descriptionEn": "Generative graphics, working with tracking system"
   },
   {
-    "id": "147",
-    "media": {
-      "filename": "147.MOV",
-      "type": "video",
-      "path": "https://res.cloudinary.com/dwwyducge/video/upload/icons/147",
-      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/147"
-    },
-    "title": "",
-    "description": "",
-    "additional": {},
-    "descriptionEn": ""
-  },
-  {
     "id": "149",
     "media": {
       "filename": "149.mp4",
@@ -2295,19 +2157,6 @@
       "col_1": "mix cover Radiant - Kibosh",
       "col_2": "Generative graphics"
     },
-    "descriptionEn": ""
-  },
-  {
-    "id": "163",
-    "media": {
-      "filename": "163.MOV",
-      "type": "video",
-      "path": "https://res.cloudinary.com/dwwyducge/video/upload/icons/163",
-      "thumbnail": "https://res.cloudinary.com/dwwyducge/image/upload/icons/163"
-    },
-    "title": "",
-    "description": "",
-    "additional": {},
     "descriptionEn": ""
   },
   {

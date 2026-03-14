@@ -10,6 +10,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.min.js"></script>
 </head>
 <body>
+    <!-- Переключатель языка RU / EN -->
+    <div id="lang-switcher" class="lang-switcher" role="group" aria-label="Язык">
+        <button type="button" class="lang-btn lang-btn--ru" data-lang="ru" aria-pressed="true">RU</button>
+        <button type="button" class="lang-btn lang-btn--en" data-lang="en" aria-pressed="false">EN</button>
+    </div>
     <!-- Метка версии: если видите "Build 2025-02-12 v6" в правом нижнем углу — загружена актуальная сборка -->
     <div id="build-version" class="build-version" aria-hidden="true">Build 2025-02-12 v6</div>
     <!-- Индикатор брейкпоинта: показывается при ?breakpoint=1 в URL (viewport и активный формат) -->

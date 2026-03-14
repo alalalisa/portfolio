@@ -112,6 +112,14 @@ def main():
     # Если по первой колонке ничего не нашли (все не числа), fallback: строка i = проект i+1
     use_index_fallback = len(row_by_project) == 0
 
+    # Удаляем из JSON записи, которых нет в таблице (актуальный список проектов — в первой колонке)
+    valid_project_keys = set(row_by_project.keys()) if not use_index_fallback else set(range(1, num_rows + 1))
+    original_count = len(portfolio)
+    portfolio[:] = [e for e in portfolio if get_project_key(e.get("id")) in valid_project_keys]
+    removed = original_count - len(portfolio)
+    if removed > 0:
+        print(f"Удалено записей, отсутствующих в таблице: {removed}")
+
     updated = 0
     for entry in portfolio:
         pk = get_project_key(entry.get("id"))
